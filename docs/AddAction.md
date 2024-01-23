@@ -1,0 +1,30 @@
+# AddAction
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**type** | **str** | Type of Document Action | 
+**parameters** | [**AddActionParameters**](AddActionParameters.md) |  | [optional] 
+
+## Example
+
+```python
+from formkiq_client.models.add_action import AddAction
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of AddAction from a JSON string
+add_action_instance = AddAction.from_json(json)
+# print the JSON string representation of the object
+print AddAction.to_json()
+
+# convert the object into a dict
+add_action_dict = add_action_instance.to_dict()
+# create an instance of AddAction from a dict
+add_action_form_dict = add_action.from_dict(add_action_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

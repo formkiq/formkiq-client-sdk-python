@@ -10,98 +10,7 @@ For more information, please visit [https://formkiq.com](https://formkiq.com)
 
 ## Requirements.
 
-Python &gt;&#x3D;3.7
-
-## Migration from other generators like python and python-legacy
-
-### Changes
-1. This generator uses spec case for all (object) property names and parameter names.
-    - So if the spec has a property name like camelCase, it will use camelCase rather than camel_case
-    - So you will need to update how you input and read properties to use spec case
-2. Endpoint parameters are stored in dictionaries to prevent collisions (explanation below)
-    - So you will need to update how you pass data in to endpoints
-3. Endpoint responses now include the original response, the deserialized response body, and (todo)the deserialized headers
-    - So you will need to update your code to use response.body to access deserialized data
-4. All validated data is instantiated in an instance that subclasses all validated Schema classes and Decimal/str/list/tuple/frozendict/NoneClass/BoolClass/bytes/io.FileIO
-    - This means that you can use isinstance to check if a payload validated against a schema class
-    - This means that no data will be of type None/True/False
-        - ingested None will subclass NoneClass
-        - ingested True will subclass BoolClass
-        - ingested False will subclass BoolClass
-        - So if you need to check is True/False/None, instead use instance.is_true_oapg()/.is_false_oapg()/.is_none_oapg()
-5. All validated class instances are immutable except for ones based on io.File
-    - This is because if properties were changed after validation, that validation would no longer apply
-    - So no changing values or property values after a class has been instantiated
-6. String + Number types with formats
-    - String type data is stored as a string and if you need to access types based on its format like date,
-    date-time, uuid, number etc then you will need to use accessor functions on the instance
-    - type string + format: See .as_date_oapg, .as_datetime_oapg, .as_decimal_oapg, .as_uuid_oapg
-    - type number + format: See .as_float_oapg, .as_int_oapg
-    - this was done because openapi/json-schema defines constraints. string data may be type string with no format
-    keyword in one schema, and include a format constraint in another schema
-    - So if you need to access a string format based type, use as_date_oapg/as_datetime_oapg/as_decimal_oapg/as_uuid_oapg
-    - So if you need to access a number format based type, use as_int_oapg/as_float_oapg
-7. Property access on AnyType(type unset) or object(dict) schemas
-    - Only required keys with valid python names are properties like .someProp and have type hints
-    - All optional keys may not exist, so properties are not defined for them
-    - One can access optional values with dict_instance['optionalProp'] and KeyError will be raised if it does not exist
-    - Use get_item_oapg if you need a way to always get a value whether or not the key exists
-        - If the key does not exist, schemas.unset is returned from calling dict_instance.get_item_oapg('optionalProp')
-        - All required and optional keys have type hints for this method, and @typing.overload is used
-        - A type hint is also generated for additionalProperties accessed using this method
-    - So you will need to update you code to use some_instance['optionalProp'] to access optional property
-    and additionalProperty values
-8. The location of the api classes has changed
-    - Api classes are located in your_package.apis.tags.some_api
-    - This change was made to eliminate redundant code generation
-    - Legacy generators generated the same endpoint twice if it had > 1 tag on it
-    - This generator defines an endpoint in one class, then inherits that class to generate
-      apis by tags and by paths
-    - This change reduces code and allows quicker run time if you use the path apis
-        - path apis are at your_package.apis.paths.some_path
-    - Those apis will only load their needed models, which is less to load than all of the resources needed in a tag api
-    - So you will need to update your import paths to the api classes
-
-### Why are Oapg and _oapg used in class and method names?
-Classes can have arbitrarily named properties set on them
-Endpoints can have arbitrary operationId method names set
-For those reasons, I use the prefix Oapg and _oapg to greatly reduce the likelihood of collisions
-on protected + public classes/methods.
-oapg stands for OpenApi Python Generator.
-
-### Object property spec case
-This was done because when payloads are ingested, they can be validated against N number of schemas.
-If the input signature used a different property name then that has mutated the payload.
-So SchemaA and SchemaB must both see the camelCase spec named variable.
-Also it is possible to send in two properties, named camelCase and camel_case in the same payload.
-That use case should be support so spec case is used.
-
-### Parameter spec case
-Parameters can be included in different locations including:
-- query
-- path
-- header
-- cookie
-
-Any of those parameters could use the same parameter names, so if every parameter
-was included as an endpoint parameter in a function signature, they would collide.
-For that reason, each of those inputs have been separated out into separate typed dictionaries:
-- query_params
-- path_params
-- header_params
-- cookie_params
-
-So when updating your code, you will need to pass endpoint parameters in using those
-dictionaries.
-
-### Endpoint responses
-Endpoint responses have been enriched to now include more information.
-Any response reom an endpoint will now include the following properties:
-response: urllib3.HTTPResponse
-body: typing.Union[Unset, Schema]
-headers: typing.Union[Unset, TODO]
-Note: response header deserialization has not yet been added
-
+Python 3.7+
 
 ## Installation & Usage
 ### pip install
@@ -132,6 +41,10 @@ Then import the package:
 import formkiq_client
 ```
 
+### Tests
+
+Execute `pytest` to run the tests.
+
 ## Getting Started
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
@@ -140,16 +53,9 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 import time
 import formkiq_client
+from formkiq_client.rest import ApiException
 from pprint import pprint
-from formkiq_client.apis.tags import advanced_document_search_api
-from formkiq_client.model.delete_fulltext_response import DeleteFulltextResponse
-from formkiq_client.model.document_fulltext_request import DocumentFulltextRequest
-from formkiq_client.model.document_fulltext_response import DocumentFulltextResponse
-from formkiq_client.model.get_document_fulltext_response import GetDocumentFulltextResponse
-from formkiq_client.model.query_fulltext_response import QueryFulltextResponse
-from formkiq_client.model.set_document_fulltext_request import SetDocumentFulltextRequest
-from formkiq_client.model.set_document_fulltext_response import SetDocumentFulltextResponse
-from formkiq_client.model.update_document_fulltext_request import UpdateDocumentFulltextRequest
+
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = formkiq_client.Configuration(
@@ -161,18 +67,22 @@ configuration = formkiq_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
+
 # Enter a context with an instance of the API client
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = advanced_document_search_api.AdvancedDocumentSearchApi(api_client)
-    document_id = "documentId_example" # str | Document Identifier
-site_id = "siteId_example" # str | Site Identifier (optional)
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
-        api_response = api_instance.delete_document_fulltext(document_idsite_id=site_id)
+        # Delete document full-text
+        api_response = api_instance.delete_document_fulltext(document_id, site_id=site_id)
+        print("The response of AdvancedDocumentSearchApi->delete_document_fulltext:\n")
         pprint(api_response)
-    except formkiq_client.ApiException as e:
+    except ApiException as e:
         print("Exception when calling AdvancedDocumentSearchApi->delete_document_fulltext: %s\n" % e)
+
 ```
 
 ## Documentation for API Endpoints
@@ -181,250 +91,284 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AdvancedDocumentSearchApi* | [**delete_document_fulltext**](docs/apis/tags/AdvancedDocumentSearchApi.md#delete_document_fulltext) | **delete** /documents/{documentId}/fulltext | 
-*AdvancedDocumentSearchApi* | [**delete_document_fulltext_tag**](docs/apis/tags/AdvancedDocumentSearchApi.md#delete_document_fulltext_tag) | **delete** /documents/{documentId}/fulltext/tags/{tagKey} | 
-*AdvancedDocumentSearchApi* | [**delete_document_fulltext_tag_and_value**](docs/apis/tags/AdvancedDocumentSearchApi.md#delete_document_fulltext_tag_and_value) | **delete** /documents/{documentId}/fulltext/tags/{tagKey}/{tagValue} | 
-*AdvancedDocumentSearchApi* | [**document_fulltext**](docs/apis/tags/AdvancedDocumentSearchApi.md#document_fulltext) | **post** /searchFulltext | 
-*AdvancedDocumentSearchApi* | [**get_document_fulltext**](docs/apis/tags/AdvancedDocumentSearchApi.md#get_document_fulltext) | **get** /documents/{documentId}/fulltext | 
-*AdvancedDocumentSearchApi* | [**query_fulltext**](docs/apis/tags/AdvancedDocumentSearchApi.md#query_fulltext) | **post** /queryFulltext | 
-*AdvancedDocumentSearchApi* | [**set_document_fulltext**](docs/apis/tags/AdvancedDocumentSearchApi.md#set_document_fulltext) | **put** /documents/{documentId}/fulltext | 
-*AdvancedDocumentSearchApi* | [**update_document_fulltext**](docs/apis/tags/AdvancedDocumentSearchApi.md#update_document_fulltext) | **patch** /documents/{documentId}/fulltext | 
-*AntivirusApi* | [**set_antivirus**](docs/apis/tags/AntivirusApi.md#set_antivirus) | **put** /documents/{documentId}/antivirus | 
-*CustomIndexApi* | [**delete_index**](docs/apis/tags/CustomIndexApi.md#delete_index) | **delete** /indices/{indexType}/{indexKey} | 
-*CustomIndexApi* | [**index_folder_move**](docs/apis/tags/CustomIndexApi.md#index_folder_move) | **post** /indices/{indexType}/move | 
-*CustomIndexApi* | [**index_search**](docs/apis/tags/CustomIndexApi.md#index_search) | **post** /indices/search | 
-*DocumentActionsApi* | [**add_document_actions**](docs/apis/tags/DocumentActionsApi.md#add_document_actions) | **post** /documents/{documentId}/actions | 
-*DocumentActionsApi* | [**get_document_actions**](docs/apis/tags/DocumentActionsApi.md#get_document_actions) | **get** /documents/{documentId}/actions | 
-*DocumentOCRApi* | [**add_document_ocr**](docs/apis/tags/DocumentOCRApi.md#add_document_ocr) | **post** /documents/{documentId}/ocr | 
-*DocumentOCRApi* | [**delete_document_ocr**](docs/apis/tags/DocumentOCRApi.md#delete_document_ocr) | **delete** /documents/{documentId}/ocr | 
-*DocumentOCRApi* | [**get_document_ocr**](docs/apis/tags/DocumentOCRApi.md#get_document_ocr) | **get** /documents/{documentId}/ocr | 
-*DocumentOCRApi* | [**set_document_ocr**](docs/apis/tags/DocumentOCRApi.md#set_document_ocr) | **put** /documents/{documentId}/ocr | 
-*DocumentSearchApi* | [**document_search**](docs/apis/tags/DocumentSearchApi.md#document_search) | **post** /search | 
-*DocumentSharesApi* | [**add_folder_share**](docs/apis/tags/DocumentSharesApi.md#add_folder_share) | **post** /shares/folders/{indexKey} | 
-*DocumentSharesApi* | [**delete_share**](docs/apis/tags/DocumentSharesApi.md#delete_share) | **delete** /shares/{shareKey} | 
-*DocumentSharesApi* | [**get_user_shares**](docs/apis/tags/DocumentSharesApi.md#get_user_shares) | **get** /shares | 
-*DocumentTagsApi* | [**add_document_tags**](docs/apis/tags/DocumentTagsApi.md#add_document_tags) | **post** /documents/{documentId}/tags | 
-*DocumentTagsApi* | [**delete_document_tag**](docs/apis/tags/DocumentTagsApi.md#delete_document_tag) | **delete** /documents/{documentId}/tags/{tagKey} | 
-*DocumentTagsApi* | [**delete_document_tag_and_value**](docs/apis/tags/DocumentTagsApi.md#delete_document_tag_and_value) | **delete** /documents/{documentId}/tags/{tagKey}/{tagValue} | 
-*DocumentTagsApi* | [**get_document_tag**](docs/apis/tags/DocumentTagsApi.md#get_document_tag) | **get** /documents/{documentId}/tags/{tagKey} | 
-*DocumentTagsApi* | [**get_document_tags**](docs/apis/tags/DocumentTagsApi.md#get_document_tags) | **get** /documents/{documentId}/tags | 
-*DocumentTagsApi* | [**set_document_tag**](docs/apis/tags/DocumentTagsApi.md#set_document_tag) | **put** /documents/{documentId}/tags/{tagKey} | 
-*DocumentTagsApi* | [**set_document_tags**](docs/apis/tags/DocumentTagsApi.md#set_document_tags) | **put** /documents/{documentId}/tags | 
-*DocumentTagsApi* | [**update_document_tags**](docs/apis/tags/DocumentTagsApi.md#update_document_tags) | **patch** /documents/{documentId}/tags | 
-*DocumentTagsApi* | [**update_matching_document_tags**](docs/apis/tags/DocumentTagsApi.md#update_matching_document_tags) | **patch** /documents/tags | 
-*DocumentVersionsApi* | [**delete_document_version**](docs/apis/tags/DocumentVersionsApi.md#delete_document_version) | **delete** /documents/{documentId}/versions/{versionKey} | 
-*DocumentVersionsApi* | [**get_document_versions**](docs/apis/tags/DocumentVersionsApi.md#get_document_versions) | **get** /documents/{documentId}/versions | 
-*DocumentVersionsApi* | [**set_document_version**](docs/apis/tags/DocumentVersionsApi.md#set_document_version) | **put** /documents/{documentId}/versions | 
-*DocumentsApi* | [**add_document**](docs/apis/tags/DocumentsApi.md#add_document) | **post** /documents | 
-*DocumentsApi* | [**add_document_upload**](docs/apis/tags/DocumentsApi.md#add_document_upload) | **post** /documents/upload | 
-*DocumentsApi* | [**compress_documents**](docs/apis/tags/DocumentsApi.md#compress_documents) | **post** /documents/compress | 
-*DocumentsApi* | [**delete_document**](docs/apis/tags/DocumentsApi.md#delete_document) | **delete** /documents/{documentId} | 
-*DocumentsApi* | [**get_document**](docs/apis/tags/DocumentsApi.md#get_document) | **get** /documents/{documentId} | 
-*DocumentsApi* | [**get_document_content**](docs/apis/tags/DocumentsApi.md#get_document_content) | **get** /documents/{documentId}/content | 
-*DocumentsApi* | [**get_document_id_upload**](docs/apis/tags/DocumentsApi.md#get_document_id_upload) | **get** /documents/{documentId}/upload | 
-*DocumentsApi* | [**get_document_syncs**](docs/apis/tags/DocumentsApi.md#get_document_syncs) | **get** /documents/{documentId}/syncs | 
-*DocumentsApi* | [**get_document_upload**](docs/apis/tags/DocumentsApi.md#get_document_upload) | **get** /documents/upload | 
-*DocumentsApi* | [**get_document_url**](docs/apis/tags/DocumentsApi.md#get_document_url) | **get** /documents/{documentId}/url | 
-*DocumentsApi* | [**get_documents**](docs/apis/tags/DocumentsApi.md#get_documents) | **get** /documents | 
-*DocumentsApi* | [**update_document**](docs/apis/tags/DocumentsApi.md#update_document) | **patch** /documents/{documentId} | 
-*ESignatureApi* | [**add_esignature_docusign_events**](docs/apis/tags/ESignatureApi.md#add_esignature_docusign_events) | **post** /esignature/docusign/events | 
-*ESignatureApi* | [**esignature_docusign**](docs/apis/tags/ESignatureApi.md#esignature_docusign) | **post** /esignature/docusign/{documentId} | 
-*ESignatureApi* | [**esignature_docusign_config**](docs/apis/tags/ESignatureApi.md#esignature_docusign_config) | **get** /esignature/docusign/config | 
-*ESignatureApi* | [**esignature_set_docusign_config**](docs/apis/tags/ESignatureApi.md#esignature_set_docusign_config) | **put** /esignature/docusign/config | 
-*FoldersApi* | [**add_folder**](docs/apis/tags/FoldersApi.md#add_folder) | **post** /folders | 
-*FoldersApi* | [**delete_folder**](docs/apis/tags/FoldersApi.md#delete_folder) | **delete** /folders/{indexKey} | 
-*FoldersApi* | [**get_folder_documents**](docs/apis/tags/FoldersApi.md#get_folder_documents) | **get** /folders | 
-*OnlyofficeApi* | [**only_office_document_edit**](docs/apis/tags/OnlyofficeApi.md#only_office_document_edit) | **post** /onlyoffice/{documentId}/edit | 
-*OnlyofficeApi* | [**only_office_document_new**](docs/apis/tags/OnlyofficeApi.md#only_office_document_new) | **post** /onlyoffice/new | 
-*OnlyofficeApi* | [**only_office_document_save**](docs/apis/tags/OnlyofficeApi.md#only_office_document_save) | **post** /onlyoffice/{documentId}/save | 
-*PublicApi* | [**public_add_document**](docs/apis/tags/PublicApi.md#public_add_document) | **post** /public/documents | 
-*PublicApi* | [**public_add_webhook**](docs/apis/tags/PublicApi.md#public_add_webhook) | **post** /public/webhooks/{webhooks+} | 
-*SystemManagementApi* | [**add_api_key**](docs/apis/tags/SystemManagementApi.md#add_api_key) | **post** /configuration/apiKeys | 
-*SystemManagementApi* | [**delete_api_key**](docs/apis/tags/SystemManagementApi.md#delete_api_key) | **delete** /configuration/apiKeys/{apiKey} | 
-*SystemManagementApi* | [**get_api_keys**](docs/apis/tags/SystemManagementApi.md#get_api_keys) | **get** /configuration/apiKeys | 
-*SystemManagementApi* | [**get_configs**](docs/apis/tags/SystemManagementApi.md#get_configs) | **get** /configuration | 
-*SystemManagementApi* | [**get_sites**](docs/apis/tags/SystemManagementApi.md#get_sites) | **get** /sites | 
-*SystemManagementApi* | [**get_version**](docs/apis/tags/SystemManagementApi.md#get_version) | **get** /version | 
-*SystemManagementApi* | [**update_config**](docs/apis/tags/SystemManagementApi.md#update_config) | **patch** /configuration | 
-*TagIndexApi* | [**index_search**](docs/apis/tags/TagIndexApi.md#index_search) | **post** /indices/search | 
-*TagSchemaApi* | [**add_tag_schema**](docs/apis/tags/TagSchemaApi.md#add_tag_schema) | **post** /tagSchemas | 
-*TagSchemaApi* | [**delete_tag_schema**](docs/apis/tags/TagSchemaApi.md#delete_tag_schema) | **delete** /tagSchemas/{tagSchemaId} | 
-*TagSchemaApi* | [**get_tag_schema**](docs/apis/tags/TagSchemaApi.md#get_tag_schema) | **get** /tagSchemas/{tagSchemaId} | 
-*TagSchemaApi* | [**get_tag_schemas**](docs/apis/tags/TagSchemaApi.md#get_tag_schemas) | **get** /tagSchemas | 
-*WebhooksApi* | [**add_webhook**](docs/apis/tags/WebhooksApi.md#add_webhook) | **post** /webhooks | 
-*WebhooksApi* | [**add_webhook_document**](docs/apis/tags/WebhooksApi.md#add_webhook_document) | **post** /private/webhooks/{webhooks+} | 
-*WebhooksApi* | [**add_webhook_tag**](docs/apis/tags/WebhooksApi.md#add_webhook_tag) | **post** /webhooks/{webhookId}/tags | 
-*WebhooksApi* | [**delete_webhook**](docs/apis/tags/WebhooksApi.md#delete_webhook) | **delete** /webhooks/{webhookId} | 
-*WebhooksApi* | [**get_webhook**](docs/apis/tags/WebhooksApi.md#get_webhook) | **get** /webhooks/{webhookId} | 
-*WebhooksApi* | [**get_webhook_tags**](docs/apis/tags/WebhooksApi.md#get_webhook_tags) | **get** /webhooks/{webhookId}/tags | 
-*WebhooksApi* | [**get_webhooks**](docs/apis/tags/WebhooksApi.md#get_webhooks) | **get** /webhooks | 
-*WebhooksApi* | [**update_webhook**](docs/apis/tags/WebhooksApi.md#update_webhook) | **patch** /webhooks/{webhookId} | 
+*AdvancedDocumentSearchApi* | [**delete_document_fulltext**](docs/AdvancedDocumentSearchApi.md#delete_document_fulltext) | **DELETE** /documents/{documentId}/fulltext | Delete document full-text
+*AdvancedDocumentSearchApi* | [**delete_document_fulltext_tag**](docs/AdvancedDocumentSearchApi.md#delete_document_fulltext_tag) | **DELETE** /documents/{documentId}/fulltext/tags/{tagKey} | Delete document full-text tag
+*AdvancedDocumentSearchApi* | [**delete_document_fulltext_tag_and_value**](docs/AdvancedDocumentSearchApi.md#delete_document_fulltext_tag_and_value) | **DELETE** /documents/{documentId}/fulltext/tags/{tagKey}/{tagValue} | Delete document full-text tag/value
+*AdvancedDocumentSearchApi* | [**document_fulltext**](docs/AdvancedDocumentSearchApi.md#document_fulltext) | **POST** /searchFulltext | Document full-text search
+*AdvancedDocumentSearchApi* | [**get_document_fulltext**](docs/AdvancedDocumentSearchApi.md#get_document_fulltext) | **GET** /documents/{documentId}/fulltext | Get document&#39;s full-text
+*AdvancedDocumentSearchApi* | [**query_fulltext**](docs/AdvancedDocumentSearchApi.md#query_fulltext) | **POST** /queryFulltext | Direct opensearch search API
+*AdvancedDocumentSearchApi* | [**set_document_fulltext**](docs/AdvancedDocumentSearchApi.md#set_document_fulltext) | **PUT** /documents/{documentId}/fulltext | Set document&#39;s full-text
+*AdvancedDocumentSearchApi* | [**update_document_fulltext**](docs/AdvancedDocumentSearchApi.md#update_document_fulltext) | **PATCH** /documents/{documentId}/fulltext | Update document&#39;s full-text
+*AntivirusApi* | [**set_antivirus**](docs/AntivirusApi.md#set_antivirus) | **PUT** /documents/{documentId}/antivirus | Antivirus document scan
+*CustomIndexApi* | [**delete_index**](docs/CustomIndexApi.md#delete_index) | **DELETE** /indices/{indexType}/{indexKey} | 
+*CustomIndexApi* | [**index_folder_move**](docs/CustomIndexApi.md#index_folder_move) | **POST** /indices/{indexType}/move | 
+*CustomIndexApi* | [**index_search**](docs/CustomIndexApi.md#index_search) | **POST** /indices/search | 
+*DocumentActionsApi* | [**add_document_actions**](docs/DocumentActionsApi.md#add_document_actions) | **POST** /documents/{documentId}/actions | Add document action
+*DocumentActionsApi* | [**add_document_retry_action**](docs/DocumentActionsApi.md#add_document_retry_action) | **POST** /documents/{documentId}/actions/retry | Retries failed document action(s)
+*DocumentActionsApi* | [**get_document_actions**](docs/DocumentActionsApi.md#get_document_actions) | **GET** /documents/{documentId}/actions | Get document actions
+*DocumentFoldersApi* | [**add_folder**](docs/DocumentFoldersApi.md#add_folder) | **POST** /folders | Add document folder
+*DocumentFoldersApi* | [**delete_folder**](docs/DocumentFoldersApi.md#delete_folder) | **DELETE** /folders/{indexKey} | Delete document folder
+*DocumentFoldersApi* | [**get_folder_documents**](docs/DocumentFoldersApi.md#get_folder_documents) | **GET** /folders | Get document folders
+*DocumentOCRApi* | [**add_document_ocr**](docs/DocumentOCRApi.md#add_document_ocr) | **POST** /documents/{documentId}/ocr | Perform document ocr
+*DocumentOCRApi* | [**delete_document_ocr**](docs/DocumentOCRApi.md#delete_document_ocr) | **DELETE** /documents/{documentId}/ocr | Delete document ocr
+*DocumentOCRApi* | [**get_document_ocr**](docs/DocumentOCRApi.md#get_document_ocr) | **GET** /documents/{documentId}/ocr | Get document ocr content
+*DocumentOCRApi* | [**set_document_ocr**](docs/DocumentOCRApi.md#set_document_ocr) | **PUT** /documents/{documentId}/ocr | Set document ocr result
+*DocumentSearchApi* | [**document_search**](docs/DocumentSearchApi.md#document_search) | **POST** /search | Document search
+*DocumentSharesApi* | [**add_folder_share**](docs/DocumentSharesApi.md#add_folder_share) | **POST** /shares/folders/{indexKey} | Add folder share
+*DocumentSharesApi* | [**delete_share**](docs/DocumentSharesApi.md#delete_share) | **DELETE** /shares/{shareKey} | Delete folder share
+*DocumentSharesApi* | [**get_user_shares**](docs/DocumentSharesApi.md#get_user_shares) | **GET** /shares | Get user shared folders
+*DocumentTagsApi* | [**add_document_tags**](docs/DocumentTagsApi.md#add_document_tags) | **POST** /documents/{documentId}/tags | Add tag to document
+*DocumentTagsApi* | [**delete_document_tag**](docs/DocumentTagsApi.md#delete_document_tag) | **DELETE** /documents/{documentId}/tags/{tagKey} | Delete document tag
+*DocumentTagsApi* | [**delete_document_tag_and_value**](docs/DocumentTagsApi.md#delete_document_tag_and_value) | **DELETE** /documents/{documentId}/tags/{tagKey}/{tagValue} | Delete document&#39;s tag value
+*DocumentTagsApi* | [**get_document_tag**](docs/DocumentTagsApi.md#get_document_tag) | **GET** /documents/{documentId}/tags/{tagKey} | Get document tag by key
+*DocumentTagsApi* | [**get_document_tags**](docs/DocumentTagsApi.md#get_document_tags) | **GET** /documents/{documentId}/tags | Get document&#39;s tags
+*DocumentTagsApi* | [**set_document_tag**](docs/DocumentTagsApi.md#set_document_tag) | **PUT** /documents/{documentId}/tags/{tagKey} | Update document tag value(s)
+*DocumentTagsApi* | [**set_document_tags**](docs/DocumentTagsApi.md#set_document_tags) | **PUT** /documents/{documentId}/tags | Set document&#39;s tags
+*DocumentTagsApi* | [**update_document_tags**](docs/DocumentTagsApi.md#update_document_tags) | **PATCH** /documents/{documentId}/tags | Update document tags
+*DocumentTagsApi* | [**update_matching_document_tags**](docs/DocumentTagsApi.md#update_matching_document_tags) | **PATCH** /documents/tags | Mass Update document tag(s)
+*DocumentVersionsApi* | [**delete_document_version**](docs/DocumentVersionsApi.md#delete_document_version) | **DELETE** /documents/{documentId}/versions/{versionKey} | Delete document version
+*DocumentVersionsApi* | [**get_document_versions**](docs/DocumentVersionsApi.md#get_document_versions) | **GET** /documents/{documentId}/versions | Get document&#39;s versions
+*DocumentVersionsApi* | [**set_document_version**](docs/DocumentVersionsApi.md#set_document_version) | **PUT** /documents/{documentId}/versions | Set version of document
+*DocumentWorkflowsApi* | [**add_document_workflow**](docs/DocumentWorkflowsApi.md#add_document_workflow) | **POST** /documents/{documentId}/workflows | Add document workflow
+*DocumentWorkflowsApi* | [**add_document_workflow_decisions**](docs/DocumentWorkflowsApi.md#add_document_workflow_decisions) | **POST** /documents/{documentId}/workflow/{workflowId}/decisions | Approve/Reject document in approval queue
+*DocumentWorkflowsApi* | [**add_queue**](docs/DocumentWorkflowsApi.md#add_queue) | **POST** /queues | Add queue
+*DocumentWorkflowsApi* | [**add_workflow**](docs/DocumentWorkflowsApi.md#add_workflow) | **POST** /workflows | Add workflow
+*DocumentWorkflowsApi* | [**delete_queue**](docs/DocumentWorkflowsApi.md#delete_queue) | **DELETE** /queues/{queueId} | Delete queue
+*DocumentWorkflowsApi* | [**delete_workflow**](docs/DocumentWorkflowsApi.md#delete_workflow) | **DELETE** /workflows/{workflowId} | Delete workflow
+*DocumentWorkflowsApi* | [**get_document_workflow**](docs/DocumentWorkflowsApi.md#get_document_workflow) | **GET** /documents/{documentId}/workflows/{workflowId} | Get document workflow
+*DocumentWorkflowsApi* | [**get_document_workflows**](docs/DocumentWorkflowsApi.md#get_document_workflows) | **GET** /documents/{documentId}/workflows | Get document workflows
+*DocumentWorkflowsApi* | [**get_queue**](docs/DocumentWorkflowsApi.md#get_queue) | **GET** /queues/{queueId} | Get queue
+*DocumentWorkflowsApi* | [**get_queues**](docs/DocumentWorkflowsApi.md#get_queues) | **GET** /queues | Get queues
+*DocumentWorkflowsApi* | [**get_workflow**](docs/DocumentWorkflowsApi.md#get_workflow) | **GET** /workflows/{workflowId} | Get workflow
+*DocumentWorkflowsApi* | [**get_workflow_documents**](docs/DocumentWorkflowsApi.md#get_workflow_documents) | **GET** /workflows/{workflowId}/documents | Get list of documents in workflow
+*DocumentWorkflowsApi* | [**get_workflow_queue_documents**](docs/DocumentWorkflowsApi.md#get_workflow_queue_documents) | **GET** /queues/{queueId}/documents | Get list of documents in queue
+*DocumentWorkflowsApi* | [**get_workflows**](docs/DocumentWorkflowsApi.md#get_workflows) | **GET** /workflows | Get workflows
+*DocumentWorkflowsApi* | [**set_workflow**](docs/DocumentWorkflowsApi.md#set_workflow) | **PUT** /workflows/{workflowId} | Add workflow
+*DocumentsApi* | [**add_document**](docs/DocumentsApi.md#add_document) | **POST** /documents | Add new document
+*DocumentsApi* | [**add_document_upload**](docs/DocumentsApi.md#add_document_upload) | **POST** /documents/upload | Add large document
+*DocumentsApi* | [**compress_documents**](docs/DocumentsApi.md#compress_documents) | **POST** /documents/compress | Compress multiple documents into a .zip file
+*DocumentsApi* | [**delete_document**](docs/DocumentsApi.md#delete_document) | **DELETE** /documents/{documentId} | Delete document
+*DocumentsApi* | [**get_document**](docs/DocumentsApi.md#get_document) | **GET** /documents/{documentId} | Get document
+*DocumentsApi* | [**get_document_content**](docs/DocumentsApi.md#get_document_content) | **GET** /documents/{documentId}/content | Get document&#39;s contents
+*DocumentsApi* | [**get_document_id_upload**](docs/DocumentsApi.md#get_document_id_upload) | **GET** /documents/{documentId}/upload | Get url to update large document
+*DocumentsApi* | [**get_document_syncs**](docs/DocumentsApi.md#get_document_syncs) | **GET** /documents/{documentId}/syncs | Get document syncs
+*DocumentsApi* | [**get_document_upload**](docs/DocumentsApi.md#get_document_upload) | **GET** /documents/upload | Get url to add large document
+*DocumentsApi* | [**get_document_url**](docs/DocumentsApi.md#get_document_url) | **GET** /documents/{documentId}/url | Get document content url
+*DocumentsApi* | [**get_documents**](docs/DocumentsApi.md#get_documents) | **GET** /documents | Get Documents listing
+*DocumentsApi* | [**set_document_restore**](docs/DocumentsApi.md#set_document_restore) | **PUT** /documents/{documentId}/restore | Restore soft deleted document
+*DocumentsApi* | [**update_document**](docs/DocumentsApi.md#update_document) | **PATCH** /documents/{documentId} | Update document
+*ESignatureApi* | [**add_esignature_docusign**](docs/ESignatureApi.md#add_esignature_docusign) | **POST** /esignature/docusign/{documentId} | Create E-signature request
+*ESignatureApi* | [**add_esignature_docusign_events**](docs/ESignatureApi.md#add_esignature_docusign_events) | **POST** /esignature/docusign/events | Add E-signature event
+*ESignatureApi* | [**get_esignature_docusign_config**](docs/ESignatureApi.md#get_esignature_docusign_config) | **GET** /esignature/docusign/config | Get E-signature config
+*ESignatureApi* | [**set_esignature_docusign_config**](docs/ESignatureApi.md#set_esignature_docusign_config) | **PUT** /esignature/docusign/config | Set E-signature config
+*OnlyofficeApi* | [**only_office_document_edit**](docs/OnlyofficeApi.md#only_office_document_edit) | **POST** /onlyoffice/{documentId}/edit | Edit onlyoffice document
+*OnlyofficeApi* | [**only_office_document_new**](docs/OnlyofficeApi.md#only_office_document_new) | **POST** /onlyoffice/new | Create onlyoffice document
+*OnlyofficeApi* | [**only_office_document_save**](docs/OnlyofficeApi.md#only_office_document_save) | **POST** /onlyoffice/{documentId}/save | Save onlyoffice document
+*PublicApi* | [**public_add_document**](docs/PublicApi.md#public_add_document) | **POST** /public/documents | Public add document
+*PublicApi* | [**public_add_webhook**](docs/PublicApi.md#public_add_webhook) | **POST** /public/webhooks/{webhooks+} | Public add webhook
+*SystemManagementApi* | [**add_api_key**](docs/SystemManagementApi.md#add_api_key) | **POST** /configuration/apiKeys | Add API Key
+*SystemManagementApi* | [**delete_api_key**](docs/SystemManagementApi.md#delete_api_key) | **DELETE** /configuration/apiKeys/{apiKey} | Delete API Key
+*SystemManagementApi* | [**get_api_keys**](docs/SystemManagementApi.md#get_api_keys) | **GET** /configuration/apiKeys | Get API Keys
+*SystemManagementApi* | [**get_configuration**](docs/SystemManagementApi.md#get_configuration) | **GET** /configuration | Get site configuration
+*SystemManagementApi* | [**get_sites**](docs/SystemManagementApi.md#get_sites) | **GET** /sites | Get site(s) access
+*SystemManagementApi* | [**get_version**](docs/SystemManagementApi.md#get_version) | **GET** /version | Get FormKiQ version
+*SystemManagementApi* | [**update_configuration**](docs/SystemManagementApi.md#update_configuration) | **PATCH** /configuration | Update site configuration
+*TagIndexApi* | [**index_search**](docs/TagIndexApi.md#index_search) | **POST** /indices/search | 
+*TagSchemaApi* | [**add_tag_schema**](docs/TagSchemaApi.md#add_tag_schema) | **POST** /tagSchemas | Add tag schemas
+*TagSchemaApi* | [**delete_tag_schema**](docs/TagSchemaApi.md#delete_tag_schema) | **DELETE** /tagSchemas/{tagSchemaId} | Delete tag schema
+*TagSchemaApi* | [**get_tag_schema**](docs/TagSchemaApi.md#get_tag_schema) | **GET** /tagSchemas/{tagSchemaId} | Get tag schema
+*TagSchemaApi* | [**get_tag_schemas**](docs/TagSchemaApi.md#get_tag_schemas) | **GET** /tagSchemas | Get tag schemas
+*UserActivitiesApi* | [**get_document_user_activities**](docs/UserActivitiesApi.md#get_document_user_activities) | **GET** /documents/{documentId}/userActivities | Get user activities
+*UserActivitiesApi* | [**get_user_activities**](docs/UserActivitiesApi.md#get_user_activities) | **GET** /userActivities | Get user activities
+*UserManagementApi* | [**get_groups**](docs/UserManagementApi.md#get_groups) | **GET** /groups | Get configured system group(s)
+*UserManagementApi* | [**get_users_in_group**](docs/UserManagementApi.md#get_users_in_group) | **GET** /groups/{groupName}/users | Get users in a group
+*WebhooksApi* | [**add_webhook**](docs/WebhooksApi.md#add_webhook) | **POST** /webhooks | Add webhook
+*WebhooksApi* | [**add_webhook_document**](docs/WebhooksApi.md#add_webhook_document) | **POST** /private/webhooks/{webhooks+} | Add webhook
+*WebhooksApi* | [**add_webhook_tag**](docs/WebhooksApi.md#add_webhook_tag) | **POST** /webhooks/{webhookId}/tags | Add webhook tag
+*WebhooksApi* | [**delete_webhook**](docs/WebhooksApi.md#delete_webhook) | **DELETE** /webhooks/{webhookId} | Delete webhook
+*WebhooksApi* | [**get_webhook**](docs/WebhooksApi.md#get_webhook) | **GET** /webhooks/{webhookId} | Get webhook
+*WebhooksApi* | [**get_webhook_tags**](docs/WebhooksApi.md#get_webhook_tags) | **GET** /webhooks/{webhookId}/tags | Get webhook tags
+*WebhooksApi* | [**get_webhooks**](docs/WebhooksApi.md#get_webhooks) | **GET** /webhooks | Get webhooks
+*WebhooksApi* | [**update_webhook**](docs/WebhooksApi.md#update_webhook) | **PATCH** /webhooks/{webhookId} | Update webhook
+
 
 ## Documentation For Models
 
- - [AddAction](docs/models/AddAction.md)
- - [AddActionParameters](docs/models/AddActionParameters.md)
- - [AddApiKeyRequest](docs/models/AddApiKeyRequest.md)
- - [AddApiKeyResponse](docs/models/AddApiKeyResponse.md)
- - [AddChildDocument](docs/models/AddChildDocument.md)
- - [AddChildDocumentResponse](docs/models/AddChildDocumentResponse.md)
- - [AddDocumentActionsRequest](docs/models/AddDocumentActionsRequest.md)
- - [AddDocumentActionsResponse](docs/models/AddDocumentActionsResponse.md)
- - [AddDocumentMetadata](docs/models/AddDocumentMetadata.md)
- - [AddDocumentOcrRequest](docs/models/AddDocumentOcrRequest.md)
- - [AddDocumentOcrResponse](docs/models/AddDocumentOcrResponse.md)
- - [AddDocumentRequest](docs/models/AddDocumentRequest.md)
- - [AddDocumentResponse](docs/models/AddDocumentResponse.md)
- - [AddDocumentTag](docs/models/AddDocumentTag.md)
- - [AddDocumentTagsRequest](docs/models/AddDocumentTagsRequest.md)
- - [AddDocumentUploadRequest](docs/models/AddDocumentUploadRequest.md)
- - [AddFolderRequest](docs/models/AddFolderRequest.md)
- - [AddFolderResponse](docs/models/AddFolderResponse.md)
- - [AddFolderShareRequest](docs/models/AddFolderShareRequest.md)
- - [AddFolderShareResponse](docs/models/AddFolderShareResponse.md)
- - [AddShare](docs/models/AddShare.md)
- - [AddTagSchemaRequest](docs/models/AddTagSchemaRequest.md)
- - [AddTagSchemaTags](docs/models/AddTagSchemaTags.md)
- - [AddWebhookRequest](docs/models/AddWebhookRequest.md)
- - [AddWebhookResponse](docs/models/AddWebhookResponse.md)
- - [ApiKey](docs/models/ApiKey.md)
- - [ChildDocument](docs/models/ChildDocument.md)
- - [DeleteApiKeyResponse](docs/models/DeleteApiKeyResponse.md)
- - [DeleteFolderResponse](docs/models/DeleteFolderResponse.md)
- - [DeleteFulltextResponse](docs/models/DeleteFulltextResponse.md)
- - [DeleteIndicesResponse](docs/models/DeleteIndicesResponse.md)
- - [DeleteShareResponse](docs/models/DeleteShareResponse.md)
- - [DocumentAction](docs/models/DocumentAction.md)
- - [DocumentFulltextRequest](docs/models/DocumentFulltextRequest.md)
- - [DocumentFulltextResponse](docs/models/DocumentFulltextResponse.md)
- - [DocumentFulltextSearch](docs/models/DocumentFulltextSearch.md)
- - [DocumentFulltextTag](docs/models/DocumentFulltextTag.md)
- - [DocumentId](docs/models/DocumentId.md)
- - [DocumentItemResult](docs/models/DocumentItemResult.md)
- - [DocumentItemVersion](docs/models/DocumentItemVersion.md)
- - [DocumentSearch](docs/models/DocumentSearch.md)
- - [DocumentSearchItemMeta](docs/models/DocumentSearchItemMeta.md)
- - [DocumentSearchItemTag](docs/models/DocumentSearchItemTag.md)
- - [DocumentSearchMatchTag](docs/models/DocumentSearchMatchTag.md)
- - [DocumentSearchRequest](docs/models/DocumentSearchRequest.md)
- - [DocumentSearchResponse](docs/models/DocumentSearchResponse.md)
- - [DocumentsCompressRequest](docs/models/DocumentsCompressRequest.md)
- - [DocumentsCompressResponse](docs/models/DocumentsCompressResponse.md)
- - [Error](docs/models/Error.md)
- - [ErrorsResponse](docs/models/ErrorsResponse.md)
- - [EsignatureDocusignCarbonCopy](docs/models/EsignatureDocusignCarbonCopy.md)
- - [EsignatureDocusignConfigResponse](docs/models/EsignatureDocusignConfigResponse.md)
- - [EsignatureDocusignRecipientTab](docs/models/EsignatureDocusignRecipientTab.md)
- - [EsignatureDocusignRequest](docs/models/EsignatureDocusignRequest.md)
- - [EsignatureDocusignResponse](docs/models/EsignatureDocusignResponse.md)
- - [EsignatureDocusignSigner](docs/models/EsignatureDocusignSigner.md)
- - [EsignatureSetDocusignConfigRequest](docs/models/EsignatureSetDocusignConfigRequest.md)
- - [EsignatureSetDocusignConfigResponse](docs/models/EsignatureSetDocusignConfigResponse.md)
- - [FulltextSearchItem](docs/models/FulltextSearchItem.md)
- - [GetApiKeysResponse](docs/models/GetApiKeysResponse.md)
- - [GetConfigurationResponse](docs/models/GetConfigurationResponse.md)
- - [GetDocumentActionsResponse](docs/models/GetDocumentActionsResponse.md)
- - [GetDocumentContentResponse](docs/models/GetDocumentContentResponse.md)
- - [GetDocumentFulltextResponse](docs/models/GetDocumentFulltextResponse.md)
- - [GetDocumentOcrResponse](docs/models/GetDocumentOcrResponse.md)
- - [GetDocumentResponse](docs/models/GetDocumentResponse.md)
- - [GetDocumentSync](docs/models/GetDocumentSync.md)
- - [GetDocumentSyncResponse](docs/models/GetDocumentSyncResponse.md)
- - [GetDocumentTagResponse](docs/models/GetDocumentTagResponse.md)
- - [GetDocumentTagsResponse](docs/models/GetDocumentTagsResponse.md)
- - [GetDocumentUrlResponse](docs/models/GetDocumentUrlResponse.md)
- - [GetDocumentVersionsResponse](docs/models/GetDocumentVersionsResponse.md)
- - [GetDocumentsResponse](docs/models/GetDocumentsResponse.md)
- - [GetFoldersResponse](docs/models/GetFoldersResponse.md)
- - [GetSitesRequest](docs/models/GetSitesRequest.md)
- - [GetTagSchemaRequest](docs/models/GetTagSchemaRequest.md)
- - [GetTagSchemasRequest](docs/models/GetTagSchemasRequest.md)
- - [GetUserShares](docs/models/GetUserShares.md)
- - [GetVersionResponse](docs/models/GetVersionResponse.md)
- - [GetWebhookResponse](docs/models/GetWebhookResponse.md)
- - [GetWebhookTagsResponse](docs/models/GetWebhookTagsResponse.md)
- - [GetWebhooksResponse](docs/models/GetWebhooksResponse.md)
- - [IndexFolderMoveRequest](docs/models/IndexFolderMoveRequest.md)
- - [IndexFolderMoveResponse](docs/models/IndexFolderMoveResponse.md)
- - [IndexSearch](docs/models/IndexSearch.md)
- - [IndexSearchRequest](docs/models/IndexSearchRequest.md)
- - [IndexSearchResponse](docs/models/IndexSearchResponse.md)
- - [MatchDocumentTag](docs/models/MatchDocumentTag.md)
- - [OnlyOfficeConfig](docs/models/OnlyOfficeConfig.md)
- - [OnlyOfficeConfigDocument](docs/models/OnlyOfficeConfigDocument.md)
- - [OnlyOfficeDocumentEditRequest](docs/models/OnlyOfficeDocumentEditRequest.md)
- - [OnlyOfficeDocumentNewRequest](docs/models/OnlyOfficeDocumentNewRequest.md)
- - [OnlyOfficeDocumentResponse](docs/models/OnlyOfficeDocumentResponse.md)
- - [OnlyOfficeDocumentSaveResponse](docs/models/OnlyOfficeDocumentSaveResponse.md)
- - [OnlyOfficeEditorConfig](docs/models/OnlyOfficeEditorConfig.md)
- - [QueryFulltextResponse](docs/models/QueryFulltextResponse.md)
- - [SearchResponseFields](docs/models/SearchResponseFields.md)
- - [SearchResultDocument](docs/models/SearchResultDocument.md)
- - [SetAntivirusResponse](docs/models/SetAntivirusResponse.md)
- - [SetConfigRequest](docs/models/SetConfigRequest.md)
- - [SetConfigResponse](docs/models/SetConfigResponse.md)
- - [SetDocumentFulltextRequest](docs/models/SetDocumentFulltextRequest.md)
- - [SetDocumentFulltextResponse](docs/models/SetDocumentFulltextResponse.md)
- - [SetDocumentOcrRequest](docs/models/SetDocumentOcrRequest.md)
- - [SetDocumentTagKeyRequest](docs/models/SetDocumentTagKeyRequest.md)
- - [SetDocumentVersionRequest](docs/models/SetDocumentVersionRequest.md)
- - [SetDocumentVersionResponse](docs/models/SetDocumentVersionResponse.md)
- - [Site](docs/models/Site.md)
- - [TagSchemaCompositeKey](docs/models/TagSchemaCompositeKey.md)
- - [TagSchemaOptional](docs/models/TagSchemaOptional.md)
- - [TagSchemaPostResponse](docs/models/TagSchemaPostResponse.md)
- - [TagSchemaRequired](docs/models/TagSchemaRequired.md)
- - [TagSchemaSummary](docs/models/TagSchemaSummary.md)
- - [TagSchemaTags](docs/models/TagSchemaTags.md)
- - [UpdateDocumentFulltextRequest](docs/models/UpdateDocumentFulltextRequest.md)
- - [UpdateMatchingDocumentTagsRequest](docs/models/UpdateMatchingDocumentTagsRequest.md)
- - [UpdateMatchingDocumentTagsResponse](docs/models/UpdateMatchingDocumentTagsResponse.md)
- - [UserShare](docs/models/UserShare.md)
- - [ValidationError](docs/models/ValidationError.md)
- - [ValidationErrorsResponse](docs/models/ValidationErrorsResponse.md)
- - [WebhookTag](docs/models/WebhookTag.md)
+ - [AddAction](docs/AddAction.md)
+ - [AddActionParameters](docs/AddActionParameters.md)
+ - [AddApiKeyRequest](docs/AddApiKeyRequest.md)
+ - [AddApiKeyResponse](docs/AddApiKeyResponse.md)
+ - [AddChildDocument](docs/AddChildDocument.md)
+ - [AddChildDocumentResponse](docs/AddChildDocumentResponse.md)
+ - [AddDocumentActionsRequest](docs/AddDocumentActionsRequest.md)
+ - [AddDocumentActionsResponse](docs/AddDocumentActionsResponse.md)
+ - [AddDocumentActionsRetryResponse](docs/AddDocumentActionsRetryResponse.md)
+ - [AddDocumentMetadata](docs/AddDocumentMetadata.md)
+ - [AddDocumentOcrRequest](docs/AddDocumentOcrRequest.md)
+ - [AddDocumentOcrResponse](docs/AddDocumentOcrResponse.md)
+ - [AddDocumentRequest](docs/AddDocumentRequest.md)
+ - [AddDocumentResponse](docs/AddDocumentResponse.md)
+ - [AddDocumentTag](docs/AddDocumentTag.md)
+ - [AddDocumentTagsRequest](docs/AddDocumentTagsRequest.md)
+ - [AddDocumentUploadRequest](docs/AddDocumentUploadRequest.md)
+ - [AddDocumentWorkflowDecisionsRequest](docs/AddDocumentWorkflowDecisionsRequest.md)
+ - [AddDocumentWorkflowDecisionsResponse](docs/AddDocumentWorkflowDecisionsResponse.md)
+ - [AddDocumentWorkflowRequest](docs/AddDocumentWorkflowRequest.md)
+ - [AddDocumentWorkflowResponse](docs/AddDocumentWorkflowResponse.md)
+ - [AddEsignatureDocusignRequest](docs/AddEsignatureDocusignRequest.md)
+ - [AddEsignatureDocusignResponse](docs/AddEsignatureDocusignResponse.md)
+ - [AddFolderRequest](docs/AddFolderRequest.md)
+ - [AddFolderResponse](docs/AddFolderResponse.md)
+ - [AddFolderShareRequest](docs/AddFolderShareRequest.md)
+ - [AddFolderShareResponse](docs/AddFolderShareResponse.md)
+ - [AddQueueRequest](docs/AddQueueRequest.md)
+ - [AddQueueResponse](docs/AddQueueResponse.md)
+ - [AddShare](docs/AddShare.md)
+ - [AddTagSchemaRequest](docs/AddTagSchemaRequest.md)
+ - [AddTagSchemaResponse](docs/AddTagSchemaResponse.md)
+ - [AddTagSchemaTags](docs/AddTagSchemaTags.md)
+ - [AddWebhookRequest](docs/AddWebhookRequest.md)
+ - [AddWebhookResponse](docs/AddWebhookResponse.md)
+ - [AddWebhookTagRequest](docs/AddWebhookTagRequest.md)
+ - [AddWorkflowRequest](docs/AddWorkflowRequest.md)
+ - [AddWorkflowResponse](docs/AddWorkflowResponse.md)
+ - [AddWorkflowStep](docs/AddWorkflowStep.md)
+ - [AddWorkflowStepDecision](docs/AddWorkflowStepDecision.md)
+ - [AddWorkflowStepQueue](docs/AddWorkflowStepQueue.md)
+ - [ApiKey](docs/ApiKey.md)
+ - [ChildDocument](docs/ChildDocument.md)
+ - [DeleteApiKeyResponse](docs/DeleteApiKeyResponse.md)
+ - [DeleteFolderResponse](docs/DeleteFolderResponse.md)
+ - [DeleteFulltextResponse](docs/DeleteFulltextResponse.md)
+ - [DeleteIndicesResponse](docs/DeleteIndicesResponse.md)
+ - [DeleteQueueResponse](docs/DeleteQueueResponse.md)
+ - [DeleteShareResponse](docs/DeleteShareResponse.md)
+ - [DeleteWorkflowResponse](docs/DeleteWorkflowResponse.md)
+ - [Document](docs/Document.md)
+ - [DocumentAction](docs/DocumentAction.md)
+ - [DocumentCompositeSearchTag](docs/DocumentCompositeSearchTag.md)
+ - [DocumentFulltextRequest](docs/DocumentFulltextRequest.md)
+ - [DocumentFulltextResponse](docs/DocumentFulltextResponse.md)
+ - [DocumentFulltextSearch](docs/DocumentFulltextSearch.md)
+ - [DocumentFulltextTag](docs/DocumentFulltextTag.md)
+ - [DocumentId](docs/DocumentId.md)
+ - [DocumentMetadata](docs/DocumentMetadata.md)
+ - [DocumentSearch](docs/DocumentSearch.md)
+ - [DocumentSearchMatchTag](docs/DocumentSearchMatchTag.md)
+ - [DocumentSearchMeta](docs/DocumentSearchMeta.md)
+ - [DocumentSearchRequest](docs/DocumentSearchRequest.md)
+ - [DocumentSearchResponse](docs/DocumentSearchResponse.md)
+ - [DocumentSearchTag](docs/DocumentSearchTag.md)
+ - [DocumentTag](docs/DocumentTag.md)
+ - [DocumentVersion](docs/DocumentVersion.md)
+ - [DocumentWorkflow](docs/DocumentWorkflow.md)
+ - [DocumentsCompressRequest](docs/DocumentsCompressRequest.md)
+ - [DocumentsCompressResponse](docs/DocumentsCompressResponse.md)
+ - [Error](docs/Error.md)
+ - [ErrorsResponse](docs/ErrorsResponse.md)
+ - [EsignatureDocusignCarbonCopy](docs/EsignatureDocusignCarbonCopy.md)
+ - [EsignatureDocusignRecipientTab](docs/EsignatureDocusignRecipientTab.md)
+ - [EsignatureDocusignSigner](docs/EsignatureDocusignSigner.md)
+ - [FulltextSearchItem](docs/FulltextSearchItem.md)
+ - [GetApiKeysResponse](docs/GetApiKeysResponse.md)
+ - [GetConfigurationResponse](docs/GetConfigurationResponse.md)
+ - [GetDocumentActionsResponse](docs/GetDocumentActionsResponse.md)
+ - [GetDocumentContentResponse](docs/GetDocumentContentResponse.md)
+ - [GetDocumentFulltextResponse](docs/GetDocumentFulltextResponse.md)
+ - [GetDocumentOcrResponse](docs/GetDocumentOcrResponse.md)
+ - [GetDocumentResponse](docs/GetDocumentResponse.md)
+ - [GetDocumentSync](docs/GetDocumentSync.md)
+ - [GetDocumentSyncResponse](docs/GetDocumentSyncResponse.md)
+ - [GetDocumentTagResponse](docs/GetDocumentTagResponse.md)
+ - [GetDocumentTagsResponse](docs/GetDocumentTagsResponse.md)
+ - [GetDocumentUrlResponse](docs/GetDocumentUrlResponse.md)
+ - [GetDocumentVersionsResponse](docs/GetDocumentVersionsResponse.md)
+ - [GetDocumentWorkflowResponse](docs/GetDocumentWorkflowResponse.md)
+ - [GetDocumentWorkflowsResponse](docs/GetDocumentWorkflowsResponse.md)
+ - [GetDocumentsResponse](docs/GetDocumentsResponse.md)
+ - [GetEsignatureDocusignConfigResponse](docs/GetEsignatureDocusignConfigResponse.md)
+ - [GetFoldersResponse](docs/GetFoldersResponse.md)
+ - [GetGroupsResponse](docs/GetGroupsResponse.md)
+ - [GetQueueResponse](docs/GetQueueResponse.md)
+ - [GetQueuesResponse](docs/GetQueuesResponse.md)
+ - [GetSitesResponse](docs/GetSitesResponse.md)
+ - [GetTagSchemaResponse](docs/GetTagSchemaResponse.md)
+ - [GetTagSchemasResponse](docs/GetTagSchemasResponse.md)
+ - [GetUserActivitesResponse](docs/GetUserActivitesResponse.md)
+ - [GetUserSharesResponse](docs/GetUserSharesResponse.md)
+ - [GetUsersInGroupResponse](docs/GetUsersInGroupResponse.md)
+ - [GetVersionResponse](docs/GetVersionResponse.md)
+ - [GetWebhookResponse](docs/GetWebhookResponse.md)
+ - [GetWebhookTagsResponse](docs/GetWebhookTagsResponse.md)
+ - [GetWebhooksResponse](docs/GetWebhooksResponse.md)
+ - [GetWorkflowDocumentsResponse](docs/GetWorkflowDocumentsResponse.md)
+ - [GetWorkflowQueueDocumentsResponse](docs/GetWorkflowQueueDocumentsResponse.md)
+ - [GetWorkflowResponse](docs/GetWorkflowResponse.md)
+ - [GetWorkflowsResponse](docs/GetWorkflowsResponse.md)
+ - [Group](docs/Group.md)
+ - [IndexFolderMoveRequest](docs/IndexFolderMoveRequest.md)
+ - [IndexFolderMoveResponse](docs/IndexFolderMoveResponse.md)
+ - [IndexSearch](docs/IndexSearch.md)
+ - [IndexSearchRequest](docs/IndexSearchRequest.md)
+ - [IndexSearchResponse](docs/IndexSearchResponse.md)
+ - [MatchDocumentTag](docs/MatchDocumentTag.md)
+ - [OnlyOfficeConfig](docs/OnlyOfficeConfig.md)
+ - [OnlyOfficeConfigDocument](docs/OnlyOfficeConfigDocument.md)
+ - [OnlyOfficeDocumentNewRequest](docs/OnlyOfficeDocumentNewRequest.md)
+ - [OnlyOfficeDocumentResponse](docs/OnlyOfficeDocumentResponse.md)
+ - [OnlyOfficeDocumentSaveResponse](docs/OnlyOfficeDocumentSaveResponse.md)
+ - [OnlyOfficeEditorConfig](docs/OnlyOfficeEditorConfig.md)
+ - [QueryFulltextResponse](docs/QueryFulltextResponse.md)
+ - [Queue](docs/Queue.md)
+ - [SearchResponseFields](docs/SearchResponseFields.md)
+ - [SearchResultDocument](docs/SearchResultDocument.md)
+ - [SetAntivirusResponse](docs/SetAntivirusResponse.md)
+ - [SetDocumentFulltextRequest](docs/SetDocumentFulltextRequest.md)
+ - [SetDocumentFulltextResponse](docs/SetDocumentFulltextResponse.md)
+ - [SetDocumentOcrRequest](docs/SetDocumentOcrRequest.md)
+ - [SetDocumentRestoreResponse](docs/SetDocumentRestoreResponse.md)
+ - [SetDocumentTagKeyRequest](docs/SetDocumentTagKeyRequest.md)
+ - [SetDocumentVersionRequest](docs/SetDocumentVersionRequest.md)
+ - [SetDocumentVersionResponse](docs/SetDocumentVersionResponse.md)
+ - [SetEsignatureDocusignConfigRequest](docs/SetEsignatureDocusignConfigRequest.md)
+ - [SetEsignatureDocusignConfigResponse](docs/SetEsignatureDocusignConfigResponse.md)
+ - [SetWorkflowRequest](docs/SetWorkflowRequest.md)
+ - [SetWorkflowResponse](docs/SetWorkflowResponse.md)
+ - [Site](docs/Site.md)
+ - [TagSchema](docs/TagSchema.md)
+ - [TagSchemaCompositeKey](docs/TagSchemaCompositeKey.md)
+ - [TagSchemaOptional](docs/TagSchemaOptional.md)
+ - [TagSchemaRequired](docs/TagSchemaRequired.md)
+ - [TagSchemaSummary](docs/TagSchemaSummary.md)
+ - [TagSchemaTags](docs/TagSchemaTags.md)
+ - [UpdateConfigurationRequest](docs/UpdateConfigurationRequest.md)
+ - [UpdateConfigurationResponse](docs/UpdateConfigurationResponse.md)
+ - [UpdateDocumentFulltextRequest](docs/UpdateDocumentFulltextRequest.md)
+ - [UpdateMatchingDocumentTagsRequest](docs/UpdateMatchingDocumentTagsRequest.md)
+ - [UpdateMatchingDocumentTagsRequestMatch](docs/UpdateMatchingDocumentTagsRequestMatch.md)
+ - [UpdateMatchingDocumentTagsRequestUpdate](docs/UpdateMatchingDocumentTagsRequestUpdate.md)
+ - [UpdateMatchingDocumentTagsResponse](docs/UpdateMatchingDocumentTagsResponse.md)
+ - [User](docs/User.md)
+ - [UserActivity](docs/UserActivity.md)
+ - [UserShare](docs/UserShare.md)
+ - [ValidationError](docs/ValidationError.md)
+ - [ValidationErrorsResponse](docs/ValidationErrorsResponse.md)
+ - [WebhookTag](docs/WebhookTag.md)
+ - [WorkflowDocument](docs/WorkflowDocument.md)
+ - [WorkflowQueue](docs/WorkflowQueue.md)
+ - [WorkflowStep](docs/WorkflowStep.md)
+ - [WorkflowStepDecision](docs/WorkflowStepDecision.md)
+ - [WorkflowSummary](docs/WorkflowSummary.md)
 
+
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
- Endpoints do not require authorization.
+Endpoints do not require authorization.
 
 
 ## Author
 
 support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
-support@formkiq.com
 
-## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in formkiq_client.apis and formkiq_client.models may fail with a
-RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
-Solution 1:
-Use specific imports for apis and models like:
-- `from formkiq_client.apis.default_api import DefaultApi`
-- `from formkiq_client.model.pet import Pet`
-
-Solution 1:
-Before importing the package, adjust the maximum recursion limit as shown below:
-```
-import sys
-sys.setrecursionlimit(1500)
-import formkiq_client
-from formkiq_client.apis import *
-from formkiq_client.models import *
-```
