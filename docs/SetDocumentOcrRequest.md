@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of SetDocumentOcrRequest from a JSON string
 set_document_ocr_request_instance = SetDocumentOcrRequest.from_json(json)
 # print the JSON string representation of the object
-print SetDocumentOcrRequest.to_json()
+print(SetDocumentOcrRequest.to_json())
 
 # convert the object into a dict
 set_document_ocr_request_dict = set_document_ocr_request_instance.to_dict()

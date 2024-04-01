@@ -30,8 +30,6 @@ Creates a new document; body may include document content if less than 5 MB  See
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_request import AddDocumentRequest
 from formkiq_client.models.add_document_response import AddDocumentResponse
@@ -110,8 +108,6 @@ Returns a URL that can be used to upload document content and create a new docum
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_upload_request import AddDocumentUploadRequest
 from formkiq_client.models.get_document_url_response import GetDocumentUrlResponse
@@ -193,8 +189,6 @@ Compress documents into an .ZIP archive file, and returns a S3 presigned url for
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.documents_compress_request import DocumentsCompressRequest
 from formkiq_client.models.documents_compress_response import DocumentsCompressResponse
@@ -270,8 +264,6 @@ Delete a document
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.rest import ApiException
 from pprint import pprint
@@ -345,8 +337,6 @@ Retrieves a document's details, i.e., metadata
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_response import GetDocumentResponse
 from formkiq_client.rest import ApiException
@@ -423,8 +413,6 @@ Get a document's contents. Certain content types, text/*, application/json, and 
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_content_response import GetDocumentContentResponse
 from formkiq_client.rest import ApiException
@@ -503,8 +491,6 @@ Returns a URL that can be used to upload documents for a specific documentId; th
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_url_response import GetDocumentUrlResponse
 from formkiq_client.rest import ApiException
@@ -585,8 +571,6 @@ Retrieve the document syncs with external services status
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_sync_response import GetDocumentSyncResponse
 from formkiq_client.rest import ApiException
@@ -665,8 +649,6 @@ Returns a URL that can be used to upload document content and create a new docum
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_url_response import GetDocumentUrlResponse
 from formkiq_client.rest import ApiException
@@ -747,8 +729,6 @@ Returns a URL for the document's contents; this URL will expire (the default is 
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_url_response import GetDocumentUrlResponse
 from formkiq_client.rest import ApiException
@@ -831,8 +811,6 @@ Returns a list of the most recent documents added, ordered by inserted, descendi
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_documents_response import GetDocumentsResponse
 from formkiq_client.rest import ApiException
@@ -919,8 +897,6 @@ Restores a soft deleted document
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.set_document_restore_response import SetDocumentRestoreResponse
 from formkiq_client.rest import ApiException
@@ -985,7 +961,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_document**
-> AddDocumentResponse update_document(document_id, add_document_request, site_id=site_id, share_key=share_key)
+> AddDocumentResponse update_document(document_id, update_document_request, site_id=site_id, share_key=share_key)
 
 Update document
 
@@ -995,11 +971,9 @@ Update a document's details, i.e., metadata
 
 
 ```python
-import time
-import os
 import formkiq_client
-from formkiq_client.models.add_document_request import AddDocumentRequest
 from formkiq_client.models.add_document_response import AddDocumentResponse
+from formkiq_client.models.update_document_request import UpdateDocumentRequest
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -1019,13 +993,13 @@ with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    add_document_request = {"path":"test.txt","contentType":"text/plain","isBase64":false,"content":"This is sample data file","tags":[{"key":"category","value":"sample"},{"key":"players","values":["111","222"]}],"metadata":[{"key":"info","value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}]} # AddDocumentRequest | 
+    update_document_request = {"path":"test.txt","contentType":"text/plain","isBase64":false,"content":"This is sample data file","tags":[{"key":"category","value":"sample"},{"key":"players","values":["111","222"]}],"metadata":[{"key":"info","value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}]} # UpdateDocumentRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Update document
-        api_response = api_instance.update_document(document_id, add_document_request, site_id=site_id, share_key=share_key)
+        api_response = api_instance.update_document(document_id, update_document_request, site_id=site_id, share_key=share_key)
         print("The response of DocumentsApi->update_document:\n")
         pprint(api_response)
     except Exception as e:
@@ -1040,7 +1014,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
- **add_document_request** | [**AddDocumentRequest**](AddDocumentRequest.md)|  | 
+ **update_document_request** | [**UpdateDocumentRequest**](UpdateDocumentRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 

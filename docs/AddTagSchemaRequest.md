@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddTagSchemaRequest from a JSON string
 add_tag_schema_request_instance = AddTagSchemaRequest.from_json(json)
 # print the JSON string representation of the object
-print AddTagSchemaRequest.to_json()
+print(AddTagSchemaRequest.to_json())
 
 # convert the object into a dict
 add_tag_schema_request_dict = add_tag_schema_request_instance.to_dict()

@@ -31,7 +31,7 @@ json = "{}"
 # create an instance of Document from a JSON string
 document_instance = Document.from_json(json)
 # print the JSON string representation of the object
-print Document.to_json()
+print(Document.to_json())
 
 # convert the object into a dict
 document_dict = document_instance.to_dict()

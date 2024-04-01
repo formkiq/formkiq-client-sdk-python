@@ -4,17 +4,20 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_api_key**](SystemManagementApi.md#add_api_key) | **POST** /configuration/apiKeys | Add API Key
-[**delete_api_key**](SystemManagementApi.md#delete_api_key) | **DELETE** /configuration/apiKeys/{apiKey} | Delete API Key
-[**get_api_keys**](SystemManagementApi.md#get_api_keys) | **GET** /configuration/apiKeys | Get API Keys
-[**get_configuration**](SystemManagementApi.md#get_configuration) | **GET** /configuration | Get site configuration
+[**add_api_key**](SystemManagementApi.md#add_api_key) | **POST** /sites/{siteId}/apiKeys | Add API Key
+[**delete_api_key**](SystemManagementApi.md#delete_api_key) | **DELETE** /sites/{siteId}/apiKeys/{apiKey} | Delete API Key
+[**delete_opensearch_index**](SystemManagementApi.md#delete_opensearch_index) | **DELETE** /sites/{siteId}/opensearch/index | Deletst site(s) OpenSearch index
+[**get_api_keys**](SystemManagementApi.md#get_api_keys) | **GET** /sites/{siteId}/apiKeys | Get API Keys
+[**get_configuration**](SystemManagementApi.md#get_configuration) | **GET** /sites/{siteId}/configuration | Get site configuration
+[**get_opensearch_index**](SystemManagementApi.md#get_opensearch_index) | **GET** /sites/{siteId}/opensearch/index | Get site(s) OpenSearch index settings
 [**get_sites**](SystemManagementApi.md#get_sites) | **GET** /sites | Get site(s) access
 [**get_version**](SystemManagementApi.md#get_version) | **GET** /version | Get FormKiQ version
-[**update_configuration**](SystemManagementApi.md#update_configuration) | **PATCH** /configuration | Update site configuration
+[**set_opensearch_index**](SystemManagementApi.md#set_opensearch_index) | **PUT** /sites/{siteId}/opensearch/index | Set site(s) OpenSearch index settings
+[**update_configuration**](SystemManagementApi.md#update_configuration) | **PATCH** /sites/{siteId}/configuration | Update site configuration
 
 
 # **add_api_key**
-> AddApiKeyResponse add_api_key(add_api_key_request, site_id=site_id)
+> AddApiKeyResponse add_api_key(site_id, add_api_key_request)
 
 Add API Key
 
@@ -24,8 +27,6 @@ Adds a new API Key
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_api_key_request import AddApiKeyRequest
 from formkiq_client.models.add_api_key_response import AddApiKeyResponse
@@ -47,12 +48,12 @@ configuration = formkiq_client.Configuration(
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
     add_api_key_request = {"name":"My API Key"} # AddApiKeyRequest | 
-    site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
         # Add API Key
-        api_response = api_instance.add_api_key(add_api_key_request, site_id=site_id)
+        api_response = api_instance.add_api_key(site_id, add_api_key_request)
         print("The response of SystemManagementApi->add_api_key:\n")
         pprint(api_response)
     except Exception as e:
@@ -66,8 +67,8 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
  **add_api_key_request** | [**AddApiKeyRequest**](AddApiKeyRequest.md)|  | 
- **site_id** | **str**| Site Identifier | [optional] 
 
 ### Return type
 
@@ -91,7 +92,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_api_key**
-> DeleteApiKeyResponse delete_api_key(api_key, site_id=site_id)
+> DeleteApiKeyResponse delete_api_key(site_id, api_key)
 
 Delete API Key
 
@@ -101,8 +102,6 @@ Adds a new API Key
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.delete_api_key_response import DeleteApiKeyResponse
 from formkiq_client.rest import ApiException
@@ -123,12 +122,12 @@ configuration = formkiq_client.Configuration(
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
     api_key = 'api_key_example' # str | API Key
-    site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
         # Delete API Key
-        api_response = api_instance.delete_api_key(api_key, site_id=site_id)
+        api_response = api_instance.delete_api_key(site_id, api_key)
         print("The response of SystemManagementApi->delete_api_key:\n")
         pprint(api_response)
     except Exception as e:
@@ -142,8 +141,8 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
  **api_key** | **str**| API Key | 
- **site_id** | **str**| Site Identifier | [optional] 
 
 ### Return type
 
@@ -166,8 +165,80 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_opensearch_index**
+> DeleteOpenSearchIndexResponse delete_opensearch_index(site_id)
+
+Deletst site(s) OpenSearch index
+
+Deletes the OpenSearch index
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.delete_open_search_index_response import DeleteOpenSearchIndexResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+
+    try:
+        # Deletst site(s) OpenSearch index
+        api_response = api_instance.delete_opensearch_index(site_id)
+        print("The response of SystemManagementApi->delete_opensearch_index:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->delete_opensearch_index: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+
+### Return type
+
+[**DeleteOpenSearchIndexResponse**](DeleteOpenSearchIndexResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_api_keys**
-> GetApiKeysResponse get_api_keys(site_id=site_id)
+> GetApiKeysResponse get_api_keys(site_id)
 
 Get API Keys
 
@@ -177,8 +248,6 @@ Returns the list of ApiKeys
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_api_keys_response import GetApiKeysResponse
 from formkiq_client.rest import ApiException
@@ -199,11 +268,11 @@ configuration = formkiq_client.Configuration(
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.SystemManagementApi(api_client)
-    site_id = 'site_id_example' # str | Site Identifier (optional)
+    site_id = 'site_id_example' # str | Site Identifier
 
     try:
         # Get API Keys
-        api_response = api_instance.get_api_keys(site_id=site_id)
+        api_response = api_instance.get_api_keys(site_id)
         print("The response of SystemManagementApi->get_api_keys:\n")
         pprint(api_response)
     except Exception as e:
@@ -217,7 +286,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **str**| Site Identifier | [optional] 
+ **site_id** | **str**| Site Identifier | 
 
 ### Return type
 
@@ -241,7 +310,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_configuration**
-> GetConfigurationResponse get_configuration(site_id=site_id)
+> GetConfigurationResponse get_configuration(site_id)
 
 Get site configuration
 
@@ -251,8 +320,6 @@ Returns the list of sites that the user has access to
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_configuration_response import GetConfigurationResponse
 from formkiq_client.rest import ApiException
@@ -273,11 +340,11 @@ configuration = formkiq_client.Configuration(
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.SystemManagementApi(api_client)
-    site_id = 'site_id_example' # str | Site Identifier (optional)
+    site_id = 'site_id_example' # str | Site Identifier
 
     try:
         # Get site configuration
-        api_response = api_instance.get_configuration(site_id=site_id)
+        api_response = api_instance.get_configuration(site_id)
         print("The response of SystemManagementApi->get_configuration:\n")
         pprint(api_response)
     except Exception as e:
@@ -291,11 +358,83 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **str**| Site Identifier | [optional] 
+ **site_id** | **str**| Site Identifier | 
 
 ### Return type
 
 [**GetConfigurationResponse**](GetConfigurationResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_opensearch_index**
+> GetOpenSearchIndexResponse get_opensearch_index(site_id)
+
+Get site(s) OpenSearch index settings
+
+Returns the OpenSearch index settings
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_open_search_index_response import GetOpenSearchIndexResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+
+    try:
+        # Get site(s) OpenSearch index settings
+        api_response = api_instance.get_opensearch_index(site_id)
+        print("The response of SystemManagementApi->get_opensearch_index:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->get_opensearch_index: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+
+### Return type
+
+[**GetOpenSearchIndexResponse**](GetOpenSearchIndexResponse.md)
 
 ### Authorization
 
@@ -325,8 +464,6 @@ Returns the list of sites that the user has access to
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_sites_response import GetSitesResponse
 from formkiq_client.rest import ApiException
@@ -395,8 +532,6 @@ Return the version of FormKiQ
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_version_response import GetVersionResponse
 from formkiq_client.rest import ApiException
@@ -454,8 +589,83 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **set_opensearch_index**
+> SetOpenSearchIndexResponse set_opensearch_index(site_id, set_open_search_index_request)
+
+Set site(s) OpenSearch index settings
+
+Sets the OpenSearch index settings
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.set_open_search_index_request import SetOpenSearchIndexRequest
+from formkiq_client.models.set_open_search_index_response import SetOpenSearchIndexResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    set_open_search_index_request = formkiq_client.SetOpenSearchIndexRequest() # SetOpenSearchIndexRequest | 
+
+    try:
+        # Set site(s) OpenSearch index settings
+        api_response = api_instance.set_opensearch_index(site_id, set_open_search_index_request)
+        print("The response of SystemManagementApi->set_opensearch_index:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->set_opensearch_index: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **set_open_search_index_request** | [**SetOpenSearchIndexRequest**](SetOpenSearchIndexRequest.md)|  | 
+
+### Return type
+
+[**SetOpenSearchIndexResponse**](SetOpenSearchIndexResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_configuration**
-> UpdateConfigurationResponse update_configuration(update_configuration_request, site_id=site_id)
+> UpdateConfigurationResponse update_configuration(site_id, update_configuration_request)
 
 Update site configuration
 
@@ -465,8 +675,6 @@ Update the System Management configuration
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.update_configuration_request import UpdateConfigurationRequest
 from formkiq_client.models.update_configuration_response import UpdateConfigurationResponse
@@ -488,12 +696,12 @@ configuration = formkiq_client.Configuration(
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
     update_configuration_request = {"chatGptApiKey":"ABC","maxContentLengthBytes":"1000000","maxDocuments":"1000","maxWebhooks":"10","notificationEmail":"<email>"} # UpdateConfigurationRequest | 
-    site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
         # Update site configuration
-        api_response = api_instance.update_configuration(update_configuration_request, site_id=site_id)
+        api_response = api_instance.update_configuration(site_id, update_configuration_request)
         print("The response of SystemManagementApi->update_configuration:\n")
         pprint(api_response)
     except Exception as e:
@@ -507,8 +715,8 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
  **update_configuration_request** | [**UpdateConfigurationRequest**](UpdateConfigurationRequest.md)|  | 
- **site_id** | **str**| Site Identifier | [optional] 
 
 ### Return type
 

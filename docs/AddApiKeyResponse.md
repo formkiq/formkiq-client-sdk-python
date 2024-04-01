@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddApiKeyResponse from a JSON string
 add_api_key_response_instance = AddApiKeyResponse.from_json(json)
 # print the JSON string representation of the object
-print AddApiKeyResponse.to_json()
+print(AddApiKeyResponse.to_json())
 
 # convert the object into a dict
 add_api_key_response_dict = add_api_key_response_instance.to_dict()

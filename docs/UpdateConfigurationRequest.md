@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of UpdateConfigurationRequest from a JSON string
 update_configuration_request_instance = UpdateConfigurationRequest.from_json(json)
 # print the JSON string representation of the object
-print UpdateConfigurationRequest.to_json()
+print(UpdateConfigurationRequest.to_json())
 
 # convert the object into a dict
 update_configuration_request_dict = update_configuration_request_instance.to_dict()

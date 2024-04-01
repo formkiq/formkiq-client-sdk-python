@@ -34,7 +34,7 @@ json = "{}"
 # create an instance of SearchResultDocument from a JSON string
 search_result_document_instance = SearchResultDocument.from_json(json)
 # print the JSON string representation of the object
-print SearchResultDocument.to_json()
+print(SearchResultDocument.to_json())
 
 # convert the object into a dict
 search_result_document_dict = search_result_document_instance.to_dict()

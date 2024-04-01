@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of UpdateMatchingDocumentTagsRequest from a JSON string
 update_matching_document_tags_request_instance = UpdateMatchingDocumentTagsRequest.from_json(json)
 # print the JSON string representation of the object
-print UpdateMatchingDocumentTagsRequest.to_json()
+print(UpdateMatchingDocumentTagsRequest.to_json())
 
 # convert the object into a dict
 update_matching_document_tags_request_dict = update_matching_document_tags_request_instance.to_dict()

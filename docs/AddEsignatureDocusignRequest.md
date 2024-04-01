@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of AddEsignatureDocusignRequest from a JSON string
 add_esignature_docusign_request_instance = AddEsignatureDocusignRequest.from_json(json)
 # print the JSON string representation of the object
-print AddEsignatureDocusignRequest.to_json()
+print(AddEsignatureDocusignRequest.to_json())
 
 # convert the object into a dict
 add_esignature_docusign_request_dict = add_esignature_docusign_request_instance.to_dict()

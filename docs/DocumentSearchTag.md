@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **begins_with** | **str** | Searches for strings that begin with | [optional] 
 **eq** | **str** | Searches for strings that eq | [optional] 
 **eq_or** | **List[str]** | Searches for ANY strings that eq | [optional] 
+**range** | [**DocumentSearchRange**](DocumentSearchRange.md) |  | [optional] 
 **key** | **str** | Tag key to search | 
 
 ## Example
@@ -20,7 +21,7 @@ json = "{}"
 # create an instance of DocumentSearchTag from a JSON string
 document_search_tag_instance = DocumentSearchTag.from_json(json)
 # print the JSON string representation of the object
-print DocumentSearchTag.to_json()
+print(DocumentSearchTag.to_json())
 
 # convert the object into a dict
 document_search_tag_dict = document_search_tag_instance.to_dict()

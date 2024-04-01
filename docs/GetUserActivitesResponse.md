@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of GetUserActivitesResponse from a JSON string
 get_user_activites_response_instance = GetUserActivitesResponse.from_json(json)
 # print the JSON string representation of the object
-print GetUserActivitesResponse.to_json()
+print(GetUserActivitesResponse.to_json())
 
 # convert the object into a dict
 get_user_activites_response_dict = get_user_activites_response_instance.to_dict()

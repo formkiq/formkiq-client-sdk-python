@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of GetDocumentSync from a JSON string
 get_document_sync_instance = GetDocumentSync.from_json(json)
 # print the JSON string representation of the object
-print GetDocumentSync.to_json()
+print(GetDocumentSync.to_json())
 
 # convert the object into a dict
 get_document_sync_dict = get_document_sync_instance.to_dict()

@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of IndexSearchResponse from a JSON string
 index_search_response_instance = IndexSearchResponse.from_json(json)
 # print the JSON string representation of the object
-print IndexSearchResponse.to_json()
+print(IndexSearchResponse.to_json())
 
 # convert the object into a dict
 index_search_response_dict = index_search_response_instance.to_dict()

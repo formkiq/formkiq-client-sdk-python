@@ -19,8 +19,6 @@ Returns the list of user groups configured in the application
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_groups_response import GetGroupsResponse
 from formkiq_client.rest import ApiException
@@ -95,8 +93,6 @@ Returns the list of users in a group
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_users_in_group_response import GetUsersInGroupResponse
 from formkiq_client.rest import ApiException

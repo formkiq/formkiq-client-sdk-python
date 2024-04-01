@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddFolderRequest from a JSON string
 add_folder_request_instance = AddFolderRequest.from_json(json)
 # print the JSON string representation of the object
-print AddFolderRequest.to_json()
+print(AddFolderRequest.to_json())
 
 # convert the object into a dict
 add_folder_request_dict = add_folder_request_instance.to_dict()

@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of DocumentSearchRequest from a JSON string
 document_search_request_instance = DocumentSearchRequest.from_json(json)
 # print the JSON string representation of the object
-print DocumentSearchRequest.to_json()
+print(DocumentSearchRequest.to_json())
 
 # convert the object into a dict
 document_search_request_dict = document_search_request_instance.to_dict()

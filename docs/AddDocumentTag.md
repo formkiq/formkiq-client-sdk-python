@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of AddDocumentTag from a JSON string
 add_document_tag_instance = AddDocumentTag.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentTag.to_json()
+print(AddDocumentTag.to_json())
 
 # convert the object into a dict
 add_document_tag_dict = add_document_tag_instance.to_dict()

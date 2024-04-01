@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of DocumentSearchMatchTag from a JSON string
 document_search_match_tag_instance = DocumentSearchMatchTag.from_json(json)
 # print the JSON string representation of the object
-print DocumentSearchMatchTag.to_json()
+print(DocumentSearchMatchTag.to_json())
 
 # convert the object into a dict
 document_search_match_tag_dict = document_search_match_tag_instance.to_dict()

@@ -15,8 +15,9 @@ Name | Type | Description | Notes
 **document_id** | **str** | Document Identifier | [optional] 
 **created_by** | **str** | User who added document | [optional] 
 **content_length** | **int** | Document size | [optional] 
-**tags** | **object** |  | [optional] 
-**metadata** | **object** |  | [optional] 
+**tags** | **Dict[str, object]** |  | [optional] 
+**metadata** | **Dict[str, object]** |  | [optional] 
+**access_attributes** | **Dict[str, object]** |  | [optional] 
 
 ## Example
 
@@ -28,7 +29,7 @@ json = "{}"
 # create an instance of GetDocumentFulltextResponse from a JSON string
 get_document_fulltext_response_instance = GetDocumentFulltextResponse.from_json(json)
 # print the JSON string representation of the object
-print GetDocumentFulltextResponse.to_json()
+print(GetDocumentFulltextResponse.to_json())
 
 # convert the object into a dict
 get_document_fulltext_response_dict = get_document_fulltext_response_instance.to_dict()

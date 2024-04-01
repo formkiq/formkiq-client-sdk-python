@@ -21,8 +21,6 @@ Document optical character recognition (OCR) request; extract text and data from
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_ocr_request import AddDocumentOcrRequest
 from formkiq_client.models.add_document_ocr_response import AddDocumentOcrResponse
@@ -100,8 +98,6 @@ Delete a document's optical character recognition (OCR) result, if exists; ONLY 
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.rest import ApiException
 from pprint import pprint
@@ -173,8 +169,6 @@ Get a document's optical character recognition (OCR) result, if exists; ONLY ava
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_ocr_response import GetDocumentOcrResponse
 from formkiq_client.rest import ApiException
@@ -255,8 +249,6 @@ Set a document's optical character recognition (OCR) result for a document; ONLY
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_ocr_response import AddDocumentOcrResponse
 from formkiq_client.models.set_document_ocr_request import SetDocumentOcrRequest

@@ -1,8 +1,10 @@
 # flake8: noqa
 
 # import apis into api package
+from formkiq_client.api.access_control_api import AccessControlApi
 from formkiq_client.api.advanced_document_search_api import AdvancedDocumentSearchApi
 from formkiq_client.api.antivirus_api import AntivirusApi
+from formkiq_client.api.case_management_api import CaseManagementApi
 from formkiq_client.api.custom_index_api import CustomIndexApi
 from formkiq_client.api.document_actions_api import DocumentActionsApi
 from formkiq_client.api.document_folders_api import DocumentFoldersApi
@@ -14,8 +16,10 @@ from formkiq_client.api.document_versions_api import DocumentVersionsApi
 from formkiq_client.api.document_workflows_api import DocumentWorkflowsApi
 from formkiq_client.api.documents_api import DocumentsApi
 from formkiq_client.api.e_signature_api import ESignatureApi
+from formkiq_client.api.examine_objects_api import ExamineObjectsApi
 from formkiq_client.api.onlyoffice_api import OnlyofficeApi
 from formkiq_client.api.public_api import PublicApi
+from formkiq_client.api.rulesets_api import RulesetsApi
 from formkiq_client.api.system_management_api import SystemManagementApi
 from formkiq_client.api.tag_index_api import TagIndexApi
 from formkiq_client.api.tag_schema_api import TagSchemaApi

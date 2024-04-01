@@ -28,7 +28,7 @@ json = "{}"
 # create an instance of DocumentVersion from a JSON string
 document_version_instance = DocumentVersion.from_json(json)
 # print the JSON string representation of the object
-print DocumentVersion.to_json()
+print(DocumentVersion.to_json())
 
 # convert the object into a dict
 document_version_dict = document_version_instance.to_dict()

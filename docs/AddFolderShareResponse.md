@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddFolderShareResponse from a JSON string
 add_folder_share_response_instance = AddFolderShareResponse.from_json(json)
 # print the JSON string representation of the object
-print AddFolderShareResponse.to_json()
+print(AddFolderShareResponse.to_json())
 
 # convert the object into a dict
 add_folder_share_response_dict = add_folder_share_response_instance.to_dict()

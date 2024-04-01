@@ -20,8 +20,6 @@ Creates a new folder share; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_folder_share_request import AddFolderShareRequest
 from formkiq_client.models.add_folder_share_response import AddFolderShareResponse
@@ -100,8 +98,6 @@ Delete a specific document share; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.delete_share_response import DeleteShareResponse
 from formkiq_client.rest import ApiException
@@ -174,8 +170,6 @@ Get a listing of user folder/document shares; ONLY available with FormKiQ Enterp
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_user_shares_response import GetUserSharesResponse
 from formkiq_client.rest import ApiException

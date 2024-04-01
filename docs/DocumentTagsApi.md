@@ -26,8 +26,6 @@ Add multiple tags to a document; this endpoint also accepts a different body par
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
 from formkiq_client.rest import ApiException
@@ -104,8 +102,6 @@ Delete a document tag by using its key
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.rest import ApiException
 from pprint import pprint
@@ -179,8 +175,6 @@ Delete a specific document tag's key/value combination; the request will be igno
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.rest import ApiException
 from pprint import pprint
@@ -258,8 +252,6 @@ Get a document tag by using its key
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_tag_response import GetDocumentTagResponse
 from formkiq_client.rest import ApiException
@@ -338,8 +330,6 @@ Get a listing of a document's tags
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_tags_response import GetDocumentTagsResponse
 from formkiq_client.rest import ApiException
@@ -422,8 +412,6 @@ Update any and all values of a document tag, by using its key; you can supply on
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.set_document_tag_key_request import SetDocumentTagKeyRequest
 from formkiq_client.rest import ApiException
@@ -500,8 +488,6 @@ Set multiple tags to a document; this endpoint also accepts a different body par
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
 from formkiq_client.rest import ApiException
@@ -576,8 +562,6 @@ Updates multiple tags to a document; this endpoint also accepts a different body
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
 from formkiq_client.rest import ApiException
@@ -652,8 +636,6 @@ This API request allows the adding/updating of multiple document tag(s) based on
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.update_matching_document_tags_request import UpdateMatchingDocumentTagsRequest
 from formkiq_client.models.update_matching_document_tags_response import UpdateMatchingDocumentTagsResponse

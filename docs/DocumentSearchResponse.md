@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of DocumentSearchResponse from a JSON string
 document_search_response_instance = DocumentSearchResponse.from_json(json)
 # print the JSON string representation of the object
-print DocumentSearchResponse.to_json()
+print(DocumentSearchResponse.to_json())
 
 # convert the object into a dict
 document_search_response_dict = document_search_response_instance.to_dict()

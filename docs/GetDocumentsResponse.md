@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of GetDocumentsResponse from a JSON string
 get_documents_response_instance = GetDocumentsResponse.from_json(json)
 # print the JSON string representation of the object
-print GetDocumentsResponse.to_json()
+print(GetDocumentsResponse.to_json())
 
 # convert the object into a dict
 get_documents_response_dict = get_documents_response_instance.to_dict()

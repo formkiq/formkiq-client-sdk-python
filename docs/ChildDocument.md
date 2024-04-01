@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of ChildDocument from a JSON string
 child_document_instance = ChildDocument.from_json(json)
 # print the JSON string representation of the object
-print ChildDocument.to_json()
+print(ChildDocument.to_json())
 
 # convert the object into a dict
 child_document_dict = child_document_instance.to_dict()

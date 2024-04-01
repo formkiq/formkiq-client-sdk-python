@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddDocumentActionsRetryResponse from a JSON string
 add_document_actions_retry_response_instance = AddDocumentActionsRetryResponse.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentActionsRetryResponse.to_json()
+print(AddDocumentActionsRetryResponse.to_json())
 
 # convert the object into a dict
 add_document_actions_retry_response_dict = add_document_actions_retry_response_instance.to_dict()

@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of SetDocumentFulltextRequest from a JSON string
 set_document_fulltext_request_instance = SetDocumentFulltextRequest.from_json(json)
 # print the JSON string representation of the object
-print SetDocumentFulltextRequest.to_json()
+print(SetDocumentFulltextRequest.to_json())
 
 # convert the object into a dict
 set_document_fulltext_request_dict = set_document_fulltext_request_instance.to_dict()

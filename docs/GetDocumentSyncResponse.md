@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of GetDocumentSyncResponse from a JSON string
 get_document_sync_response_instance = GetDocumentSyncResponse.from_json(json)
 # print the JSON string representation of the object
-print GetDocumentSyncResponse.to_json()
+print(GetDocumentSyncResponse.to_json())
 
 # convert the object into a dict
 get_document_sync_response_dict = get_document_sync_response_instance.to_dict()

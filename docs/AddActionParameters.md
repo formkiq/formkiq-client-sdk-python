@@ -18,7 +18,6 @@ Name | Type | Description | Notes
 **notification_text** | **str** | Text of the notification | [optional] 
 **notification_html** | **str** | Html of the notification | [optional] 
 **tags** | **str** | DocumentTagging: Comma-deliminted list of keywords to generate tags for | [optional] 
-**queue_name** | **str** | Name of Queue action | [optional] 
 
 ## Example
 
@@ -30,7 +29,7 @@ json = "{}"
 # create an instance of AddActionParameters from a JSON string
 add_action_parameters_instance = AddActionParameters.from_json(json)
 # print the JSON string representation of the object
-print AddActionParameters.to_json()
+print(AddActionParameters.to_json())
 
 # convert the object into a dict
 add_action_parameters_dict = add_action_parameters_instance.to_dict()

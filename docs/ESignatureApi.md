@@ -21,8 +21,6 @@ Create a DocuSign E-Signature request; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_esignature_docusign_request import AddEsignatureDocusignRequest
 from formkiq_client.models.add_esignature_docusign_response import AddEsignatureDocusignResponse
@@ -101,8 +99,6 @@ DocuSign callback URL handler; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_esignature_docusign_response import AddEsignatureDocusignResponse
 from formkiq_client.rest import ApiException
@@ -167,8 +163,6 @@ Get DocuSign configuration info; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_esignature_docusign_config_response import GetEsignatureDocusignConfigResponse
 from formkiq_client.rest import ApiException
@@ -241,8 +235,6 @@ Set DocuSign configuration, required for integration; ONLY available with FormKi
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.set_esignature_docusign_config_request import SetEsignatureDocusignConfigRequest
 from formkiq_client.models.set_esignature_docusign_config_response import SetEsignatureDocusignConfigResponse

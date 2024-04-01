@@ -14,14 +14,12 @@ Method | HTTP request | Description
 
 Add document action
 
-Add one or more actions to a document; this appends actions and does not replace previous actions  Each action type supports a different set of parameters as shown in the table below:  ### Action Parameters  | ActionType | Parameter | Description | Example | | -------- | ------- | ------- | ------- | | OCR  | ocrParseTypes | Ocr Parsing strategy to use | TEXT, FORMS, TABLES | | OCR | ocrEngine     | Ocr Engine to use | tesseract or textract | | OCR    | addPdfDetectedCharactersAsText | PDF Documents convert images to text | true or false | | FULLTEXT    | characterMax    | Maximum number of characters to add to Fulltext destination | -1 | | DOCUMENTTAGGING    | engine    | Tagging Engine to use | chatgpt | | DOCUMENTTAGGING    | tags    | Comma-deliminted list of keywords | author,title,description | | WEBHOOK    | url    | Webhook URL | https://yourdomain.com/webhook-endpoint | | NOTIFICATION    | notificationType | Type of Notification | email | | NOTIFICATION    | notificationToCc    | Notification Carbon Copy | <email>@yourdomain.com | | NOTIFICATION    | notificationToBcc    | Notification Blind Carbon Copy | <email>@yourdomain.com | | NOTIFICATION    | notificationSubject    | Notification Subject | Email Subject | | NOTIFICATION    | notificationText    | Notification as Text | Email Text | | NOTIFICATION    | notificationHtml    | Notification as Html | Email HTML Text | | QUEUE    | queueName    | Name of Queue | |
+Add one or more actions to a document; this appends actions and does not replace previous actions  Each action type supports a different set of parameters as shown in the table below:  ### Action Parameters  | ActionType | Parameter | Description | Example | | -------- | ------- | ------- | ------- | | OCR  | ocrParseTypes | Ocr Parsing strategy to use | TEXT, FORMS, TABLES | | OCR | ocrEngine     | Ocr Engine to use | tesseract or textract | | OCR    | addPdfDetectedCharactersAsText | PDF Documents convert images to text | true or false | | FULLTEXT    | characterMax    | Maximum number of characters to add to Fulltext destination | -1 | | DOCUMENTTAGGING    | engine    | Tagging Engine to use | chatgpt | | DOCUMENTTAGGING    | tags    | Comma-deliminted list of keywords | author,title,description | | WEBHOOK    | url    | Webhook URL | https://yourdomain.com/webhook-endpoint | | NOTIFICATION    | notificationType | Type of Notification | email | | NOTIFICATION    | notificationToCc    | Notification Carbon Copy | <email>@yourdomain.com | | NOTIFICATION    | notificationToBcc    | Notification Blind Carbon Copy | <email>@yourdomain.com | | NOTIFICATION    | notificationSubject    | Notification Subject | Email Subject | | NOTIFICATION    | notificationText    | Notification as Text | Email Text | | NOTIFICATION    | notificationHtml    | Notification as Html | Email HTML Text | | QUEUE    | queueId    | Id of Queue | |
 
 ### Example
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_actions_request import AddDocumentActionsRequest
 from formkiq_client.models.add_document_actions_response import AddDocumentActionsResponse
@@ -100,8 +98,6 @@ Retries all failed document action(s). Failed action status changes to \"FAILED_
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_actions_retry_response import AddDocumentActionsRetryResponse
 from formkiq_client.rest import ApiException
@@ -167,7 +163,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_actions**
-> GetDocumentActionsResponse get_document_actions(document_id, site_id=site_id, share_key=share_key)
+> GetDocumentActionsResponse get_document_actions(document_id, site_id=site_id, limit=limit, share_key=share_key, next=next)
 
 Get document actions
 
@@ -177,8 +173,6 @@ Get document actions and their status
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_actions_response import GetDocumentActionsResponse
 from formkiq_client.rest import ApiException
@@ -201,11 +195,13 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentActionsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    limit = '10' # str | Limit Results (optional) (default to '10')
     share_key = 'share_key_example' # str | Share Identifier (optional)
+    next = 'next_example' # str | Next page of results token (optional)
 
     try:
         # Get document actions
-        api_response = api_instance.get_document_actions(document_id, site_id=site_id, share_key=share_key)
+        api_response = api_instance.get_document_actions(document_id, site_id=site_id, limit=limit, share_key=share_key, next=next)
         print("The response of DocumentActionsApi->get_document_actions:\n")
         pprint(api_response)
     except Exception as e:
@@ -221,7 +217,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
  **share_key** | **str**| Share Identifier | [optional] 
+ **next** | **str**| Next page of results token | [optional] 
 
 ### Return type
 

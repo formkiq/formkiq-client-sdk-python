@@ -19,8 +19,6 @@ Allow unauthenticated creation of new documents; must be enabled during installa
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_request import AddDocumentRequest
 from formkiq_client.models.add_document_response import AddDocumentResponse
@@ -92,8 +90,6 @@ Receive an incoming public post to a specified webhook and creates a document ba
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.document_id import DocumentId
 from formkiq_client.rest import ApiException

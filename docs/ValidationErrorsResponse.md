@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of ValidationErrorsResponse from a JSON string
 validation_errors_response_instance = ValidationErrorsResponse.from_json(json)
 # print the JSON string representation of the object
-print ValidationErrorsResponse.to_json()
+print(ValidationErrorsResponse.to_json())
 
 # convert the object into a dict
 validation_errors_response_dict = validation_errors_response_instance.to_dict()

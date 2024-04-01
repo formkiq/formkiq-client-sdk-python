@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of DeleteIndicesResponse from a JSON string
 delete_indices_response_instance = DeleteIndicesResponse.from_json(json)
 # print the JSON string representation of the object
-print DeleteIndicesResponse.to_json()
+print(DeleteIndicesResponse.to_json())
 
 # convert the object into a dict
 delete_indices_response_dict = delete_indices_response_instance.to_dict()

@@ -18,8 +18,6 @@ Document search query request;   Supports searching DynamoDB for document(s) by 
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.document_search_request import DocumentSearchRequest
 from formkiq_client.models.document_search_response import DocumentSearchResponse

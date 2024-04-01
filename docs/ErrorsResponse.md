@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of ErrorsResponse from a JSON string
 errors_response_instance = ErrorsResponse.from_json(json)
 # print the JSON string representation of the object
-print ErrorsResponse.to_json()
+print(ErrorsResponse.to_json())
 
 # convert the object into a dict
 errors_response_dict = errors_response_instance.to_dict()

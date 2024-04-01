@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of UserActivity from a JSON string
 user_activity_instance = UserActivity.from_json(json)
 # print the JSON string representation of the object
-print UserActivity.to_json()
+print(UserActivity.to_json())
 
 # convert the object into a dict
 user_activity_dict = user_activity_instance.to_dict()

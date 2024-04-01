@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of GetVersionResponse from a JSON string
 get_version_response_instance = GetVersionResponse.from_json(json)
 # print the JSON string representation of the object
-print GetVersionResponse.to_json()
+print(GetVersionResponse.to_json())
 
 # convert the object into a dict
 get_version_response_dict = get_version_response_instance.to_dict()

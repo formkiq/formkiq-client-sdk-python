@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddDocumentActionsResponse from a JSON string
 add_document_actions_response_instance = AddDocumentActionsResponse.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentActionsResponse.to_json()
+print(AddDocumentActionsResponse.to_json())
 
 # convert the object into a dict
 add_document_actions_response_dict = add_document_actions_response_instance.to_dict()

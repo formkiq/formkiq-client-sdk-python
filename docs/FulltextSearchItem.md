@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **created_by** | **str** | User who added document | [optional] 
 **tags** | **Dict[str, object]** |  | [optional] 
 **metadata** | **Dict[str, object]** |  | [optional] 
+**access_attributes** | **Dict[str, object]** |  | [optional] 
 
 ## Example
 
@@ -26,7 +27,7 @@ json = "{}"
 # create an instance of FulltextSearchItem from a JSON string
 fulltext_search_item_instance = FulltextSearchItem.from_json(json)
 # print the JSON string representation of the object
-print FulltextSearchItem.to_json()
+print(FulltextSearchItem.to_json())
 
 # convert the object into a dict
 fulltext_search_item_dict = fulltext_search_item_instance.to_dict()

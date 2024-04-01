@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of DeleteApiKeyResponse from a JSON string
 delete_api_key_response_instance = DeleteApiKeyResponse.from_json(json)
 # print the JSON string representation of the object
-print DeleteApiKeyResponse.to_json()
+print(DeleteApiKeyResponse.to_json())
 
 # convert the object into a dict
 delete_api_key_response_dict = delete_api_key_response_instance.to_dict()

@@ -5,8 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | Type of Document Action | 
+**type** | [**DocumentActionType**](DocumentActionType.md) |  | 
 **parameters** | [**AddActionParameters**](AddActionParameters.md) |  | [optional] 
+**queue_id** | **str** | Id of Queue | [optional] 
 
 ## Example
 
@@ -18,7 +19,7 @@ json = "{}"
 # create an instance of AddAction from a JSON string
 add_action_instance = AddAction.from_json(json)
 # print the JSON string representation of the object
-print AddAction.to_json()
+print(AddAction.to_json())
 
 # convert the object into a dict
 add_action_dict = add_action_instance.to_dict()

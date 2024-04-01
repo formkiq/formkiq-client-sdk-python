@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of GetSitesResponse from a JSON string
 get_sites_response_instance = GetSitesResponse.from_json(json)
 # print the JSON string representation of the object
-print GetSitesResponse.to_json()
+print(GetSitesResponse.to_json())
 
 # convert the object into a dict
 get_sites_response_dict = get_sites_response_instance.to_dict()

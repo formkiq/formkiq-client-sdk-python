@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of AddDocumentUploadRequest from a JSON string
 add_document_upload_request_instance = AddDocumentUploadRequest.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentUploadRequest.to_json()
+print(AddDocumentUploadRequest.to_json())
 
 # convert the object into a dict
 add_document_upload_request_dict = add_document_upload_request_instance.to_dict()

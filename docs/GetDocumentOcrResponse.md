@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**content_urls** | **List[str]** | Presigned S3 Urls for the OCR content | [optional] 
 **data** | **str** | OCR text result | [optional] 
 **ocr_engine** | **str** | The OCR technique used | [optional] 
 **ocr_status** | **str** | The status of the OCR request | [optional] 
@@ -24,7 +25,7 @@ json = "{}"
 # create an instance of GetDocumentOcrResponse from a JSON string
 get_document_ocr_response_instance = GetDocumentOcrResponse.from_json(json)
 # print the JSON string representation of the object
-print GetDocumentOcrResponse.to_json()
+print(GetDocumentOcrResponse.to_json())
 
 # convert the object into a dict
 get_document_ocr_response_dict = get_document_ocr_response_instance.to_dict()

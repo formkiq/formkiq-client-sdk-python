@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of SetDocumentTagKeyRequest from a JSON string
 set_document_tag_key_request_instance = SetDocumentTagKeyRequest.from_json(json)
 # print the JSON string representation of the object
-print SetDocumentTagKeyRequest.to_json()
+print(SetDocumentTagKeyRequest.to_json())
 
 # convert the object into a dict
 set_document_tag_key_request_dict = set_document_tag_key_request_instance.to_dict()

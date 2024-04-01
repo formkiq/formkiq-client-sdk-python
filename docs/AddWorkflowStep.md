@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of AddWorkflowStep from a JSON string
 add_workflow_step_instance = AddWorkflowStep.from_json(json)
 # print the JSON string representation of the object
-print AddWorkflowStep.to_json()
+print(AddWorkflowStep.to_json())
 
 # convert the object into a dict
 add_workflow_step_dict = add_workflow_step_instance.to_dict()

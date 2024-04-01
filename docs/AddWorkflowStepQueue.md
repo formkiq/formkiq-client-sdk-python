@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddWorkflowStepQueue from a JSON string
 add_workflow_step_queue_instance = AddWorkflowStepQueue.from_json(json)
 # print the JSON string representation of the object
-print AddWorkflowStepQueue.to_json()
+print(AddWorkflowStepQueue.to_json())
 
 # convert the object into a dict
 add_workflow_step_queue_dict = add_workflow_step_queue_instance.to_dict()

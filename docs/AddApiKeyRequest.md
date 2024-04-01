@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddApiKeyRequest from a JSON string
 add_api_key_request_instance = AddApiKeyRequest.from_json(json)
 # print the JSON string representation of the object
-print AddApiKeyRequest.to_json()
+print(AddApiKeyRequest.to_json())
 
 # convert the object into a dict
 add_api_key_request_dict = add_api_key_request_instance.to_dict()

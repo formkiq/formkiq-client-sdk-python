@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Workflow name | 
 **description** | **str** | Workflow description | [optional] 
-**status** | **str** |  | 
+**status** | [**WorkflowStatus**](WorkflowStatus.md) |  | 
 **steps** | [**List[AddWorkflowStep]**](AddWorkflowStep.md) | Workflow Steps | 
 
 ## Example
@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of AddWorkflowRequest from a JSON string
 add_workflow_request_instance = AddWorkflowRequest.from_json(json)
 # print the JSON string representation of the object
-print AddWorkflowRequest.to_json()
+print(AddWorkflowRequest.to_json())
 
 # convert the object into a dict
 add_workflow_request_dict = add_workflow_request_instance.to_dict()

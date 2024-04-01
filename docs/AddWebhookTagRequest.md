@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of AddWebhookTagRequest from a JSON string
 add_webhook_tag_request_instance = AddWebhookTagRequest.from_json(json)
 # print the JSON string representation of the object
-print AddWebhookTagRequest.to_json()
+print(AddWebhookTagRequest.to_json())
 
 # convert the object into a dict
 add_webhook_tag_request_dict = add_webhook_tag_request_instance.to_dict()

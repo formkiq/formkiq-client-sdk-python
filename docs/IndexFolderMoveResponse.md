@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of IndexFolderMoveResponse from a JSON string
 index_folder_move_response_instance = IndexFolderMoveResponse.from_json(json)
 # print the JSON string representation of the object
-print IndexFolderMoveResponse.to_json()
+print(IndexFolderMoveResponse.to_json())
 
 # convert the object into a dict
 index_folder_move_response_dict = index_folder_move_response_instance.to_dict()

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | Type of Workflow Step Decision | [optional] 
+**type** | [**WorkflowStepDecisionType**](WorkflowStepDecisionType.md) |  | [optional] 
 **next_step_id** | **str** | Workflow Step to move to | [optional] 
 
 ## Example
@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of WorkflowStepDecision from a JSON string
 workflow_step_decision_instance = WorkflowStepDecision.from_json(json)
 # print the JSON string representation of the object
-print WorkflowStepDecision.to_json()
+print(WorkflowStepDecision.to_json())
 
 # convert the object into a dict
 workflow_step_decision_dict = workflow_step_decision_instance.to_dict()

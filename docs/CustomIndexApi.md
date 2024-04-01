@@ -20,8 +20,6 @@ Perform a delete on the Folder Index
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.delete_indices_response import DeleteIndicesResponse
 from formkiq_client.rest import ApiException
@@ -98,8 +96,6 @@ Perform an Folder Index Move
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.index_folder_move_request import IndexFolderMoveRequest
 from formkiq_client.models.index_folder_move_response import IndexFolderMoveResponse
@@ -177,8 +173,6 @@ Perform a search on a index; this is currently available for both folder and tag
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.index_search_request import IndexSearchRequest
 from formkiq_client.models.index_search_response import IndexSearchResponse

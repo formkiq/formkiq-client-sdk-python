@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **tags** | [**List[AddDocumentTag]**](AddDocumentTag.md) | List of document tags | [optional] 
 **metadata** | [**List[AddDocumentMetadata]**](AddDocumentMetadata.md) | List of document Metadata | [optional] 
 **actions** | [**List[AddAction]**](AddAction.md) | List of Actions | [optional] 
+**access_attributes** | [**List[AddAccessAttribute]**](AddAccessAttribute.md) | List of Access Attributes (only available in pro/enterprise) | [optional] 
 **documents** | [**List[AddChildDocument]**](AddChildDocument.md) | List of child documents | [optional] 
 
 ## Example
@@ -26,7 +27,7 @@ json = "{}"
 # create an instance of AddDocumentRequest from a JSON string
 add_document_request_instance = AddDocumentRequest.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentRequest.to_json()
+print(AddDocumentRequest.to_json())
 
 # convert the object into a dict
 add_document_request_dict = add_document_request_instance.to_dict()

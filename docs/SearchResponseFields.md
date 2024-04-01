@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of SearchResponseFields from a JSON string
 search_response_fields_instance = SearchResponseFields.from_json(json)
 # print the JSON string representation of the object
-print SearchResponseFields.to_json()
+print(SearchResponseFields.to_json())
 
 # convert the object into a dict
 search_response_fields_dict = search_response_fields_instance.to_dict()

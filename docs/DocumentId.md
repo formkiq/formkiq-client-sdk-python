@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of DocumentId from a JSON string
 document_id_instance = DocumentId.from_json(json)
 # print the JSON string representation of the object
-print DocumentId.to_json()
+print(DocumentId.to_json())
 
 # convert the object into a dict
 document_id_dict = document_id_instance.to_dict()

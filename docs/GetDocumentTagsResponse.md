@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of GetDocumentTagsResponse from a JSON string
 get_document_tags_response_instance = GetDocumentTagsResponse.from_json(json)
 # print the JSON string representation of the object
-print GetDocumentTagsResponse.to_json()
+print(GetDocumentTagsResponse.to_json())
 
 # convert the object into a dict
 get_document_tags_response_dict = get_document_tags_response_instance.to_dict()

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **text** | **str** | Full text search | [optional] 
 **meta** | [**DocumentSearchMeta**](DocumentSearchMeta.md) |  | [optional] 
 **tag** | [**DocumentSearchTag**](DocumentSearchTag.md) |  | [optional] 
-**tags** | [**List[DocumentCompositeSearchTag]**](DocumentCompositeSearchTag.md) | List of Composite Key tags to filter search results on | [optional] 
+**tags** | [**List[DocumentSearchTags]**](DocumentSearchTags.md) | List of Composite Key tags to filter search results on | [optional] 
 **document_ids** | **List[str]** | List of DocumentIds to filter search results on | [optional] 
 
 ## Example
@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of DocumentSearch from a JSON string
 document_search_instance = DocumentSearch.from_json(json)
 # print the JSON string representation of the object
-print DocumentSearch.to_json()
+print(DocumentSearch.to_json())
 
 # convert the object into a dict
 document_search_dict = document_search_instance.to_dict()

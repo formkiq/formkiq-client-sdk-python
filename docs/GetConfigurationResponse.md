@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of GetConfigurationResponse from a JSON string
 get_configuration_response_instance = GetConfigurationResponse.from_json(json)
 # print the JSON string representation of the object
-print GetConfigurationResponse.to_json()
+print(GetConfigurationResponse.to_json())
 
 # convert the object into a dict
 get_configuration_response_dict = get_configuration_response_instance.to_dict()

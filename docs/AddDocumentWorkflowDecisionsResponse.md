@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddDocumentWorkflowDecisionsResponse from a JSON string
 add_document_workflow_decisions_response_instance = AddDocumentWorkflowDecisionsResponse.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentWorkflowDecisionsResponse.to_json()
+print(AddDocumentWorkflowDecisionsResponse.to_json())
 
 # convert the object into a dict
 add_document_workflow_decisions_response_dict = add_document_workflow_decisions_response_instance.to_dict()

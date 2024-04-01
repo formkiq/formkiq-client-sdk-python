@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of GetUserSharesResponse from a JSON string
 get_user_shares_response_instance = GetUserSharesResponse.from_json(json)
 # print the JSON string representation of the object
-print GetUserSharesResponse.to_json()
+print(GetUserSharesResponse.to_json())
 
 # convert the object into a dict
 get_user_shares_response_dict = get_user_shares_response_instance.to_dict()

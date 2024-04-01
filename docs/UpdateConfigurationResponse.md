@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of UpdateConfigurationResponse from a JSON string
 update_configuration_response_instance = UpdateConfigurationResponse.from_json(json)
 # print the JSON string representation of the object
-print UpdateConfigurationResponse.to_json()
+print(UpdateConfigurationResponse.to_json())
 
 # convert the object into a dict
 update_configuration_response_dict = update_configuration_response_instance.to_dict()

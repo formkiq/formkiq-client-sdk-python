@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of OnlyOfficeDocumentNewRequest from a JSON string
 only_office_document_new_request_instance = OnlyOfficeDocumentNewRequest.from_json(json)
 # print the JSON string representation of the object
-print OnlyOfficeDocumentNewRequest.to_json()
+print(OnlyOfficeDocumentNewRequest.to_json())
 
 # convert the object into a dict
 only_office_document_new_request_dict = only_office_document_new_request_instance.to_dict()

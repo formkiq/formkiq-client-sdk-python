@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of TagSchemaRequired from a JSON string
 tag_schema_required_instance = TagSchemaRequired.from_json(json)
 # print the JSON string representation of the object
-print TagSchemaRequired.to_json()
+print(TagSchemaRequired.to_json())
 
 # convert the object into a dict
 tag_schema_required_dict = tag_schema_required_instance.to_dict()

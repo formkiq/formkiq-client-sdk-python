@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **name** | **str** | Workflow name | [optional] 
 **description** | **str** | Workflow description | [optional] 
 **current_step_id** | **str** | The current step workflow is on | [optional] 
-**status** | **str** | Workflow status | [optional] 
+**status** | [**DocumentWorkflowStatus**](DocumentWorkflowStatus.md) |  | [optional] 
 
 ## Example
 
@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of DocumentWorkflow from a JSON string
 document_workflow_instance = DocumentWorkflow.from_json(json)
 # print the JSON string representation of the object
-print DocumentWorkflow.to_json()
+print(DocumentWorkflow.to_json())
 
 # convert the object into a dict
 document_workflow_dict = document_workflow_instance.to_dict()

@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddFolderResponse from a JSON string
 add_folder_response_instance = AddFolderResponse.from_json(json)
 # print the JSON string representation of the object
-print AddFolderResponse.to_json()
+print(AddFolderResponse.to_json())
 
 # convert the object into a dict
 add_folder_response_dict = add_folder_response_instance.to_dict()

@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of GetQueuesResponse from a JSON string
 get_queues_response_instance = GetQueuesResponse.from_json(json)
 # print the JSON string representation of the object
-print GetQueuesResponse.to_json()
+print(GetQueuesResponse.to_json())
 
 # convert the object into a dict
 get_queues_response_dict = get_queues_response_instance.to_dict()

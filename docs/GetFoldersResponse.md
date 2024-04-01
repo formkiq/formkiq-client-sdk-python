@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of GetFoldersResponse from a JSON string
 get_folders_response_instance = GetFoldersResponse.from_json(json)
 # print the JSON string representation of the object
-print GetFoldersResponse.to_json()
+print(GetFoldersResponse.to_json())
 
 # convert the object into a dict
 get_folders_response_dict = get_folders_response_instance.to_dict()

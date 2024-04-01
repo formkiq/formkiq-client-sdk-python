@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of DeleteWorkflowResponse from a JSON string
 delete_workflow_response_instance = DeleteWorkflowResponse.from_json(json)
 # print the JSON string representation of the object
-print DeleteWorkflowResponse.to_json()
+print(DeleteWorkflowResponse.to_json())
 
 # convert the object into a dict
 delete_workflow_response_dict = delete_workflow_response_instance.to_dict()

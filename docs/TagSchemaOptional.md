@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of TagSchemaOptional from a JSON string
 tag_schema_optional_instance = TagSchemaOptional.from_json(json)
 # print the JSON string representation of the object
-print TagSchemaOptional.to_json()
+print(TagSchemaOptional.to_json())
 
 # convert the object into a dict
 tag_schema_optional_dict = tag_schema_optional_instance.to_dict()

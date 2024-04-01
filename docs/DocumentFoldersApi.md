@@ -20,8 +20,6 @@ Creates a new folder
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_folder_request import AddFolderRequest
 from formkiq_client.models.add_folder_response import AddFolderResponse
@@ -99,8 +97,6 @@ Delete a specific folder; folder must be empty
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.delete_folder_response import DeleteFolderResponse
 from formkiq_client.rest import ApiException
@@ -177,8 +173,6 @@ Get list of documents in a folder
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_folders_response import GetFoldersResponse
 from formkiq_client.rest import ApiException

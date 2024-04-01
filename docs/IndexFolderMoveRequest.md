@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of IndexFolderMoveRequest from a JSON string
 index_folder_move_request_instance = IndexFolderMoveRequest.from_json(json)
 # print the JSON string representation of the object
-print IndexFolderMoveRequest.to_json()
+print(IndexFolderMoveRequest.to_json())
 
 # convert the object into a dict
 index_folder_move_request_dict = index_folder_move_request_instance.to_dict()

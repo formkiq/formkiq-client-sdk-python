@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of SetDocumentVersionResponse from a JSON string
 set_document_version_response_instance = SetDocumentVersionResponse.from_json(json)
 # print the JSON string representation of the object
-print SetDocumentVersionResponse.to_json()
+print(SetDocumentVersionResponse.to_json())
 
 # convert the object into a dict
 set_document_version_response_dict = set_document_version_response_instance.to_dict()

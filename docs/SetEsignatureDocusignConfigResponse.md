@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of SetEsignatureDocusignConfigResponse from a JSON string
 set_esignature_docusign_config_response_instance = SetEsignatureDocusignConfigResponse.from_json(json)
 # print the JSON string representation of the object
-print SetEsignatureDocusignConfigResponse.to_json()
+print(SetEsignatureDocusignConfigResponse.to_json())
 
 # convert the object into a dict
 set_esignature_docusign_config_response_dict = set_esignature_docusign_config_response_instance.to_dict()

@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of GetDocumentUrlResponse from a JSON string
 get_document_url_response_instance = GetDocumentUrlResponse.from_json(json)
 # print the JSON string representation of the object
-print GetDocumentUrlResponse.to_json()
+print(GetDocumentUrlResponse.to_json())
 
 # convert the object into a dict
 get_document_url_response_dict = get_document_url_response_instance.to_dict()

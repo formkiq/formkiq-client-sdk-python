@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddChildDocumentResponse from a JSON string
 add_child_document_response_instance = AddChildDocumentResponse.from_json(json)
 # print the JSON string representation of the object
-print AddChildDocumentResponse.to_json()
+print(AddChildDocumentResponse.to_json())
 
 # convert the object into a dict
 add_child_document_response_dict = add_child_document_response_instance.to_dict()

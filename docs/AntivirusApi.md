@@ -18,8 +18,6 @@ Perform an Anti-Malware / Antivirus scan on a document; ONLY available with Form
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.set_antivirus_response import SetAntivirusResponse
 from formkiq_client.rest import ApiException

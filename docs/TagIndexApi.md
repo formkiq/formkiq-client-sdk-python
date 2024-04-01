@@ -18,8 +18,6 @@ Perform a search on a index; this is currently available for both folder and tag
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.index_search_request import IndexSearchRequest
 from formkiq_client.models.index_search_response import IndexSearchResponse

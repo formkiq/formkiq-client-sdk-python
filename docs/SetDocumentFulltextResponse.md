@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of SetDocumentFulltextResponse from a JSON string
 set_document_fulltext_response_instance = SetDocumentFulltextResponse.from_json(json)
 # print the JSON string representation of the object
-print SetDocumentFulltextResponse.to_json()
+print(SetDocumentFulltextResponse.to_json())
 
 # convert the object into a dict
 set_document_fulltext_response_dict = set_document_fulltext_response_instance.to_dict()

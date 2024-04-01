@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of IndexSearch from a JSON string
 index_search_instance = IndexSearch.from_json(json)
 # print the JSON string representation of the object
-print IndexSearch.to_json()
+print(IndexSearch.to_json())
 
 # convert the object into a dict
 index_search_dict = index_search_instance.to_dict()

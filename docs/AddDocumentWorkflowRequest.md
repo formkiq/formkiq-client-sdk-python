@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddDocumentWorkflowRequest from a JSON string
 add_document_workflow_request_instance = AddDocumentWorkflowRequest.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentWorkflowRequest.to_json()
+print(AddDocumentWorkflowRequest.to_json())
 
 # convert the object into a dict
 add_document_workflow_request_dict = add_document_workflow_request_instance.to_dict()

@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddDocumentActionsRequest from a JSON string
 add_document_actions_request_instance = AddDocumentActionsRequest.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentActionsRequest.to_json()
+print(AddDocumentActionsRequest.to_json())
 
 # convert the object into a dict
 add_document_actions_request_dict = add_document_actions_request_instance.to_dict()

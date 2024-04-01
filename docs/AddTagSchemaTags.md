@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of AddTagSchemaTags from a JSON string
 add_tag_schema_tags_instance = AddTagSchemaTags.from_json(json)
 # print the JSON string representation of the object
-print AddTagSchemaTags.to_json()
+print(AddTagSchemaTags.to_json())
 
 # convert the object into a dict
 add_tag_schema_tags_dict = add_tag_schema_tags_instance.to_dict()

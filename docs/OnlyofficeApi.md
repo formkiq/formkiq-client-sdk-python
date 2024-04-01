@@ -20,8 +20,6 @@ Provide ONLYOFFICE integration for editing documents; ONLY available with FormKi
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.only_office_document_response import OnlyOfficeDocumentResponse
 from formkiq_client.rest import ApiException
@@ -98,8 +96,6 @@ Provide ONLYOFFICE integration for the creation of new documents; ONLY available
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.only_office_document_new_request import OnlyOfficeDocumentNewRequest
 from formkiq_client.models.only_office_document_response import OnlyOfficeDocumentResponse
@@ -175,8 +171,6 @@ Save an updated document for ONLYOFFICE integration. ONLY available with FormKiQ
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.only_office_document_save_response import OnlyOfficeDocumentSaveResponse
 from formkiq_client.rest import ApiException

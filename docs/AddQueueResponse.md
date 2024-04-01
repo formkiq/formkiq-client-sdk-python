@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddQueueResponse from a JSON string
 add_queue_response_instance = AddQueueResponse.from_json(json)
 # print the JSON string representation of the object
-print AddQueueResponse.to_json()
+print(AddQueueResponse.to_json())
 
 # convert the object into a dict
 add_queue_response_dict = add_queue_response_instance.to_dict()

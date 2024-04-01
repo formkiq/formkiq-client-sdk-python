@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **group** | **str** | Name of Share Group | [optional] 
 **share_key** | **str** | Share Identifier | [optional] 
 **type** | **str** | Type of Document | [optional] 
-**permissions** | **List[str]** | List of share permissions | [optional] 
+**permissions** | [**List[UserSharePermission]**](UserSharePermission.md) | List of share permissions | [optional] 
 **site_id** | **str** | Site Identifier | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
 **user_id** | **str** | User who created share | [optional] 
-**permission_type** | **str** | Type of share | [optional] 
+**permission_type** | [**UserSharePermissionType**](UserSharePermissionType.md) |  | [optional] 
 
 ## Example
 
@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of UserShare from a JSON string
 user_share_instance = UserShare.from_json(json)
 # print the JSON string representation of the object
-print UserShare.to_json()
+print(UserShare.to_json())
 
 # convert the object into a dict
 user_share_dict = user_share_instance.to_dict()

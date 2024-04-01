@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddTagSchemaResponse from a JSON string
 add_tag_schema_response_instance = AddTagSchemaResponse.from_json(json)
 # print the JSON string representation of the object
-print AddTagSchemaResponse.to_json()
+print(AddTagSchemaResponse.to_json())
 
 # convert the object into a dict
 add_tag_schema_response_dict = add_tag_schema_response_instance.to_dict()

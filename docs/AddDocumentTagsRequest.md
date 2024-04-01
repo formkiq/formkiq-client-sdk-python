@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddDocumentTagsRequest from a JSON string
 add_document_tags_request_instance = AddDocumentTagsRequest.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentTagsRequest.to_json()
+print(AddDocumentTagsRequest.to_json())
 
 # convert the object into a dict
 add_document_tags_request_dict = add_document_tags_request_instance.to_dict()

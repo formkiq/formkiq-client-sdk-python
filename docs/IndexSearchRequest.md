@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of IndexSearchRequest from a JSON string
 index_search_request_instance = IndexSearchRequest.from_json(json)
 # print the JSON string representation of the object
-print IndexSearchRequest.to_json()
+print(IndexSearchRequest.to_json())
 
 # convert the object into a dict
 index_search_request_dict = index_search_request_instance.to_dict()

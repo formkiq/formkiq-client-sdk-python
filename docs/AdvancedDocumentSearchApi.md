@@ -4,15 +4,93 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**add_document_fulltext**](AdvancedDocumentSearchApi.md#add_document_fulltext) | **POST** /documents/{documentId}/fulltext | Add document&#39;s full-text
 [**delete_document_fulltext**](AdvancedDocumentSearchApi.md#delete_document_fulltext) | **DELETE** /documents/{documentId}/fulltext | Delete document full-text
 [**delete_document_fulltext_tag**](AdvancedDocumentSearchApi.md#delete_document_fulltext_tag) | **DELETE** /documents/{documentId}/fulltext/tags/{tagKey} | Delete document full-text tag
 [**delete_document_fulltext_tag_and_value**](AdvancedDocumentSearchApi.md#delete_document_fulltext_tag_and_value) | **DELETE** /documents/{documentId}/fulltext/tags/{tagKey}/{tagValue} | Delete document full-text tag/value
-[**document_fulltext**](AdvancedDocumentSearchApi.md#document_fulltext) | **POST** /searchFulltext | Document full-text search
 [**get_document_fulltext**](AdvancedDocumentSearchApi.md#get_document_fulltext) | **GET** /documents/{documentId}/fulltext | Get document&#39;s full-text
 [**query_fulltext**](AdvancedDocumentSearchApi.md#query_fulltext) | **POST** /queryFulltext | Direct opensearch search API
+[**search_fulltext**](AdvancedDocumentSearchApi.md#search_fulltext) | **POST** /searchFulltext | Document full-text search
 [**set_document_fulltext**](AdvancedDocumentSearchApi.md#set_document_fulltext) | **PUT** /documents/{documentId}/fulltext | Set document&#39;s full-text
 [**update_document_fulltext**](AdvancedDocumentSearchApi.md#update_document_fulltext) | **PATCH** /documents/{documentId}/fulltext | Update document&#39;s full-text
 
+
+# **add_document_fulltext**
+> AddDocumentFulltextResponse add_document_fulltext(document_id, site_id=site_id, add_document_fulltext_request=add_document_fulltext_request)
+
+Add document's full-text
+
+Adde a document to OpenSearch; ONLY available with FormKiQ Enterprise
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.add_document_fulltext_request import AddDocumentFulltextRequest
+from formkiq_client.models.add_document_fulltext_response import AddDocumentFulltextResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+    add_document_fulltext_request = formkiq_client.AddDocumentFulltextRequest() # AddDocumentFulltextRequest |  (optional)
+
+    try:
+        # Add document's full-text
+        api_response = api_instance.add_document_fulltext(document_id, site_id=site_id, add_document_fulltext_request=add_document_fulltext_request)
+        print("The response of AdvancedDocumentSearchApi->add_document_fulltext:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AdvancedDocumentSearchApi->add_document_fulltext: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+ **add_document_fulltext_request** | [**AddDocumentFulltextRequest**](AddDocumentFulltextRequest.md)|  | [optional] 
+
+### Return type
+
+[**AddDocumentFulltextResponse**](AddDocumentFulltextResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_fulltext**
 > DeleteFulltextResponse delete_document_fulltext(document_id, site_id=site_id)
@@ -25,8 +103,6 @@ Remove full text search for a document from OpenSearch; ONLY available with Form
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.delete_fulltext_response import DeleteFulltextResponse
 from formkiq_client.rest import ApiException
@@ -101,8 +177,6 @@ Remove document tags from OpenSearch; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.rest import ApiException
 from pprint import pprint
@@ -178,8 +252,6 @@ Remove document tag/value from OpenSearch; ONLY available with FormKiQ Enterpris
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.rest import ApiException
 from pprint import pprint
@@ -246,85 +318,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **document_fulltext**
-> DocumentFulltextResponse document_fulltext(document_fulltext_request, site_id=site_id, limit=limit)
-
-Document full-text search
-
-Document full-text search (and more robust multi-tag search queries, powered by OpenSearch); ONLY available with FormKiQ Enterprise
-
-### Example
-
-
-```python
-import time
-import os
-import formkiq_client
-from formkiq_client.models.document_fulltext_request import DocumentFulltextRequest
-from formkiq_client.models.document_fulltext_response import DocumentFulltextResponse
-from formkiq_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
-    document_fulltext_request = formkiq_client.DocumentFulltextRequest() # DocumentFulltextRequest | 
-    site_id = 'site_id_example' # str | Site Identifier (optional)
-    limit = '10' # str | Limit Results (optional) (default to '10')
-
-    try:
-        # Document full-text search
-        api_response = api_instance.document_fulltext(document_fulltext_request, site_id=site_id, limit=limit)
-        print("The response of AdvancedDocumentSearchApi->document_fulltext:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling AdvancedDocumentSearchApi->document_fulltext: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **document_fulltext_request** | [**DocumentFulltextRequest**](DocumentFulltextRequest.md)|  | 
- **site_id** | **str**| Site Identifier | [optional] 
- **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
-
-### Return type
-
-[**DocumentFulltextResponse**](DocumentFulltextResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_document_fulltext**
 > GetDocumentFulltextResponse get_document_fulltext(document_id, site_id=site_id, share_key=share_key)
 
@@ -336,8 +329,6 @@ Retrieve an OpenSearch document's details, i.e., metadata
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_fulltext_response import GetDocumentFulltextResponse
 from formkiq_client.rest import ApiException
@@ -408,14 +399,12 @@ No authorization required
 
 Direct opensearch search API
 
-Endpoint for allowing custom, complex queries using the OpenSearch search API (https://opensearch.org/docs/latest/opensearch/rest-api/search/); ONLY available with FormKiQ Enterprise
+Endpoint for allowing custom, complex queries using the OpenSearch search API (https://opensearch.org/docs/latest/opensearch/rest-api/search/); ONLY available with FormKiQ Enterprise  Example Request Body: { \"query\": { \"match_all\": {} }}
 
 ### Example
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.query_fulltext_response import QueryFulltextResponse
 from formkiq_client.rest import ApiException
@@ -479,6 +468,83 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **search_fulltext**
+> DocumentFulltextResponse search_fulltext(document_fulltext_request, site_id=site_id, limit=limit)
+
+Document full-text search
+
+Document full-text search (and more robust multi-tag search queries, powered by OpenSearch); ONLY available with FormKiQ Enterprise
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.document_fulltext_request import DocumentFulltextRequest
+from formkiq_client.models.document_fulltext_response import DocumentFulltextResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
+    document_fulltext_request = formkiq_client.DocumentFulltextRequest() # DocumentFulltextRequest | 
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+    limit = '10' # str | Limit Results (optional) (default to '10')
+
+    try:
+        # Document full-text search
+        api_response = api_instance.search_fulltext(document_fulltext_request, site_id=site_id, limit=limit)
+        print("The response of AdvancedDocumentSearchApi->search_fulltext:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AdvancedDocumentSearchApi->search_fulltext: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_fulltext_request** | [**DocumentFulltextRequest**](DocumentFulltextRequest.md)|  | 
+ **site_id** | **str**| Site Identifier | [optional] 
+ **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
+
+### Return type
+
+[**DocumentFulltextResponse**](DocumentFulltextResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **set_document_fulltext**
 > SetDocumentFulltextResponse set_document_fulltext(document_id, site_id=site_id, set_document_fulltext_request=set_document_fulltext_request)
 
@@ -490,8 +556,6 @@ Set all text/tags found within a document to OpenSearch; ONLY available with For
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.set_document_fulltext_request import SetDocumentFulltextRequest
 from formkiq_client.models.set_document_fulltext_response import SetDocumentFulltextResponse
@@ -559,7 +623,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_document_fulltext**
-> SetDocumentFulltextResponse update_document_fulltext(document_id, site_id=site_id, update_document_fulltext_request=update_document_fulltext_request)
+> UpdateDocumentFulltextResponse update_document_fulltext(document_id, site_id=site_id, update_document_fulltext_request=update_document_fulltext_request)
 
 Update document's full-text
 
@@ -569,11 +633,9 @@ Update a document in OpenSearch; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
-from formkiq_client.models.set_document_fulltext_response import SetDocumentFulltextResponse
 from formkiq_client.models.update_document_fulltext_request import UpdateDocumentFulltextRequest
+from formkiq_client.models.update_document_fulltext_response import UpdateDocumentFulltextResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -618,7 +680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SetDocumentFulltextResponse**](SetDocumentFulltextResponse.md)
+[**UpdateDocumentFulltextResponse**](UpdateDocumentFulltextResponse.md)
 
 ### Authorization
 

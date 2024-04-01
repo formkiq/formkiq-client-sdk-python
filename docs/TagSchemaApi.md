@@ -21,8 +21,6 @@ Creates a new TagSchema; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_tag_schema_request import AddTagSchemaRequest
 from formkiq_client.models.add_tag_schema_response import AddTagSchemaResponse
@@ -99,8 +97,6 @@ Delete a TagSchema; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.rest import ApiException
 from pprint import pprint
@@ -172,8 +168,6 @@ Retrieves a TagSchema's details, i.e., metadata; ONLY available with FormKiQ Pro
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_tag_schema_response import GetTagSchemaResponse
 from formkiq_client.rest import ApiException
@@ -248,8 +242,6 @@ Returns the list of tagSchemas; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_tag_schemas_response import GetTagSchemasResponse
 from formkiq_client.rest import ApiException

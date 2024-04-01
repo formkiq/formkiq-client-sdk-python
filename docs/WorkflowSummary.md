@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **user_id** | **str** | User who created workflow | [optional] 
 **in_use** | **bool** | Whether the Workflow is in use | [optional] 
-**status** | **str** | Type of Document | [optional] 
+**status** | [**WorkflowStatus**](WorkflowStatus.md) |  | [optional] 
 
 ## Example
 
@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of WorkflowSummary from a JSON string
 workflow_summary_instance = WorkflowSummary.from_json(json)
 # print the JSON string representation of the object
-print WorkflowSummary.to_json()
+print(WorkflowSummary.to_json())
 
 # convert the object into a dict
 workflow_summary_dict = workflow_summary_instance.to_dict()

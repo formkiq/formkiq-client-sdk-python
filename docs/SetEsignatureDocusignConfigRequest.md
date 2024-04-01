@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of SetEsignatureDocusignConfigRequest from a JSON string
 set_esignature_docusign_config_request_instance = SetEsignatureDocusignConfigRequest.from_json(json)
 # print the JSON string representation of the object
-print SetEsignatureDocusignConfigRequest.to_json()
+print(SetEsignatureDocusignConfigRequest.to_json())
 
 # convert the object into a dict
 set_esignature_docusign_config_request_dict = set_esignature_docusign_config_request_instance.to_dict()

@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of DeleteQueueResponse from a JSON string
 delete_queue_response_instance = DeleteQueueResponse.from_json(json)
 # print the JSON string representation of the object
-print DeleteQueueResponse.to_json()
+print(DeleteQueueResponse.to_json())
 
 # convert the object into a dict
 delete_queue_response_dict = delete_queue_response_instance.to_dict()

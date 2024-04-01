@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddDocumentOcrResponse from a JSON string
 add_document_ocr_response_instance = AddDocumentOcrResponse.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentOcrResponse.to_json()
+print(AddDocumentOcrResponse.to_json())
 
 # convert the object into a dict
 add_document_ocr_response_dict = add_document_ocr_response_instance.to_dict()

@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of TagSchemaCompositeKey from a JSON string
 tag_schema_composite_key_instance = TagSchemaCompositeKey.from_json(json)
 # print the JSON string representation of the object
-print TagSchemaCompositeKey.to_json()
+print(TagSchemaCompositeKey.to_json())
 
 # convert the object into a dict
 tag_schema_composite_key_dict = tag_schema_composite_key_instance.to_dict()

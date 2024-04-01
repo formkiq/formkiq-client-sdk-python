@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of DocumentFulltextTag from a JSON string
 document_fulltext_tag_instance = DocumentFulltextTag.from_json(json)
 # print the JSON string representation of the object
-print DocumentFulltextTag.to_json()
+print(DocumentFulltextTag.to_json())
 
 # convert the object into a dict
 document_fulltext_tag_dict = document_fulltext_tag_instance.to_dict()

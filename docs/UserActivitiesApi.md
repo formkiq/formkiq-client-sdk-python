@@ -19,8 +19,6 @@ Retrieve a user's activities
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_user_activites_response import GetUserActivitesResponse
 from formkiq_client.rest import ApiException
@@ -99,8 +97,6 @@ Retrieve a user's activities
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_user_activites_response import GetUserActivitesResponse
 from formkiq_client.rest import ApiException

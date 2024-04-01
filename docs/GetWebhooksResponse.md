@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of GetWebhooksResponse from a JSON string
 get_webhooks_response_instance = GetWebhooksResponse.from_json(json)
 # print the JSON string representation of the object
-print GetWebhooksResponse.to_json()
+print(GetWebhooksResponse.to_json())
 
 # convert the object into a dict
 get_webhooks_response_dict = get_webhooks_response_instance.to_dict()

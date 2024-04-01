@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**next** | **str** | Next page of results token | [optional] 
 **actions** | [**List[DocumentAction]**](DocumentAction.md) | List of document actions | [optional] 
 
 ## Example
@@ -17,7 +18,7 @@ json = "{}"
 # create an instance of GetDocumentActionsResponse from a JSON string
 get_document_actions_response_instance = GetDocumentActionsResponse.from_json(json)
 # print the JSON string representation of the object
-print GetDocumentActionsResponse.to_json()
+print(GetDocumentActionsResponse.to_json())
 
 # convert the object into a dict
 get_document_actions_response_dict = get_document_actions_response_instance.to_dict()

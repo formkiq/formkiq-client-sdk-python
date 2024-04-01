@@ -20,8 +20,6 @@ Delete a specific previous document version; ONLY available with FormKiQ Pro and
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.rest import ApiException
 from pprint import pprint
@@ -87,7 +85,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_versions**
-> GetDocumentVersionsResponse get_document_versions(document_id, site_id=site_id, share_key=share_key, next=next)
+> GetDocumentVersionsResponse get_document_versions(document_id, site_id=site_id, limit=limit, share_key=share_key, next=next)
 
 Get document's versions
 
@@ -97,8 +95,6 @@ Get a listing of document content and metadata versions; ONLY available with For
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_versions_response import GetDocumentVersionsResponse
 from formkiq_client.rest import ApiException
@@ -121,12 +117,13 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentVersionsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    limit = '10' # str | Limit Results (optional) (default to '10')
     share_key = 'share_key_example' # str | Share Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
 
     try:
         # Get document's versions
-        api_response = api_instance.get_document_versions(document_id, site_id=site_id, share_key=share_key, next=next)
+        api_response = api_instance.get_document_versions(document_id, site_id=site_id, limit=limit, share_key=share_key, next=next)
         print("The response of DocumentVersionsApi->get_document_versions:\n")
         pprint(api_response)
     except Exception as e:
@@ -142,6 +139,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
  **share_key** | **str**| Share Identifier | [optional] 
  **next** | **str**| Next page of results token | [optional] 
 
@@ -177,8 +175,6 @@ Set document to a previous document version; ONLY available with FormKiQ Pro and
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.set_document_version_request import SetDocumentVersionRequest
 from formkiq_client.models.set_document_version_response import SetDocumentVersionResponse

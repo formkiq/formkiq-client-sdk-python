@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of SetAntivirusResponse from a JSON string
 set_antivirus_response_instance = SetAntivirusResponse.from_json(json)
 # print the JSON string representation of the object
-print SetAntivirusResponse.to_json()
+print(SetAntivirusResponse.to_json())
 
 # convert the object into a dict
 set_antivirus_response_dict = set_antivirus_response_instance.to_dict()

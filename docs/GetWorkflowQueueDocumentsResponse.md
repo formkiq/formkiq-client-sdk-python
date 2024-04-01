@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of GetWorkflowQueueDocumentsResponse from a JSON string
 get_workflow_queue_documents_response_instance = GetWorkflowQueueDocumentsResponse.from_json(json)
 # print the JSON string representation of the object
-print GetWorkflowQueueDocumentsResponse.to_json()
+print(GetWorkflowQueueDocumentsResponse.to_json())
 
 # convert the object into a dict
 get_workflow_queue_documents_response_dict = get_workflow_queue_documents_response_instance.to_dict()

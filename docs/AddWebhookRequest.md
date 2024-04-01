@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of AddWebhookRequest from a JSON string
 add_webhook_request_instance = AddWebhookRequest.from_json(json)
 # print the JSON string representation of the object
-print AddWebhookRequest.to_json()
+print(AddWebhookRequest.to_json())
 
 # convert the object into a dict
 add_webhook_request_dict = add_webhook_request_instance.to_dict()

@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of WebhookTag from a JSON string
 webhook_tag_instance = WebhookTag.from_json(json)
 # print the JSON string representation of the object
-print WebhookTag.to_json()
+print(WebhookTag.to_json())
 
 # convert the object into a dict
 webhook_tag_dict = webhook_tag_instance.to_dict()

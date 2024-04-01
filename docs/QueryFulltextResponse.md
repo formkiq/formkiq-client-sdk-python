@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of QueryFulltextResponse from a JSON string
 query_fulltext_response_instance = QueryFulltextResponse.from_json(json)
 # print the JSON string representation of the object
-print QueryFulltextResponse.to_json()
+print(QueryFulltextResponse.to_json())
 
 # convert the object into a dict
 query_fulltext_response_dict = query_fulltext_response_instance.to_dict()

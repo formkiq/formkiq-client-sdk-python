@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of DocumentFulltextSearch from a JSON string
 document_fulltext_search_instance = DocumentFulltextSearch.from_json(json)
 # print the JSON string representation of the object
-print DocumentFulltextSearch.to_json()
+print(DocumentFulltextSearch.to_json())
 
 # convert the object into a dict
 document_fulltext_search_dict = document_fulltext_search_instance.to_dict()

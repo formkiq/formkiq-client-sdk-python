@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of EsignatureDocusignRecipientTab from a JSON string
 esignature_docusign_recipient_tab_instance = EsignatureDocusignRecipientTab.from_json(json)
 # print the JSON string representation of the object
-print EsignatureDocusignRecipientTab.to_json()
+print(EsignatureDocusignRecipientTab.to_json())
 
 # convert the object into a dict
 esignature_docusign_recipient_tab_dict = esignature_docusign_recipient_tab_instance.to_dict()

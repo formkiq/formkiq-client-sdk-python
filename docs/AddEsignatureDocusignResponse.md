@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddEsignatureDocusignResponse from a JSON string
 add_esignature_docusign_response_instance = AddEsignatureDocusignResponse.from_json(json)
 # print the JSON string representation of the object
-print AddEsignatureDocusignResponse.to_json()
+print(AddEsignatureDocusignResponse.to_json())
 
 # convert the object into a dict
 add_esignature_docusign_response_dict = add_esignature_docusign_response_instance.to_dict()

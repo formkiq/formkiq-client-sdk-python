@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of Queue from a JSON string
 queue_instance = Queue.from_json(json)
 # print the JSON string representation of the object
-print Queue.to_json()
+print(Queue.to_json())
 
 # convert the object into a dict
 queue_dict = queue_instance.to_dict()

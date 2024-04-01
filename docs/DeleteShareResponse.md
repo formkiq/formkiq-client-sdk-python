@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of DeleteShareResponse from a JSON string
 delete_share_response_instance = DeleteShareResponse.from_json(json)
 # print the JSON string representation of the object
-print DeleteShareResponse.to_json()
+print(DeleteShareResponse.to_json())
 
 # convert the object into a dict
 delete_share_response_dict = delete_share_response_instance.to_dict()

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **group** | **str** | Share with Group | [optional] 
-**permissions** | **List[str]** | List of share permissions | [optional] 
+**permissions** | [**List[UserSharePermission]**](UserSharePermission.md) | List of share permissions | [optional] 
 
 ## Example
 
@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddShare from a JSON string
 add_share_instance = AddShare.from_json(json)
 # print the JSON string representation of the object
-print AddShare.to_json()
+print(AddShare.to_json())
 
 # convert the object into a dict
 add_share_dict = add_share_instance.to_dict()

@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of UpdateDocumentFulltextRequest from a JSON string
 update_document_fulltext_request_instance = UpdateDocumentFulltextRequest.from_json(json)
 # print the JSON string representation of the object
-print UpdateDocumentFulltextRequest.to_json()
+print(UpdateDocumentFulltextRequest.to_json())
 
 # convert the object into a dict
 update_document_fulltext_request_dict = update_document_fulltext_request_instance.to_dict()

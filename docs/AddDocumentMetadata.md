@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of AddDocumentMetadata from a JSON string
 add_document_metadata_instance = AddDocumentMetadata.from_json(json)
 # print the JSON string representation of the object
-print AddDocumentMetadata.to_json()
+print(AddDocumentMetadata.to_json())
 
 # convert the object into a dict
 add_document_metadata_dict = add_document_metadata_instance.to_dict()

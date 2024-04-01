@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of GetUsersInGroupResponse from a JSON string
 get_users_in_group_response_instance = GetUsersInGroupResponse.from_json(json)
 # print the JSON string representation of the object
-print GetUsersInGroupResponse.to_json()
+print(GetUsersInGroupResponse.to_json())
 
 # convert the object into a dict
 get_users_in_group_response_dict = get_users_in_group_response_instance.to_dict()

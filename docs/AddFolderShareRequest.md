@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of AddFolderShareRequest from a JSON string
 add_folder_share_request_instance = AddFolderShareRequest.from_json(json)
 # print the JSON string representation of the object
-print AddFolderShareRequest.to_json()
+print(AddFolderShareRequest.to_json())
 
 # convert the object into a dict
 add_folder_share_request_dict = add_folder_share_request_instance.to_dict()

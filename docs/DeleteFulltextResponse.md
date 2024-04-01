@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of DeleteFulltextResponse from a JSON string
 delete_fulltext_response_instance = DeleteFulltextResponse.from_json(json)
 # print the JSON string representation of the object
-print DeleteFulltextResponse.to_json()
+print(DeleteFulltextResponse.to_json())
 
 # convert the object into a dict
 delete_fulltext_response_dict = delete_fulltext_response_instance.to_dict()

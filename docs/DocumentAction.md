@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **str** | Status of the Document Action | [optional] 
-**type** | **str** | Type of Document Action | [optional] 
+**status** | [**DocumentActionStatus**](DocumentActionStatus.md) |  | [optional] 
+**type** | [**DocumentActionType**](DocumentActionType.md) |  | [optional] 
 **queue_id** | **str** | Queue Id | [optional] 
 **workflow_id** | **str** | Workflow Id | [optional] 
 **workflow_step_id** | **str** | Workflow Step Id | [optional] 
@@ -28,7 +28,7 @@ json = "{}"
 # create an instance of DocumentAction from a JSON string
 document_action_instance = DocumentAction.from_json(json)
 # print the JSON string representation of the object
-print DocumentAction.to_json()
+print(DocumentAction.to_json())
 
 # convert the object into a dict
 document_action_dict = document_action_instance.to_dict()

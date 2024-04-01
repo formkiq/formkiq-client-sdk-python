@@ -18,7 +18,8 @@ Method | HTTP request | Description
 [**get_workflow_documents**](DocumentWorkflowsApi.md#get_workflow_documents) | **GET** /workflows/{workflowId}/documents | Get list of documents in workflow
 [**get_workflow_queue_documents**](DocumentWorkflowsApi.md#get_workflow_queue_documents) | **GET** /queues/{queueId}/documents | Get list of documents in queue
 [**get_workflows**](DocumentWorkflowsApi.md#get_workflows) | **GET** /workflows | Get workflows
-[**set_workflow**](DocumentWorkflowsApi.md#set_workflow) | **PUT** /workflows/{workflowId} | Add workflow
+[**set_workflow**](DocumentWorkflowsApi.md#set_workflow) | **PUT** /workflows/{workflowId} | Set workflow
+[**update_workflow**](DocumentWorkflowsApi.md#update_workflow) | **PATCH** /workflows/{workflowId} | Update workflow
 
 
 # **add_document_workflow**
@@ -32,8 +33,6 @@ Creates a document workflow; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_workflow_request import AddDocumentWorkflowRequest
 from formkiq_client.models.add_document_workflow_response import AddDocumentWorkflowResponse
@@ -112,8 +111,6 @@ Approve/Reject document in approval queue; ONLY available with FormKiQ Pro and E
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_document_workflow_decisions_request import AddDocumentWorkflowDecisionsRequest
 from formkiq_client.models.add_document_workflow_decisions_response import AddDocumentWorkflowDecisionsResponse
@@ -194,8 +191,6 @@ Creates a new Queue; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_queue_request import AddQueueRequest
 from formkiq_client.models.add_queue_response import AddQueueResponse
@@ -272,8 +267,6 @@ Creates a new Workflow; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.add_workflow_request import AddWorkflowRequest
 from formkiq_client.models.add_workflow_response import AddWorkflowResponse
@@ -350,8 +343,6 @@ Delete a Queue; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.delete_queue_response import DeleteQueueResponse
 from formkiq_client.rest import ApiException
@@ -426,8 +417,6 @@ Delete a Workflow; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.delete_workflow_response import DeleteWorkflowResponse
 from formkiq_client.rest import ApiException
@@ -502,8 +491,6 @@ Gets a document workflow; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_workflow_response import GetDocumentWorkflowResponse
 from formkiq_client.rest import ApiException
@@ -581,8 +568,6 @@ Gets a document workflows; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_document_workflows_response import GetDocumentWorkflowsResponse
 from formkiq_client.rest import ApiException
@@ -658,8 +643,6 @@ Get a queue; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_queue_response import GetQueueResponse
 from formkiq_client.rest import ApiException
@@ -734,8 +717,6 @@ Get a listing of queues; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_queues_response import GetQueuesResponse
 from formkiq_client.rest import ApiException
@@ -812,8 +793,6 @@ Get a workflow; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_workflow_response import GetWorkflowResponse
 from formkiq_client.rest import ApiException
@@ -888,8 +867,6 @@ List documents in Workflow; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_workflow_documents_response import GetWorkflowDocumentsResponse
 from formkiq_client.rest import ApiException
@@ -968,8 +945,6 @@ List documents in Workflow Queue; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_workflow_queue_documents_response import GetWorkflowQueueDocumentsResponse
 from formkiq_client.rest import ApiException
@@ -1048,8 +1023,6 @@ Get a listing of workflows; ONLY available with FormKiQ Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.get_workflows_response import GetWorkflowsResponse
 from formkiq_client.rest import ApiException
@@ -1120,7 +1093,7 @@ No authorization required
 # **set_workflow**
 > SetWorkflowResponse set_workflow(workflow_id, set_workflow_request, site_id=site_id)
 
-Add workflow
+Set workflow
 
 Set a Workflow details; ONLY available with FormKiQ Pro and Enterprise
 
@@ -1128,8 +1101,6 @@ Set a Workflow details; ONLY available with FormKiQ Pro and Enterprise
 
 
 ```python
-import time
-import os
 import formkiq_client
 from formkiq_client.models.set_workflow_request import SetWorkflowRequest
 from formkiq_client.models.set_workflow_response import SetWorkflowResponse
@@ -1156,7 +1127,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
-        # Add workflow
+        # Set workflow
         api_response = api_instance.set_workflow(workflow_id, set_workflow_request, site_id=site_id)
         print("The response of DocumentWorkflowsApi->set_workflow:\n")
         pprint(api_response)
@@ -1178,6 +1149,84 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SetWorkflowResponse**](SetWorkflowResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 20) OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | 400 BAD REQUEST |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_workflow**
+> UpdateWorkflowResponse update_workflow(workflow_id, update_workflow_request, site_id=site_id)
+
+Update workflow
+
+Update a Workflow details; ONLY available with FormKiQ Pro and Enterprise
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.update_workflow_request import UpdateWorkflowRequest
+from formkiq_client.models.update_workflow_response import UpdateWorkflowResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    workflow_id = 'workflow_id_example' # str | Workflow Identifier
+    update_workflow_request = formkiq_client.UpdateWorkflowRequest() # UpdateWorkflowRequest | 
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Update workflow
+        api_response = api_instance.update_workflow(workflow_id, update_workflow_request, site_id=site_id)
+        print("The response of DocumentWorkflowsApi->update_workflow:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentWorkflowsApi->update_workflow: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workflow_id** | **str**| Workflow Identifier | 
+ **update_workflow_request** | [**UpdateWorkflowRequest**](UpdateWorkflowRequest.md)|  | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**UpdateWorkflowResponse**](UpdateWorkflowResponse.md)
 
 ### Authorization
 

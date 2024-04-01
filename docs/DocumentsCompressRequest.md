@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of DocumentsCompressRequest from a JSON string
 documents_compress_request_instance = DocumentsCompressRequest.from_json(json)
 # print the JSON string representation of the object
-print DocumentsCompressRequest.to_json()
+print(DocumentsCompressRequest.to_json())
 
 # convert the object into a dict
 documents_compress_request_dict = documents_compress_request_instance.to_dict()

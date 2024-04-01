@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of SetDocumentRestoreResponse from a JSON string
 set_document_restore_response_instance = SetDocumentRestoreResponse.from_json(json)
 # print the JSON string representation of the object
-print SetDocumentRestoreResponse.to_json()
+print(SetDocumentRestoreResponse.to_json())
 
 # convert the object into a dict
 set_document_restore_response_dict = set_document_restore_response_instance.to_dict()

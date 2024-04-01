@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of OnlyOfficeConfig from a JSON string
 only_office_config_instance = OnlyOfficeConfig.from_json(json)
 # print the JSON string representation of the object
-print OnlyOfficeConfig.to_json()
+print(OnlyOfficeConfig.to_json())
 
 # convert the object into a dict
 only_office_config_dict = only_office_config_instance.to_dict()
