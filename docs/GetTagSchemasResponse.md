@@ -24,7 +24,7 @@ print(GetTagSchemasResponse.to_json())
 # convert the object into a dict
 get_tag_schemas_response_dict = get_tag_schemas_response_instance.to_dict()
 # create an instance of GetTagSchemasResponse from a dict
-get_tag_schemas_response_form_dict = get_tag_schemas_response.from_dict(get_tag_schemas_response_dict)
+get_tag_schemas_response_from_dict = GetTagSchemasResponse.from_dict(get_tag_schemas_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

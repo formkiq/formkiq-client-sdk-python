@@ -23,7 +23,7 @@ print(AddEsignatureDocusignResponse.to_json())
 # convert the object into a dict
 add_esignature_docusign_response_dict = add_esignature_docusign_response_instance.to_dict()
 # create an instance of AddEsignatureDocusignResponse from a dict
-add_esignature_docusign_response_form_dict = add_esignature_docusign_response.from_dict(add_esignature_docusign_response_dict)
+add_esignature_docusign_response_from_dict = AddEsignatureDocusignResponse.from_dict(add_esignature_docusign_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -22,7 +22,7 @@ print(UpdateDocumentFulltextResponse.to_json())
 # convert the object into a dict
 update_document_fulltext_response_dict = update_document_fulltext_response_instance.to_dict()
 # create an instance of UpdateDocumentFulltextResponse from a dict
-update_document_fulltext_response_form_dict = update_document_fulltext_response.from_dict(update_document_fulltext_response_dict)
+update_document_fulltext_response_from_dict = UpdateDocumentFulltextResponse.from_dict(update_document_fulltext_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

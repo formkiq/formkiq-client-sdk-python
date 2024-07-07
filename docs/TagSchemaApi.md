@@ -87,7 +87,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_tag_schema**
-> delete_tag_schema(tag_schema_id, site_id=site_id)
+> DeleteResponse delete_tag_schema(tag_schema_id, site_id=site_id)
 
 Delete tag schema
 
@@ -98,6 +98,7 @@ Delete a TagSchema; ONLY available with FormKiQ Pro and Enterprise
 
 ```python
 import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -121,7 +122,9 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete tag schema
-        api_instance.delete_tag_schema(tag_schema_id, site_id=site_id)
+        api_response = api_instance.delete_tag_schema(tag_schema_id, site_id=site_id)
+        print("The response of TagSchemaApi->delete_tag_schema:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling TagSchemaApi->delete_tag_schema: %s\n" % e)
 ```
@@ -138,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -147,7 +150,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 

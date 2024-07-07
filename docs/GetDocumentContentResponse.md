@@ -25,7 +25,7 @@ print(GetDocumentContentResponse.to_json())
 # convert the object into a dict
 get_document_content_response_dict = get_document_content_response_instance.to_dict()
 # create an instance of GetDocumentContentResponse from a dict
-get_document_content_response_form_dict = get_document_content_response.from_dict(get_document_content_response_dict)
+get_document_content_response_from_dict = GetDocumentContentResponse.from_dict(get_document_content_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

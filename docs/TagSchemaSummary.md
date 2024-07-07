@@ -26,7 +26,7 @@ print(TagSchemaSummary.to_json())
 # convert the object into a dict
 tag_schema_summary_dict = tag_schema_summary_instance.to_dict()
 # create an instance of TagSchemaSummary from a dict
-tag_schema_summary_form_dict = tag_schema_summary.from_dict(tag_schema_summary_dict)
+tag_schema_summary_from_dict = TagSchemaSummary.from_dict(tag_schema_summary_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

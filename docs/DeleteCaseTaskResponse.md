@@ -22,7 +22,7 @@ print(DeleteCaseTaskResponse.to_json())
 # convert the object into a dict
 delete_case_task_response_dict = delete_case_task_response_instance.to_dict()
 # create an instance of DeleteCaseTaskResponse from a dict
-delete_case_task_response_form_dict = delete_case_task_response.from_dict(delete_case_task_response_dict)
+delete_case_task_response_from_dict = DeleteCaseTaskResponse.from_dict(delete_case_task_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

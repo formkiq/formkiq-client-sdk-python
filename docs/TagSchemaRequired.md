@@ -24,7 +24,7 @@ print(TagSchemaRequired.to_json())
 # convert the object into a dict
 tag_schema_required_dict = tag_schema_required_instance.to_dict()
 # create an instance of TagSchemaRequired from a dict
-tag_schema_required_form_dict = tag_schema_required.from_dict(tag_schema_required_dict)
+tag_schema_required_from_dict = TagSchemaRequired.from_dict(tag_schema_required_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

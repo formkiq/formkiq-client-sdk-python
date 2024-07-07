@@ -25,7 +25,7 @@ print(SetWorkflowRequest.to_json())
 # convert the object into a dict
 set_workflow_request_dict = set_workflow_request_instance.to_dict()
 # create an instance of SetWorkflowRequest from a dict
-set_workflow_request_form_dict = set_workflow_request.from_dict(set_workflow_request_dict)
+set_workflow_request_from_dict = SetWorkflowRequest.from_dict(set_workflow_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

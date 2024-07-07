@@ -5,6 +5,8 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_case**](CaseManagementApi.md#add_case) | **POST** /cases | Add New Case
+[**add_nigo**](CaseManagementApi.md#add_nigo) | **POST** /cases/{caseId}/nigos | Add New Nigo
+[**add_task**](CaseManagementApi.md#add_task) | **POST** /cases/{caseId}/tasks | Add New Task
 [**delete_case**](CaseManagementApi.md#delete_case) | **DELETE** /cases/{caseId} | Delete Case
 [**delete_case_document**](CaseManagementApi.md#delete_case_document) | **DELETE** /cases/{caseId}/documents/{documentId} | Delete Document from Case
 [**delete_nigo**](CaseManagementApi.md#delete_nigo) | **DELETE** /cases/{caseId}/nigos/{nigoId} | Delete Nigo
@@ -82,6 +84,160 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AddCaseResponse**](AddCaseResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_nigo**
+> AddNigoResponse add_nigo(case_id, add_nigo_request, site_id=site_id)
+
+Add New Nigo
+
+Adds new nigo; ONLY available with FormKiQ Enterprise
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.add_nigo_request import AddNigoRequest
+from formkiq_client.models.add_nigo_response import AddNigoResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.CaseManagementApi(api_client)
+    case_id = 'case_id_example' # str | Case Identifier
+    add_nigo_request = formkiq_client.AddNigoRequest() # AddNigoRequest | 
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Add New Nigo
+        api_response = api_instance.add_nigo(case_id, add_nigo_request, site_id=site_id)
+        print("The response of CaseManagementApi->add_nigo:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CaseManagementApi->add_nigo: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **case_id** | **str**| Case Identifier | 
+ **add_nigo_request** | [**AddNigoRequest**](AddNigoRequest.md)|  | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**AddNigoResponse**](AddNigoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_task**
+> AddTaskResponse add_task(case_id, add_task_request, site_id=site_id)
+
+Add New Task
+
+Adds new task; ONLY available with FormKiQ Enterprise
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.add_task_request import AddTaskRequest
+from formkiq_client.models.add_task_response import AddTaskResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.CaseManagementApi(api_client)
+    case_id = 'case_id_example' # str | Case Identifier
+    add_task_request = formkiq_client.AddTaskRequest() # AddTaskRequest | 
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Add New Task
+        api_response = api_instance.add_task(case_id, add_task_request, site_id=site_id)
+        print("The response of CaseManagementApi->add_task:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CaseManagementApi->add_task: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **case_id** | **str**| Case Identifier | 
+ **add_task_request** | [**AddTaskRequest**](AddTaskRequest.md)|  | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**AddTaskResponse**](AddTaskResponse.md)
 
 ### Authorization
 

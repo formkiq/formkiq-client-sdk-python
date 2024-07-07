@@ -33,7 +33,7 @@ print(DocumentVersion.to_json())
 # convert the object into a dict
 document_version_dict = document_version_instance.to_dict()
 # create an instance of DocumentVersion from a dict
-document_version_form_dict = document_version.from_dict(document_version_dict)
+document_version_from_dict = DocumentVersion.from_dict(document_version_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

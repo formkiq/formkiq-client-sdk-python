@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **created_by** | **str** | User who added document | [optional] 
 **tags** | **Dict[str, object]** |  | [optional] 
 **metadata** | **Dict[str, object]** |  | [optional] 
-**access_attributes** | **Dict[str, object]** |  | [optional] 
+**attributes** | [**Dict[str, FulltextAttribute]**](FulltextAttribute.md) |  | [optional] 
 
 ## Example
 
@@ -32,7 +32,7 @@ print(FulltextSearchItem.to_json())
 # convert the object into a dict
 fulltext_search_item_dict = fulltext_search_item_instance.to_dict()
 # create an instance of FulltextSearchItem from a dict
-fulltext_search_item_form_dict = fulltext_search_item.from_dict(fulltext_search_item_dict)
+fulltext_search_item_from_dict = FulltextSearchItem.from_dict(fulltext_search_item_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

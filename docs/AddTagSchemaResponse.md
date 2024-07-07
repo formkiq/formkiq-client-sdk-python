@@ -22,7 +22,7 @@ print(AddTagSchemaResponse.to_json())
 # convert the object into a dict
 add_tag_schema_response_dict = add_tag_schema_response_instance.to_dict()
 # create an instance of AddTagSchemaResponse from a dict
-add_tag_schema_response_form_dict = add_tag_schema_response.from_dict(add_tag_schema_response_dict)
+add_tag_schema_response_from_dict = AddTagSchemaResponse.from_dict(add_tag_schema_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

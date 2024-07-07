@@ -24,7 +24,7 @@ print(GetFoldersResponse.to_json())
 # convert the object into a dict
 get_folders_response_dict = get_folders_response_instance.to_dict()
 # create an instance of GetFoldersResponse from a dict
-get_folders_response_form_dict = get_folders_response.from_dict(get_folders_response_dict)
+get_folders_response_from_dict = GetFoldersResponse.from_dict(get_folders_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

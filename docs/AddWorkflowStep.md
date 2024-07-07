@@ -25,7 +25,7 @@ print(AddWorkflowStep.to_json())
 # convert the object into a dict
 add_workflow_step_dict = add_workflow_step_instance.to_dict()
 # create an instance of AddWorkflowStep from a dict
-add_workflow_step_form_dict = add_workflow_step.from_dict(add_workflow_step_dict)
+add_workflow_step_from_dict = AddWorkflowStep.from_dict(add_workflow_step_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

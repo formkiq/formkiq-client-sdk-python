@@ -24,7 +24,7 @@ print(DocumentSearchResponse.to_json())
 # convert the object into a dict
 document_search_response_dict = document_search_response_instance.to_dict()
 # create an instance of DocumentSearchResponse from a dict
-document_search_response_form_dict = document_search_response.from_dict(document_search_response_dict)
+document_search_response_from_dict = DocumentSearchResponse.from_dict(document_search_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

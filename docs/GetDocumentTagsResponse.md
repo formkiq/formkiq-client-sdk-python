@@ -24,7 +24,7 @@ print(GetDocumentTagsResponse.to_json())
 # convert the object into a dict
 get_document_tags_response_dict = get_document_tags_response_instance.to_dict()
 # create an instance of GetDocumentTagsResponse from a dict
-get_document_tags_response_form_dict = get_document_tags_response.from_dict(get_document_tags_response_dict)
+get_document_tags_response_from_dict = GetDocumentTagsResponse.from_dict(get_document_tags_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

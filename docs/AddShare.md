@@ -23,7 +23,7 @@ print(AddShare.to_json())
 # convert the object into a dict
 add_share_dict = add_share_instance.to_dict()
 # create an instance of AddShare from a dict
-add_share_form_dict = add_share.from_dict(add_share_dict)
+add_share_from_dict = AddShare.from_dict(add_share_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

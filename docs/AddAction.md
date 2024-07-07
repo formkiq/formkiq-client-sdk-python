@@ -24,7 +24,7 @@ print(AddAction.to_json())
 # convert the object into a dict
 add_action_dict = add_action_instance.to_dict()
 # create an instance of AddAction from a dict
-add_action_form_dict = add_action.from_dict(add_action_dict)
+add_action_from_dict = AddAction.from_dict(add_action_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

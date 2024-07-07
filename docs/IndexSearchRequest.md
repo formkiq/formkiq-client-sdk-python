@@ -22,7 +22,7 @@ print(IndexSearchRequest.to_json())
 # convert the object into a dict
 index_search_request_dict = index_search_request_instance.to_dict()
 # create an instance of IndexSearchRequest from a dict
-index_search_request_form_dict = index_search_request.from_dict(index_search_request_dict)
+index_search_request_from_dict = IndexSearchRequest.from_dict(index_search_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

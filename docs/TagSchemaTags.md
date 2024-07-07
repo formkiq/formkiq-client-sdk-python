@@ -25,7 +25,7 @@ print(TagSchemaTags.to_json())
 # convert the object into a dict
 tag_schema_tags_dict = tag_schema_tags_instance.to_dict()
 # create an instance of TagSchemaTags from a dict
-tag_schema_tags_form_dict = tag_schema_tags.from_dict(tag_schema_tags_dict)
+tag_schema_tags_from_dict = TagSchemaTags.from_dict(tag_schema_tags_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

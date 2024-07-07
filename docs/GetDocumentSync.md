@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**service** | **str** | To which service the data was synced | [optional] 
-**status** | **str** | The status of the sync | [optional] 
-**type** | **str** | The type of the sync | [optional] 
+**service** | [**DocumentSyncService**](DocumentSyncService.md) |  | [optional] 
+**status** | [**DocumentSyncStatus**](DocumentSyncStatus.md) |  | [optional] 
+**type** | [**DocumentSyncType**](DocumentSyncType.md) |  | [optional] 
 **sync_date** | **str** | Timestamp of synchronization | [optional] 
 **user_id** | **str** | User who added document | [optional] 
 **message** | **str** | Document sync message | [optional] 
@@ -27,7 +27,7 @@ print(GetDocumentSync.to_json())
 # convert the object into a dict
 get_document_sync_dict = get_document_sync_instance.to_dict()
 # create an instance of GetDocumentSync from a dict
-get_document_sync_form_dict = get_document_sync.from_dict(get_document_sync_dict)
+get_document_sync_from_dict = GetDocumentSync.from_dict(get_document_sync_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

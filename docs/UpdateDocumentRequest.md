@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **content** | **str** | Document content | [optional] 
 **tags** | [**List[AddDocumentTag]**](AddDocumentTag.md) | List of document tags | [optional] 
 **metadata** | [**List[AddDocumentMetadata]**](AddDocumentMetadata.md) | List of document Metadata | [optional] 
+**attributes** | [**List[AddDocumentAttribute]**](AddDocumentAttribute.md) | List of document attributes | [optional] 
 **actions** | [**List[AddAction]**](AddAction.md) | List of Actions | [optional] 
 **documents** | [**List[AddChildDocument]**](AddChildDocument.md) | List of child documents | [optional] 
 
@@ -31,7 +32,7 @@ print(UpdateDocumentRequest.to_json())
 # convert the object into a dict
 update_document_request_dict = update_document_request_instance.to_dict()
 # create an instance of UpdateDocumentRequest from a dict
-update_document_request_form_dict = update_document_request.from_dict(update_document_request_dict)
+update_document_request_from_dict = UpdateDocumentRequest.from_dict(update_document_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

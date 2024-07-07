@@ -22,7 +22,7 @@ print(UpdateRulesetRequest.to_json())
 # convert the object into a dict
 update_ruleset_request_dict = update_ruleset_request_instance.to_dict()
 # create an instance of UpdateRulesetRequest from a dict
-update_ruleset_request_form_dict = update_ruleset_request.from_dict(update_ruleset_request_dict)
+update_ruleset_request_from_dict = UpdateRulesetRequest.from_dict(update_ruleset_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

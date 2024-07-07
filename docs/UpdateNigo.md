@@ -28,7 +28,7 @@ print(UpdateNigo.to_json())
 # convert the object into a dict
 update_nigo_dict = update_nigo_instance.to_dict()
 # create an instance of UpdateNigo from a dict
-update_nigo_form_dict = update_nigo.from_dict(update_nigo_dict)
+update_nigo_from_dict = UpdateNigo.from_dict(update_nigo_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

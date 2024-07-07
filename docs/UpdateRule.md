@@ -26,7 +26,7 @@ print(UpdateRule.to_json())
 # convert the object into a dict
 update_rule_dict = update_rule_instance.to_dict()
 # create an instance of UpdateRule from a dict
-update_rule_form_dict = update_rule.from_dict(update_rule_dict)
+update_rule_from_dict = UpdateRule.from_dict(update_rule_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

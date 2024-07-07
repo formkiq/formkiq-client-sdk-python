@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **delete_document_version**
-> delete_document_version(document_id, version_key, site_id=site_id, share_key=share_key)
+> DeleteResponse delete_document_version(document_id, version_key, site_id=site_id, share_key=share_key)
 
 Delete document version
 
@@ -21,6 +21,7 @@ Delete a specific previous document version; ONLY available with FormKiQ Pro and
 
 ```python
 import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -46,7 +47,9 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete document version
-        api_instance.delete_document_version(document_id, version_key, site_id=site_id, share_key=share_key)
+        api_response = api_instance.delete_document_version(document_id, version_key, site_id=site_id, share_key=share_key)
+        print("The response of DocumentVersionsApi->delete_document_version:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DocumentVersionsApi->delete_document_version: %s\n" % e)
 ```
@@ -65,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -74,7 +77,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 

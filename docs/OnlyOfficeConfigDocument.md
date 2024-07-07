@@ -25,7 +25,7 @@ print(OnlyOfficeConfigDocument.to_json())
 # convert the object into a dict
 only_office_config_document_dict = only_office_config_document_instance.to_dict()
 # create an instance of OnlyOfficeConfigDocument from a dict
-only_office_config_document_form_dict = only_office_config_document.from_dict(only_office_config_document_dict)
+only_office_config_document_from_dict = OnlyOfficeConfigDocument.from_dict(only_office_config_document_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

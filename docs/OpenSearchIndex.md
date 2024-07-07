@@ -23,7 +23,7 @@ print(OpenSearchIndex.to_json())
 # convert the object into a dict
 open_search_index_dict = open_search_index_instance.to_dict()
 # create an instance of OpenSearchIndex from a dict
-open_search_index_form_dict = open_search_index.from_dict(open_search_index_dict)
+open_search_index_from_dict = OpenSearchIndex.from_dict(open_search_index_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -22,7 +22,7 @@ print(QueryFulltextResponse.to_json())
 # convert the object into a dict
 query_fulltext_response_dict = query_fulltext_response_instance.to_dict()
 # create an instance of QueryFulltextResponse from a dict
-query_fulltext_response_form_dict = query_fulltext_response.from_dict(query_fulltext_response_dict)
+query_fulltext_response_from_dict = QueryFulltextResponse.from_dict(query_fulltext_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

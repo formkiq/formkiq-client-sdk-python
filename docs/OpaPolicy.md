@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **site_id** | **str** | SiteId to apply OPA Policy to | [optional] 
 **policy** | **str** | OPA Policy in REGO format | [optional] 
-**inserted_date** | **str** | Inserted Timestamp | [optional] 
 
 ## Example
 
@@ -24,7 +23,7 @@ print(OpaPolicy.to_json())
 # convert the object into a dict
 opa_policy_dict = opa_policy_instance.to_dict()
 # create an instance of OpaPolicy from a dict
-opa_policy_form_dict = opa_policy.from_dict(opa_policy_dict)
+opa_policy_from_dict = OpaPolicy.from_dict(opa_policy_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

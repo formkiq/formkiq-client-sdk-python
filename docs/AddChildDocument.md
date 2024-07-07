@@ -29,7 +29,7 @@ print(AddChildDocument.to_json())
 # convert the object into a dict
 add_child_document_dict = add_child_document_instance.to_dict()
 # create an instance of AddChildDocument from a dict
-add_child_document_form_dict = add_child_document.from_dict(add_child_document_dict)
+add_child_document_from_dict = AddChildDocument.from_dict(add_child_document_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

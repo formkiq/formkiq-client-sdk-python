@@ -22,7 +22,7 @@ print(SetOpenSearchIndexRequest.to_json())
 # convert the object into a dict
 set_open_search_index_request_dict = set_open_search_index_request_instance.to_dict()
 # create an instance of SetOpenSearchIndexRequest from a dict
-set_open_search_index_request_form_dict = set_open_search_index_request.from_dict(set_open_search_index_request_dict)
+set_open_search_index_request_from_dict = SetOpenSearchIndexRequest.from_dict(set_open_search_index_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

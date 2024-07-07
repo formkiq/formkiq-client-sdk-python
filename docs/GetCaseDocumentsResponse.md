@@ -23,7 +23,7 @@ print(GetCaseDocumentsResponse.to_json())
 # convert the object into a dict
 get_case_documents_response_dict = get_case_documents_response_instance.to_dict()
 # create an instance of GetCaseDocumentsResponse from a dict
-get_case_documents_response_form_dict = get_case_documents_response.from_dict(get_case_documents_response_dict)
+get_case_documents_response_from_dict = GetCaseDocumentsResponse.from_dict(get_case_documents_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -166,7 +166,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_opensearch_index**
-> DeleteOpenSearchIndexResponse delete_opensearch_index(site_id)
+> DeleteResponse delete_opensearch_index(site_id)
 
 Deletst site(s) OpenSearch index
 
@@ -177,7 +177,7 @@ Deletes the OpenSearch index
 
 ```python
 import formkiq_client
-from formkiq_client.models.delete_open_search_index_response import DeleteOpenSearchIndexResponse
+from formkiq_client.models.delete_response import DeleteResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteOpenSearchIndexResponse**](DeleteOpenSearchIndexResponse.md)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 

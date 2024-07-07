@@ -22,7 +22,7 @@ print(IndexFolderMoveResponse.to_json())
 # convert the object into a dict
 index_folder_move_response_dict = index_folder_move_response_instance.to_dict()
 # create an instance of IndexFolderMoveResponse from a dict
-index_folder_move_response_form_dict = index_folder_move_response.from_dict(index_folder_move_response_dict)
+index_folder_move_response_from_dict = IndexFolderMoveResponse.from_dict(index_folder_move_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

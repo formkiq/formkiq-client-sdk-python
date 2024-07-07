@@ -22,7 +22,7 @@ print(PdfDocument.to_json())
 # convert the object into a dict
 pdf_document_dict = pdf_document_instance.to_dict()
 # create an instance of PdfDocument from a dict
-pdf_document_form_dict = pdf_document.from_dict(pdf_document_dict)
+pdf_document_from_dict = PdfDocument.from_dict(pdf_document_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

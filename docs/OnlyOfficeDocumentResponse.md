@@ -22,7 +22,7 @@ print(OnlyOfficeDocumentResponse.to_json())
 # convert the object into a dict
 only_office_document_response_dict = only_office_document_response_instance.to_dict()
 # create an instance of OnlyOfficeDocumentResponse from a dict
-only_office_document_response_form_dict = only_office_document_response.from_dict(only_office_document_response_dict)
+only_office_document_response_from_dict = OnlyOfficeDocumentResponse.from_dict(only_office_document_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -26,7 +26,7 @@ print(UpdateConfigurationRequest.to_json())
 # convert the object into a dict
 update_configuration_request_dict = update_configuration_request_instance.to_dict()
 # create an instance of UpdateConfigurationRequest from a dict
-update_configuration_request_form_dict = update_configuration_request.from_dict(update_configuration_request_dict)
+update_configuration_request_from_dict = UpdateConfigurationRequest.from_dict(update_configuration_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
