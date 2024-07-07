@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **page** | **int** | Result page to return (starting at 1) | [optional] 
 **text** | **str** | Full text search | [optional] 
 **tags** | [**List[DocumentFulltextTag]**](DocumentFulltextTag.md) | List of search tags | [optional] 
+**attributes** | [**List[DocumentFulltextAttribute]**](DocumentFulltextAttribute.md) | List of search attributes | [optional] 
 
 ## Example
 
@@ -25,7 +26,7 @@ print(DocumentFulltextSearch.to_json())
 # convert the object into a dict
 document_fulltext_search_dict = document_fulltext_search_instance.to_dict()
 # create an instance of DocumentFulltextSearch from a dict
-document_fulltext_search_form_dict = document_fulltext_search.from_dict(document_fulltext_search_dict)
+document_fulltext_search_from_dict = DocumentFulltextSearch.from_dict(document_fulltext_search_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

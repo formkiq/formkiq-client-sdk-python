@@ -27,7 +27,7 @@ print(Ruleset.to_json())
 # convert the object into a dict
 ruleset_dict = ruleset_instance.to_dict()
 # create an instance of Ruleset from a dict
-ruleset_form_dict = ruleset.from_dict(ruleset_dict)
+ruleset_from_dict = Ruleset.from_dict(ruleset_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

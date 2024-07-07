@@ -24,7 +24,7 @@ print(UpdateWorkflowRequest.to_json())
 # convert the object into a dict
 update_workflow_request_dict = update_workflow_request_instance.to_dict()
 # create an instance of UpdateWorkflowRequest from a dict
-update_workflow_request_form_dict = update_workflow_request.from_dict(update_workflow_request_dict)
+update_workflow_request_from_dict = UpdateWorkflowRequest.from_dict(update_workflow_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

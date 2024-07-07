@@ -23,7 +23,7 @@ print(IndexFolderMoveRequest.to_json())
 # convert the object into a dict
 index_folder_move_request_dict = index_folder_move_request_instance.to_dict()
 # create an instance of IndexFolderMoveRequest from a dict
-index_folder_move_request_form_dict = index_folder_move_request.from_dict(index_folder_move_request_dict)
+index_folder_move_request_from_dict = IndexFolderMoveRequest.from_dict(index_folder_move_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -32,7 +32,7 @@ print(Case.to_json())
 # convert the object into a dict
 case_dict = case_instance.to_dict()
 # create an instance of Case from a dict
-case_form_dict = case.from_dict(case_dict)
+case_from_dict = Case.from_dict(case_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

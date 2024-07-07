@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**add_document_upload**](DocumentsApi.md#add_document_upload) | **POST** /documents/upload | Add large document
 [**compress_documents**](DocumentsApi.md#compress_documents) | **POST** /documents/compress | Compress multiple documents into a .zip file
 [**delete_document**](DocumentsApi.md#delete_document) | **DELETE** /documents/{documentId} | Delete document
+[**delete_published_document_content**](DocumentsApi.md#delete_published_document_content) | **DELETE** /publications/{documentId} | Delete published document&#39;s contents
 [**get_document**](DocumentsApi.md#get_document) | **GET** /documents/{documentId} | Get document
 [**get_document_content**](DocumentsApi.md#get_document_content) | **GET** /documents/{documentId}/content | Get document&#39;s contents
 [**get_document_id_upload**](DocumentsApi.md#get_document_id_upload) | **GET** /documents/{documentId}/upload | Get url to update large document
@@ -15,6 +16,7 @@ Method | HTTP request | Description
 [**get_document_upload**](DocumentsApi.md#get_document_upload) | **GET** /documents/upload | Get url to add large document
 [**get_document_url**](DocumentsApi.md#get_document_url) | **GET** /documents/{documentId}/url | Get document content url
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /documents | Get Documents listing
+[**get_published_document_content**](DocumentsApi.md#get_published_document_content) | **GET** /publications/{documentId} | Get published document&#39;s contents
 [**set_document_restore**](DocumentsApi.md#set_document_restore) | **PUT** /documents/{documentId}/restore | Restore soft deleted document
 [**update_document**](DocumentsApi.md#update_document) | **PATCH** /documents/{documentId} | Update document
 
@@ -254,7 +256,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document**
-> delete_document(document_id, site_id=site_id, soft_delete=soft_delete)
+> DeleteResponse delete_document(document_id, site_id=site_id, soft_delete=soft_delete)
 
 Delete document
 
@@ -265,6 +267,7 @@ Delete a document
 
 ```python
 import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -289,7 +292,9 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete document
-        api_instance.delete_document(document_id, site_id=site_id, soft_delete=soft_delete)
+        api_response = api_instance.delete_document(document_id, site_id=site_id, soft_delete=soft_delete)
+        print("The response of DocumentsApi->delete_document:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DocumentsApi->delete_document: %s\n" % e)
 ```
@@ -307,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -316,7 +321,81 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_published_document_content**
+> DeleteResponse delete_published_document_content(document_id, site_id=site_id)
+
+Delete published document's contents
+
+Delete a published document's contents. Certain content types, text/*, application/json, and application/x-www-form-urlencoded. return the  \"content\" field, while all other content types return a 'contentUrl' for retrieving the content.
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Delete published document's contents
+        api_response = api_instance.delete_published_document_content(document_id, site_id=site_id)
+        print("The response of DocumentsApi->delete_published_document_content:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentsApi->delete_published_document_content: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**DeleteResponse**](DeleteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -883,6 +962,77 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_published_document_content**
+> get_published_document_content(document_id, site_id=site_id)
+
+Get published document's contents
+
+Get a published document's contents. Certain content types, text/*, application/json, and application/x-www-form-urlencoded. return the  \"content\" field, while all other content types return a 'contentUrl' for retrieving the content.
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Get published document's contents
+        api_instance.get_published_document_content(document_id, site_id=site_id)
+    except Exception as e:
+        print("Exception when calling DocumentsApi->get_published_document_content: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**307** | Temporary Redirect |  * Location -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

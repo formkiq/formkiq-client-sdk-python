@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **content_length** | **int** | Document size | [optional] 
 **tags** | **Dict[str, object]** |  | [optional] 
 **metadata** | **Dict[str, object]** |  | [optional] 
-**access_attributes** | **Dict[str, object]** |  | [optional] 
+**attributes** | [**Dict[str, FulltextAttribute]**](FulltextAttribute.md) |  | [optional] 
 
 ## Example
 
@@ -34,7 +34,7 @@ print(GetDocumentFulltextResponse.to_json())
 # convert the object into a dict
 get_document_fulltext_response_dict = get_document_fulltext_response_instance.to_dict()
 # create an instance of GetDocumentFulltextResponse from a dict
-get_document_fulltext_response_form_dict = get_document_fulltext_response.from_dict(get_document_fulltext_response_dict)
+get_document_fulltext_response_from_dict = GetDocumentFulltextResponse.from_dict(get_document_fulltext_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

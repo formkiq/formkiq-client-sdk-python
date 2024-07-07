@@ -25,7 +25,7 @@ print(AddDocumentMetadata.to_json())
 # convert the object into a dict
 add_document_metadata_dict = add_document_metadata_instance.to_dict()
 # create an instance of AddDocumentMetadata from a dict
-add_document_metadata_form_dict = add_document_metadata.from_dict(add_document_metadata_dict)
+add_document_metadata_from_dict = AddDocumentMetadata.from_dict(add_document_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -22,7 +22,7 @@ print(UpdateTaskResponse.to_json())
 # convert the object into a dict
 update_task_response_dict = update_task_response_instance.to_dict()
 # create an instance of UpdateTaskResponse from a dict
-update_task_response_form_dict = update_task_response.from_dict(update_task_response_dict)
+update_task_response_from_dict = UpdateTaskResponse.from_dict(update_task_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

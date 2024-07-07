@@ -29,7 +29,7 @@ print(UserShare.to_json())
 # convert the object into a dict
 user_share_dict = user_share_instance.to_dict()
 # create an instance of UserShare from a dict
-user_share_form_dict = user_share.from_dict(user_share_dict)
+user_share_from_dict = UserShare.from_dict(user_share_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

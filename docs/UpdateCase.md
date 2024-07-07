@@ -28,7 +28,7 @@ print(UpdateCase.to_json())
 # convert the object into a dict
 update_case_dict = update_case_instance.to_dict()
 # create an instance of UpdateCase from a dict
-update_case_form_dict = update_case.from_dict(update_case_dict)
+update_case_from_dict = UpdateCase.from_dict(update_case_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ print(AddWorkflowStepQueue.to_json())
 # convert the object into a dict
 add_workflow_step_queue_dict = add_workflow_step_queue_instance.to_dict()
 # create an instance of AddWorkflowStepQueue from a dict
-add_workflow_step_queue_form_dict = add_workflow_step_queue.from_dict(add_workflow_step_queue_dict)
+add_workflow_step_queue_from_dict = AddWorkflowStepQueue.from_dict(add_workflow_step_queue_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

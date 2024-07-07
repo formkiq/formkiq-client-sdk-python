@@ -24,7 +24,7 @@ print(DocumentSearchMatchTag.to_json())
 # convert the object into a dict
 document_search_match_tag_dict = document_search_match_tag_instance.to_dict()
 # create an instance of DocumentSearchMatchTag from a dict
-document_search_match_tag_form_dict = document_search_match_tag.from_dict(document_search_match_tag_dict)
+document_search_match_tag_from_dict = DocumentSearchMatchTag.from_dict(document_search_match_tag_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

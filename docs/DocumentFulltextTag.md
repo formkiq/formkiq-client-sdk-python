@@ -24,7 +24,7 @@ print(DocumentFulltextTag.to_json())
 # convert the object into a dict
 document_fulltext_tag_dict = document_fulltext_tag_instance.to_dict()
 # create an instance of DocumentFulltextTag from a dict
-document_fulltext_tag_form_dict = document_fulltext_tag.from_dict(document_fulltext_tag_dict)
+document_fulltext_tag_from_dict = DocumentFulltextTag.from_dict(document_fulltext_tag_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

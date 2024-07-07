@@ -22,7 +22,7 @@ print(RuleCondition.to_json())
 # convert the object into a dict
 rule_condition_dict = rule_condition_instance.to_dict()
 # create an instance of RuleCondition from a dict
-rule_condition_form_dict = rule_condition.from_dict(rule_condition_dict)
+rule_condition_from_dict = RuleCondition.from_dict(rule_condition_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

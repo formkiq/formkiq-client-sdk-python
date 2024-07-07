@@ -5,8 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**name** | **str** | Name of Task | [optional] 
 **description** | **str** | Description of Task | 
 **status** | [**TaskStatus**](TaskStatus.md) |  | [optional] 
+**start_date** | **str** | Start Date | [optional] 
+**end_date** | **str** | End Date | [optional] 
 **metadata** | **Dict[str, object]** |  | [optional] 
 **document_ids** | **List[str]** |  | [optional] 
 
@@ -25,7 +28,7 @@ print(AddTask.to_json())
 # convert the object into a dict
 add_task_dict = add_task_instance.to_dict()
 # create an instance of AddTask from a dict
-add_task_form_dict = add_task.from_dict(add_task_dict)
+add_task_from_dict = AddTask.from_dict(add_task_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

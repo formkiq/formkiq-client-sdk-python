@@ -39,7 +39,7 @@ configuration = formkiq_client.Configuration(
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.DocumentSearchApi(api_client)
-    document_search_request = {"query":{"tag":{"key":"category"}}} # DocumentSearchRequest | 
+    document_search_request = {"query":{"attribute":{"key":"category"}}} # DocumentSearchRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)

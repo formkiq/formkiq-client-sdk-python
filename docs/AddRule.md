@@ -26,7 +26,7 @@ print(AddRule.to_json())
 # convert the object into a dict
 add_rule_dict = add_rule_instance.to_dict()
 # create an instance of AddRule from a dict
-add_rule_form_dict = add_rule.from_dict(add_rule_dict)
+add_rule_from_dict = AddRule.from_dict(add_rule_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

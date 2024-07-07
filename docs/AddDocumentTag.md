@@ -25,7 +25,7 @@ print(AddDocumentTag.to_json())
 # convert the object into a dict
 add_document_tag_dict = add_document_tag_instance.to_dict()
 # create an instance of AddDocumentTag from a dict
-add_document_tag_form_dict = add_document_tag.from_dict(add_document_tag_dict)
+add_document_tag_from_dict = AddDocumentTag.from_dict(add_document_tag_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

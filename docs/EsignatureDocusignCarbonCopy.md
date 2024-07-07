@@ -23,7 +23,7 @@ print(EsignatureDocusignCarbonCopy.to_json())
 # convert the object into a dict
 esignature_docusign_carbon_copy_dict = esignature_docusign_carbon_copy_instance.to_dict()
 # create an instance of EsignatureDocusignCarbonCopy from a dict
-esignature_docusign_carbon_copy_form_dict = esignature_docusign_carbon_copy.from_dict(esignature_docusign_carbon_copy_dict)
+esignature_docusign_carbon_copy_from_dict = EsignatureDocusignCarbonCopy.from_dict(esignature_docusign_carbon_copy_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

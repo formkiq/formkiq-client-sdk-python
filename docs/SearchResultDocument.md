@@ -19,9 +19,11 @@ Name | Type | Description | Notes
 **content_length** | **int** | Document size | [optional] 
 **version_id** | **str** | Document version | [optional] 
 **belongs_to_document_id** | **str** | Parent Document Identifier | [optional] 
+**matched_attribute** | [**DocumentSearchMatchAttribute**](DocumentSearchMatchAttribute.md) |  | [optional] 
 **matched_tag** | [**DocumentSearchMatchTag**](DocumentSearchMatchTag.md) |  | [optional] 
 **matched_tags** | [**List[DocumentSearchMatchTag]**](DocumentSearchMatchTag.md) |  | [optional] 
 **tags** | **Dict[str, object]** |  | [optional] 
+**attributes** | [**Dict[str, SearchResultDocumentAttribute]**](SearchResultDocumentAttribute.md) |  | [optional] 
 **metadata** | [**List[DocumentMetadata]**](DocumentMetadata.md) | List of document Metadata | [optional] 
 
 ## Example
@@ -39,7 +41,7 @@ print(SearchResultDocument.to_json())
 # convert the object into a dict
 search_result_document_dict = search_result_document_instance.to_dict()
 # create an instance of SearchResultDocument from a dict
-search_result_document_form_dict = search_result_document.from_dict(search_result_document_dict)
+search_result_document_from_dict = SearchResultDocument.from_dict(search_result_document_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

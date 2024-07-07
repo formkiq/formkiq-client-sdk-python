@@ -22,7 +22,7 @@ print(DocumentsCompressRequest.to_json())
 # convert the object into a dict
 documents_compress_request_dict = documents_compress_request_instance.to_dict()
 # create an instance of DocumentsCompressRequest from a dict
-documents_compress_request_form_dict = documents_compress_request.from_dict(documents_compress_request_dict)
+documents_compress_request_from_dict = DocumentsCompressRequest.from_dict(documents_compress_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

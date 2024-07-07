@@ -30,7 +30,7 @@ print(Nigo.to_json())
 # convert the object into a dict
 nigo_dict = nigo_instance.to_dict()
 # create an instance of Nigo from a dict
-nigo_form_dict = nigo.from_dict(nigo_dict)
+nigo_from_dict = Nigo.from_dict(nigo_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

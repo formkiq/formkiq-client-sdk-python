@@ -22,7 +22,7 @@ print(DeleteFulltextResponse.to_json())
 # convert the object into a dict
 delete_fulltext_response_dict = delete_fulltext_response_instance.to_dict()
 # create an instance of DeleteFulltextResponse from a dict
-delete_fulltext_response_form_dict = delete_fulltext_response.from_dict(delete_fulltext_response_dict)
+delete_fulltext_response_from_dict = DeleteFulltextResponse.from_dict(delete_fulltext_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

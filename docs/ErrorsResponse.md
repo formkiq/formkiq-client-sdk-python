@@ -22,7 +22,7 @@ print(ErrorsResponse.to_json())
 # convert the object into a dict
 errors_response_dict = errors_response_instance.to_dict()
 # create an instance of ErrorsResponse from a dict
-errors_response_form_dict = errors_response.from_dict(errors_response_dict)
+errors_response_from_dict = ErrorsResponse.from_dict(errors_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

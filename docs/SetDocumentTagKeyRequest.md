@@ -23,7 +23,7 @@ print(SetDocumentTagKeyRequest.to_json())
 # convert the object into a dict
 set_document_tag_key_request_dict = set_document_tag_key_request_instance.to_dict()
 # create an instance of SetDocumentTagKeyRequest from a dict
-set_document_tag_key_request_form_dict = set_document_tag_key_request.from_dict(set_document_tag_key_request_dict)
+set_document_tag_key_request_from_dict = SetDocumentTagKeyRequest.from_dict(set_document_tag_key_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

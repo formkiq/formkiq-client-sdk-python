@@ -23,7 +23,7 @@ print(AddTagSchemaRequest.to_json())
 # convert the object into a dict
 add_tag_schema_request_dict = add_tag_schema_request_instance.to_dict()
 # create an instance of AddTagSchemaRequest from a dict
-add_tag_schema_request_form_dict = add_tag_schema_request.from_dict(add_tag_schema_request_dict)
+add_tag_schema_request_from_dict = AddTagSchemaRequest.from_dict(add_tag_schema_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

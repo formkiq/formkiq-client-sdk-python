@@ -23,7 +23,7 @@ print(AddWorkflowStepDecision.to_json())
 # convert the object into a dict
 add_workflow_step_decision_dict = add_workflow_step_decision_instance.to_dict()
 # create an instance of AddWorkflowStepDecision from a dict
-add_workflow_step_decision_form_dict = add_workflow_step_decision.from_dict(add_workflow_step_decision_dict)
+add_workflow_step_decision_from_dict = AddWorkflowStepDecision.from_dict(add_workflow_step_decision_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

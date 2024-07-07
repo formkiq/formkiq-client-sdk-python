@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **tags** | [**List[AddDocumentTag]**](AddDocumentTag.md) | List of document tags | [optional] 
 **metadata** | [**List[AddDocumentMetadata]**](AddDocumentMetadata.md) | List of document Metadata | [optional] 
 **actions** | [**List[AddAction]**](AddAction.md) | List of Actions | [optional] 
-**access_attributes** | [**List[AddAccessAttribute]**](AddAccessAttribute.md) | List of Access Attributes (only available in pro/enterprise) | [optional] 
+**attributes** | [**List[AddDocumentAttribute]**](AddDocumentAttribute.md) | List of Attributes to add to document | [optional] 
 **documents** | [**List[AddChildDocument]**](AddChildDocument.md) | List of child documents | [optional] 
 
 ## Example
@@ -32,7 +32,7 @@ print(AddDocumentRequest.to_json())
 # convert the object into a dict
 add_document_request_dict = add_document_request_instance.to_dict()
 # create an instance of AddDocumentRequest from a dict
-add_document_request_form_dict = add_document_request.from_dict(add_document_request_dict)
+add_document_request_from_dict = AddDocumentRequest.from_dict(add_document_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

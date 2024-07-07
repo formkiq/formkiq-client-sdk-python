@@ -24,7 +24,7 @@ print(TagSchemaOptional.to_json())
 # convert the object into a dict
 tag_schema_optional_dict = tag_schema_optional_instance.to_dict()
 # create an instance of TagSchemaOptional from a dict
-tag_schema_optional_form_dict = tag_schema_optional.from_dict(tag_schema_optional_dict)
+tag_schema_optional_from_dict = TagSchemaOptional.from_dict(tag_schema_optional_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

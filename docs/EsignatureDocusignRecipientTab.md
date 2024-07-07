@@ -25,7 +25,7 @@ print(EsignatureDocusignRecipientTab.to_json())
 # convert the object into a dict
 esignature_docusign_recipient_tab_dict = esignature_docusign_recipient_tab_instance.to_dict()
 # create an instance of EsignatureDocusignRecipientTab from a dict
-esignature_docusign_recipient_tab_form_dict = esignature_docusign_recipient_tab.from_dict(esignature_docusign_recipient_tab_dict)
+esignature_docusign_recipient_tab_from_dict = EsignatureDocusignRecipientTab.from_dict(esignature_docusign_recipient_tab_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

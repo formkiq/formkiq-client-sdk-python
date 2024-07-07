@@ -92,7 +92,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_tag**
-> delete_document_tag(document_id, tag_key, site_id=site_id)
+> DeleteResponse delete_document_tag(document_id, tag_key, site_id=site_id)
 
 Delete document tag
 
@@ -103,6 +103,7 @@ Delete a document tag by using its key
 
 ```python
 import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -127,7 +128,9 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete document tag
-        api_instance.delete_document_tag(document_id, tag_key, site_id=site_id)
+        api_response = api_instance.delete_document_tag(document_id, tag_key, site_id=site_id)
+        print("The response of DocumentTagsApi->delete_document_tag:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DocumentTagsApi->delete_document_tag: %s\n" % e)
 ```
@@ -145,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -154,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -165,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_tag_and_value**
-> delete_document_tag_and_value(document_id, tag_key, tag_value, site_id=site_id, share_key=share_key)
+> DeleteResponse delete_document_tag_and_value(document_id, tag_key, tag_value, site_id=site_id, share_key=share_key)
 
 Delete document's tag value
 
@@ -176,6 +179,7 @@ Delete a specific document tag's key/value combination; the request will be igno
 
 ```python
 import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -202,7 +206,9 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete document's tag value
-        api_instance.delete_document_tag_and_value(document_id, tag_key, tag_value, site_id=site_id, share_key=share_key)
+        api_response = api_instance.delete_document_tag_and_value(document_id, tag_key, tag_value, site_id=site_id, share_key=share_key)
+        print("The response of DocumentTagsApi->delete_document_tag_and_value:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DocumentTagsApi->delete_document_tag_and_value: %s\n" % e)
 ```
@@ -222,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -231,7 +237,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 

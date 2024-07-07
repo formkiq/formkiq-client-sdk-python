@@ -23,7 +23,7 @@ print(WorkflowDocument.to_json())
 # convert the object into a dict
 workflow_document_dict = workflow_document_instance.to_dict()
 # create an instance of WorkflowDocument from a dict
-workflow_document_form_dict = workflow_document.from_dict(workflow_document_dict)
+workflow_document_from_dict = WorkflowDocument.from_dict(workflow_document_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

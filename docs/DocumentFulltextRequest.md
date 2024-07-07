@@ -24,7 +24,7 @@ print(DocumentFulltextRequest.to_json())
 # convert the object into a dict
 document_fulltext_request_dict = document_fulltext_request_instance.to_dict()
 # create an instance of DocumentFulltextRequest from a dict
-document_fulltext_request_form_dict = document_fulltext_request.from_dict(document_fulltext_request_dict)
+document_fulltext_request_from_dict = DocumentFulltextRequest.from_dict(document_fulltext_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

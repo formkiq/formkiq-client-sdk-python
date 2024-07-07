@@ -14,8 +14,6 @@ Name | Type | Description | Notes
 **case_number_format** | [**List[StringFormat]**](StringFormat.md) | Format of Case Number | [optional] 
 **metadata** | **Dict[str, object]** |  | [optional] 
 **document_ids** | **List[str]** |  | [optional] 
-**tasks** | [**List[AddTask]**](AddTask.md) |  | [optional] 
-**nigos** | [**List[AddNigo]**](AddNigo.md) |  | [optional] 
 
 ## Example
 
@@ -32,7 +30,7 @@ print(AddCase.to_json())
 # convert the object into a dict
 add_case_dict = add_case_instance.to_dict()
 # create an instance of AddCase from a dict
-add_case_form_dict = add_case.from_dict(add_case_dict)
+add_case_from_dict = AddCase.from_dict(add_case_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,7 @@ print(Site.to_json())
 # convert the object into a dict
 site_dict = site_instance.to_dict()
 # create an instance of Site from a dict
-site_form_dict = site.from_dict(site_dict)
+site_from_dict = Site.from_dict(site_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

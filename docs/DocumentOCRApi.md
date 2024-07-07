@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Perform document ocr
 
-Document optical character recognition (OCR) request; extract text and data from a document; ONLY available with FormKiQ Pro and Enterprise
+Document optical character recognition (OCR) request; extract text and data from a document;   Tesseract available for all editions, but Textract engine and tables and forms options ONLY available with FormKiQ Pro and Enterprise
 
 ### Example
 
@@ -88,17 +88,18 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_ocr**
-> delete_document_ocr(document_id, site_id=site_id)
+> DeleteResponse delete_document_ocr(document_id, site_id=site_id)
 
 Delete document ocr
 
-Delete a document's optical character recognition (OCR) result, if exists; ONLY available with FormKiQ Pro and Enterprise
+Delete a document's optical character recognition (OCR) result, if exists;   Tesseract available for all editions, but Textract engine and tables and forms options ONLY available with FormKiQ Pro and Enterprise
 
 ### Example
 
 
 ```python
 import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -122,7 +123,9 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete document ocr
-        api_instance.delete_document_ocr(document_id, site_id=site_id)
+        api_response = api_instance.delete_document_ocr(document_id, site_id=site_id)
+        print("The response of DocumentOCRApi->delete_document_ocr:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DocumentOCRApi->delete_document_ocr: %s\n" % e)
 ```
@@ -139,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -148,7 +151,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -163,7 +166,7 @@ No authorization required
 
 Get document ocr content
 
-Get a document's optical character recognition (OCR) result, if exists; ONLY available with FormKiQ Pro and Enterprise
+Get a document's optical character recognition (OCR) result, if exists;   Tesseract available for all editions, but Textract engine and tables and forms options ONLY available with FormKiQ Pro and Enterprise
 
 ### Example
 
@@ -243,7 +246,7 @@ No authorization required
 
 Set document ocr result
 
-Set a document's optical character recognition (OCR) result for a document; ONLY available with FormKiQ Pro and Enterprise
+Set a document's optical character recognition (OCR) result for a document;   Tesseract available for all editions, but Textract engine and tables and forms options ONLY available with FormKiQ Pro and Enterprise
 
 ### Example
 

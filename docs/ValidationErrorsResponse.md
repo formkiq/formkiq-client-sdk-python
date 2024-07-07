@@ -22,7 +22,7 @@ print(ValidationErrorsResponse.to_json())
 # convert the object into a dict
 validation_errors_response_dict = validation_errors_response_instance.to_dict()
 # create an instance of ValidationErrorsResponse from a dict
-validation_errors_response_form_dict = validation_errors_response.from_dict(validation_errors_response_dict)
+validation_errors_response_from_dict = ValidationErrorsResponse.from_dict(validation_errors_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

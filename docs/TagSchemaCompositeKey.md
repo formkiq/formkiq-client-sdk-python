@@ -22,7 +22,7 @@ print(TagSchemaCompositeKey.to_json())
 # convert the object into a dict
 tag_schema_composite_key_dict = tag_schema_composite_key_instance.to_dict()
 # create an instance of TagSchemaCompositeKey from a dict
-tag_schema_composite_key_form_dict = tag_schema_composite_key.from_dict(tag_schema_composite_key_dict)
+tag_schema_composite_key_from_dict = TagSchemaCompositeKey.from_dict(tag_schema_composite_key_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
