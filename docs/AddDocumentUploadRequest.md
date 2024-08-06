@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**document_id** | **str** | optional Document Identifier, if skipped one will be assigned | [optional] 
 **tag_schema_id** | **str** | Tag Schema Id | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
 **content_type** | **str** | Document media type | [optional] 

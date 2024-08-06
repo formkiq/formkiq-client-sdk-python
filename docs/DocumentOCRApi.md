@@ -162,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_ocr**
-> GetDocumentOcrResponse get_document_ocr(document_id, site_id=site_id, content_url=content_url, text=text, share_key=share_key)
+> GetDocumentOcrResponse get_document_ocr(document_id, site_id=site_id, output_type=output_type, content_url=content_url, text=text, share_key=share_key)
 
 Get document ocr content
 
@@ -194,13 +194,14 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentOCRApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    content_url = 'content_url_example' # str | Whether to return a \"contentUrl\", set value to 'true' (optional)
-    text = 'text_example' # str | Returns raw 'text' of OCR content. e.g. AWS Textract returns JSON, setting parameter to 'true' converts JSON to Text (optional)
+    output_type = 'output_type_example' # str | Output Format Type (optional)
+    content_url = 'content_url_example' # str | Whether to return a \"contentUrl\", set value to 'true' (deprecated) (optional)
+    text = 'text_example' # str | Returns raw 'text' of OCR content. e.g. AWS Textract returns JSON, setting parameter to 'true' converts JSON to Text (deprecated) (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Get document ocr content
-        api_response = api_instance.get_document_ocr(document_id, site_id=site_id, content_url=content_url, text=text, share_key=share_key)
+        api_response = api_instance.get_document_ocr(document_id, site_id=site_id, output_type=output_type, content_url=content_url, text=text, share_key=share_key)
         print("The response of DocumentOCRApi->get_document_ocr:\n")
         pprint(api_response)
     except Exception as e:
@@ -216,8 +217,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
- **content_url** | **str**| Whether to return a \&quot;contentUrl\&quot;, set value to &#39;true&#39; | [optional] 
- **text** | **str**| Returns raw &#39;text&#39; of OCR content. e.g. AWS Textract returns JSON, setting parameter to &#39;true&#39; converts JSON to Text | [optional] 
+ **output_type** | **str**| Output Format Type | [optional] 
+ **content_url** | **str**| Whether to return a \&quot;contentUrl\&quot;, set value to &#39;true&#39; (deprecated) | [optional] 
+ **text** | **str**| Returns raw &#39;text&#39; of OCR content. e.g. AWS Textract returns JSON, setting parameter to &#39;true&#39; converts JSON to Text (deprecated) | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 
 ### Return type

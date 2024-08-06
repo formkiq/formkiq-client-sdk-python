@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**username** | **str** | Username of user | [optional] 
+**username** | **str** | Email address of user | [optional] 
 
 ## Example
 

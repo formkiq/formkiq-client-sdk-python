@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **content_urls** | **List[str]** | Presigned S3 Urls for the OCR content | [optional] 
+**key_values** | [**List[OcrKeyValues]**](OcrKeyValues.md) | List of ocr key / values | [optional] 
 **data** | **str** | OCR text result | [optional] 
 **ocr_engine** | **str** | The OCR technique used | [optional] 
 **ocr_status** | **str** | The status of the OCR request | [optional] 

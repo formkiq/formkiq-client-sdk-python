@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**mapping_id** | **str** | Mapping Identifier | [optional] 
 **name** | **str** | Name of Mapping | [optional] 
 **description** | **str** | Description of Mapping | [optional] 
 **attributes** | [**List[MappingAttribute]**](MappingAttribute.md) | List of attributes | [optional] 
