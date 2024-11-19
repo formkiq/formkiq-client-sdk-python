@@ -32,7 +32,7 @@ Method | HTTP request | Description
 
 Add New Case
 
-Adds new case; ONLY available with FormKiQ Enterprise
+Adds new case; available as an Add-On Module
 
 ### Example
 
@@ -107,7 +107,7 @@ No authorization required
 
 Add New Nigo
 
-Adds new nigo; ONLY available with FormKiQ Enterprise
+Adds new nigo; available as an Add-On Module
 
 ### Example
 
@@ -184,7 +184,7 @@ No authorization required
 
 Add New Task
 
-Adds new task; ONLY available with FormKiQ Enterprise
+Adds new task; available as an Add-On Module
 
 ### Example
 
@@ -719,7 +719,7 @@ No authorization required
 
 Get Case details
 
-Returns a Case; ONLY available with FormKiQ Enterprise
+Returns a Case; available as an Add-On Module
 
 ### Example
 
@@ -793,7 +793,7 @@ No authorization required
 
 Get list of document in a case
 
-Returns documents in a Case; ONLY available with FormKiQ Enterprise
+Returns documents in a Case; available as an Add-On Module
 
 ### Example
 
@@ -871,7 +871,7 @@ No authorization required
 
 Get nigo in a case
 
-Returns a Nigo in Case; ONLY available with FormKiQ Enterprise
+Returns a Nigo in Case; available as an Add-On Module
 
 ### Example
 
@@ -947,7 +947,7 @@ No authorization required
 
 Get list of Nigos in a case
 
-Returns a Nigos of Case; ONLY available with FormKiQ Enterprise
+Returns a Nigos of Case; available as an Add-On Module
 
 ### Example
 
@@ -1025,7 +1025,7 @@ No authorization required
 
 Get task in a case
 
-Returns a Task in Case; ONLY available with FormKiQ Enterprise
+Returns a Task in Case; available as an Add-On Module
 
 ### Example
 
@@ -1101,7 +1101,7 @@ No authorization required
 
 Get list of tasks in a case
 
-Returns a Case; ONLY available with FormKiQ Enterprise
+Returns a Case; available as an Add-On Module
 
 ### Example
 
@@ -1179,7 +1179,7 @@ No authorization required
 
 Get Case listing
 
-Returns a list of the Cases; ONLY available with FormKiQ Enterprise
+Returns a list of the Cases; available as an Add-On Module
 
 ### Example
 
@@ -1255,7 +1255,7 @@ No authorization required
 
 Get list of document in a task
 
-Returns a list documents in a Case; ONLY available with FormKiQ Enterprise
+Returns a list documents in a Case; available as an Add-On Module
 
 ### Example
 
@@ -1335,7 +1335,7 @@ No authorization required
 
 Get list of document in a task
 
-Returns a list documents in a Case; ONLY available with FormKiQ Enterprise
+Returns a list documents in a Case; available as an Add-On Module
 
 ### Example
 
@@ -1415,7 +1415,7 @@ No authorization required
 
 Update existing Case
 
-Updates existing case; ONLY available with FormKiQ Enterprise
+Updates existing case; available as an Add-On Module
 
 ### Example
 
@@ -1492,7 +1492,7 @@ No authorization required
 
 Update existing Nigo
 
-Updates existing nigo; ONLY available with FormKiQ Enterprise
+Updates existing nigo; available as an Add-On Module
 
 ### Example
 
@@ -1571,7 +1571,7 @@ No authorization required
 
 Update existing Task
 
-Updates existing task; ONLY available with FormKiQ Enterprise
+Updates existing task; available as an Add-On Module
 
 ### Example
 

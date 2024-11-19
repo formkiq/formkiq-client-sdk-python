@@ -5,9 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**document_id** | **str** | optional Document Identifier, if skipped one will be assigned | [optional] 
-**tag_schema_id** | **str** | Tag Schema Id | [optional] 
+**document_id** | **str** | optional Document Identifier (Version 4 UUID), if skipped one will be assigned | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
+**checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
+**checksum** | **str** | The checksum value to validate the file against | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
 **content_type** | **str** | Document media type | [optional] 
 **is_base64** | **bool** | Is the content Base64-encoded? | [optional] 

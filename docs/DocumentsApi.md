@@ -131,7 +131,7 @@ configuration = formkiq_client.Configuration(
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.DocumentsApi(api_client)
-    add_document_upload_request = {"path":"test.txt","contentType":"text/plain","isBase64":false,"content":"This is sample data file","tags":[{"key":"category","value":"sample"},{"key":"players","values":["111","222"]}],"metadata":[{"key":"info","value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}]} # AddDocumentUploadRequest | 
+    add_document_upload_request = {"path":"test.txt","contentType":"text/plain","tags":[{"key":"category","value":"sample"},{"key":"players","values":["111","222"]}],"metadata":[{"key":"info","value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}]} # AddDocumentUploadRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     content_length = 56 # int | Indicates the size of the entity-body (optional)
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
@@ -260,7 +260,7 @@ No authorization required
 
 Delete document
 
-Delete a document
+Delete a document's details, i.e., metadata, contents, etc  SoftDelete:  The SoftDelete parameter allows for the temporary removal of a document's metadata, attributes, etc from being retrieved from all API requests.  The document can be permanently deleted by calling the DELETE /documents/{documentId} with softDelete=false or restored using the PUT /documents/{documentId}/restore.  Only the GET /documents?deleted=true will return all the soft deleted documents.
 
 ### Example
 
@@ -486,7 +486,7 @@ No authorization required
 
 Get document's contents
 
-Get a document's contents. Certain content types, text/*, application/json, and application/x-www-form-urlencoded. return the  \"content\" field, while all other content types return a 'contentUrl' for retrieving the content.
+Retrieves the content of the document with the specified `documentId`. - If the content is plain text and under 6 MB, the content will be returned directly. - If the content is plain text but exceeds 6 MB, an error will be returned. - For documents not in plain text format, pre-signed S3 URLs will be returned to download the content from S3. It is recommended to use the `/documents/{documentId}/url` endpoint to retrieve pre-signed S3 URLs for downloading the content. 
 
 ### Example
 
@@ -514,7 +514,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    version_key = 'version_key_example' # str | Version Key (optional)
+    version_key = 'version_key_example' # str | Version Key (version key required URL encoding) (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
- **version_key** | **str**| Version Key | [optional] 
+ **version_key** | **str**| Version Key (version key required URL encoding) | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 
 ### Return type
@@ -560,7 +560,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_id_upload**
-> GetDocumentUrlResponse get_document_id_upload(document_id, site_id=site_id, content_length=content_length, duration=duration, share_key=share_key)
+> GetDocumentUrlResponse get_document_id_upload(document_id, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
 
 Get url to update large document
 
@@ -592,13 +592,15 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    checksum_type = 'checksum_type_example' # str | Checksum Type (optional)
+    checksum = 'checksum_example' # str | Checksum value (optional)
     content_length = 56 # int | Indicates the size of the entity-body (optional)
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Get url to update large document
-        api_response = api_instance.get_document_id_upload(document_id, site_id=site_id, content_length=content_length, duration=duration, share_key=share_key)
+        api_response = api_instance.get_document_id_upload(document_id, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
         print("The response of DocumentsApi->get_document_id_upload:\n")
         pprint(api_response)
     except Exception as e:
@@ -614,6 +616,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **checksum_type** | **str**| Checksum Type | [optional] 
+ **checksum** | **str**| Checksum value | [optional] 
  **content_length** | **int**| Indicates the size of the entity-body | [optional] 
  **duration** | **int**| Indicates the number of hours request is valid for | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
@@ -718,7 +722,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_upload**
-> GetDocumentUrlResponse get_document_upload(path=path, site_id=site_id, content_length=content_length, duration=duration, share_key=share_key)
+> GetDocumentUrlResponse get_document_upload(path=path, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
 
 Get url to add large document
 
@@ -750,13 +754,15 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     path = 'path_example' # str | The upload file's path (optional)
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    checksum_type = 'checksum_type_example' # str | Checksum Type (optional)
+    checksum = 'checksum_example' # str | Checksum value (optional)
     content_length = 56 # int | Indicates the size of the entity-body (optional)
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Get url to add large document
-        api_response = api_instance.get_document_upload(path=path, site_id=site_id, content_length=content_length, duration=duration, share_key=share_key)
+        api_response = api_instance.get_document_upload(path=path, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
         print("The response of DocumentsApi->get_document_upload:\n")
         pprint(api_response)
     except Exception as e:
@@ -772,6 +778,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**| The upload file&#39;s path | [optional] 
  **site_id** | **str**| Site Identifier | [optional] 
+ **checksum_type** | **str**| Checksum Type | [optional] 
+ **checksum** | **str**| Checksum value | [optional] 
  **content_length** | **int**| Indicates the size of the entity-body | [optional] 
  **duration** | **int**| Indicates the number of hours request is valid for | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
@@ -830,7 +838,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    version_key = 'version_key_example' # str | Version Key (optional)
+    version_key = 'version_key_example' # str | Version Key (version key required URL encoding) (optional)
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
     inline = False # bool | Set the Content-Disposition to inline (optional) (default to False)
@@ -853,7 +861,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
- **version_key** | **str**| Version Key | [optional] 
+ **version_key** | **str**| Version Key (version key required URL encoding) | [optional] 
  **duration** | **int**| Indicates the number of hours request is valid for | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
  **inline** | **bool**| Set the Content-Disposition to inline | [optional] [default to False]
@@ -1115,7 +1123,7 @@ No authorization required
 
 Update document
 
-Update a document's details, i.e., metadata
+Update a document's details, i.e., metadata  If no content is specified, the endpoint will return a S3 Presigned that will allow for the uploading of Large document data.   NOTE: - provided attributes will overwrite existing matching attribute keys in the document. Attributes not included in the request body will remain unchanged.
 
 ### Example
 

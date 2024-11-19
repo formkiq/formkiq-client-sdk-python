@@ -7,8 +7,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Name of Nigo | [optional] 
 **description** | **str** | Description of Nigo | [optional] 
+**planned_start_date** | **str** | Planned Start Date | [optional] 
 **start_date** | **str** | Start Date | [optional] 
 **end_date** | **str** | End Date | [optional] 
+**due_date** | **str** | Due Date | [optional] 
 **status** | [**NigoStatus**](NigoStatus.md) |  | [optional] 
 **metadata** | **Dict[str, object]** |  | [optional] 
 **document_ids** | **List[str]** |  | [optional] 

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**add_attribute**](AttributesApi.md#add_attribute) | **POST** /attributes | Add new attribute
 [**delete_attribute**](AttributesApi.md#delete_attribute) | **DELETE** /attributes/{key} | Delete attribute
 [**get_attribute**](AttributesApi.md#get_attribute) | **GET** /attributes/{key} | Get Attribute
+[**get_attribute_allowed_values**](AttributesApi.md#get_attribute_allowed_values) | **GET** /attributes/{key}/allowedValues | Get Attribute Allowed Values
 [**get_attributes**](AttributesApi.md#get_attributes) | **GET** /attributes | Get Attributes listing
 
 
@@ -217,6 +218,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAttributeResponse**](GetAttributeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_attribute_allowed_values**
+> GetAttributeAllowedValuesResponse get_attribute_allowed_values(key, site_id=site_id)
+
+Get Attribute Allowed Values
+
+Returns an attribute's allowed values that spans across all classifications and site schema
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.AttributesApi(api_client)
+    key = 'key_example' # str | Key Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Get Attribute Allowed Values
+        api_response = api_instance.get_attribute_allowed_values(key, site_id=site_id)
+        print("The response of AttributesApi->get_attribute_allowed_values:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AttributesApi->get_attribute_allowed_values: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **key** | **str**| Key Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**GetAttributeAllowedValuesResponse**](GetAttributeAllowedValuesResponse.md)
 
 ### Authorization
 

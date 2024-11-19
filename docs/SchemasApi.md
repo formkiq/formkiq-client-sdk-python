@@ -7,8 +7,10 @@ Method | HTTP request | Description
 [**add_classification**](SchemasApi.md#add_classification) | **POST** /sites/{siteId}/classifications | Add Classification
 [**delete_classification**](SchemasApi.md#delete_classification) | **DELETE** /sites/{siteId}/classifications/{classificationId} | Delete Classification
 [**get_classification**](SchemasApi.md#get_classification) | **GET** /sites/{siteId}/classifications/{classificationId} | Get Classification
+[**get_classification_attribute_allowed_values**](SchemasApi.md#get_classification_attribute_allowed_values) | **GET** /sites/{siteId}/classifications/{classificationId}/attributes/{key}/allowedValues | Get Classification&#39;s Attribute Allowed Values
 [**get_sites_classifications**](SchemasApi.md#get_sites_classifications) | **GET** /sites/{siteId}/classifications | Get Sites Classifications
 [**get_sites_schema**](SchemasApi.md#get_sites_schema) | **GET** /sites/{siteId}/schema/document | Get Sites Schema
+[**get_sites_schema_attribute_allowed_values**](SchemasApi.md#get_sites_schema_attribute_allowed_values) | **GET** /sites/{siteId}/schema/document/attributes/{key}/allowedValues | Get Attribute Allowed Values
 [**set_classification**](SchemasApi.md#set_classification) | **PUT** /sites/{siteId}/classifications/{classificationId} | Set Classification
 [**set_sites_schema**](SchemasApi.md#set_sites_schema) | **PUT** /sites/{siteId}/schema/document | Set Sites Schema
 
@@ -237,6 +239,82 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_classification_attribute_allowed_values**
+> GetAttributeAllowedValuesResponse get_classification_attribute_allowed_values(site_id, classification_id, key)
+
+Get Classification's Attribute Allowed Values
+
+Returns an attribute's allowed values that spans for a specific classifications and site schema
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SchemasApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    classification_id = 'classification_id_example' # str | Classification Identifier
+    key = 'key_example' # str | Key Identifier
+
+    try:
+        # Get Classification's Attribute Allowed Values
+        api_response = api_instance.get_classification_attribute_allowed_values(site_id, classification_id, key)
+        print("The response of SchemasApi->get_classification_attribute_allowed_values:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SchemasApi->get_classification_attribute_allowed_values: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **classification_id** | **str**| Classification Identifier | 
+ **key** | **str**| Key Identifier | 
+
+### Return type
+
+[**GetAttributeAllowedValuesResponse**](GetAttributeAllowedValuesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_sites_classifications**
 > GetClassificationsResponse get_sites_classifications(site_id, limit=limit, next=next)
 
@@ -367,6 +445,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetSitesSchemaResponse**](GetSitesSchemaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_sites_schema_attribute_allowed_values**
+> GetAttributeAllowedValuesResponse get_sites_schema_attribute_allowed_values(site_id, key)
+
+Get Attribute Allowed Values
+
+Returns an attribute's allowed values from the site schema
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SchemasApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    key = 'key_example' # str | Key Identifier
+
+    try:
+        # Get Attribute Allowed Values
+        api_response = api_instance.get_sites_schema_attribute_allowed_values(site_id, key)
+        print("The response of SchemasApi->get_sites_schema_attribute_allowed_values:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SchemasApi->get_sites_schema_attribute_allowed_values: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **key** | **str**| Key Identifier | 
+
+### Return type
+
+[**GetAttributeAllowedValuesResponse**](GetAttributeAllowedValuesResponse.md)
 
 ### Authorization
 

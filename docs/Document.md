@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **last_modified_date** | **str** | Last Modified Timestamp | [optional] 
 **checksum** | **str** | Document checksum, changes when document file changes | [optional] 
+**checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **document_id** | **str** | Document Identifier | [optional] 
 **content_type** | **str** | Document Content-Type | [optional] 
 **user_id** | **str** | User who added document | [optional] 

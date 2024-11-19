@@ -6,8 +6,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **site_id** | **str** | Site Identifier | [optional] 
+**title** | **str** | Site Title | [optional] 
+**status** | [**SiteStatus**](SiteStatus.md) |  | [optional] 
 **permission** | **str** | SiteId permission level | [optional] 
-**permissions** | **List[str]** | List of caller permissions | [optional] 
+**permissions** | [**List[SiteGroupPermissions]**](SiteGroupPermissions.md) |  | [optional] 
 **upload_email** | **str** | SiteId document upload email address | [optional] 
 
 ## Example

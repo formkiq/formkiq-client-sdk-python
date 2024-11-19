@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **version** | **str** | FormKiQ version | [optional] 
 **type** | **str** | FormKiQ type | [optional] 
+**app_environment** | **str** | FormKiQ App Environment | [optional] 
 **modules** | **List[str]** | List of installed modules | [optional] 
 
 ## Example

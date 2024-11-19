@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Add New Mapping
 
-Creates a new mapping; ONLY available with FormKiQ Enterprise
+Creates a new mapping; available as an Add-On Module
 
 ### Example
 
@@ -92,7 +92,7 @@ No authorization required
 
 Delete Mapping
 
-Delete Mapping; ONLY available with FormKiQ Enterprise
+Delete Mapping; available as an Add-On Module
 
 ### Example
 
@@ -166,7 +166,7 @@ No authorization required
 
 Get Mapping
 
-Get a mapping; ONLY available with FormKiQ Enterprise
+Get a mapping; available as an Add-On Module
 
 ### Example
 
@@ -240,7 +240,7 @@ No authorization required
 
 Get Mappings
 
-Returns a list of mappings; ONLY available with FormKiQ Enterprise
+Returns a list of mappings; available as an Add-On Module
 
 ### Example
 
@@ -316,7 +316,7 @@ No authorization required
 
 Set Mapping
 
-Sets an mapping; ONLY available with FormKiQ Enterprise
+Sets an mapping; available as an Add-On Module
 
 ### Example
 

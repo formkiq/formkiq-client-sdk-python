@@ -5,12 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activity_id** | **str** | Activity identifier | [optional] 
 **type** | [**UserActivityType**](UserActivityType.md) |  | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **user_id** | **str** | User who added document | [optional] 
-**version_key** | **str** | Document Version Identifier | [optional] 
-**time_to_live** | **str** | User activity time to live | [optional] 
+**document** | [**Document**](Document.md) |  | [optional] 
+**changes** | [**Dict[str, UserActivityChanges]**](UserActivityChanges.md) |  | [optional] 
 
 ## Example
 

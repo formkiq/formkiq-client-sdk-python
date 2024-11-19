@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 Add document workflow
 
-Creates a document workflow; ONLY available with FormKiQ Pro and Enterprise
+Creates a document workflow; available as an Add-On Module
 
 ### Example
 
@@ -105,7 +105,7 @@ No authorization required
 
 Approve/Reject document in approval queue
 
-Approve/Reject document in approval queue; ONLY available with FormKiQ Pro and Enterprise
+Approve/Reject document in approval queue; available as an Add-On Module
 
 ### Example
 
@@ -185,7 +185,7 @@ No authorization required
 
 Add queue
 
-Creates a new Queue; ONLY available with FormKiQ Pro and Enterprise
+Creates a new Queue; available as an Add-On Module
 
 ### Example
 
@@ -261,7 +261,7 @@ No authorization required
 
 Add workflow
 
-Creates a new Workflow; ONLY available with FormKiQ Pro and Enterprise
+Creates a new Workflow; available as an Add-On Module
 
 ### Example
 
@@ -337,7 +337,7 @@ No authorization required
 
 Delete queue
 
-Delete a Queue; ONLY available with FormKiQ Pro and Enterprise
+Delete a Queue; available as an Add-On Module
 
 ### Example
 
@@ -411,7 +411,7 @@ No authorization required
 
 Delete workflow
 
-Delete a Workflow; ONLY available with FormKiQ Pro and Enterprise
+Delete a Workflow; available as an Add-On Module
 
 ### Example
 
@@ -485,7 +485,7 @@ No authorization required
 
 Get document workflow
 
-Gets a document workflow; ONLY available with FormKiQ Pro and Enterprise
+Gets a document workflow; available as an Add-On Module
 
 ### Example
 
@@ -562,7 +562,7 @@ No authorization required
 
 Get document workflows
 
-Gets a document workflows; ONLY available with FormKiQ Pro and Enterprise
+Gets a document workflows; available as an Add-On Module
 
 ### Example
 
@@ -637,7 +637,7 @@ No authorization required
 
 Get queue
 
-Get a queue; ONLY available with FormKiQ Enterprise
+Get a queue; available as an Add-On Module
 
 ### Example
 
@@ -711,7 +711,7 @@ No authorization required
 
 Get queues
 
-Get a listing of queues; ONLY available with FormKiQ Enterprise
+Get a listing of queues; available as an Add-On Module
 
 ### Example
 
@@ -787,7 +787,7 @@ No authorization required
 
 Get workflow
 
-Get a workflow; ONLY available with FormKiQ Enterprise
+Get a workflow; available as an Add-On Module
 
 ### Example
 
@@ -861,7 +861,7 @@ No authorization required
 
 Get list of documents in workflow
 
-List documents in Workflow; ONLY available with FormKiQ Pro and Enterprise
+List documents in Workflow; available as an Add-On Module
 
 ### Example
 
@@ -939,7 +939,7 @@ No authorization required
 
 Get list of documents in queue
 
-List documents in Workflow Queue; ONLY available with FormKiQ Pro and Enterprise
+List documents in Workflow Queue; available as an Add-On Module
 
 ### Example
 
@@ -1017,7 +1017,7 @@ No authorization required
 
 Get workflows
 
-Get a listing of workflows; ONLY available with FormKiQ Enterprise
+Get a listing of workflows; available as an Add-On Module
 
 ### Example
 
@@ -1095,7 +1095,7 @@ No authorization required
 
 Set workflow
 
-Set a Workflow details; ONLY available with FormKiQ Pro and Enterprise
+Set a Workflow details; available as an Add-On Module
 
 ### Example
 
@@ -1173,7 +1173,7 @@ No authorization required
 
 Update workflow
 
-Update a Workflow details; ONLY available with FormKiQ Pro and Enterprise
+Update a Workflow details; available as an Add-On Module
 
 ### Example
 

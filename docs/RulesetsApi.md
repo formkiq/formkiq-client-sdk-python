@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 Add New Rule
 
-Creates a new rule; ONLY available with FormKiQ Enterprise
+Creates a new rule; available as an Add-On Module
 
 ### Example
 
@@ -99,7 +99,7 @@ No authorization required
 
 Add New Ruleset
 
-Creates a new ruleset; ONLY available with FormKiQ Enterprise
+Creates a new ruleset; available as an Add-On Module
 
 ### Example
 
@@ -175,7 +175,7 @@ No authorization required
 
 Delete Rule
 
-Delete Rule; ONLY available with FormKiQ Enterprise
+Delete Rule; available as an Add-On Module
 
 ### Example
 
@@ -251,7 +251,7 @@ No authorization required
 
 Delete Ruleset
 
-Delete Ruleset; ONLY available with FormKiQ Enterprise
+Delete Ruleset; available as an Add-On Module
 
 ### Example
 
@@ -325,7 +325,7 @@ No authorization required
 
 Get Rule
 
-Returns a rule in a ruleset; ONLY available with FormKiQ Enterprise
+Returns a rule in a ruleset; available as an Add-On Module
 
 ### Example
 
@@ -401,7 +401,7 @@ No authorization required
 
 Get Rules
 
-Returns a list of rules in a ruleset; ONLY available with FormKiQ Enterprise
+Returns a list of rules in a ruleset; available as an Add-On Module
 
 ### Example
 
@@ -479,7 +479,7 @@ No authorization required
 
 Get Ruleset
 
-Get a rule sets; ONLY available with FormKiQ Enterprise
+Get a rule sets; available as an Add-On Module
 
 ### Example
 
@@ -553,7 +553,7 @@ No authorization required
 
 Get Rulesets
 
-Returns a list of rule sets; ONLY available with FormKiQ Enterprise
+Returns a list of rule sets; available as an Add-On Module
 
 ### Example
 
@@ -629,7 +629,7 @@ No authorization required
 
 Update Rule
 
-Update Rule; ONLY available with FormKiQ Enterprise
+Update Rule; available as an Add-On Module
 
 ### Example
 
@@ -709,7 +709,7 @@ No authorization required
 
 Update Ruleset
 
-Updates an existing ruleset; ONLY available with FormKiQ Enterprise
+Updates an existing ruleset; available as an Add-On Module
 
 ### Example
 

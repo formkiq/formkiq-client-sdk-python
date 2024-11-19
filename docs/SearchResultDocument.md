@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **folder** | **bool** | Is Result a Document Folder | [optional] 
 **index_key** | **str** | populated if search result are from an index | [optional] 
 **checksum** | **str** | Document checksum, changes when document file changes | [optional] 
+**checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **document_id** | **str** | Document Identifier | [optional] 
 **content_type** | **str** | Document Content-Type | [optional] 
 **user_id** | **str** | User who added document | [optional] 

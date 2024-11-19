@@ -10,6 +10,7 @@ from formkiq_client.api.custom_index_api import CustomIndexApi
 from formkiq_client.api.document_actions_api import DocumentActionsApi
 from formkiq_client.api.document_attributes_api import DocumentAttributesApi
 from formkiq_client.api.document_folders_api import DocumentFoldersApi
+from formkiq_client.api.document_generation_api import DocumentGenerationApi
 from formkiq_client.api.document_ocr_api import DocumentOCRApi
 from formkiq_client.api.document_search_api import DocumentSearchApi
 from formkiq_client.api.document_shares_api import DocumentSharesApi
@@ -19,14 +20,15 @@ from formkiq_client.api.document_workflows_api import DocumentWorkflowsApi
 from formkiq_client.api.documents_api import DocumentsApi
 from formkiq_client.api.e_signature_api import ESignatureApi
 from formkiq_client.api.examine_objects_api import ExamineObjectsApi
+from formkiq_client.api.google_integration_api import GoogleIntegrationApi
 from formkiq_client.api.mappings_api import MappingsApi
 from formkiq_client.api.onlyoffice_api import OnlyofficeApi
 from formkiq_client.api.public_api import PublicApi
+from formkiq_client.api.reindex_api import ReindexApi
 from formkiq_client.api.rulesets_api import RulesetsApi
 from formkiq_client.api.schemas_api import SchemasApi
 from formkiq_client.api.system_management_api import SystemManagementApi
 from formkiq_client.api.tag_index_api import TagIndexApi
-from formkiq_client.api.tag_schema_api import TagSchemaApi
 from formkiq_client.api.user_activities_api import UserActivitiesApi
 from formkiq_client.api.user_management_api import UserManagementApi
 from formkiq_client.api.webhooks_api import WebhooksApi

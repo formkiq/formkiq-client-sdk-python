@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_document_user_activities**](UserActivitiesApi.md#get_document_user_activities) | **GET** /documents/{documentId}/userActivities | Get user activities
+[**get_document_user_activities**](UserActivitiesApi.md#get_document_user_activities) | **GET** /documents/{documentId}/userActivities | Get user activities for a document
 [**get_user_activities**](UserActivitiesApi.md#get_user_activities) | **GET** /userActivities | Get user activities
 
 
 # **get_document_user_activities**
 > GetUserActivitesResponse get_document_user_activities(document_id, site_id=site_id, next=next, limit=limit)
 
-Get user activities
+Get user activities for a document
 
-Retrieve a user's activities
+Retrieve a user's activities for a document
 
 ### Example
 
@@ -45,7 +45,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     limit = '10' # str | Limit Results (optional) (default to '10')
 
     try:
-        # Get user activities
+        # Get user activities for a document
         api_response = api_instance.get_document_user_activities(document_id, site_id=site_id, next=next, limit=limit)
         print("The response of UserActivitiesApi->get_document_user_activities:\n")
         pprint(api_response)

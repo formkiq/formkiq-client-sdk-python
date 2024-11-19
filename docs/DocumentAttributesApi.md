@@ -328,7 +328,7 @@ No authorization required
 
 Get document attribute's versions
 
-Get a listing of a document's attribute versions; ONLY available with FormKiQ Pro and Enterprise
+Get a listing of a document's attribute versions; available as an Add-On Module
 
 ### Example
 
@@ -565,7 +565,7 @@ No authorization required
 
 Set document's attributes
 
-Set multiple attributes to a document; this endpoint also accepts a different body parameter for setting a single attribute
+Set multiple attributes to a document; this endpoint also accepts a different body parameter for setting a single attribute  Note: - attributes in the request will overwrite existing attributes.
 
 ### Example
 

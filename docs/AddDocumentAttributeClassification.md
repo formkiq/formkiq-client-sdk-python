@@ -6,7 +6,7 @@ Document Classification
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**classification_id** | **str** | Classification Identifier | [optional] 
+**classification_id** | **str** | Classification Identifier | 
 
 ## Example
 

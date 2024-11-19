@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **description** | **str** | Workflow description | [optional] 
 **current_step_id** | **str** | The current step workflow is on | [optional] 
 **status** | [**DocumentWorkflowStatus**](DocumentWorkflowStatus.md) |  | [optional] 
+**inserted_date** | **str** | Inserted Timestamp | [optional] 
 
 ## Example
 

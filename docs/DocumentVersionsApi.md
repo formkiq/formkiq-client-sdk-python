@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Delete document version
 
-Delete a specific previous document version; ONLY available with FormKiQ Pro and Enterprise
+Delete a specific previous document version; available as an Add-On Module
 
 ### Example
 
@@ -41,7 +41,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.DocumentVersionsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    version_key = 'version_key_example' # str | Version Key
+    version_key = 'version_key_example' # str | Version Key (version key required URL encoding)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
@@ -62,7 +62,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
- **version_key** | **str**| Version Key | 
+ **version_key** | **str**| Version Key (version key required URL encoding) | 
  **site_id** | **str**| Site Identifier | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 
@@ -92,7 +92,7 @@ No authorization required
 
 Get document's versions
 
-Get a listing of document content and metadata versions; ONLY available with FormKiQ Pro and Enterprise
+Get a listing of document content and metadata versions; available as an Add-On Module
 
 ### Example
 
@@ -172,7 +172,7 @@ No authorization required
 
 Set version of document
 
-Set document to a previous document version; ONLY available with FormKiQ Pro and Enterprise
+Set document to a previous document version; available as an Add-On Module
 
 ### Example
 

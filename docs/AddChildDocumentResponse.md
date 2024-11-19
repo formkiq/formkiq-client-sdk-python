@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **document_id** | **str** | Document Identifier | [optional] 
 **upload_url** | **str** | Url to upload document to | [optional] 
+**headers** | **Dict[str, object]** |  | [optional] 
 
 ## Example
 

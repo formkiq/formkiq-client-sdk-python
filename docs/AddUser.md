@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **username** | **str** | Email address of user | [optional] 
+**attributes** | [**UserAttributes**](UserAttributes.md) |  | [optional] 
 
 ## Example
 

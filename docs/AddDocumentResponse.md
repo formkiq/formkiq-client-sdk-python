@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **document_id** | **str** | Document Identifier | [optional] 
 **site_id** | **str** | Site Identifier | [optional] 
 **upload_url** | **str** | Url to upload document to | [optional] 
+**headers** | **Dict[str, object]** |  | [optional] 
 **documents** | [**List[AddChildDocumentResponse]**](AddChildDocumentResponse.md) | List of child documents | [optional] 
 
 ## Example

@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **number_values** | **List[float]** | Attribute with number values | [optional] 
 **boolean_value** | **bool** | Attribute with boolean value | [optional] 
 **value_type** | [**AttributeValueType**](AttributeValueType.md) |  | [optional] 
-**inserted_date** | **str** | Inserted Timestamp | [optional] 
 
 ## Example
 

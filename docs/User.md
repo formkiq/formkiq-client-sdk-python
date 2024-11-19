@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **user_status** | **str** | Status of user | [optional] 
 **inserted_date** | **str** | Inserted timestamp of user | [optional] 
 **last_modified_date** | **str** | Last nodified timestamp of user | [optional] 
+**attributes** | [**UserAttributes**](UserAttributes.md) |  | [optional] 
 
 ## Example
 

@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**index_search**](TagIndexApi.md#index_search) | **POST** /indices/search | 
+[**index_search_0**](TagIndexApi.md#index_search_0) | **POST** /indices/search | 
 
 
-# **index_search**
-> IndexSearchResponse index_search(index_search_request, site_id=site_id, limit=limit, next=next, previous=previous)
+# **index_search_0**
+> IndexSearchResponse index_search_0(index_search_request, site_id=site_id, limit=limit, next=next, previous=previous)
 
 
 
@@ -46,11 +46,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     previous = 'previous_example' # str | Previous page of results token (optional)
 
     try:
-        api_response = api_instance.index_search(index_search_request, site_id=site_id, limit=limit, next=next, previous=previous)
-        print("The response of TagIndexApi->index_search:\n")
+        api_response = api_instance.index_search_0(index_search_request, site_id=site_id, limit=limit, next=next, previous=previous)
+        print("The response of TagIndexApi->index_search_0:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling TagIndexApi->index_search: %s\n" % e)
+        print("Exception when calling TagIndexApi->index_search_0: %s\n" % e)
 ```
 
 

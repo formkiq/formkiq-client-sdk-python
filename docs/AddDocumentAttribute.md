@@ -11,7 +11,10 @@ Name | Type | Description | Notes
 **number_value** | **float** | Attribute with number value | [optional] 
 **number_values** | **List[float]** | Attribute with number values | [optional] 
 **boolean_value** | **bool** | Attribute with boolean value | [optional] 
-**classification_id** | **str** | Classification Identifier | [optional] 
+**classification_id** | **str** | Classification Identifier | 
+**document_id** | **str** | Relationship To Document Identifier | 
+**relationship** | [**DocumentRelationshipType**](DocumentRelationshipType.md) |  | 
+**inverse_relationship** | [**DocumentRelationshipType**](DocumentRelationshipType.md) |  | [optional] 
 
 ## Example
 

@@ -5,16 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**path** | **str** | Path or Name of document | [optional] 
-**deep_link_path** | **str** | Path or Name of deep link | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
-**last_modified_date** | **str** | Last Modified Timestamp | [optional] 
 **checksum** | **str** | Document checksum, changes when document file changes | [optional] 
-**document_id** | **str** | Document Identifier | [optional] 
+**checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **content_type** | **str** | Document Content-Type | [optional] 
 **user_id** | **str** | User who added document | [optional] 
 **content_length** | **int** | Document size | [optional] 
-**version** | **str** | Document version | [optional] 
 **version_key** | **str** | Document Version Identifier | [optional] 
 **s3version** | **str** | Document storage version | [optional] 
 

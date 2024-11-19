@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **document_id** | **str** | Document Identifier | [optional] 
 **url** | **str** | Document content url | [optional] 
+**headers** | **Dict[str, object]** |  | [optional] 
 
 ## Example
 

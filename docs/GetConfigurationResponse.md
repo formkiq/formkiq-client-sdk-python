@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **max_documents** | **str** | Set Maximum number of Documents allowed | [optional] 
 **max_webhooks** | **str** | Set Maximum number of Webhooks allowed | [optional] 
 **notification_email** | **str** | Email address to use for notifications (Must be verified identity created in AWS SES) | [optional] 
+**google** | [**GoogleConfig**](GoogleConfig.md) |  | [optional] 
+**docusign** | [**DocusignConfig**](DocusignConfig.md) |  | [optional] 
 
 ## Example
 

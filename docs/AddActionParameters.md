@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **notification_html** | **str** | Html of the notification | [optional] 
 **tags** | **str** | DocumentTagging: Comma-deliminted list of keywords to generate tags for | [optional] 
 **mapping_id** | **str** | Id of Mapping | [optional] 
+**event_bus_name** | **str** | The name or ARN of the event bus to receive the event | [optional] 
 
 ## Example
 

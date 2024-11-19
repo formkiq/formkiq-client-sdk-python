@@ -163,7 +163,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_folder_documents**
-> GetFoldersResponse get_folder_documents(site_id=site_id, index_key=index_key, limit=limit, share_key=share_key, next=next)
+> GetFoldersResponse get_folder_documents(site_id=site_id, index_key=index_key, path=path, limit=limit, share_key=share_key, next=next)
 
 Get document folders
 
@@ -195,13 +195,14 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentFoldersApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     index_key = 'index_key_example' # str | Index Key Identifier (optional)
+    path = 'path_example' # str | Path query parameter (must be URL Encoded) (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
     share_key = 'share_key_example' # str | Share Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
 
     try:
         # Get document folders
-        api_response = api_instance.get_folder_documents(site_id=site_id, index_key=index_key, limit=limit, share_key=share_key, next=next)
+        api_response = api_instance.get_folder_documents(site_id=site_id, index_key=index_key, path=path, limit=limit, share_key=share_key, next=next)
         print("The response of DocumentFoldersApi->get_folder_documents:\n")
         pprint(api_response)
     except Exception as e:
@@ -217,6 +218,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **str**| Site Identifier | [optional] 
  **index_key** | **str**| Index Key Identifier | [optional] 
+ **path** | **str**| Path query parameter (must be URL Encoded) | [optional] 
  **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
  **share_key** | **str**| Share Identifier | [optional] 
  **next** | **str**| Next page of results token | [optional] 

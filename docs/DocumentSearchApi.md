@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Document search
 
-Document search query request;   Supports searching DynamoDB for document(s) by a single TAG key and/or value. Value can be \"exacted\" or \"begins_with\" matched. Search can be filtered to only check certain documentIds (up to 100 documentIds accepted).  If using Enteprise TagSchema Composite Keys feature then multiple tag(s) can be searched for.  If Typesense is enabled, full text search is supported through the \"text\" parameter. Full text search will look for the text in the \"content\" and/or document \"metadata\".  DocumentIds parameter allows you to filter your results to a specific set of documents.   See requestBody examples below for commmon examples.
+Document search query request;   Supports searching DynamoDB for document(s) by a single TAG key and/or value. Value can be \"exacted\" or \"begins_with\" matched. Search can be filtered to only check certain documentIds (up to 100 documentIds accepted).  If using Enteprise Composite Keys feature then multiple tag(s) can be searched for.  If Typesense is enabled, full text search is supported through the \"text\" parameter. Full text search will look for the text in the \"content\" and/or document \"metadata\".  DocumentIds parameter allows you to filter your results to a specific set of documents.   See requestBody examples below for commmon examples.
 
 ### Example
 

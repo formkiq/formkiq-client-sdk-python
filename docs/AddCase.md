@@ -7,8 +7,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Case Name | 
 **status** | [**CaseStatus**](CaseStatus.md) |  | [optional] 
+**planned_start_date** | **str** | Planned Start Date | [optional] 
 **start_date** | **str** | Start Date | [optional] 
 **end_date** | **str** | End Date | [optional] 
+**due_date** | **str** | Due Date | [optional] 
 **description** | **str** | Case Description | [optional] 
 **document_number_format** | [**List[StringFormat]**](StringFormat.md) | Format of Document Number | [optional] 
 **case_number_format** | [**List[StringFormat]**](StringFormat.md) | Format of Case Number | [optional] 

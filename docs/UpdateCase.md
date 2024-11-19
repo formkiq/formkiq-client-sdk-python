@@ -9,8 +9,10 @@ Name | Type | Description | Notes
 **status** | [**CaseStatus**](CaseStatus.md) |  | [optional] 
 **description** | **str** | Case Description | [optional] 
 **metadata** | **Dict[str, object]** |  | [optional] 
+**planned_start_date** | **str** | Planned Start Date | [optional] 
 **start_date** | **str** | Start Date | [optional] 
 **end_date** | **str** | End Date | [optional] 
+**due_date** | **str** | Due Date | [optional] 
 **document_ids** | **List[str]** |  | [optional] 
 
 ## Example

@@ -5,12 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tag_schema_id** | **str** | Tag Schema Id | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
 **content_type** | **str** | Document media type | [optional] 
 **is_base64** | **bool** | Is the content Base64-encoded? | [optional] 
 **content** | **str** | Document content | [optional] 
+**checksum** | **str** | Document checksum, changes when document file changes | [optional] 
+**checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **tags** | [**List[AddDocumentTag]**](AddDocumentTag.md) | List of document tags | [optional] 
 **metadata** | [**List[AddDocumentMetadata]**](AddDocumentMetadata.md) | List of document Metadata | [optional] 
 **attributes** | [**List[AddDocumentAttribute]**](AddDocumentAttribute.md) | List of document attributes | [optional] 
