@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **webhook_id** | **str** | Webhook Identifier | [optional] 
 **user_id** | **str** | User who added document | [optional] 
 **enabled** | **str** | Is webhook enabled | [optional] 
+**ttl** | **str** | Webhook time to live (expiry in seconds) | [optional] 
 
 ## Example
 

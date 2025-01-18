@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **locale** | [**Locale**](Locale.md) |  | [optional] 
+**insert_documents** | [**List[DocumentGenerateInsertDocument]**](DocumentGenerateInsertDocument.md) | List of documents to insert | [optional] 
 **datasources** | [**List[DocumentGenerateDataSource]**](DocumentGenerateDataSource.md) | List of data sources | [optional] 
 **output_type** | [**DocumentGenerateOutputType**](DocumentGenerateOutputType.md) |  | [optional] 
 **save_as_document_id** | **str** | Save the generated document with a specific documentId | [optional] 

@@ -7,9 +7,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **site_id** | **str** | Site Identifier | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
+**content_type** | **str** | Document Content-Type | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **last_modified_date** | **str** | Last Modified Timestamp | [optional] 
+**checksum** | **str** | Document checksum, changes when document file changes | [optional] 
+**checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **document_id** | **str** | Document Identifier | [optional] 
 **content_length** | **int** | Document size | [optional] 
 **created_by** | **str** | User who added document | [optional] 

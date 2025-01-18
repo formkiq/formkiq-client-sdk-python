@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-Perform a delete on the Folder Index
+Perform a delete on the Folder Index.  When deleting a file from the \"folder\" index, you can set the indexKey to a URLEncoded path variable.
 
 ### Example
 

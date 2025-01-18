@@ -10,8 +10,11 @@ Name | Type | Description | Notes
 **content_urls** | **List[str]** | URL(s) which contain document content | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
+**checksum** | **str** | Document checksum, changes when document file changes | [optional] 
+**checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **tags** | [**List[AddDocumentTag]**](AddDocumentTag.md) | List of document tags | [optional] 
 **metadata** | [**List[AddDocumentMetadata]**](AddDocumentMetadata.md) | List of document Metadata | [optional] 
+**attributes** | [**Dict[str, FulltextAttribute]**](FulltextAttribute.md) |  | [optional] 
 
 ## Example
 

@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **document_id** | **str** | Document Identifier | [optional] 
 **created_by** | **str** | User who added document | [optional] 
 **content_length** | **int** | Document size | [optional] 
+**checksum** | **str** | Document checksum, changes when document file changes | [optional] 
+**checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **tags** | **Dict[str, object]** |  | [optional] 
 **metadata** | **Dict[str, object]** |  | [optional] 
 **attributes** | [**Dict[str, FulltextAttribute]**](FulltextAttribute.md) |  | [optional] 

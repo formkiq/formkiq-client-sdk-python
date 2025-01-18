@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **permission** | **str** | SiteId permission level | [optional] 
 **permissions** | [**List[SiteGroupPermissions]**](SiteGroupPermissions.md) |  | [optional] 
 **upload_email** | **str** | SiteId document upload email address | [optional] 
+**config** | [**SiteConfig**](SiteConfig.md) |  | [optional] 
+**usage** | [**SiteUsage**](SiteUsage.md) |  | [optional] 
 
 ## Example
 

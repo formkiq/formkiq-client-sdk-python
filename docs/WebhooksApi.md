@@ -240,7 +240,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_webhook**
-> delete_webhook(webhook_id, site_id=site_id)
+> DeleteResponse delete_webhook(webhook_id, site_id=site_id)
 
 Delete webhook
 
@@ -251,6 +251,7 @@ Delete a webhook; this will disable sending, receiving, or processing of data fr
 
 ```python
 import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -274,7 +275,9 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete webhook
-        api_instance.delete_webhook(webhook_id, site_id=site_id)
+        api_response = api_instance.delete_webhook(webhook_id, site_id=site_id)
+        print("The response of WebhooksApi->delete_webhook:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling WebhooksApi->delete_webhook: %s\n" % e)
 ```
@@ -291,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -300,7 +303,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -459,7 +462,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_webhooks**
-> GetWebhooksResponse get_webhooks(site_id=site_id)
+> GetWebhooksResponse get_webhooks(site_id=site_id, next=next, limit=limit)
 
 Get webhooks
 
@@ -490,10 +493,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.WebhooksApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    next = 'next_example' # str | Next page of results token (optional)
+    limit = '10' # str | Limit Results (optional) (default to '10')
 
     try:
         # Get webhooks
-        api_response = api_instance.get_webhooks(site_id=site_id)
+        api_response = api_instance.get_webhooks(site_id=site_id, next=next, limit=limit)
         print("The response of WebhooksApi->get_webhooks:\n")
         pprint(api_response)
     except Exception as e:
@@ -508,6 +513,8 @@ with formkiq_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **str**| Site Identifier | [optional] 
+ **next** | **str**| Next page of results token | [optional] 
+ **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
 
 ### Return type
 
@@ -531,7 +538,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_webhook**
-> update_webhook(webhook_id, add_webhook_request, site_id=site_id)
+> UpdateResponse update_webhook(webhook_id, add_webhook_request, site_id=site_id)
 
 Update webhook
 
@@ -543,6 +550,7 @@ Updates a webhook's details, i.e., its metadata
 ```python
 import formkiq_client
 from formkiq_client.models.add_webhook_request import AddWebhookRequest
+from formkiq_client.models.update_response import UpdateResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -567,7 +575,9 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Update webhook
-        api_instance.update_webhook(webhook_id, add_webhook_request, site_id=site_id)
+        api_response = api_instance.update_webhook(webhook_id, add_webhook_request, site_id=site_id)
+        print("The response of WebhooksApi->update_webhook:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling WebhooksApi->update_webhook: %s\n" % e)
 ```
@@ -585,7 +595,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UpdateResponse**](UpdateResponse.md)
 
 ### Authorization
 
@@ -594,7 +604,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 

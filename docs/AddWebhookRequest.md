@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Name of webhook | 
-**ttl** | **str** | Webhook time to live (expiry) | [optional] 
+**ttl** | **str** | Webhook time to live (expiry in seconds) | [optional] 
 **enabled** | **str** | Is webhook enabled | [optional] 
 **tags** | [**List[AddDocumentTag]**](AddDocumentTag.md) | List of document tags | [optional] 
 

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attribute** | [**RuleConditionAttribute**](RuleConditionAttribute.md) |  | [optional] 
 **criterion** | [**RuleConditionCriterion**](RuleConditionCriterion.md) |  | [optional] 
+**attribute_key** | **str** | Rule attribute key (only required for ATTRIBUTE criterion) | [optional] 
 **field_name** | **str** | Rule field name (only required for FIELD criterion) | [optional] 
 **value** | **str** | Rule condition value | [optional] 
 **operation** | [**RuleConditionOperation**](RuleConditionOperation.md) |  | [optional] 

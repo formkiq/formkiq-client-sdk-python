@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**next** | **str** | Next page of results token | [optional] 
 **webhooks** | [**List[GetWebhookResponse]**](GetWebhookResponse.md) | List of webhooks | [optional] 
 
 ## Example
