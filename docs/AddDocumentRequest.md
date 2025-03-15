@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **path** | **str** | Path or Name of document | [optional] 
 **checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **checksum** | **str** | The checksum value to validate the file against | [optional] 
+**width** | **str** | Document Content Width property | [optional] 
+**height** | **str** | Document Content Height property | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
 **content_type** | **str** | Document media type | [optional] 
 **is_base64** | **bool** | Is the content Base64-encoded? | [optional] 

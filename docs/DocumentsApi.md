@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**get_document_url**](DocumentsApi.md#get_document_url) | **GET** /documents/{documentId}/url | Get document content url
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /documents | Get Documents listing
 [**get_published_document_content**](DocumentsApi.md#get_published_document_content) | **GET** /publications/{documentId} | Get published document&#39;s contents
+[**purge_document**](DocumentsApi.md#purge_document) | **DELETE** /documents/{documentId}/purge | Purge document
 [**set_document_restore**](DocumentsApi.md#set_document_restore) | **PUT** /documents/{documentId}/restore | Restore soft deleted document
 [**update_document**](DocumentsApi.md#update_document) | **PATCH** /documents/{documentId} | Update document
 
@@ -26,7 +27,13 @@ Method | HTTP request | Description
 
 Add new document
 
-Creates a new document; body may include document content if less than 5 MB  See POST /documents/{documentId}/tags for adding tags to document schema  See POST /documents/{documentId}/actions for adding actions to document schema
+Creates a new document; body may include document content if less than 5 MB.
+
+Returns a unique **documentId** used in subsequent operations.
+
+See POST /documents/{documentId}/tags for adding tags to document schema
+
+See POST /documents/{documentId}/actions for adding actions to document schema
 
 ### Example
 
@@ -104,7 +111,7 @@ No authorization required
 
 Add large document
 
-Returns a URL that can be used to upload document content and create a new document, while allowing metadata to also be sent; this endpoint (whether GET or POST) is required in order to add content that is larger than 5 MB
+Returns a URL that can be used to upload document content and create a new document, while allowing metadata to also be sent; this endpoint (whether GET or POST) is required in order to add content that is larger than 5 MB. The POST endpoint allow the adding of document metadata at the same time as the document is created.
 
 ### Example
 
@@ -260,7 +267,15 @@ No authorization required
 
 Delete document
 
-Delete a document's details, i.e., metadata, contents, etc  SoftDelete:  The SoftDelete parameter allows for the temporary removal of a document's metadata, attributes, etc from being retrieved from all API requests.  The document can be permanently deleted by calling the DELETE /documents/{documentId} with softDelete=false or restored using the PUT /documents/{documentId}/restore.  Only the GET /documents?deleted=true will return all the soft deleted documents.
+Delete a document's details, i.e., metadata, contents, etc
+
+SoftDelete:
+
+The SoftDelete parameter allows for the temporary removal of a document's metadata, attributes, etc from being retrieved from all API requests.
+
+The document can be permanently deleted by calling the DELETE /documents/{documentId} with softDelete=false or restored using the PUT /documents/{documentId}/restore.
+
+Only the GET /documents?deleted=true will return all the soft deleted documents.
 
 ### Example
 
@@ -336,7 +351,7 @@ No authorization required
 
 Delete published document's contents
 
-Delete a published document's contents. Certain content types, text/*, application/json, and application/x-www-form-urlencoded. return the  \"content\" field, while all other content types return a 'contentUrl' for retrieving the content.
+Delete a published document's contents. Certain content types, text/*, application/json, and application/x-www-form-urlencoded. return the  "content" field, while all other content types return a 'contentUrl' for retrieving the content.
 
 ### Example
 
@@ -486,7 +501,15 @@ No authorization required
 
 Get document's contents
 
-Retrieves the content of the document with the specified `documentId`. - If the content is plain text and under 6 MB, the content will be returned directly. - If the content is plain text but exceeds 6 MB, an error will be returned. - For documents not in plain text format, pre-signed S3 URLs will be returned to download the content from S3. It is recommended to use the `/documents/{documentId}/url` endpoint to retrieve pre-signed S3 URLs for downloading the content. 
+Retrieves the content of the document with the specified `documentId`.
+- If the content is plain text and under 6 MB, the content will be returned directly.
+- If the content is plain text but exceeds 6 MB, an error will be returned.
+- For documents not in plain text format, pre-signed S3 URLs will be returned to download the content from S3.
+It is recommended to use the `/documents/{documentId}/url` endpoint to retrieve pre-signed S3 URLs for downloading the content.
+
+If the document has a Content-Type of text/, application/json, application/x-www-form-urlencoded the content field will be returned. 
+All other Content-Type, the contentUrl field will be returned, which is a S3 Presigned url.
+
 
 ### Example
 
@@ -806,7 +829,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_url**
-> GetDocumentUrlResponse get_document_url(document_id, site_id=site_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline)
+> GetDocumentUrlResponse get_document_url(document_id, site_id=site_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark)
 
 Get document content url
 
@@ -842,10 +865,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
     inline = False # bool | Set the Content-Disposition to inline (optional) (default to False)
+    bypass_watermark = False # bool | Allow the by pass of watermark (only allowed by GOVERN / ADMIN permissions) (optional) (default to False)
 
     try:
         # Get document content url
-        api_response = api_instance.get_document_url(document_id, site_id=site_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline)
+        api_response = api_instance.get_document_url(document_id, site_id=site_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark)
         print("The response of DocumentsApi->get_document_url:\n")
         pprint(api_response)
     except Exception as e:
@@ -865,6 +889,7 @@ Name | Type | Description  | Notes
  **duration** | **int**| Indicates the number of hours request is valid for | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
  **inline** | **bool**| Set the Content-Disposition to inline | [optional] [default to False]
+ **bypass_watermark** | **bool**| Allow the by pass of watermark (only allowed by GOVERN / ADMIN permissions) | [optional] [default to False]
 
 ### Return type
 
@@ -978,7 +1003,7 @@ No authorization required
 
 Get published document's contents
 
-Get a published document's contents. Certain content types, text/*, application/json, and application/x-www-form-urlencoded. return the  \"content\" field, while all other content types return a 'contentUrl' for retrieving the content.
+Get a published document's contents. Certain content types, text/*, application/json, and application/x-www-form-urlencoded. return the  "content" field, while all other content types return a 'contentUrl' for retrieving the content.
 
 ### Example
 
@@ -1041,6 +1066,80 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **307** | Temporary Redirect |  * Location -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **purge_document**
+> DeleteResponse purge_document(document_id, site_id=site_id)
+
+Purge document
+
+Remove all objects from the S3 bucket, including previous versions and current version, and should remove all metadata as well, so that no trace of the document exists outside of the audit logs and any backups. Can only be called be ADMIN or GOVERN.
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Purge document
+        api_response = api_instance.purge_document(document_id, site_id=site_id)
+        print("The response of DocumentsApi->purge_document:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentsApi->purge_document: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**DeleteResponse**](DeleteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1123,7 +1222,12 @@ No authorization required
 
 Update document
 
-Update a document's details, i.e., metadata  If no content is specified, the endpoint will return a S3 Presigned that will allow for the uploading of Large document data.   NOTE: - provided attributes will overwrite existing matching attribute keys in the document. Attributes not included in the request body will remain unchanged.
+Update a document's details, i.e., metadata
+
+If no content is specified, the endpoint will return a S3 Presigned that will allow for the uploading of Large document data. 
+
+NOTE:
+- provided attributes will overwrite existing matching attribute keys in the document. Attributes not included in the request body will remain unchanged.
 
 ### Example
 

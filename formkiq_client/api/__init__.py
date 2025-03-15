@@ -22,7 +22,6 @@ from formkiq_client.api.e_signature_api import ESignatureApi
 from formkiq_client.api.examine_objects_api import ExamineObjectsApi
 from formkiq_client.api.google_integration_api import GoogleIntegrationApi
 from formkiq_client.api.mappings_api import MappingsApi
-from formkiq_client.api.onlyoffice_api import OnlyofficeApi
 from formkiq_client.api.public_api import PublicApi
 from formkiq_client.api.reindex_api import ReindexApi
 from formkiq_client.api.rulesets_api import RulesetsApi

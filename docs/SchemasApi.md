@@ -166,7 +166,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_classification**
-> GetClassificationResponse get_classification(site_id, classification_id)
+> GetClassificationResponse get_classification(site_id, classification_id, locale=locale)
 
 Get Classification
 
@@ -198,10 +198,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     classification_id = 'classification_id_example' # str | Classification Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166) (optional)
 
     try:
         # Get Classification
-        api_response = api_instance.get_classification(site_id, classification_id)
+        api_response = api_instance.get_classification(site_id, classification_id, locale=locale)
         print("The response of SchemasApi->get_classification:\n")
         pprint(api_response)
     except Exception as e:
@@ -217,6 +218,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **str**| Site Identifier | 
  **classification_id** | **str**| Classification Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | [optional] 
 
 ### Return type
 
@@ -240,7 +242,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_classification_attribute_allowed_values**
-> GetAttributeAllowedValuesResponse get_classification_attribute_allowed_values(site_id, classification_id, key)
+> GetAttributeAllowedValuesResponse get_classification_attribute_allowed_values(site_id, classification_id, key, locale=locale)
 
 Get Classification's Attribute Allowed Values
 
@@ -273,10 +275,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     site_id = 'site_id_example' # str | Site Identifier
     classification_id = 'classification_id_example' # str | Classification Identifier
     key = 'key_example' # str | Key Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166) (optional)
 
     try:
         # Get Classification's Attribute Allowed Values
-        api_response = api_instance.get_classification_attribute_allowed_values(site_id, classification_id, key)
+        api_response = api_instance.get_classification_attribute_allowed_values(site_id, classification_id, key, locale=locale)
         print("The response of SchemasApi->get_classification_attribute_allowed_values:\n")
         pprint(api_response)
     except Exception as e:
@@ -293,6 +296,7 @@ Name | Type | Description  | Notes
  **site_id** | **str**| Site Identifier | 
  **classification_id** | **str**| Classification Identifier | 
  **key** | **str**| Key Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | [optional] 
 
 ### Return type
 
@@ -392,7 +396,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_sites_schema**
-> GetSitesSchemaResponse get_sites_schema(site_id)
+> GetSitesSchemaResponse get_sites_schema(site_id, locale=locale)
 
 Get Sites Schema
 
@@ -423,10 +427,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166) (optional)
 
     try:
         # Get Sites Schema
-        api_response = api_instance.get_sites_schema(site_id)
+        api_response = api_instance.get_sites_schema(site_id, locale=locale)
         print("The response of SchemasApi->get_sites_schema:\n")
         pprint(api_response)
     except Exception as e:
@@ -441,6 +446,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **str**| Site Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | [optional] 
 
 ### Return type
 
@@ -464,7 +470,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_sites_schema_attribute_allowed_values**
-> GetAttributeAllowedValuesResponse get_sites_schema_attribute_allowed_values(site_id, key)
+> GetAttributeAllowedValuesResponse get_sites_schema_attribute_allowed_values(site_id, key, locale=locale)
 
 Get Attribute Allowed Values
 
@@ -496,10 +502,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     key = 'key_example' # str | Key Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166) (optional)
 
     try:
         # Get Attribute Allowed Values
-        api_response = api_instance.get_sites_schema_attribute_allowed_values(site_id, key)
+        api_response = api_instance.get_sites_schema_attribute_allowed_values(site_id, key, locale=locale)
         print("The response of SchemasApi->get_sites_schema_attribute_allowed_values:\n")
         pprint(api_response)
     except Exception as e:
@@ -515,6 +522,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **str**| Site Identifier | 
  **key** | **str**| Key Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | [optional] 
 
 ### Return type
 

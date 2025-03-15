@@ -12,7 +12,9 @@ Method | HTTP request | Description
 
 Reindex metadata on a document
 
-The API allows for the reindexing of a document's metadata determined by the target.  ATTRIBUTE target will regenerate the composite keys for a document based on the Classification / SiteSchema
+The API allows for the reindexing of a document's metadata determined by the target.
+
+ATTRIBUTE target will regenerate the composite keys for a document based on the Classification / SiteSchema
 
 ### Example
 

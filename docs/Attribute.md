@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **type** | [**AttributeType**](AttributeType.md) |  | [optional] [default to AttributeType.STANDARD]
 **key** | **str** | Attribute Key | [optional] 
 **data_type** | [**AttributeDataType**](AttributeDataType.md) |  | [optional] [default to AttributeDataType.STRING]
+**watermark** | [**Watermark**](Watermark.md) |  | [optional] 
 
 ## Example
 

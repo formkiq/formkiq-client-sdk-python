@@ -399,7 +399,9 @@ No authorization required
 
 Direct opensearch search API
 
-Endpoint for allowing custom, complex queries using the OpenSearch search API (https://opensearch.org/docs/latest/opensearch/rest-api/search/); available as an Add-On Module  Example Request Body: { \"query\": { \"match_all\": {} }}
+Endpoint for allowing custom, complex queries using the OpenSearch search API (https://opensearch.org/docs/latest/opensearch/rest-api/search/); available as an Add-On Module
+
+Example Request Body: { "query": { "match_all": {} }}
 
 ### Example
 

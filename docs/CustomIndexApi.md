@@ -12,9 +12,9 @@ Method | HTTP request | Description
 # **delete_index**
 > DeleteIndicesResponse delete_index(index_key, index_type, site_id=site_id)
 
+Perform a delete on the Folder Index.
 
-
-Perform a delete on the Folder Index.  When deleting a file from the \"folder\" index, you can set the indexKey to a URLEncoded path variable.
+When deleting a file from the "folder" index, you can set the indexKey to a URLEncoded path variable.
 
 ### Example
 
@@ -87,8 +87,6 @@ No authorization required
 
 # **index_folder_move**
 > IndexFolderMoveResponse index_folder_move(index_type, index_folder_move_request, site_id=site_id)
-
-
 
 Perform an Folder Index Move
 
@@ -164,8 +162,6 @@ No authorization required
 
 # **index_search**
 > IndexSearchResponse index_search(index_search_request, site_id=site_id, limit=limit, next=next, previous=previous)
-
-
 
 Perform a search on a index; this is currently available for both folder and tag indices
 

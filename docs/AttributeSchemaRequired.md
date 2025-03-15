@@ -6,9 +6,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attribute_key** | **str** |  | [optional] 
+**min_number_of_values** | **float** | The minimum number of attribute values | [optional] 
+**max_number_of_values** | **float** | The maximum number of attribute values | [optional] 
 **default_value** | **str** | Default value | [optional] 
 **default_values** | **List[str]** | Default values | [optional] 
 **allowed_values** | **List[str]** | Only valid string values | [optional] 
+**localized_allowed_values** | **Dict[str, str]** |  | [optional] 
 
 ## Example
 

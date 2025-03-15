@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **next** | **str** | Next page of results token | [optional] 
-**syncs** | [**List[GetDocumentSync]**](GetDocumentSync.md) | List of document syncs | [optional] 
+**syncs** | [**List[DocumentSync]**](DocumentSync.md) | List of document syncs | [optional] 
 
 ## Example
 

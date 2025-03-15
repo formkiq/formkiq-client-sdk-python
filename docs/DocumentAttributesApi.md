@@ -565,7 +565,10 @@ No authorization required
 
 Set document's attributes
 
-Set multiple attributes to a document; this endpoint also accepts a different body parameter for setting a single attribute  Note: - attributes in the request will overwrite existing attributes.
+Set multiple attributes to a document; this endpoint also accepts a different body parameter for setting a single attribute
+
+Note:
+- attributes in the request will overwrite existing attributes.
 
 ### Example
 

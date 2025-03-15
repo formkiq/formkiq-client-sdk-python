@@ -13,7 +13,9 @@ Method | HTTP request | Description
 
 Add Examine Pdf
 
-Get PDF details  File must have been uploaded previously using the GET /objects/examine/pdf API.
+Get PDF details
+
+File must have been uploaded previously using the GET /objects/examine/pdf API.
 
 ### Example
 

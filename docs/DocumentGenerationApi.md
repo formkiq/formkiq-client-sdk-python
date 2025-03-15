@@ -12,7 +12,11 @@ Method | HTTP request | Description
 
 Add Document Generate
 
-Generates a new document using a specified template file and data sources. This operation allows users to merge data from multiple documents into a template to create a new document in the desired output format (e.g., DOCX).  By Default data source must include a `data` object, which contains key-value pairs that will be merged into the template. The value can be any valid JSON object. { \"data\":{}}. The data path can be adjusted via the \"dataRoot\" field.  ; available as an Add-On Module
+Generates a new document using a specified template file and data sources. This operation allows users to merge data from multiple documents into a template to create a new document in the desired output format (e.g., DOCX).
+
+By Default data source must include a `data` object, which contains key-value pairs that will be merged into the template. The value can be any valid JSON object. { "data":{}}. The data path can be adjusted via the "dataRoot" field.
+
+; available as an Add-On Module
 
 ### Example
 

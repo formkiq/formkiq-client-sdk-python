@@ -5,8 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**language** | **str** | ISO 639-1 language code (eg: en (English), fr (French), de (German)) | [optional] 
-**country** | **str** | ISO 3166-1 country code (eg: US, CA, DE, FR) | [optional] 
+**locale** | **str** | Name of Locale | [optional] 
 
 ## Example
 

@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allowed_values** | **List[str]** | Attribute&#39;s allowed values | [optional] 
+**localized_allowed_values** | **Dict[str, str]** |  | [optional] 
 
 ## Example
 

@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **index_search**
 > IndexSearchResponse index_search(index_search_request, site_id=site_id, limit=limit, next=next, previous=previous)
 
-
-
 Perform a search on a index; this is currently available for both folder and tag indices
 
 ### Example

@@ -5,17 +5,25 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_api_key**](SystemManagementApi.md#add_api_key) | **POST** /sites/{siteId}/apiKeys | Add API Key
+[**add_locale**](SystemManagementApi.md#add_locale) | **POST** /sites/{siteId}/locales | Add Locale
+[**add_locale_resource_item**](SystemManagementApi.md#add_locale_resource_item) | **POST** /sites/{siteId}/locales/{locale}/resourceItems | Add Locale Resource Item
 [**add_site**](SystemManagementApi.md#add_site) | **POST** /sites | Add Site
 [**delete_api_key**](SystemManagementApi.md#delete_api_key) | **DELETE** /sites/{siteId}/apiKeys/{apiKey} | Delete API Key
+[**delete_locale**](SystemManagementApi.md#delete_locale) | **DELETE** /sites/{siteId}/locales/{locale} | Delete Locale
+[**delete_locale_resource_item**](SystemManagementApi.md#delete_locale_resource_item) | **DELETE** /sites/{siteId}/locales/{locale}/resourceItems/{itemKey} | Delete Local Resource Item
 [**delete_opensearch_index**](SystemManagementApi.md#delete_opensearch_index) | **DELETE** /sites/{siteId}/opensearch/index | Deletes site(s) OpenSearch index
 [**delete_site_group**](SystemManagementApi.md#delete_site_group) | **DELETE** /sites/{siteId}/groups/{groupName} | Deletes Site Group and permissions
 [**get_api_keys**](SystemManagementApi.md#get_api_keys) | **GET** /sites/{siteId}/apiKeys | Get API Keys
 [**get_configuration**](SystemManagementApi.md#get_configuration) | **GET** /sites/{siteId}/configuration | Get site configuration
+[**get_locale_resource_item**](SystemManagementApi.md#get_locale_resource_item) | **GET** /sites/{siteId}/locales/{locale}/resourceItems/{itemKey} | Get Resource Item by Locale
+[**get_locale_resource_items**](SystemManagementApi.md#get_locale_resource_items) | **GET** /sites/{siteId}/locales/{locale}/resourceItems | Get Resource Items by Locale
+[**get_locales**](SystemManagementApi.md#get_locales) | **GET** /sites/{siteId}/locales | Get Locales
 [**get_opensearch_index**](SystemManagementApi.md#get_opensearch_index) | **GET** /sites/{siteId}/opensearch/index | Get site(s) OpenSearch index settings
 [**get_site_group**](SystemManagementApi.md#get_site_group) | **GET** /sites/{siteId}/groups/{groupName} | Get group and permissions belonging to site
 [**get_site_groups**](SystemManagementApi.md#get_site_groups) | **GET** /sites/{siteId}/groups | Get group(s) and permissions belonging to site
 [**get_sites**](SystemManagementApi.md#get_sites) | **GET** /sites | Get site(s) access
 [**get_version**](SystemManagementApi.md#get_version) | **GET** /version | Get FormKiQ version
+[**set_locale_resource_item**](SystemManagementApi.md#set_locale_resource_item) | **PUT** /sites/{siteId}/locales/{locale}/resourceItems/{itemKey} | Set Locale Resource Item
 [**set_opensearch_index**](SystemManagementApi.md#set_opensearch_index) | **PUT** /sites/{siteId}/opensearch/index | Set site(s) OpenSearch index settings
 [**set_site_group_permissions**](SystemManagementApi.md#set_site_group_permissions) | **PUT** /sites/{siteId}/groups/{groupName}/permissions | Set Site&#39;s Group Permissions
 [**update_configuration**](SystemManagementApi.md#update_configuration) | **PATCH** /sites/{siteId}/configuration | Update site configuration
@@ -94,6 +102,158 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_locale**
+> AddResponse add_locale(site_id, add_locale_request)
+
+Add Locale
+
+Adds a new locale to the specified site
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.add_locale_request import AddLocaleRequest
+from formkiq_client.models.add_response import AddResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    add_locale_request = formkiq_client.AddLocaleRequest() # AddLocaleRequest | 
+
+    try:
+        # Add Locale
+        api_response = api_instance.add_locale(site_id, add_locale_request)
+        print("The response of SystemManagementApi->add_locale:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->add_locale: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **add_locale_request** | [**AddLocaleRequest**](AddLocaleRequest.md)|  | 
+
+### Return type
+
+[**AddResponse**](AddResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | 201 CREATED |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_locale_resource_item**
+> AddLocaleResourceItemResponse add_locale_resource_item(site_id, locale, add_locale_resource_item_request)
+
+Add Locale Resource Item
+
+Adds a new localized resource item for a given locale
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.add_locale_resource_item_request import AddLocaleResourceItemRequest
+from formkiq_client.models.add_locale_resource_item_response import AddLocaleResourceItemResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
+    add_locale_resource_item_request = formkiq_client.AddLocaleResourceItemRequest() # AddLocaleResourceItemRequest | 
+
+    try:
+        # Add Locale Resource Item
+        api_response = api_instance.add_locale_resource_item(site_id, locale, add_locale_resource_item_request)
+        print("The response of SystemManagementApi->add_locale_resource_item:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->add_locale_resource_item: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | 
+ **add_locale_resource_item_request** | [**AddLocaleResourceItemRequest**](AddLocaleResourceItemRequest.md)|  | 
+
+### Return type
+
+[**AddLocaleResourceItemResponse**](AddLocaleResourceItemResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 201 CREATED |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -227,6 +387,156 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DeleteApiKeyResponse**](DeleteApiKeyResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_locale**
+> DeleteResponse delete_locale(site_id, locale)
+
+Delete Locale
+
+Delete Locale
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
+
+    try:
+        # Delete Locale
+        api_response = api_instance.delete_locale(site_id, locale)
+        print("The response of SystemManagementApi->delete_locale:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->delete_locale: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | 
+
+### Return type
+
+[**DeleteResponse**](DeleteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_locale_resource_item**
+> DeleteResponse delete_locale_resource_item(site_id, locale, item_key)
+
+Delete Local Resource Item
+
+Delete Local Resource Item
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
+    item_key = 'item_key_example' # str | Item Key (MUST be URL‑encoded)
+
+    try:
+        # Delete Local Resource Item
+        api_response = api_instance.delete_locale_resource_item(site_id, locale, item_key)
+        print("The response of SystemManagementApi->delete_locale_resource_item:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->delete_locale_resource_item: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | 
+ **item_key** | **str**| Item Key (MUST be URL‑encoded) | 
+
+### Return type
+
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -521,6 +831,236 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetConfigurationResponse**](GetConfigurationResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_locale_resource_item**
+> GetLocaleResourceItemResponse get_locale_resource_item(site_id, locale, item_key)
+
+Get Resource Item by Locale
+
+Returns the resource item
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_locale_resource_item_response import GetLocaleResourceItemResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
+    item_key = 'item_key_example' # str | Item Key (MUST be URL‑encoded)
+
+    try:
+        # Get Resource Item by Locale
+        api_response = api_instance.get_locale_resource_item(site_id, locale, item_key)
+        print("The response of SystemManagementApi->get_locale_resource_item:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->get_locale_resource_item: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | 
+ **item_key** | **str**| Item Key (MUST be URL‑encoded) | 
+
+### Return type
+
+[**GetLocaleResourceItemResponse**](GetLocaleResourceItemResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_locale_resource_items**
+> GetLocaleResourceItemsResponse get_locale_resource_items(site_id, locale, next=next, limit=limit)
+
+Get Resource Items by Locale
+
+Returns the list resource items
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_locale_resource_items_response import GetLocaleResourceItemsResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
+    next = 'next_example' # str | Next page of results token (optional)
+    limit = '10' # str | Limit Results (optional) (default to '10')
+
+    try:
+        # Get Resource Items by Locale
+        api_response = api_instance.get_locale_resource_items(site_id, locale, next=next, limit=limit)
+        print("The response of SystemManagementApi->get_locale_resource_items:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->get_locale_resource_items: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | 
+ **next** | **str**| Next page of results token | [optional] 
+ **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
+
+### Return type
+
+[**GetLocaleResourceItemsResponse**](GetLocaleResourceItemsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_locales**
+> GetLocalesResponse get_locales(site_id, next=next, limit=limit)
+
+Get Locales
+
+Returns a list of locale(s) in a specified site
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_locales_response import GetLocalesResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    next = 'next_example' # str | Next page of results token (optional)
+    limit = '10' # str | Limit Results (optional) (default to '10')
+
+    try:
+        # Get Locales
+        api_response = api_instance.get_locales(site_id, next=next, limit=limit)
+        print("The response of SystemManagementApi->get_locales:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->get_locales: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **next** | **str**| Next page of results token | [optional] 
+ **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
+
+### Return type
+
+[**GetLocalesResponse**](GetLocalesResponse.md)
 
 ### Authorization
 
@@ -888,6 +1428,85 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_locale_resource_item**
+> SetResponse set_locale_resource_item(site_id, locale, item_key, set_locale_resource_item_request)
+
+Set Locale Resource Item
+
+Set a new Locale Resource Item
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.set_locale_resource_item_request import SetLocaleResourceItemRequest
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
+    item_key = 'item_key_example' # str | Item Key (MUST be URL‑encoded)
+    set_locale_resource_item_request = formkiq_client.SetLocaleResourceItemRequest() # SetLocaleResourceItemRequest | 
+
+    try:
+        # Set Locale Resource Item
+        api_response = api_instance.set_locale_resource_item(site_id, locale, item_key, set_locale_resource_item_request)
+        print("The response of SystemManagementApi->set_locale_resource_item:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->set_locale_resource_item: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | 
+ **item_key** | **str**| Item Key (MUST be URL‑encoded) | 
+ **set_locale_resource_item_request** | [**SetLocaleResourceItemRequest**](SetLocaleResourceItemRequest.md)|  | 
+
+### Return type
+
+[**SetResponse**](SetResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

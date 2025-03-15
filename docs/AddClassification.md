@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Name of Classification | [optional] 
-**attributes** | [**SchemaAttributes**](SchemaAttributes.md) |  | [optional] 
+**attributes** | [**SetSchemaAttributes**](SetSchemaAttributes.md) |  | [optional] 
 
 ## Example
 

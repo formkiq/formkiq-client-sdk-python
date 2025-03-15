@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **content** | **str** | Document content | [optional] 
 **content_urls** | **List[str]** | URL(s) which contain document content | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
+**width** | **str** | Document Content Width property | [optional] 
+**height** | **str** | Document Content Height property | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
 **checksum** | **str** | Document checksum, changes when document file changes | [optional] 
 **checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
