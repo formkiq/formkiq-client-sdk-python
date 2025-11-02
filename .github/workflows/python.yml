@@ -19,8 +19,6 @@ jobs:
         uses: openapi-generators/openapi-python-client-action@v2
         with:
           openapi_url: "https://raw.githubusercontent.com/formkiq/formkiq-core/refs/heads/master/docs/openapi/openapi-jwt.yaml"
-          client_name: "formkiq_client"
-          output_dir: "./formkiq_client"
 
       - name: Install and test
         run: |
