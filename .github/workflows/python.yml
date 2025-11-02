@@ -35,6 +35,7 @@ jobs:
 
           # install test tools (add any of your own test requirements here)
           pip install pytest pytest-cov
+          pip install "pydantic>=2,<3" pytest pytest-cov
 
           # run tests; prefer 'python -m pytest' so we use the configured Python
           python -m pytest -q
