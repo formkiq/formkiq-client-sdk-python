@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.update_attribute_request import UpdateAttributeRequest
+from openapi_client.model.update_attribute_request import UpdateAttributeRequest
 
 class TestUpdateAttributeRequest(unittest.TestCase):
     """UpdateAttributeRequest unit test stubs"""
@@ -36,15 +36,15 @@ class TestUpdateAttributeRequest(unittest.TestCase):
         model = UpdateAttributeRequest()
         if include_optional:
             return UpdateAttributeRequest(
-                attribute = formkiq_client.models.update_attribute.UpdateAttribute(
+                attribute = openapi_client.models.update_attribute.UpdateAttribute(
                     type = 'STANDARD', 
-                    watermark = formkiq_client.models.watermark.Watermark(
+                    watermark = openapi_client.models.watermark.Watermark(
                         font_size = 1.337, 
                         text = '', 
                         rotation = 1.337, 
                         image_document_id = '', 
                         scale = 'FIT_BEST', 
-                        position = formkiq_client.models.watermark_position.WatermarkPosition(
+                        position = openapi_client.models.watermark_position.WatermarkPosition(
                             x_anchor = 'LEFT', 
                             y_anchor = 'TOP', 
                             x_offset = 1.337, 
@@ -52,15 +52,15 @@ class TestUpdateAttributeRequest(unittest.TestCase):
             )
         else:
             return UpdateAttributeRequest(
-                attribute = formkiq_client.models.update_attribute.UpdateAttribute(
+                attribute = openapi_client.models.update_attribute.UpdateAttribute(
                     type = 'STANDARD', 
-                    watermark = formkiq_client.models.watermark.Watermark(
+                    watermark = openapi_client.models.watermark.Watermark(
                         font_size = 1.337, 
                         text = '', 
                         rotation = 1.337, 
                         image_document_id = '', 
                         scale = 'FIT_BEST', 
-                        position = formkiq_client.models.watermark_position.WatermarkPosition(
+                        position = openapi_client.models.watermark_position.WatermarkPosition(
                             x_anchor = 'LEFT', 
                             y_anchor = 'TOP', 
                             x_offset = 1.337, 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.get_activites_response import GetActivitesResponse
+from openapi_client.model.get_activites_response import GetActivitesResponse
 
 class TestGetActivitesResponse(unittest.TestCase):
     """GetActivitesResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetActivitesResponse(unittest.TestCase):
             return GetActivitesResponse(
                 next = '',
                 activities = [
-                    formkiq_client.models.activity.Activity(
+                    openapi_client.models.activity.Activity(
                         resource = '', 
                         type = '', 
                         source = '', 
@@ -52,9 +52,9 @@ class TestGetActivitesResponse(unittest.TestCase):
                         entity_type_id = '', 
                         entity_id = '', 
                         changes = {
-                            'key' : formkiq_client.models.user_activity_changes.UserActivityChanges(
-                                old_value = formkiq_client.models.old_value.oldValue(), 
-                                new_value = formkiq_client.models.new_value.newValue(), )
+                            'key' : openapi_client.models.user_activity_changes.UserActivityChanges(
+                                old_value = openapi_client.models.old_value.oldValue(), 
+                                new_value = openapi_client.models.new_value.newValue(), )
                             }, )
                     ]
             )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.entity_attribute import EntityAttribute
+from openapi_client.model.entity_attribute import EntityAttribute
 
 class TestEntityAttribute(unittest.TestCase):
     """EntityAttribute unit test stubs"""

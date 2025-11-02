@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.open_search_alias import OpenSearchAlias
+from openapi_client.model.open_search_alias import OpenSearchAlias
 
 class TestOpenSearchAlias(unittest.TestCase):
     """OpenSearchAlias unit test stubs"""

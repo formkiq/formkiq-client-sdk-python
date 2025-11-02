@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.open_search_s3_repository import OpenSearchS3Repository
+from openapi_client.model.open_search_s3_repository import OpenSearchS3Repository
 
 class TestOpenSearchS3Repository(unittest.TestCase):
     """OpenSearchS3Repository unit test stubs"""

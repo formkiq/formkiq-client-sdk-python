@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.opa_policy_input import OpaPolicyInput
+from openapi_client.model.opa_policy_input import OpaPolicyInput
 
 class TestOpaPolicyInput(unittest.TestCase):
     """OpaPolicyInput unit test stubs"""
@@ -36,14 +36,14 @@ class TestOpaPolicyInput(unittest.TestCase):
         model = OpaPolicyInput()
         if include_optional:
             return OpaPolicyInput(
-                http_method = formkiq_client.models.opa_policy_input_method.OpaPolicyInputMethod(
+                http_method = openapi_client.models.opa_policy_input_method.OpaPolicyInputMethod(
                     in = [
                         ''
                         ], 
                     not_in = [
                         ''
                         ], ),
-                resource = formkiq_client.models.opa_policy_input_resource.OpaPolicyInputResource(
+                resource = openapi_client.models.opa_policy_input_resource.OpaPolicyInputResource(
                     in = [
                         ''
                         ], 

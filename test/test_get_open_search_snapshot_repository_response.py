@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.get_open_search_snapshot_repository_response import GetOpenSearchSnapshotRepositoryResponse
+from openapi_client.model.get_open_search_snapshot_repository_response import GetOpenSearchSnapshotRepositoryResponse
 
 class TestGetOpenSearchSnapshotRepositoryResponse(unittest.TestCase):
     """GetOpenSearchSnapshotRepositoryResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestGetOpenSearchSnapshotRepositoryResponse(unittest.TestCase):
         if include_optional:
             return GetOpenSearchSnapshotRepositoryResponse(
                 s3_repositories = [
-                    formkiq_client.models.open_search_s3_repository.OpenSearchS3Repository(
+                    openapi_client.models.open_search_s3_repository.OpenSearchS3Repository(
                         repository = '', 
                         bucket = '', )
                     ]

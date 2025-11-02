@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.entity import Entity
+from openapi_client.model.entity import Entity
 
 class TestEntity(unittest.TestCase):
     """Entity unit test stubs"""
@@ -41,7 +41,7 @@ class TestEntity(unittest.TestCase):
                 name = '',
                 inserted_date = '',
                 attributes = [
-                    formkiq_client.models.entity_attribute.EntityAttribute(
+                    openapi_client.models.entity_attribute.EntityAttribute(
                         key = '', 
                         string_value = '', 
                         string_values = [

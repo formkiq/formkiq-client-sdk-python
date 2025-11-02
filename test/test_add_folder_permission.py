@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.add_folder_permission import AddFolderPermission
+from openapi_client.model.add_folder_permission import AddFolderPermission
 
 class TestAddFolderPermission(unittest.TestCase):
     """AddFolderPermission unit test stubs"""

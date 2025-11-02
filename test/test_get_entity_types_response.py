@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.get_entity_types_response import GetEntityTypesResponse
+from openapi_client.model.get_entity_types_response import GetEntityTypesResponse
 
 class TestGetEntityTypesResponse(unittest.TestCase):
     """GetEntityTypesResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetEntityTypesResponse(unittest.TestCase):
             return GetEntityTypesResponse(
                 next = '',
                 entity_types = [
-                    formkiq_client.models.entity_type.EntityType(
+                    openapi_client.models.entity_type.EntityType(
                         entity_type_id = '', 
                         namespace = 'PRESET', 
                         name = '', 

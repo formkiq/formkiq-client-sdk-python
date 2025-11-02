@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.set_document_data_classification_request import SetDocumentDataClassificationRequest
+from openapi_client.model.set_document_data_classification_request import SetDocumentDataClassificationRequest
 
 class TestSetDocumentDataClassificationRequest(unittest.TestCase):
     """SetDocumentDataClassificationRequest unit test stubs"""

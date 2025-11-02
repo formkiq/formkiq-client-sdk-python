@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.add_document_attribute_entity import AddDocumentAttributeEntity
+from openapi_client.model.add_document_attribute_entity import AddDocumentAttributeEntity
 
 class TestAddDocumentAttributeEntity(unittest.TestCase):
     """AddDocumentAttributeEntity unit test stubs"""

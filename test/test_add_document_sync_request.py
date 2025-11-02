@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.add_document_sync_request import AddDocumentSyncRequest
+from openapi_client.model.add_document_sync_request import AddDocumentSyncRequest
 
 class TestAddDocumentSyncRequest(unittest.TestCase):
     """AddDocumentSyncRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAddDocumentSyncRequest(unittest.TestCase):
         model = AddDocumentSyncRequest()
         if include_optional:
             return AddDocumentSyncRequest(
-                sync = formkiq_client.models.add_document_sync.AddDocumentSync(
+                sync = openapi_client.models.add_document_sync.AddDocumentSync(
                     service = 'FULLTEXT', 
                     type = 'METADATA', )
             )

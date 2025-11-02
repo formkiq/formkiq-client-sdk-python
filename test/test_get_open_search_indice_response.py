@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.get_open_search_indice_response import GetOpenSearchIndiceResponse
+from openapi_client.model.get_open_search_indice_response import GetOpenSearchIndiceResponse
 
 class TestGetOpenSearchIndiceResponse(unittest.TestCase):
     """GetOpenSearchIndiceResponse unit test stubs"""
@@ -37,14 +37,14 @@ class TestGetOpenSearchIndiceResponse(unittest.TestCase):
         if include_optional:
             return GetOpenSearchIndiceResponse(
                 indices = [
-                    formkiq_client.models.open_search_index.OpenSearchIndex(
+                    openapi_client.models.open_search_index.OpenSearchIndex(
                         number_of_replicas = '', 
                         number_of_shards = '', 
                         document_count = '', 
                         store_size = '', 
                         name = '', 
                         aliases = [
-                            formkiq_client.models.open_search_alias.OpenSearchAlias(
+                            openapi_client.models.open_search_alias.OpenSearchAlias(
                                 name = '', )
                             ], )
                     ]

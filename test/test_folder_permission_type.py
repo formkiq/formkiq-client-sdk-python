@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.folder_permission_type import FolderPermissionType
+from openapi_client.model.folder_permission_type import FolderPermissionType
 
 class TestFolderPermissionType(unittest.TestCase):
     """FolderPermissionType unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.activity import Activity
+from openapi_client.model.activity import Activity
 
 class TestActivity(unittest.TestCase):
     """Activity unit test stubs"""
@@ -49,9 +49,9 @@ class TestActivity(unittest.TestCase):
                 entity_type_id = '',
                 entity_id = '',
                 changes = {
-                    'key' : formkiq_client.models.user_activity_changes.UserActivityChanges(
-                        old_value = formkiq_client.models.old_value.oldValue(), 
-                        new_value = formkiq_client.models.new_value.newValue(), )
+                    'key' : openapi_client.models.user_activity_changes.UserActivityChanges(
+                        old_value = openapi_client.models.old_value.oldValue(), 
+                        new_value = openapi_client.models.new_value.newValue(), )
                     }
             )
         else:

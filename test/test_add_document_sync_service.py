@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.add_document_sync_service import AddDocumentSyncService
+from openapi_client.model.add_document_sync_service import AddDocumentSyncService
 
 class TestAddDocumentSyncService(unittest.TestCase):
     """AddDocumentSyncService unit test stubs"""

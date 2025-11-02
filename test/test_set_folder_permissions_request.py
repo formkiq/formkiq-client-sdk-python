@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.set_folder_permissions_request import SetFolderPermissionsRequest
+from openapi_client.model.set_folder_permissions_request import SetFolderPermissionsRequest
 
 class TestSetFolderPermissionsRequest(unittest.TestCase):
     """SetFolderPermissionsRequest unit test stubs"""
@@ -38,7 +38,7 @@ class TestSetFolderPermissionsRequest(unittest.TestCase):
             return SetFolderPermissionsRequest(
                 path = '',
                 roles = [
-                    formkiq_client.models.add_folder_permission.AddFolderPermission(
+                    openapi_client.models.add_folder_permission.AddFolderPermission(
                         role_name = '', 
                         permissions = [
                             'READ'

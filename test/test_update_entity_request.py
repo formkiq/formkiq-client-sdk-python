@@ -15,7 +15,7 @@
 
 import unittest
 
-from formkiq_client.models.update_entity_request import UpdateEntityRequest
+from openapi_client.model.update_entity_request import UpdateEntityRequest
 
 class TestUpdateEntityRequest(unittest.TestCase):
     """UpdateEntityRequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestUpdateEntityRequest(unittest.TestCase):
         model = UpdateEntityRequest()
         if include_optional:
             return UpdateEntityRequest(
-                entity = formkiq_client.models.add_entity.AddEntity(
+                entity = openapi_client.models.add_entity.AddEntity(
                     name = '', 
                     attributes = [
-                        formkiq_client.models.add_entity_attribute.AddEntityAttribute(
+                        openapi_client.models.add_entity_attribute.AddEntityAttribute(
                             key = '', 
                             string_value = '', 
                             string_values = [
