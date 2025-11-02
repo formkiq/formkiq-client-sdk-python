@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.get_open_search_indice_response import GetOpenSearchIndiceResponse
+from openapi_client.models.get_open_search_indice_response import GetOpenSearchIndiceResponse
 
 # TODO update the JSON string below
 json = "{}"

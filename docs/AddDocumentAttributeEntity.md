@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_document_attribute_entity import AddDocumentAttributeEntity
+from openapi_client.models.add_document_attribute_entity import AddDocumentAttributeEntity
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.get_entity_response import GetEntityResponse
+from openapi_client.models.get_entity_response import GetEntityResponse
 
 # TODO update the JSON string below
 json = "{}"

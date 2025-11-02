@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.document_fulltext_search import DocumentFulltextSearch
+from openapi_client.models.document_fulltext_search import DocumentFulltextSearch
 
 # TODO update the JSON string below
 json = "{}"

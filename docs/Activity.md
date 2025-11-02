@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.activity import Activity
+from openapi_client.models.activity import Activity
 
 # TODO update the JSON string below
 json = "{}"

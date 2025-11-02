@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.set_document_data_classification_response import SetDocumentDataClassificationResponse
+from openapi_client.models.set_document_data_classification_response import SetDocumentDataClassificationResponse
 
 # TODO update the JSON string below
 json = "{}"

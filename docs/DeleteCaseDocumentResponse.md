@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.delete_case_document_response import DeleteCaseDocumentResponse
+from openapi_client.models.delete_case_document_response import DeleteCaseDocumentResponse
 
 # TODO update the JSON string below
 json = "{}"

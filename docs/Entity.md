@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.entity import Entity
+from openapi_client.models.entity import Entity
 
 # TODO update the JSON string below
 json = "{}"

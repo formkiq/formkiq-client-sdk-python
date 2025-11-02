@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.opa_policy_item import OpaPolicyItem
+from openapi_client.models.opa_policy_item import OpaPolicyItem
 
 # TODO update the JSON string below
 json = "{}"

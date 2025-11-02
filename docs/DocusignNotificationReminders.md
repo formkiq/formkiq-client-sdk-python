@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.docusign_notification_reminders import DocusignNotificationReminders
+from openapi_client.models.docusign_notification_reminders import DocusignNotificationReminders
 
 # TODO update the JSON string below
 json = "{}"

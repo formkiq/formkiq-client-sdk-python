@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_webhook_tag_request import AddWebhookTagRequest
+from openapi_client.models.add_webhook_tag_request import AddWebhookTagRequest
 
 # TODO update the JSON string below
 json = "{}"

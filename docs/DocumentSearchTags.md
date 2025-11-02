@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.document_search_tags import DocumentSearchTags
+from openapi_client.models.document_search_tags import DocumentSearchTags
 
 # TODO update the JSON string below
 json = "{}"

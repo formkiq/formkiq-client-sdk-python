@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.get_user_groups_response import GetUserGroupsResponse
+from openapi_client.models.get_user_groups_response import GetUserGroupsResponse
 
 # TODO update the JSON string below
 json = "{}"

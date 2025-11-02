@@ -1,4 +1,4 @@
-# formkiq_client.GoogleIntegrationApi
+# openapi_client.GoogleIntegrationApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,15 +18,15 @@ Exports a Google Document; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_google_document_export_request import AddGoogleDocumentExportRequest
-from formkiq_client.models.add_google_document_export_response import AddGoogleDocumentExportResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_google_document_export_request import AddGoogleDocumentExportRequest
+from openapi_client.models.add_google_document_export_response import AddGoogleDocumentExportResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -36,11 +36,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.GoogleIntegrationApi(api_client)
+    api_instance = openapi_client.GoogleIntegrationApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    add_google_document_export_request = formkiq_client.AddGoogleDocumentExportRequest() # AddGoogleDocumentExportRequest | 
+    add_google_document_export_request = openapi_client.AddGoogleDocumentExportRequest() # AddGoogleDocumentExportRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

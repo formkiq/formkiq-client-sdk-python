@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_document_attribute_standard import AddDocumentAttributeStandard
+from openapi_client.models.add_document_attribute_standard import AddDocumentAttributeStandard
 
 # TODO update the JSON string below
 json = "{}"

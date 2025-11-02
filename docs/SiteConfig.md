@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.site_config import SiteConfig
+from openapi_client.models.site_config import SiteConfig
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_classification import AddClassification
+from openapi_client.models.add_classification import AddClassification
 
 # TODO update the JSON string below
 json = "{}"

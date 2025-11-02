@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.google_config import GoogleConfig
+from openapi_client.models.google_config import GoogleConfig
 
 # TODO update the JSON string below
 json = "{}"

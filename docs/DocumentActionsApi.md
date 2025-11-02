@@ -1,4 +1,4 @@
-# formkiq_client.DocumentActionsApi
+# openapi_client.DocumentActionsApi
 
 All URIs are relative to *http://localhost*
 
@@ -51,15 +51,15 @@ Each action type supports a different set of parameters as shown in the table be
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_document_actions_request import AddDocumentActionsRequest
-from formkiq_client.models.add_document_actions_response import AddDocumentActionsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_document_actions_request import AddDocumentActionsRequest
+from openapi_client.models.add_document_actions_response import AddDocumentActionsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -69,12 +69,12 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentActionsApi(api_client)
+    api_instance = openapi_client.DocumentActionsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    add_document_actions_request = formkiq_client.AddDocumentActionsRequest() # AddDocumentActionsRequest |  (optional)
+    add_document_actions_request = openapi_client.AddDocumentActionsRequest() # AddDocumentActionsRequest |  (optional)
 
     try:
         # Add document action
@@ -129,14 +129,14 @@ Retries all failed document action(s). Failed action status changes to "FAILED_R
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_document_actions_retry_response import AddDocumentActionsRetryResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_document_actions_retry_response import AddDocumentActionsRetryResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -146,9 +146,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentActionsApi(api_client)
+    api_instance = openapi_client.DocumentActionsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -204,14 +204,14 @@ Get document actions and their status
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_document_actions_response import GetDocumentActionsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_document_actions_response import GetDocumentActionsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -221,9 +221,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentActionsApi(api_client)
+    api_instance = openapi_client.DocumentActionsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')

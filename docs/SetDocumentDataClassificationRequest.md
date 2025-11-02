@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.set_document_data_classification_request import SetDocumentDataClassificationRequest
+from openapi_client.models.set_document_data_classification_request import SetDocumentDataClassificationRequest
 
 # TODO update the JSON string below
 json = "{}"

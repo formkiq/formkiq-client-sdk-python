@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.update_rule import UpdateRule
+from openapi_client.models.update_rule import UpdateRule
 
 # TODO update the JSON string below
 json = "{}"

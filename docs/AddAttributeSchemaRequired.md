@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_attribute_schema_required import AddAttributeSchemaRequired
+from openapi_client.models.add_attribute_schema_required import AddAttributeSchemaRequired
 
 # TODO update the JSON string below
 json = "{}"

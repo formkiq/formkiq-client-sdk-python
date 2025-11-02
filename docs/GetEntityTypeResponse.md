@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.get_entity_type_response import GetEntityTypeResponse
+from openapi_client.models.get_entity_type_response import GetEntityTypeResponse
 
 # TODO update the JSON string below
 json = "{}"

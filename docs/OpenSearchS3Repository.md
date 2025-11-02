@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.open_search_s3_repository import OpenSearchS3Repository
+from openapi_client.models.open_search_s3_repository import OpenSearchS3Repository
 
 # TODO update the JSON string below
 json = "{}"

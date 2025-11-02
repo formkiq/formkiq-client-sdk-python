@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_classification_response import AddClassificationResponse
+from openapi_client.models.add_classification_response import AddClassificationResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.classification_summary import ClassificationSummary
+from openapi_client.models.classification_summary import ClassificationSummary
 
 # TODO update the JSON string below
 json = "{}"

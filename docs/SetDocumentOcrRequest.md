@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.set_document_ocr_request import SetDocumentOcrRequest
+from openapi_client.models.set_document_ocr_request import SetDocumentOcrRequest
 
 # TODO update the JSON string below
 json = "{}"

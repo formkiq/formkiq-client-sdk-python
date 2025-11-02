@@ -1,4 +1,4 @@
-# formkiq_client.UserManagementApi
+# openapi_client.UserManagementApi
 
 All URIs are relative to *http://localhost*
 
@@ -30,15 +30,15 @@ Add a new group
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_group_request import AddGroupRequest
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_group_request import AddGroupRequest
+from openapi_client.models.add_response import AddResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -48,10 +48,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
-    add_group_request = formkiq_client.AddGroupRequest() # AddGroupRequest | 
+    api_instance = openapi_client.UserManagementApi(api_client)
+    add_group_request = openapi_client.AddGroupRequest() # AddGroupRequest | 
 
     try:
         # Add a group
@@ -103,15 +103,15 @@ Adds a user
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.models.add_user_request import AddUserRequest
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_response import AddResponse
+from openapi_client.models.add_user_request import AddUserRequest
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -121,10 +121,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
-    add_user_request = formkiq_client.AddUserRequest() # AddUserRequest | 
+    api_instance = openapi_client.UserManagementApi(api_client)
+    add_user_request = openapi_client.AddUserRequest() # AddUserRequest | 
 
     try:
         # Add User
@@ -176,15 +176,15 @@ Adds a user to a group
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.models.add_user_request import AddUserRequest
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_response import AddResponse
+from openapi_client.models.add_user_request import AddUserRequest
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -194,11 +194,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     group_name = 'group_name_example' # str | Group Name
-    add_user_request = formkiq_client.AddUserRequest() # AddUserRequest | 
+    add_user_request = openapi_client.AddUserRequest() # AddUserRequest | 
 
     try:
         # Add User to a group
@@ -251,14 +251,14 @@ Delete Group
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -268,9 +268,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     group_name = 'group_name_example' # str | Group Name
 
     try:
@@ -323,14 +323,14 @@ Delete Username
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -340,9 +340,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     username = 'username_example' # str | Username
 
     try:
@@ -395,14 +395,14 @@ Returns a user group
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_group_response import GetGroupResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_group_response import GetGroupResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -412,9 +412,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     group_name = 'group_name_example' # str | Group Name
 
     try:
@@ -467,14 +467,14 @@ Returns the list of user groups
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_groups_response import GetGroupsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_groups_response import GetGroupsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -484,9 +484,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)
 
@@ -541,14 +541,14 @@ Returns a list of group user belongs to
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_user_groups_response import GetUserGroupsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_user_groups_response import GetUserGroupsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -558,9 +558,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     username = 'username_example' # str | Username
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)
@@ -617,14 +617,14 @@ Returns a user
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_user_response import GetUserResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_user_response import GetUserResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -634,9 +634,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     username = 'username_example' # str | Username
 
     try:
@@ -689,14 +689,14 @@ Returns the list of users
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_users_response import GetUsersResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_users_response import GetUsersResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -706,9 +706,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)
 
@@ -763,14 +763,14 @@ Returns the list of users in a group
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_users_in_group_response import GetUsersInGroupResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_users_in_group_response import GetUsersInGroupResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -780,9 +780,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     group_name = 'group_name_example' # str | Group Name
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)
@@ -839,14 +839,14 @@ Remove Username From Group
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -856,9 +856,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     group_name = 'group_name_example' # str | Group Name
     username = 'username_example' # str | Username
 
@@ -913,14 +913,14 @@ Set User Operation (disable, enable, reset-password)
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.set_response import SetResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.set_response import SetResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -930,9 +930,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.UserManagementApi(api_client)
+    api_instance = openapi_client.UserManagementApi(api_client)
     username = 'username_example' # str | Username
     user_operation = 'user_operation_example' # str | Username Operation
 

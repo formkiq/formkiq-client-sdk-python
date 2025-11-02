@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.document_generate_data_source import DocumentGenerateDataSource
+from openapi_client.models.document_generate_data_source import DocumentGenerateDataSource
 
 # TODO update the JSON string below
 json = "{}"

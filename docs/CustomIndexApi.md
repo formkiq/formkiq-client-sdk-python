@@ -1,4 +1,4 @@
-# formkiq_client.CustomIndexApi
+# openapi_client.CustomIndexApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,14 +20,14 @@ When deleting a file from the "folder" index, you can set the indexKey to a URLE
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_indices_response import DeleteIndicesResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_indices_response import DeleteIndicesResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -37,9 +37,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.CustomIndexApi(api_client)
+    api_instance = openapi_client.CustomIndexApi(api_client)
     index_key = 'index_key_example' # str | Index Key Identifier
     index_type = 'index_type_example' # str | Index Type
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -94,15 +94,15 @@ Perform an Folder Index Move
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.index_folder_move_request import IndexFolderMoveRequest
-from formkiq_client.models.index_folder_move_response import IndexFolderMoveResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.index_folder_move_request import IndexFolderMoveRequest
+from openapi_client.models.index_folder_move_response import IndexFolderMoveResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -112,11 +112,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.CustomIndexApi(api_client)
+    api_instance = openapi_client.CustomIndexApi(api_client)
     index_type = 'index_type_example' # str | Index Type
-    index_folder_move_request = formkiq_client.IndexFolderMoveRequest() # IndexFolderMoveRequest | 
+    index_folder_move_request = openapi_client.IndexFolderMoveRequest() # IndexFolderMoveRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -169,15 +169,15 @@ Perform a search on a index; this is currently available for both folder and tag
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.index_search_request import IndexSearchRequest
-from formkiq_client.models.index_search_response import IndexSearchResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.index_search_request import IndexSearchRequest
+from openapi_client.models.index_search_response import IndexSearchResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -187,10 +187,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.CustomIndexApi(api_client)
-    index_search_request = formkiq_client.IndexSearchRequest() # IndexSearchRequest | 
+    api_instance = openapi_client.CustomIndexApi(api_client)
+    index_search_request = openapi_client.IndexSearchRequest() # IndexSearchRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)

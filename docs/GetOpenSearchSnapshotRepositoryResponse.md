@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.get_open_search_snapshot_repository_response import GetOpenSearchSnapshotRepositoryResponse
+from openapi_client.models.get_open_search_snapshot_repository_response import GetOpenSearchSnapshotRepositoryResponse
 
 # TODO update the JSON string below
 json = "{}"

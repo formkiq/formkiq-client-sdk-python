@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.search_response_fields import SearchResponseFields
+from openapi_client.models.search_response_fields import SearchResponseFields
 
 # TODO update the JSON string below
 json = "{}"

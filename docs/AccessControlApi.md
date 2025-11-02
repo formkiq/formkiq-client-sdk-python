@@ -1,4 +1,4 @@
-# formkiq_client.AccessControlApi
+# openapi_client.AccessControlApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,14 +22,14 @@ Delete OPA Access Policy Items
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -39,9 +39,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AccessControlApi(api_client)
+    api_instance = openapi_client.AccessControlApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -94,14 +94,14 @@ Returns a list of OPA Access Policies, can only be requested with ADMIN privileg
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_opa_access_policies_response import GetOpaAccessPoliciesResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_opa_access_policies_response import GetOpaAccessPoliciesResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -111,9 +111,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AccessControlApi(api_client)
+    api_instance = openapi_client.AccessControlApi(api_client)
 
     try:
         # Get OPAs Access Policies
@@ -162,14 +162,14 @@ Returns OPA Access Policy, can only be requested with ADMIN privileges
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_opa_access_policy_response import GetOpaAccessPolicyResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_opa_access_policy_response import GetOpaAccessPolicyResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -179,9 +179,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AccessControlApi(api_client)
+    api_instance = openapi_client.AccessControlApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -234,14 +234,14 @@ Returns OPA Access Policy Items, can only be requested with ADMIN privileges
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_opa_access_policy_items_response import GetOpaAccessPolicyItemsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_opa_access_policy_items_response import GetOpaAccessPolicyItemsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -251,9 +251,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AccessControlApi(api_client)
+    api_instance = openapi_client.AccessControlApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -306,15 +306,15 @@ Sets opa access policy items
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.set_opa_access_policy_items_request import SetOpaAccessPolicyItemsRequest
-from formkiq_client.models.set_response import SetResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.set_opa_access_policy_items_request import SetOpaAccessPolicyItemsRequest
+from openapi_client.models.set_response import SetResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -324,11 +324,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AccessControlApi(api_client)
+    api_instance = openapi_client.AccessControlApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
-    set_opa_access_policy_items_request = formkiq_client.SetOpaAccessPolicyItemsRequest() # SetOpaAccessPolicyItemsRequest | 
+    set_opa_access_policy_items_request = openapi_client.SetOpaAccessPolicyItemsRequest() # SetOpaAccessPolicyItemsRequest | 
 
     try:
         # Set opa access policy items, can only be requested with ADMIN privileges

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.open_search_snapshot_shard import OpenSearchSnapshotShard
+from openapi_client.models.open_search_snapshot_shard import OpenSearchSnapshotShard
 
 # TODO update the JSON string below
 json = "{}"

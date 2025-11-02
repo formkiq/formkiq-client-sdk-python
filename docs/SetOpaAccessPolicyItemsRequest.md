@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.set_opa_access_policy_items_request import SetOpaAccessPolicyItemsRequest
+from openapi_client.models.set_opa_access_policy_items_request import SetOpaAccessPolicyItemsRequest
 
 # TODO update the JSON string below
 json = "{}"

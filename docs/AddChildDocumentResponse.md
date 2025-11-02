@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_child_document_response import AddChildDocumentResponse
+from openapi_client.models.add_child_document_response import AddChildDocumentResponse
 
 # TODO update the JSON string below
 json = "{}"

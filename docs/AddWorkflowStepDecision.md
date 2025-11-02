@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_workflow_step_decision import AddWorkflowStepDecision
+from openapi_client.models.add_workflow_step_decision import AddWorkflowStepDecision
 
 # TODO update the JSON string below
 json = "{}"

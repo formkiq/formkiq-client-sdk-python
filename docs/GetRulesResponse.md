@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.get_rules_response import GetRulesResponse
+from openapi_client.models.get_rules_response import GetRulesResponse
 
 # TODO update the JSON string below
 json = "{}"

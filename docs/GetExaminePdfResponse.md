@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.get_examine_pdf_response import GetExaminePdfResponse
+from openapi_client.models.get_examine_pdf_response import GetExaminePdfResponse
 
 # TODO update the JSON string below
 json = "{}"

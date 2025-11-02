@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_workflow_step import AddWorkflowStep
+from openapi_client.models.add_workflow_step import AddWorkflowStep
 
 # TODO update the JSON string below
 json = "{}"

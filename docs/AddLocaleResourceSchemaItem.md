@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_locale_resource_schema_item import AddLocaleResourceSchemaItem
+from openapi_client.models.add_locale_resource_schema_item import AddLocaleResourceSchemaItem
 
 # TODO update the JSON string below
 json = "{}"

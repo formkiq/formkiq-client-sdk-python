@@ -1,4 +1,4 @@
-# formkiq_client.DocumentWorkflowsApi
+# openapi_client.DocumentWorkflowsApi
 
 All URIs are relative to *http://localhost*
 
@@ -33,15 +33,15 @@ Creates a document workflow; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_document_workflow_request import AddDocumentWorkflowRequest
-from formkiq_client.models.add_document_workflow_response import AddDocumentWorkflowResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_document_workflow_request import AddDocumentWorkflowRequest
+from openapi_client.models.add_document_workflow_response import AddDocumentWorkflowResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -51,11 +51,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    add_document_workflow_request = formkiq_client.AddDocumentWorkflowRequest() # AddDocumentWorkflowRequest | 
+    add_document_workflow_request = openapi_client.AddDocumentWorkflowRequest() # AddDocumentWorkflowRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -111,15 +111,15 @@ Approve/Reject document in approval queue; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_document_workflow_decisions_request import AddDocumentWorkflowDecisionsRequest
-from formkiq_client.models.add_document_workflow_decisions_response import AddDocumentWorkflowDecisionsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_document_workflow_decisions_request import AddDocumentWorkflowDecisionsRequest
+from openapi_client.models.add_document_workflow_decisions_response import AddDocumentWorkflowDecisionsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -129,12 +129,12 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
-    add_document_workflow_decisions_request = formkiq_client.AddDocumentWorkflowDecisionsRequest() # AddDocumentWorkflowDecisionsRequest | 
+    add_document_workflow_decisions_request = openapi_client.AddDocumentWorkflowDecisionsRequest() # AddDocumentWorkflowDecisionsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -191,15 +191,15 @@ Creates a new Queue; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_queue_request import AddQueueRequest
-from formkiq_client.models.add_queue_response import AddQueueResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_queue_request import AddQueueRequest
+from openapi_client.models.add_queue_response import AddQueueResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -209,10 +209,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
-    add_queue_request = formkiq_client.AddQueueRequest() # AddQueueRequest | 
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
+    add_queue_request = openapi_client.AddQueueRequest() # AddQueueRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -267,15 +267,15 @@ Creates a new Workflow; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_workflow_request import AddWorkflowRequest
-from formkiq_client.models.add_workflow_response import AddWorkflowResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_workflow_request import AddWorkflowRequest
+from openapi_client.models.add_workflow_response import AddWorkflowResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -285,10 +285,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
-    add_workflow_request = formkiq_client.AddWorkflowRequest() # AddWorkflowRequest | 
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
+    add_workflow_request = openapi_client.AddWorkflowRequest() # AddWorkflowRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -343,14 +343,14 @@ Delete a Queue; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_queue_response import DeleteQueueResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_queue_response import DeleteQueueResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -360,9 +360,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     queue_id = 'queue_id_example' # str | Queue Id
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -417,14 +417,14 @@ Delete a Workflow; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_workflow_response import DeleteWorkflowResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_workflow_response import DeleteWorkflowResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -434,9 +434,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -491,14 +491,14 @@ Gets a document workflow; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_document_workflow_response import GetDocumentWorkflowResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_document_workflow_response import GetDocumentWorkflowResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -508,9 +508,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -568,14 +568,14 @@ Gets a document workflows; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_document_workflows_response import GetDocumentWorkflowsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_document_workflows_response import GetDocumentWorkflowsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -585,9 +585,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -643,14 +643,14 @@ Get a queue; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_queue_response import GetQueueResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_queue_response import GetQueueResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -660,9 +660,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     queue_id = 'queue_id_example' # str | Queue Id
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -717,14 +717,14 @@ Get a listing of queues; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_queues_response import GetQueuesResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_queues_response import GetQueuesResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -734,9 +734,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -793,14 +793,14 @@ Get a workflow; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_workflow_response import GetWorkflowResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_workflow_response import GetWorkflowResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -810,9 +810,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -867,14 +867,14 @@ List documents in Workflow; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_workflow_documents_response import GetWorkflowDocumentsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_workflow_documents_response import GetWorkflowDocumentsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -884,9 +884,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -945,14 +945,14 @@ List documents in Workflow Queue; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_workflow_queue_documents_response import GetWorkflowQueueDocumentsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_workflow_queue_documents_response import GetWorkflowQueueDocumentsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -962,9 +962,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     queue_id = 'queue_id_example' # str | Queue Id
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -1023,14 +1023,14 @@ Get a listing of workflows; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_workflows_response import GetWorkflowsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_workflows_response import GetWorkflowsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1040,9 +1040,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -1101,15 +1101,15 @@ Set a Workflow details; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.set_workflow_request import SetWorkflowRequest
-from formkiq_client.models.set_workflow_response import SetWorkflowResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.set_workflow_request import SetWorkflowRequest
+from openapi_client.models.set_workflow_response import SetWorkflowResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1119,11 +1119,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
-    set_workflow_request = formkiq_client.SetWorkflowRequest() # SetWorkflowRequest | 
+    set_workflow_request = openapi_client.SetWorkflowRequest() # SetWorkflowRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -1179,15 +1179,15 @@ Update a Workflow details; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.update_workflow_request import UpdateWorkflowRequest
-from formkiq_client.models.update_workflow_response import UpdateWorkflowResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.update_workflow_request import UpdateWorkflowRequest
+from openapi_client.models.update_workflow_response import UpdateWorkflowResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1197,11 +1197,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
+    api_instance = openapi_client.DocumentWorkflowsApi(api_client)
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
-    update_workflow_request = formkiq_client.UpdateWorkflowRequest() # UpdateWorkflowRequest | 
+    update_workflow_request = openapi_client.UpdateWorkflowRequest() # UpdateWorkflowRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

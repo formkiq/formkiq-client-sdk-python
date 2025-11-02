@@ -1,4 +1,4 @@
-# formkiq_client.ESignatureApi
+# openapi_client.ESignatureApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,15 +20,15 @@ DocuSign create Docusign Envelope request; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_docusign_envelopes_request import AddDocusignEnvelopesRequest
-from formkiq_client.models.add_docusign_envelopes_response import AddDocusignEnvelopesResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_docusign_envelopes_request import AddDocusignEnvelopesRequest
+from openapi_client.models.add_docusign_envelopes_response import AddDocusignEnvelopesResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -38,11 +38,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.ESignatureApi(api_client)
+    api_instance = openapi_client.ESignatureApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    add_docusign_envelopes_request = formkiq_client.AddDocusignEnvelopesRequest() # AddDocusignEnvelopesRequest | 
+    add_docusign_envelopes_request = openapi_client.AddDocusignEnvelopesRequest() # AddDocusignEnvelopesRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -98,15 +98,15 @@ DocuSign create Docusign Recipient View request; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_docusign_recipient_view_request import AddDocusignRecipientViewRequest
-from formkiq_client.models.add_docusign_recipient_view_response import AddDocusignRecipientViewResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_docusign_recipient_view_request import AddDocusignRecipientViewRequest
+from openapi_client.models.add_docusign_recipient_view_response import AddDocusignRecipientViewResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -116,12 +116,12 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.ESignatureApi(api_client)
+    api_instance = openapi_client.ESignatureApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     envelope_id = 'envelope_id_example' # str | Docusign Envelope Id
-    add_docusign_recipient_view_request = formkiq_client.AddDocusignRecipientViewRequest() # AddDocusignRecipientViewRequest | 
+    add_docusign_recipient_view_request = openapi_client.AddDocusignRecipientViewRequest() # AddDocusignRecipientViewRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -178,22 +178,22 @@ DocuSign callback URL handler; available as an Add-On Module
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_response import AddResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.ESignatureApi(api_client)
+    api_instance = openapi_client.ESignatureApi(api_client)
 
     try:
         # Add E-signature event

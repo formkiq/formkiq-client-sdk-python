@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.document_search_meta import DocumentSearchMeta
+from openapi_client.models.document_search_meta import DocumentSearchMeta
 
 # TODO update the JSON string below
 json = "{}"

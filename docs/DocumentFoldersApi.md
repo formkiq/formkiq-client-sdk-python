@@ -1,4 +1,4 @@
-# formkiq_client.DocumentFoldersApi
+# openapi_client.DocumentFoldersApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,15 +22,15 @@ Creates a new folder
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_folder_request import AddFolderRequest
-from formkiq_client.models.add_folder_response import AddFolderResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_folder_request import AddFolderRequest
+from openapi_client.models.add_folder_response import AddFolderResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,10 +40,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentFoldersApi(api_client)
-    add_folder_request = formkiq_client.AddFolderRequest() # AddFolderRequest | 
+    api_instance = openapi_client.DocumentFoldersApi(api_client)
+    add_folder_request = openapi_client.AddFolderRequest() # AddFolderRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
@@ -99,14 +99,14 @@ Delete a specific folder; folder must be empty
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_folder_response import DeleteFolderResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_folder_response import DeleteFolderResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -116,9 +116,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentFoldersApi(api_client)
+    api_instance = openapi_client.DocumentFoldersApi(api_client)
     index_key = 'index_key_example' # str | Index Key Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
@@ -175,14 +175,14 @@ Get list of documents in a folder
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_folders_response import GetFoldersResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_folders_response import GetFoldersResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -192,9 +192,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentFoldersApi(api_client)
+    api_instance = openapi_client.DocumentFoldersApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     index_key = 'index_key_example' # str | Index Key Identifier (optional)
     path = 'path_example' # str | Path query parameter (must be URL Encoded) (optional)
@@ -257,14 +257,14 @@ Get list of permissions for a folder
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_folder_permissions_response import GetFolderPermissionsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_folder_permissions_response import GetFolderPermissionsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -274,9 +274,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentFoldersApi(api_client)
+    api_instance = openapi_client.DocumentFoldersApi(api_client)
     index_key = 'index_key_example' # str | Index Key Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -333,15 +333,15 @@ NOTE: Can only be called be ADMIN or GOVERN.
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.set_folder_permissions_request import SetFolderPermissionsRequest
-from formkiq_client.models.set_response import SetResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.set_folder_permissions_request import SetFolderPermissionsRequest
+from openapi_client.models.set_response import SetResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -351,10 +351,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentFoldersApi(api_client)
-    set_folder_permissions_request = formkiq_client.SetFolderPermissionsRequest() # SetFolderPermissionsRequest | 
+    api_instance = openapi_client.DocumentFoldersApi(api_client)
+    set_folder_permissions_request = openapi_client.SetFolderPermissionsRequest() # SetFolderPermissionsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

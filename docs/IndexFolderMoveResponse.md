@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.index_folder_move_response import IndexFolderMoveResponse
+from openapi_client.models.index_folder_move_response import IndexFolderMoveResponse
 
 # TODO update the JSON string below
 json = "{}"

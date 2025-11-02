@@ -1,4 +1,4 @@
-# formkiq_client.SystemManagementApi
+# openapi_client.SystemManagementApi
 
 All URIs are relative to *http://localhost*
 
@@ -54,15 +54,15 @@ Adds a new API Key
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_api_key_request import AddApiKeyRequest
-from formkiq_client.models.add_api_key_response import AddApiKeyResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_api_key_request import AddApiKeyRequest
+from openapi_client.models.add_api_key_response import AddApiKeyResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -72,9 +72,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     add_api_key_request = {"name":"My API Key"} # AddApiKeyRequest | 
 
@@ -129,15 +129,15 @@ Adds a new locale to the specified site
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_locale_request import AddLocaleRequest
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_locale_request import AddLocaleRequest
+from openapi_client.models.add_response import AddResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -147,11 +147,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
-    add_locale_request = formkiq_client.AddLocaleRequest() # AddLocaleRequest | 
+    add_locale_request = openapi_client.AddLocaleRequest() # AddLocaleRequest | 
 
     try:
         # Add Locale
@@ -204,15 +204,15 @@ Adds a new localized resource item for a given locale
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_locale_resource_item_request import AddLocaleResourceItemRequest
-from formkiq_client.models.add_locale_resource_item_response import AddLocaleResourceItemResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_locale_resource_item_request import AddLocaleResourceItemRequest
+from openapi_client.models.add_locale_resource_item_response import AddLocaleResourceItemResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -222,9 +222,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
     add_locale_resource_item_request = {"resourceItem":{"itemType":"INTERFACE","interfaceKey":"mainMenuTitle","localizedValue":"Main Menu"}} # AddLocaleResourceItemRequest | 
@@ -281,14 +281,14 @@ Add an OpenSearch Restore Snapshot
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_response import AddResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -298,9 +298,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
@@ -355,14 +355,14 @@ Add an OpenSearch Snapshot
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_response import AddResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -372,9 +372,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
@@ -429,15 +429,15 @@ Add Site
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.models.add_site_request import AddSiteRequest
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_response import AddResponse
+from openapi_client.models.add_site_request import AddSiteRequest
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -447,10 +447,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
-    add_site_request = formkiq_client.AddSiteRequest() # AddSiteRequest | 
+    api_instance = openapi_client.SystemManagementApi(api_client)
+    add_site_request = openapi_client.AddSiteRequest() # AddSiteRequest | 
 
     try:
         # Add Site
@@ -503,14 +503,14 @@ Adds a new API Key
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_api_key_response import DeleteApiKeyResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_api_key_response import DeleteApiKeyResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -520,9 +520,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     api_key = 'api_key_example' # str | API Key
 
@@ -577,14 +577,14 @@ Delete Locale
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -594,9 +594,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
 
@@ -651,14 +651,14 @@ Delete Local Resource Item
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -668,9 +668,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
     item_key = 'item_key_example' # str | Item Key (MUST be URL‑encoded)
@@ -727,14 +727,14 @@ Deletes the OpenSearch index
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -744,9 +744,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -799,14 +799,14 @@ Deletes the OpenSearch index by name
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -816,9 +816,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     index_name = 'index_name_example' # str | IndexName to path
 
     try:
@@ -871,14 +871,14 @@ Deletes the OpenSearch Restore Snapshot
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -888,9 +888,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
@@ -945,14 +945,14 @@ Deletes the OpenSearch Snapshot
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -962,9 +962,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
@@ -1019,14 +1019,14 @@ Deletes the OpenSearch Snapshot Repository
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1036,9 +1036,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -1091,14 +1091,14 @@ Deletes Site Group and permissions
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1108,9 +1108,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     group_name = 'group_name_example' # str | Group Name
 
@@ -1165,14 +1165,14 @@ Returns all OpenSearch indices
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_open_search_indice_response import GetOpenSearchIndiceResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_open_search_indice_response import GetOpenSearchIndiceResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1182,9 +1182,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
 
     try:
         # Get all OpenSearch indices
@@ -1233,14 +1233,14 @@ Returns the list of ApiKeys
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_api_keys_response import GetApiKeysResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_api_keys_response import GetApiKeysResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1250,9 +1250,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     next = 'next_example' # str | Next page of results token (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -1309,14 +1309,14 @@ Returns the list of sites that the user has access to
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_configuration_response import GetConfigurationResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_configuration_response import GetConfigurationResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1326,9 +1326,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -1381,14 +1381,14 @@ Returns the resource item
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_locale_resource_item_response import GetLocaleResourceItemResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_locale_resource_item_response import GetLocaleResourceItemResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1398,9 +1398,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
     item_key = 'item_key_example' # str | Item Key (MUST be URL‑encoded)
@@ -1457,14 +1457,14 @@ Returns the list resource items
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_locale_resource_items_response import GetLocaleResourceItemsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_locale_resource_items_response import GetLocaleResourceItemsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1474,9 +1474,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
     next = 'next_example' # str | Next page of results token (optional)
@@ -1535,14 +1535,14 @@ Returns a list of locale(s) in a specified site
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_locales_response import GetLocalesResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_locales_response import GetLocalesResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1552,9 +1552,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     next = 'next_example' # str | Next page of results token (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -1613,14 +1613,14 @@ Returns the OpenSearch index settings
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_open_search_index_response import GetOpenSearchIndexResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_open_search_index_response import GetOpenSearchIndexResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1630,9 +1630,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -1685,14 +1685,14 @@ Returns the OpenSearch indices
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_open_search_indice_response import GetOpenSearchIndiceResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_open_search_indice_response import GetOpenSearchIndiceResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1702,9 +1702,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -1757,14 +1757,14 @@ Returns the OpenSearch Snapshot
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_open_search_snapshot_response import GetOpenSearchSnapshotResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_open_search_snapshot_response import GetOpenSearchSnapshotResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1774,9 +1774,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
@@ -1831,14 +1831,14 @@ Returns the OpenSearch Snapshot Repositories
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_open_search_snapshot_repository_response import GetOpenSearchSnapshotRepositoryResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_open_search_snapshot_repository_response import GetOpenSearchSnapshotRepositoryResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1848,9 +1848,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
 
     try:
         # Get site(s) OpenSearch snapshot repositories
@@ -1899,14 +1899,14 @@ Returns the OpenSearch Snapshot Repository
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_open_search_snapshot_repository_response import GetOpenSearchSnapshotRepositoryResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_open_search_snapshot_repository_response import GetOpenSearchSnapshotRepositoryResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1916,9 +1916,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -1971,14 +1971,14 @@ Returns the OpenSearch Snapshots
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_open_search_snapshot_response import GetOpenSearchSnapshotResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_open_search_snapshot_response import GetOpenSearchSnapshotResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1988,9 +1988,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -2043,14 +2043,14 @@ Returns details of a group and permissions belonging to site
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_site_group_response import GetSiteGroupResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_site_group_response import GetSiteGroupResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2060,9 +2060,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     group_name = 'group_name_example' # str | Group Name
 
@@ -2117,14 +2117,14 @@ Returns list of groups and permissions belonging to site
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_site_groups_response import GetSiteGroupsResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_site_groups_response import GetSiteGroupsResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2134,9 +2134,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
@@ -2189,15 +2189,15 @@ Returns the list of sites that the user has access to
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_sites_response import GetSitesResponse
-from formkiq_client.models.site_status import SiteStatus
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_sites_response import GetSitesResponse
+from openapi_client.models.site_status import SiteStatus
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2207,10 +2207,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
-    status = formkiq_client.SiteStatus() # SiteStatus | Fetch sites with status (only valid when using SitePermissions 'defined' (optional)
+    api_instance = openapi_client.SystemManagementApi(api_client)
+    status = openapi_client.SiteStatus() # SiteStatus | Fetch sites with status (only valid when using SitePermissions 'defined' (optional)
 
     try:
         # Get site(s) access
@@ -2262,14 +2262,14 @@ Return the version of FormKiQ
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_version_response import GetVersionResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_version_response import GetVersionResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2279,9 +2279,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
 
     try:
         # Get FormKiQ version
@@ -2330,15 +2330,15 @@ Set a new Locale Resource Item
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.set_locale_resource_item_request import SetLocaleResourceItemRequest
-from formkiq_client.models.set_response import SetResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.set_locale_resource_item_request import SetLocaleResourceItemRequest
+from openapi_client.models.set_response import SetResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2348,13 +2348,13 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166)
     item_key = 'item_key_example' # str | Item Key (MUST be URL‑encoded)
-    set_locale_resource_item_request = formkiq_client.SetLocaleResourceItemRequest() # SetLocaleResourceItemRequest | 
+    set_locale_resource_item_request = openapi_client.SetLocaleResourceItemRequest() # SetLocaleResourceItemRequest | 
 
     try:
         # Set Locale Resource Item
@@ -2409,15 +2409,15 @@ Sets the OpenSearch index settings
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.set_open_search_index_request import SetOpenSearchIndexRequest
-from formkiq_client.models.set_open_search_index_response import SetOpenSearchIndexResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.set_open_search_index_request import SetOpenSearchIndexRequest
+from openapi_client.models.set_open_search_index_response import SetOpenSearchIndexResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2427,11 +2427,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
-    set_open_search_index_request = formkiq_client.SetOpenSearchIndexRequest() # SetOpenSearchIndexRequest | 
+    set_open_search_index_request = openapi_client.SetOpenSearchIndexRequest() # SetOpenSearchIndexRequest | 
 
     try:
         # Set site(s) OpenSearch index settings
@@ -2484,15 +2484,15 @@ Sets the OpenSearch index to use for a SiteId
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.set_open_search_indice_request import SetOpenSearchIndiceRequest
-from formkiq_client.models.set_response import SetResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.set_open_search_indice_request import SetOpenSearchIndiceRequest
+from openapi_client.models.set_response import SetResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2502,11 +2502,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
-    set_open_search_indice_request = formkiq_client.SetOpenSearchIndiceRequest() # SetOpenSearchIndiceRequest | 
+    set_open_search_indice_request = openapi_client.SetOpenSearchIndiceRequest() # SetOpenSearchIndiceRequest | 
 
     try:
         # Set site(s) OpenSearch index to use for a SiteId
@@ -2559,15 +2559,15 @@ Set Site's Group Permissions
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.set_group_permissions_request import SetGroupPermissionsRequest
-from formkiq_client.models.set_response import SetResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.set_group_permissions_request import SetGroupPermissionsRequest
+from openapi_client.models.set_response import SetResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2577,12 +2577,12 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     group_name = 'group_name_example' # str | Group Name
-    set_group_permissions_request = formkiq_client.SetGroupPermissionsRequest() # SetGroupPermissionsRequest | 
+    set_group_permissions_request = openapi_client.SetGroupPermissionsRequest() # SetGroupPermissionsRequest | 
 
     try:
         # Set Site's Group Permissions
@@ -2636,15 +2636,15 @@ Update the System Management configuration
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.update_configuration_request import UpdateConfigurationRequest
-from formkiq_client.models.update_configuration_response import UpdateConfigurationResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.update_configuration_request import UpdateConfigurationRequest
+from openapi_client.models.update_configuration_response import UpdateConfigurationResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2654,11 +2654,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
-    update_configuration_request = formkiq_client.UpdateConfigurationRequest() # UpdateConfigurationRequest | 
+    update_configuration_request = openapi_client.UpdateConfigurationRequest() # UpdateConfigurationRequest | 
 
     try:
         # Update site configuration
@@ -2712,15 +2712,15 @@ Update Site
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.update_response import UpdateResponse
-from formkiq_client.models.update_site_request import UpdateSiteRequest
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.update_response import UpdateResponse
+from openapi_client.models.update_site_request import UpdateSiteRequest
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -2730,11 +2730,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.SystemManagementApi(api_client)
+    api_instance = openapi_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
-    update_site_request = formkiq_client.UpdateSiteRequest() # UpdateSiteRequest | 
+    update_site_request = openapi_client.UpdateSiteRequest() # UpdateSiteRequest | 
 
     try:
         # Update Site

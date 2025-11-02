@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.index_folder_move_request import IndexFolderMoveRequest
+from openapi_client.models.index_folder_move_request import IndexFolderMoveRequest
 
 # TODO update the JSON string below
 json = "{}"

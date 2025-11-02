@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_document_workflow_decisions_request import AddDocumentWorkflowDecisionsRequest
+from openapi_client.models.add_document_workflow_decisions_request import AddDocumentWorkflowDecisionsRequest
 
 # TODO update the JSON string below
 json = "{}"

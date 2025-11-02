@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.document_search_range import DocumentSearchRange
+from openapi_client.models.document_search_range import DocumentSearchRange
 
 # TODO update the JSON string below
 json = "{}"

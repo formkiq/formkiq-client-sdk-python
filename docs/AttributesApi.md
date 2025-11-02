@@ -1,4 +1,4 @@
-# formkiq_client.AttributesApi
+# openapi_client.AttributesApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,15 +23,15 @@ Creates a new attribute
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_attribute_request import AddAttributeRequest
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_attribute_request import AddAttributeRequest
+from openapi_client.models.add_response import AddResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -41,10 +41,10 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AttributesApi(api_client)
-    add_attribute_request = formkiq_client.AddAttributeRequest() # AddAttributeRequest | 
+    api_instance = openapi_client.AttributesApi(api_client)
+    add_attribute_request = openapi_client.AddAttributeRequest() # AddAttributeRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -99,14 +99,14 @@ Delete a attribute
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.delete_response import DeleteResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.delete_response import DeleteResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -116,9 +116,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AttributesApi(api_client)
+    api_instance = openapi_client.AttributesApi(api_client)
     key = 'key_example' # str | Key Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -174,14 +174,14 @@ Returns a attribute
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_attribute_response import GetAttributeResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_attribute_response import GetAttributeResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -191,9 +191,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AttributesApi(api_client)
+    api_instance = openapi_client.AttributesApi(api_client)
     key = 'key_example' # str | Key Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -248,14 +248,14 @@ Returns an attribute's allowed values that spans across all classifications and 
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -265,9 +265,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AttributesApi(api_client)
+    api_instance = openapi_client.AttributesApi(api_client)
     key = 'key_example' # str | Key Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -322,14 +322,14 @@ Returns a list of attributes
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.get_attributes_response import GetAttributesResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.get_attributes_response import GetAttributesResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -339,9 +339,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AttributesApi(api_client)
+    api_instance = openapi_client.AttributesApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -398,15 +398,15 @@ Updates existing attribute
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.update_attribute_request import UpdateAttributeRequest
-from formkiq_client.models.update_response import UpdateResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.update_attribute_request import UpdateAttributeRequest
+from openapi_client.models.update_response import UpdateResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -416,11 +416,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AttributesApi(api_client)
+    api_instance = openapi_client.AttributesApi(api_client)
     key = 'key_example' # str | Key Identifier
-    update_attribute_request = formkiq_client.UpdateAttributeRequest() # UpdateAttributeRequest | 
+    update_attribute_request = openapi_client.UpdateAttributeRequest() # UpdateAttributeRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

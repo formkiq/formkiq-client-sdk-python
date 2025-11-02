@@ -1,4 +1,4 @@
-# formkiq_client.DocumentSearchApi
+# openapi_client.DocumentSearchApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,15 +28,15 @@ See requestBody examples below for commmon examples.
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.document_search_request import DocumentSearchRequest
-from formkiq_client.models.document_search_response import DocumentSearchResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.document_search_request import DocumentSearchRequest
+from openapi_client.models.document_search_response import DocumentSearchResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -46,9 +46,9 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.DocumentSearchApi(api_client)
+    api_instance = openapi_client.DocumentSearchApi(api_client)
     document_search_request = {"query":{"attribute":{"key":"category"}}} # DocumentSearchRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')

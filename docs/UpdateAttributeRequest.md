@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.update_attribute_request import UpdateAttributeRequest
+from openapi_client.models.update_attribute_request import UpdateAttributeRequest
 
 # TODO update the JSON string below
 json = "{}"

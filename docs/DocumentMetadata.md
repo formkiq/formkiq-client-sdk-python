@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.document_metadata import DocumentMetadata
+from openapi_client.models.document_metadata import DocumentMetadata
 
 # TODO update the JSON string below
 json = "{}"

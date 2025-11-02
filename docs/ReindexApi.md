@@ -1,4 +1,4 @@
-# formkiq_client.ReindexApi
+# openapi_client.ReindexApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,15 +20,15 @@ ATTRIBUTE target will regenerate the composite keys for a document based on the 
 
 
 ```python
-import formkiq_client
-from formkiq_client.models.add_reindex_document_request import AddReindexDocumentRequest
-from formkiq_client.models.add_response import AddResponse
-from formkiq_client.rest import ApiException
+import openapi_client
+from openapi_client.models.add_reindex_document_request import AddReindexDocumentRequest
+from openapi_client.models.add_response import AddResponse
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -38,11 +38,11 @@ configuration = formkiq_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.ReindexApi(api_client)
+    api_instance = openapi_client.ReindexApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    add_reindex_document_request = formkiq_client.AddReindexDocumentRequest() # AddReindexDocumentRequest | 
+    add_reindex_document_request = openapi_client.AddReindexDocumentRequest() # AddReindexDocumentRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

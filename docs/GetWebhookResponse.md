@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.get_webhook_response import GetWebhookResponse
+from openapi_client.models.get_webhook_response import GetWebhookResponse
 
 # TODO update the JSON string below
 json = "{}"

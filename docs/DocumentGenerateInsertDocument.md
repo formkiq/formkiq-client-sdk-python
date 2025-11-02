@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.document_generate_insert_document import DocumentGenerateInsertDocument
+from openapi_client.models.document_generate_insert_document import DocumentGenerateInsertDocument
 
 # TODO update the JSON string below
 json = "{}"

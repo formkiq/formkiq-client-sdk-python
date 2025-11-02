@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_nigo import AddNigo
+from openapi_client.models.add_nigo import AddNigo
 
 # TODO update the JSON string below
 json = "{}"

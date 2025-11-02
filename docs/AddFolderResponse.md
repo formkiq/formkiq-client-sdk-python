@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.add_folder_response import AddFolderResponse
+from openapi_client.models.add_folder_response import AddFolderResponse
 
 # TODO update the JSON string below
 json = "{}"

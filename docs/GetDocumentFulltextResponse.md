@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.get_document_fulltext_response import GetDocumentFulltextResponse
+from openapi_client.models.get_document_fulltext_response import GetDocumentFulltextResponse
 
 # TODO update the JSON string below
 json = "{}"

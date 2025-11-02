@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.rule_condition_must import RuleConditionMust
+from openapi_client.models.rule_condition_must import RuleConditionMust
 
 # TODO update the JSON string below
 json = "{}"

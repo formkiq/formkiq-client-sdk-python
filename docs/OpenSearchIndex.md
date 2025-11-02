@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from formkiq_client.models.open_search_index import OpenSearchIndex
+from openapi_client.models.open_search_index import OpenSearchIndex
 
 # TODO update the JSON string below
 json = "{}"
