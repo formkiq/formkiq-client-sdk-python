@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | [**DocumentActionStatus**](DocumentActionStatus.md) |  | [optional] 
 **type** | [**DocumentActionType**](DocumentActionType.md) |  | [optional] 
+**retry_count** | **float** | The number of times this action has already been attempted | [optional] 
+**max_retries** | **float** | The maximum number of retry attempts allowed for this action | [optional] 
 **queue_id** | **str** | Queue Id | [optional] 
 **workflow_id** | **str** | Workflow Id | [optional] 
 **workflow_step_id** | **str** | Workflow Step Id | [optional] 
@@ -15,7 +17,7 @@ Name | Type | Description | Notes
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **start_date** | **str** | Started Timestamp | [optional] 
 **completed_date** | **str** | Completed Timestamp | [optional] 
-**parameters** | **Dict[str, str]** | Action parameters | [optional] 
+**parameters** | **Dict[str, object]** | Action parameters | [optional] 
 **metadata** | **Dict[str, str]** | Action metadata | [optional] 
 
 ## Example

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**index_settings** | [**OpenSearchIndex**](OpenSearchIndex.md) |  | [optional] 
+**index_settings** | [**OpenSearchIndexSetting**](OpenSearchIndexSetting.md) |  | [optional] 
 
 ## Example
 

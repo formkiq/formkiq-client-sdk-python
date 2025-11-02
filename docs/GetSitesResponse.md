@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **username** | **str** | Username of request caller | [optional] 
+**roles** | **List[str]** |  | [optional] 
 **sites** | [**List[Site]**](Site.md) | List of sites | [optional] 
 
 ## Example

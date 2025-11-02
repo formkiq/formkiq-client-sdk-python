@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **lt** | [**OpaPolicyAttributeLt**](OpaPolicyAttributeLt.md) |  | [optional] 
 **lte** | [**OpaPolicyAttributeLte**](OpaPolicyAttributeLte.md) |  | [optional] 
 **neq** | [**OpaPolicyAttributeNeq**](OpaPolicyAttributeNeq.md) |  | [optional] 
+**var_in** | [**OpaPolicyAttributeIn**](OpaPolicyAttributeIn.md) |  | [optional] 
+**not_in** | [**OpaPolicyAttributeNotIn**](OpaPolicyAttributeNotIn.md) |  | [optional] 
 
 ## Example
 

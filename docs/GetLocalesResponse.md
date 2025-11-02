@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **next** | **str** | Next page of results token | [optional] 
-**locales** | [**List[Locale]**](Locale.md) | List of Locale | [optional] 
+**locales** | [**List[LocaleInfo]**](LocaleInfo.md) | List of Locale | [optional] 
 
 ## Example
 

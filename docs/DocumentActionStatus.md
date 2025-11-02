@@ -18,6 +18,10 @@ Status of the Document Action
 
 * `FAILED_RETRY` (value: `'FAILED_RETRY'`)
 
+* `MAX_RETRIES_REACHED` (value: `'MAX_RETRIES_REACHED'`)
+
+* `WAITING_FOR_RETRY` (value: `'WAITING_FOR_RETRY'`)
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

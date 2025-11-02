@@ -5,7 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**parse_types** | **List[str]** | OCR Parse types - TEXT, FORMS, TABLES | [optional] 
+**textract_queries** | [**List[TextractQuery]**](TextractQuery.md) |  | [optional] 
+**parse_types** | **List[str]** | OCR Parse types - TEXT, FORMS, TABLES, QUERIES | [optional] 
 **add_pdf_detected_characters_as_text** | **bool** | Rewrite PDF document, converting any Image text to searchable text | [optional] 
 **ocr_engine** | [**OcrEngine**](OcrEngine.md) |  | [optional] 
 **ocr_number_of_pages** | **str** | Number of pages to OCR (from start) (-1 all) | [optional] 

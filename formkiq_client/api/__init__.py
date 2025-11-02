@@ -3,12 +3,12 @@
 # import apis into api package
 from formkiq_client.api.access_control_api import AccessControlApi
 from formkiq_client.api.advanced_document_search_api import AdvancedDocumentSearchApi
-from formkiq_client.api.antivirus_api import AntivirusApi
 from formkiq_client.api.attributes_api import AttributesApi
 from formkiq_client.api.case_management_api import CaseManagementApi
 from formkiq_client.api.custom_index_api import CustomIndexApi
 from formkiq_client.api.document_actions_api import DocumentActionsApi
 from formkiq_client.api.document_attributes_api import DocumentAttributesApi
+from formkiq_client.api.document_data_classification_api import DocumentDataClassificationApi
 from formkiq_client.api.document_folders_api import DocumentFoldersApi
 from formkiq_client.api.document_generation_api import DocumentGenerationApi
 from formkiq_client.api.document_ocr_api import DocumentOCRApi
@@ -19,8 +19,10 @@ from formkiq_client.api.document_versions_api import DocumentVersionsApi
 from formkiq_client.api.document_workflows_api import DocumentWorkflowsApi
 from formkiq_client.api.documents_api import DocumentsApi
 from formkiq_client.api.e_signature_api import ESignatureApi
+from formkiq_client.api.entity_api import EntityApi
 from formkiq_client.api.examine_objects_api import ExamineObjectsApi
 from formkiq_client.api.google_integration_api import GoogleIntegrationApi
+from formkiq_client.api.malware_scan_api import MalwareScanApi
 from formkiq_client.api.mappings_api import MappingsApi
 from formkiq_client.api.public_api import PublicApi
 from formkiq_client.api.reindex_api import ReindexApi

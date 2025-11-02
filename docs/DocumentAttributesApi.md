@@ -8,14 +8,13 @@ Method | HTTP request | Description
 [**delete_document_attribute**](DocumentAttributesApi.md#delete_document_attribute) | **DELETE** /documents/{documentId}/attributes/{attributeKey} | Delete document attribute
 [**delete_document_attribute_and_value**](DocumentAttributesApi.md#delete_document_attribute_and_value) | **DELETE** /documents/{documentId}/attributes/{attributeKey}/{attributeValue} | Delete document&#39;s attribute value
 [**get_document_attribute**](DocumentAttributesApi.md#get_document_attribute) | **GET** /documents/{documentId}/attributes/{attributeKey} | Get document attribute by key
-[**get_document_attribute_versions**](DocumentAttributesApi.md#get_document_attribute_versions) | **GET** /documents/{documentId}/attributes/{attributeKey}/versions | Get document attribute&#39;s versions
 [**get_document_attributes**](DocumentAttributesApi.md#get_document_attributes) | **GET** /documents/{documentId}/attributes | Get document&#39;s attributes
 [**set_document_attribute_value**](DocumentAttributesApi.md#set_document_attribute_value) | **PUT** /documents/{documentId}/attributes/{attributeKey} | Set document&#39;s attributes value
 [**set_document_attributes**](DocumentAttributesApi.md#set_document_attributes) | **PUT** /documents/{documentId}/attributes | Set document&#39;s attributes
 
 
 # **add_document_attributes**
-> AddResponse add_document_attributes(document_id, add_document_attributes_request, site_id=site_id, ws=ws)
+> AddResponse add_document_attributes(document_id, add_document_attributes_request, site_id=site_id)
 
 Add attribute to document
 
@@ -49,11 +48,10 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     add_document_attributes_request = formkiq_client.AddDocumentAttributesRequest() # AddDocumentAttributesRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    ws = 'ws_example' # str | Whether to enable WebSocket real-time communication with the request (optional)
 
     try:
         # Add attribute to document
-        api_response = api_instance.add_document_attributes(document_id, add_document_attributes_request, site_id=site_id, ws=ws)
+        api_response = api_instance.add_document_attributes(document_id, add_document_attributes_request, site_id=site_id)
         print("The response of DocumentAttributesApi->add_document_attributes:\n")
         pprint(api_response)
     except Exception as e:
@@ -70,7 +68,6 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **add_document_attributes_request** | [**AddDocumentAttributesRequest**](AddDocumentAttributesRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
- **ws** | **str**| Whether to enable WebSocket real-time communication with the request | [optional] 
 
 ### Return type
 
@@ -305,86 +302,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetDocumentAttributeResponse**](GetDocumentAttributeResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_document_attribute_versions**
-> GetDocumentAttributeVersionsResponse get_document_attribute_versions(document_id, attribute_key, site_id=site_id, limit=limit, next=next)
-
-Get document attribute's versions
-
-Get a listing of a document's attribute versions; available as an Add-On Module
-
-### Example
-
-
-```python
-import formkiq_client
-from formkiq_client.models.get_document_attribute_versions_response import GetDocumentAttributeVersionsResponse
-from formkiq_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = formkiq_client.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Enter a context with an instance of the API client
-with formkiq_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = formkiq_client.DocumentAttributesApi(api_client)
-    document_id = 'document_id_example' # str | Document Identifier
-    attribute_key = 'attribute_key_example' # str | Attribute Key
-    site_id = 'site_id_example' # str | Site Identifier (optional)
-    limit = '10' # str | Limit Results (optional) (default to '10')
-    next = 'next_example' # str | Next page of results token (optional)
-
-    try:
-        # Get document attribute's versions
-        api_response = api_instance.get_document_attribute_versions(document_id, attribute_key, site_id=site_id, limit=limit, next=next)
-        print("The response of DocumentAttributesApi->get_document_attribute_versions:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DocumentAttributesApi->get_document_attribute_versions: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **document_id** | **str**| Document Identifier | 
- **attribute_key** | **str**| Attribute Key | 
- **site_id** | **str**| Site Identifier | [optional] 
- **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
- **next** | **str**| Next page of results token | [optional] 
-
-### Return type
-
-[**GetDocumentAttributeVersionsResponse**](GetDocumentAttributeVersionsResponse.md)
 
 ### Authorization
 

@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**font_size** | **float** | Watermark Font Size | [optional] 
 **text** | **str** | Watermark text | [optional] 
 **rotation** | **float** | Watermark Rotation | [optional] 
 **image_document_id** | **str** | Watermark Image Document Id | [optional] 

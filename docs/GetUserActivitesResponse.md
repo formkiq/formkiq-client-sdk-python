@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **next** | **str** | Next page of results token | [optional] 
-**user_activities** | [**List[UserActivity]**](UserActivity.md) | List of user activities syncs | [optional] 
+**user_activities** | [**List[UserActivity]**](UserActivity.md) | List of user activities | [optional] 
 
 ## Example
 
