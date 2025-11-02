@@ -24,7 +24,19 @@ jobs:
 
       - name: Install and test
         run: |
-          python3 -m pip install -U pip
-          pip install -e formkiq-client
-          # The importable package is "formkiq_client"
-          pytest --maxfail=1 --disable-warnings -q
+          python -m pip install -U pip
+          # find the generated client folder (it contains pyproject.toml)
+          CLIENT_DIR=$(find . -maxdepth 2 -type f -name pyproject.toml -exec dirname {} \; | head -n1)
+          echo "Detected client dir: ${CLIENT_DIR}"
+          test -n "$CLIENT_DIR" || { echo "Could not find generated client dir"; exit 1; }
+
+          # install your client in editable mode
+          pip install -e "$CLIENT_DIR"
+
+          # install test tools (add any of your own test requirements here)
+          pip install pytest pytest-cov
+
+          # run tests; prefer 'python -m pytest' so we use the configured Python
+          python -m pytest -q
+          # or, if you want coverage on your package (adjust the package name accordingly):
+          # python -m pytest --cov=formkiq_client
