@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_folder_request import AddFolderRequest
+from openapi_client.model.add_folder_request import AddFolderRequest
 
 # TODO update the JSON string below
 json = "{}"

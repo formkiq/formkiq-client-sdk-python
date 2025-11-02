@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.fulltext_search_item import FulltextSearchItem
+from openapi_client.model.fulltext_search_item import FulltextSearchItem
 
 # TODO update the JSON string below
 json = "{}"

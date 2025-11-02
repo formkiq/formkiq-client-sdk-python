@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_document_actions_response import AddDocumentActionsResponse
+from openapi_client.model.add_document_actions_response import AddDocumentActionsResponse
 
 # TODO update the JSON string below
 json = "{}"

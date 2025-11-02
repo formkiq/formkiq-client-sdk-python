@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_locale_resource_items_response import GetLocaleResourceItemsResponse
+from openapi_client.model.get_locale_resource_items_response import GetLocaleResourceItemsResponse
 
 # TODO update the JSON string below
 json = "{}"

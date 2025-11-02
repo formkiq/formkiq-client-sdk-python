@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_entity_types_response import GetEntityTypesResponse
+from openapi_client.model.get_entity_types_response import GetEntityTypesResponse
 
 # TODO update the JSON string below
 json = "{}"

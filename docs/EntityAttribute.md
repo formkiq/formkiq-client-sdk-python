@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.entity_attribute import EntityAttribute
+from openapi_client.model.entity_attribute import EntityAttribute
 
 # TODO update the JSON string below
 json = "{}"

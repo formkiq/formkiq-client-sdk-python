@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.document_search_response import DocumentSearchResponse
+from openapi_client.model.document_search_response import DocumentSearchResponse
 
 # TODO update the JSON string below
 json = "{}"

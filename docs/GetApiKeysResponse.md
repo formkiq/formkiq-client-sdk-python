@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_api_keys_response import GetApiKeysResponse
+from openapi_client.model.get_api_keys_response import GetApiKeysResponse
 
 # TODO update the JSON string below
 json = "{}"

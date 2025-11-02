@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.queue import Queue
+from openapi_client.model.queue import Queue
 
 # TODO update the JSON string below
 json = "{}"

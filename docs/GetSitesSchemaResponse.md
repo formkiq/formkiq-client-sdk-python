@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_sites_schema_response import GetSitesSchemaResponse
+from openapi_client.model.get_sites_schema_response import GetSitesSchemaResponse
 
 # TODO update the JSON string below
 json = "{}"

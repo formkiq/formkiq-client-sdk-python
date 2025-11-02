@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_resource_item import AddResourceItem
+from openapi_client.model.add_resource_item import AddResourceItem
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.pdf_document_field import PdfDocumentField
+from openapi_client.model.pdf_document_field import PdfDocumentField
 
 # TODO update the JSON string below
 json = "{}"

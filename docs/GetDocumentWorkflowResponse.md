@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_document_workflow_response import GetDocumentWorkflowResponse
+from openapi_client.model.get_document_workflow_response import GetDocumentWorkflowResponse
 
 # TODO update the JSON string below
 json = "{}"

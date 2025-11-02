@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_document_tag import AddDocumentTag
+from openapi_client.model.add_document_tag import AddDocumentTag
 
 # TODO update the JSON string below
 json = "{}"

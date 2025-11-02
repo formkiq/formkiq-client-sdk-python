@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.document import Document
+from openapi_client.model.document import Document
 
 # TODO update the JSON string below
 json = "{}"

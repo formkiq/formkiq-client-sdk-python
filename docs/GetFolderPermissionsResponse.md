@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_folder_permissions_response import GetFolderPermissionsResponse
+from openapi_client.model.get_folder_permissions_response import GetFolderPermissionsResponse
 
 # TODO update the JSON string below
 json = "{}"

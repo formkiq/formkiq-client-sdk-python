@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.index_search import IndexSearch
+from openapi_client.model.index_search import IndexSearch
 
 # TODO update the JSON string below
 json = "{}"

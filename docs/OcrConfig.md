@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ocr_config import OcrConfig
+from openapi_client.model.ocr_config import OcrConfig
 
 # TODO update the JSON string below
 json = "{}"

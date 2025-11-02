@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.locale_info import LocaleInfo
+from openapi_client.model.locale_info import LocaleInfo
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.opa_policy_input_resource import OpaPolicyInputResource
+from openapi_client.model.opa_policy_input_resource import OpaPolicyInputResource
 
 # TODO update the JSON string below
 json = "{}"

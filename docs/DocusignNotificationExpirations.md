@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.docusign_notification_expirations import DocusignNotificationExpirations
+from openapi_client.model.docusign_notification_expirations import DocusignNotificationExpirations
 
 # TODO update the JSON string below
 json = "{}"

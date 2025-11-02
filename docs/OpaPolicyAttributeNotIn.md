@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.opa_policy_attribute_not_in import OpaPolicyAttributeNotIn
+from openapi_client.model.opa_policy_attribute_not_in import OpaPolicyAttributeNotIn
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_group import AddGroup
+from openapi_client.model.add_group import AddGroup
 
 # TODO update the JSON string below
 json = "{}"

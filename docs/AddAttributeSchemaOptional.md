@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_attribute_schema_optional import AddAttributeSchemaOptional
+from openapi_client.model.add_attribute_schema_optional import AddAttributeSchemaOptional
 
 # TODO update the JSON string below
 json = "{}"

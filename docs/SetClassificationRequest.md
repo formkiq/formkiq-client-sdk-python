@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.set_classification_request import SetClassificationRequest
+from openapi_client.model.set_classification_request import SetClassificationRequest
 
 # TODO update the JSON string below
 json = "{}"

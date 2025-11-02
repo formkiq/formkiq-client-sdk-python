@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.document_fulltext_attribute import DocumentFulltextAttribute
+from openapi_client.model.document_fulltext_attribute import DocumentFulltextAttribute
 
 # TODO update the JSON string below
 json = "{}"

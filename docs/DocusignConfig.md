@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.docusign_config import DocusignConfig
+from openapi_client.model.docusign_config import DocusignConfig
 
 # TODO update the JSON string below
 json = "{}"

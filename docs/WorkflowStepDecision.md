@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.workflow_step_decision import WorkflowStepDecision
+from openapi_client.model.workflow_step_decision import WorkflowStepDecision
 
 # TODO update the JSON string below
 json = "{}"

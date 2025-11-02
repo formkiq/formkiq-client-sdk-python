@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.attribute import Attribute
+from openapi_client.model.attribute import Attribute
 
 # TODO update the JSON string below
 json = "{}"

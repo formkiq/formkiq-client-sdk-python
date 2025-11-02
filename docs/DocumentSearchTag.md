@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.document_search_tag import DocumentSearchTag
+from openapi_client.model.document_search_tag import DocumentSearchTag
 
 # TODO update the JSON string below
 json = "{}"

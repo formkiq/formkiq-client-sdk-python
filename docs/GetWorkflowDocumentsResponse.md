@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_workflow_documents_response import GetWorkflowDocumentsResponse
+from openapi_client.model.get_workflow_documents_response import GetWorkflowDocumentsResponse
 
 # TODO update the JSON string below
 json = "{}"

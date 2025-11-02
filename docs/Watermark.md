@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.watermark import Watermark
+from openapi_client.model.watermark import Watermark
 
 # TODO update the JSON string below
 json = "{}"

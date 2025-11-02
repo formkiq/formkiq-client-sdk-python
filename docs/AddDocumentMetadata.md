@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_document_metadata import AddDocumentMetadata
+from openapi_client.model.add_document_metadata import AddDocumentMetadata
 
 # TODO update the JSON string below
 json = "{}"

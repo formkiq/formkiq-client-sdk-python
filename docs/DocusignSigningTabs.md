@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.docusign_signing_tabs import DocusignSigningTabs
+from openapi_client.model.docusign_signing_tabs import DocusignSigningTabs
 
 # TODO update the JSON string below
 json = "{}"

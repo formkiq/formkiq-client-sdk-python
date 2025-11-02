@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.mapping_attribute import MappingAttribute
+from openapi_client.model.mapping_attribute import MappingAttribute
 
 # TODO update the JSON string below
 json = "{}"

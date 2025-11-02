@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_locale_resource_item_response import GetLocaleResourceItemResponse
+from openapi_client.model.get_locale_resource_item_response import GetLocaleResourceItemResponse
 
 # TODO update the JSON string below
 json = "{}"

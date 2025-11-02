@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_docusign_envelopes_response import AddDocusignEnvelopesResponse
+from openapi_client.model.add_docusign_envelopes_response import AddDocusignEnvelopesResponse
 
 # TODO update the JSON string below
 json = "{}"

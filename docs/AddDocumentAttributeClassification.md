@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_document_attribute_classification import AddDocumentAttributeClassification
+from openapi_client.model.add_document_attribute_classification import AddDocumentAttributeClassification
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ocr_table import OcrTable
+from openapi_client.model.ocr_table import OcrTable
 
 # TODO update the JSON string below
 json = "{}"

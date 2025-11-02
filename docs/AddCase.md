@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_case import AddCase
+from openapi_client.model.add_case import AddCase
 
 # TODO update the JSON string below
 json = "{}"

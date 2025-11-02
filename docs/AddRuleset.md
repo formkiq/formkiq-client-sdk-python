@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_ruleset import AddRuleset
+from openapi_client.model.add_ruleset import AddRuleset
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.validation_errors_response import ValidationErrorsResponse
+from openapi_client.model.validation_errors_response import ValidationErrorsResponse
 
 # TODO update the JSON string below
 json = "{}"

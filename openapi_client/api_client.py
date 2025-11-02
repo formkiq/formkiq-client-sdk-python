@@ -30,7 +30,7 @@ from pydantic import SecretStr
 
 from openapi_client.configuration import Configuration
 from openapi_client.api_response import ApiResponse, T as ApiResponseT
-import openapi_client.models
+import openapi_client.model
 from openapi_client import rest
 from openapi_client.exceptions import (
     ApiValueError,
@@ -457,7 +457,7 @@ class ApiClient:
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(openapi_client.models, klass)
+                klass = getattr(openapi_client.model, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)
