@@ -77,28 +77,30 @@ from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = formkiq_client.Configuration(
-    host = "http://localhost"
+    host = "https://your-formkiq-api.example.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
+JWT_ACCESS_TOKEN = "YOUR_JWT_ACCESS_TOKEN"
 
 # Enter a context with an instance of the API client
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = formkiq_client.AccessControlApi(api_client)
+    api_client.set_default_header("Authorization", f"Bearer {JWT_ACCESS_TOKEN}")
+    api_instance = formkiq_client.DocumentsApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
 
+    body = {
+      "path": "inbox/hello.txt",
+      "contentType": "text/plain",
+      "content": "Hello World"
+    }
+
     try:
-        # Delete OPA Access Policy Items
-        api_response = api_instance.delete_opa_access_policy_items(site_id)
-        print("The response of AccessControlApi->delete_opa_access_policy_items:\n")
+        # Add Document
+        api_response = api_instance.add_document(add_document_request=body, site_id=site_id)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling AccessControlApi->delete_opa_access_policy_items: %s\n" % e)
+        print("Exception when calling DocumentsApi->add_document: %s\n" % e)
 
 ```
 
