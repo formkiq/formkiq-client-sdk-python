@@ -22,11 +22,13 @@ Each action type supports a different set of parameters as shown in the table be
 
 | ActionType | Parameter | Description | Example |
 | -------- | ------- | ------- | ------- |
-| OCR  | ocrParseTypes | Ocr Parsing strategy to use | TEXT, FORMS, TABLES |
+| OCR  | ocrParseTypes | Ocr Parsing strategy to use | TEXT, FORMS, TABLES, QUERIES (requires 'ocrTextractQueries') |
+| OCR  | ocrTextractQueries | Required for "QUERIES", questions to ask Textract |
 | OCR | ocrEngine     | Ocr Engine to use | tesseract or textract |
 | OCR | ocrOutputType     | Convert OCR result to an Output format (textract table only) | true |
 | OCR | ocrNumberOfPages  | Number of pages to OCR (from start) | -1 |
 | OCR    | addPdfDetectedCharactersAsText | PDF Documents convert images to text | true or false |
+| DATA_CLASSIFICATION | llmPromptEntityName | LLM Prompt Entity Name |
 | FULLTEXT    | characterMax    | Maximum number of characters to add to Fulltext destination | -1 |
 | DOCUMENTTAGGING    | engine    | Tagging Engine to use | chatgpt |
 | DOCUMENTTAGGING    | tags    | Comma-deliminted list of keywords | author,title,description |
@@ -40,6 +42,10 @@ Each action type supports a different set of parameters as shown in the table be
 | QUEUE    | queueId    | Id of Queue | |
 | IDP    | mappingId    | Id of Mapping | |
 | EVENTBRIDGE    | eventBusName    | The name or ARN of the Amazon EventBridge to receive the event. | |
+| RESIZE    | width    | The width of the image to resize (or 'auto'). | |
+| RESIZE    | height    | The height of the image to resize (or 'auto'). | |
+| RESIZE    | outputType    | The output type of the image (optional). | |
+| RESIZE    | path    | The path to use when creating resized document (optional). | |
 
 ### Example
 

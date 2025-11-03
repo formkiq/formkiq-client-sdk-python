@@ -5,11 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**OpaPolicyItemType**](OpaPolicyItemType.md) |  | [optional] 
 **policy** | **str** | OPA Policy in REGO format | [optional] 
 **all_roles** | **List[str]** | User must match all roles | [optional] 
 **any_roles** | **List[str]** | User must match any role | [optional] 
+**excluded_roles** | **List[str]** | User must NOT have these roles | [optional] 
 **attributes** | [**List[OpaPolicyAttribute]**](OpaPolicyAttribute.md) |  | [optional] 
+**input** | [**OpaPolicyInput**](OpaPolicyInput.md) |  | [optional] 
 
 ## Example
 

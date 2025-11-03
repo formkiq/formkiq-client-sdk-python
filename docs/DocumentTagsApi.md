@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **add_document_tags**
-> add_document_tags(document_id, add_document_tags_request, site_id=site_id, ws=ws)
+> AddResponse add_document_tags(document_id, add_document_tags_request, site_id=site_id)
 
 Add tag to document
 
@@ -28,6 +28,7 @@ Add multiple tags to a document; this endpoint also accepts a different body par
 ```python
 import formkiq_client
 from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
+from formkiq_client.models.add_response import AddResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -49,11 +50,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     add_document_tags_request = {"key":"category"} # AddDocumentTagsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    ws = 'ws_example' # str | Whether to enable WebSocket real-time communication with the request (optional)
 
     try:
         # Add tag to document
-        api_instance.add_document_tags(document_id, add_document_tags_request, site_id=site_id, ws=ws)
+        api_response = api_instance.add_document_tags(document_id, add_document_tags_request, site_id=site_id)
+        print("The response of DocumentTagsApi->add_document_tags:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DocumentTagsApi->add_document_tags: %s\n" % e)
 ```
@@ -68,11 +70,10 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **add_document_tags_request** | [**AddDocumentTagsRequest**](AddDocumentTagsRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
- **ws** | **str**| Whether to enable WebSocket real-time communication with the request | [optional] 
 
 ### Return type
 
-void (empty response body)
+[**AddResponse**](AddResponse.md)
 
 ### Authorization
 
@@ -81,13 +82,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**201** | 201 CREATED |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

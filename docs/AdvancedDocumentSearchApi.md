@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 Add document's full-text
 
-Adde a document to OpenSearch; available as an Add-On Module
+Add a document to OpenSearch; available as an Add-On Module
 
 ### Example
 
@@ -395,7 +395,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **query_fulltext**
-> QueryFulltextResponse query_fulltext(body, site_id=site_id)
+> QueryFulltextResponse query_fulltext(body, site_id=site_id, index_name=index_name)
 
 Direct opensearch search API
 
@@ -429,10 +429,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     body = None # object | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    index_name = 'index_name_example' # str | IndexName to query (optional)
 
     try:
         # Direct opensearch search API
-        api_response = api_instance.query_fulltext(body, site_id=site_id)
+        api_response = api_instance.query_fulltext(body, site_id=site_id, index_name=index_name)
         print("The response of AdvancedDocumentSearchApi->query_fulltext:\n")
         pprint(api_response)
     except Exception as e:
@@ -448,6 +449,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | **object**|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **index_name** | **str**| IndexName to query | [optional] 
 
 ### Return type
 
@@ -471,7 +473,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **search_fulltext**
-> DocumentFulltextResponse search_fulltext(document_fulltext_request, site_id=site_id, limit=limit)
+> DocumentFulltextResponse search_fulltext(document_fulltext_request, site_id=site_id, index_name=index_name, limit=limit)
 
 Document full-text search
 
@@ -504,11 +506,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     document_fulltext_request = formkiq_client.DocumentFulltextRequest() # DocumentFulltextRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    index_name = 'index_name_example' # str | IndexName to query (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
 
     try:
         # Document full-text search
-        api_response = api_instance.search_fulltext(document_fulltext_request, site_id=site_id, limit=limit)
+        api_response = api_instance.search_fulltext(document_fulltext_request, site_id=site_id, index_name=index_name, limit=limit)
         print("The response of AdvancedDocumentSearchApi->search_fulltext:\n")
         pprint(api_response)
     except Exception as e:
@@ -524,6 +527,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_fulltext_request** | [**DocumentFulltextRequest**](DocumentFulltextRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **index_name** | **str**| IndexName to query | [optional] 
  **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
 
 ### Return type

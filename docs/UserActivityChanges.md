@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**old_value** | **str** | Previous key value | [optional] 
-**new_value** | **str** | New key value | [optional] 
+**old_value** | **object** | Previous key value | [optional] 
+**new_value** | **object** | New key value | [optional] 
 
 ## Example
 

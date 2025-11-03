@@ -15,6 +15,9 @@ Name | Type | Description | Notes
 **document_id** | **str** | Relationship To Document Identifier | 
 **relationship** | [**DocumentRelationshipType**](DocumentRelationshipType.md) |  | 
 **inverse_relationship** | [**DocumentRelationshipType**](DocumentRelationshipType.md) |  | [optional] 
+**entity_type_id** | **str** | EntityType Identifier or Entity Type Name | 
+**entity_id** | **str** | Entity Identifier | 
+**namespace** | [**EntityTypeNamespace**](EntityTypeNamespace.md) |  | [optional] 
 
 ## Example
 

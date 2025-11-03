@@ -5,9 +5,11 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_document**](DocumentsApi.md#add_document) | **POST** /documents | Add new document
+[**add_document_sync**](DocumentsApi.md#add_document_sync) | **POST** /documents/{documentId}/syncs | Add document sync to service
 [**add_document_upload**](DocumentsApi.md#add_document_upload) | **POST** /documents/upload | Add large document
 [**compress_documents**](DocumentsApi.md#compress_documents) | **POST** /documents/compress | Compress multiple documents into a .zip file
 [**delete_document**](DocumentsApi.md#delete_document) | **DELETE** /documents/{documentId} | Delete document
+[**delete_document_checkout_legal_hold**](DocumentsApi.md#delete_document_checkout_legal_hold) | **DELETE** /documents/{documentId}/legalHold | Delete document legal hold checkout
 [**delete_published_document_content**](DocumentsApi.md#delete_published_document_content) | **DELETE** /publications/{documentId} | Delete published document&#39;s contents
 [**get_document**](DocumentsApi.md#get_document) | **GET** /documents/{documentId} | Get document
 [**get_document_content**](DocumentsApi.md#get_document_content) | **GET** /documents/{documentId}/content | Get document&#39;s contents
@@ -18,6 +20,8 @@ Method | HTTP request | Description
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /documents | Get Documents listing
 [**get_published_document_content**](DocumentsApi.md#get_published_document_content) | **GET** /publications/{documentId} | Get published document&#39;s contents
 [**purge_document**](DocumentsApi.md#purge_document) | **DELETE** /documents/{documentId}/purge | Purge document
+[**set_document_checkout**](DocumentsApi.md#set_document_checkout) | **PUT** /documents/{documentId}/checkout | Perform document checkout
+[**set_document_checkout_legal_hold**](DocumentsApi.md#set_document_checkout_legal_hold) | **PUT** /documents/{documentId}/legalHold | Perform document legal hold checkout
 [**set_document_restore**](DocumentsApi.md#set_document_restore) | **PUT** /documents/{documentId}/restore | Restore soft deleted document
 [**update_document**](DocumentsApi.md#update_document) | **PATCH** /documents/{documentId} | Update document
 
@@ -103,6 +107,83 @@ No authorization required
 |-------------|-------------|------------------|
 **201** | 201 CREATED |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 **400** | 400 OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_document_sync**
+> AddResponse add_document_sync(document_id, site_id=site_id, add_document_sync_request=add_document_sync_request)
+
+Add document sync to service
+
+Add a document to a service
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.add_document_sync_request import AddDocumentSyncRequest
+from formkiq_client.models.add_response import AddResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+    add_document_sync_request = formkiq_client.AddDocumentSyncRequest() # AddDocumentSyncRequest |  (optional)
+
+    try:
+        # Add document sync to service
+        api_response = api_instance.add_document_sync(document_id, site_id=site_id, add_document_sync_request=add_document_sync_request)
+        print("The response of DocumentsApi->add_document_sync:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentsApi->add_document_sync: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+ **add_document_sync_request** | [**AddDocumentSyncRequest**](AddDocumentSyncRequest.md)|  | [optional] 
+
+### Return type
+
+[**AddResponse**](AddResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -324,6 +405,81 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
  **soft_delete** | **bool**| Whether to soft delete document | [optional] 
+
+### Return type
+
+[**DeleteResponse**](DeleteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_document_checkout_legal_hold**
+> DeleteResponse delete_document_checkout_legal_hold(document_id, site_id=site_id)
+
+Delete document legal hold checkout
+
+Removes a legal hold checkout for the document; available as an Add-On Module
+
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Delete document legal hold checkout
+        api_response = api_instance.delete_document_checkout_legal_hold(document_id, site_id=site_id)
+        print("The response of DocumentsApi->delete_document_checkout_legal_hold:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentsApi->delete_document_checkout_legal_hold: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
 
 ### Return type
 
@@ -913,7 +1069,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_documents**
-> GetDocumentsResponse get_documents(site_id=site_id, action_status=action_status, deleted=deleted, var_date=var_date, tz=tz, next=next, previous=previous, limit=limit)
+> GetDocumentsResponse get_documents(site_id=site_id, action_status=action_status, sync_status=sync_status, deleted=deleted, var_date=var_date, tz=tz, next=next, previous=previous, limit=limit)
 
 Get Documents listing
 
@@ -945,6 +1101,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     action_status = 'action_status_example' # str | Fetch documents with an action status (optional)
+    sync_status = 'sync_status_example' # str | Fetch documents with an sync status (optional)
     deleted = True # bool | Fetch soft deleted documents (optional)
     var_date = 'var_date_example' # str | Fetch documents inserted on a certain date (yyyy-MM-dd) (optional)
     tz = 'tz_example' # str | UTC offset to apply to date parameter (IE: -0600) (optional)
@@ -954,7 +1111,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Documents listing
-        api_response = api_instance.get_documents(site_id=site_id, action_status=action_status, deleted=deleted, var_date=var_date, tz=tz, next=next, previous=previous, limit=limit)
+        api_response = api_instance.get_documents(site_id=site_id, action_status=action_status, sync_status=sync_status, deleted=deleted, var_date=var_date, tz=tz, next=next, previous=previous, limit=limit)
         print("The response of DocumentsApi->get_documents:\n")
         pprint(api_response)
     except Exception as e:
@@ -970,6 +1127,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **str**| Site Identifier | [optional] 
  **action_status** | **str**| Fetch documents with an action status | [optional] 
+ **sync_status** | **str**| Fetch documents with an sync status | [optional] 
  **deleted** | **bool**| Fetch soft deleted documents | [optional] 
  **var_date** | **str**| Fetch documents inserted on a certain date (yyyy-MM-dd) | [optional] 
  **tz** | **str**| UTC offset to apply to date parameter (IE: -0600) | [optional] 
@@ -1125,6 +1283,156 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DeleteResponse**](DeleteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_document_checkout**
+> SetResponse set_document_checkout(document_id, site_id=site_id)
+
+Perform document checkout
+
+Creates a checkout for the document. Fails with **409 Conflict** if the document is already checkedout by another user; available as an Add-On Module
+
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Perform document checkout
+        api_response = api_instance.set_document_checkout(document_id, site_id=site_id)
+        print("The response of DocumentsApi->set_document_checkout:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentsApi->set_document_checkout: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**SetResponse**](SetResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_document_checkout_legal_hold**
+> SetResponse set_document_checkout_legal_hold(document_id, site_id=site_id)
+
+Perform document legal hold checkout
+
+Creates a legal hold checkout for the document. Fails with **409 Conflict** if the document is already checkedout by another user; available as an Add-On Module
+
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Perform document legal hold checkout
+        api_response = api_instance.set_document_checkout_legal_hold(document_id, site_id=site_id)
+        print("The response of DocumentsApi->set_document_checkout_legal_hold:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentsApi->set_document_checkout_legal_hold: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**SetResponse**](SetResponse.md)
 
 ### Authorization
 

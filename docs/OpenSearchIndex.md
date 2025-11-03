@@ -7,6 +7,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **number_of_replicas** | **str** | The number of replicas per shard | [optional] 
 **number_of_shards** | **str** | The number of shards in index | [optional] 
+**document_count** | **str** | The number of documents in index | [optional] 
+**store_size** | **str** | The store size of the index | [optional] 
+**name** | **str** | Name of Index | [optional] 
+**aliases** | [**List[OpenSearchAlias]**](OpenSearchAlias.md) |  | [optional] 
 
 ## Example
 

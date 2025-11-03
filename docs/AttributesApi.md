@@ -9,10 +9,11 @@ Method | HTTP request | Description
 [**get_attribute**](AttributesApi.md#get_attribute) | **GET** /attributes/{key} | Get Attribute
 [**get_attribute_allowed_values**](AttributesApi.md#get_attribute_allowed_values) | **GET** /attributes/{key}/allowedValues | Get Attribute Allowed Values
 [**get_attributes**](AttributesApi.md#get_attributes) | **GET** /attributes | Get Attributes listing
+[**update_attribute**](AttributesApi.md#update_attribute) | **PATCH** /attributes/{key} | Update existing attribute
 
 
 # **add_attribute**
-> AddAttributeResponse add_attribute(add_attribute_request, site_id=site_id)
+> AddResponse add_attribute(add_attribute_request, site_id=site_id)
 
 Add new attribute
 
@@ -24,7 +25,7 @@ Creates a new attribute
 ```python
 import formkiq_client
 from formkiq_client.models.add_attribute_request import AddAttributeRequest
-from formkiq_client.models.add_attribute_response import AddAttributeResponse
+from formkiq_client.models.add_response import AddResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -67,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddAttributeResponse**](AddAttributeResponse.md)
+[**AddResponse**](AddResponse.md)
 
 ### Authorization
 
@@ -383,6 +384,84 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_attribute**
+> UpdateResponse update_attribute(key, update_attribute_request, site_id=site_id)
+
+Update existing attribute
+
+Updates existing attribute
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.update_attribute_request import UpdateAttributeRequest
+from formkiq_client.models.update_response import UpdateResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.AttributesApi(api_client)
+    key = 'key_example' # str | Key Identifier
+    update_attribute_request = formkiq_client.UpdateAttributeRequest() # UpdateAttributeRequest | 
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Update existing attribute
+        api_response = api_instance.update_attribute(key, update_attribute_request, site_id=site_id)
+        print("The response of AttributesApi->update_attribute:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AttributesApi->update_attribute: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **key** | **str**| Key Identifier | 
+ **update_attribute_request** | [**UpdateAttributeRequest**](UpdateAttributeRequest.md)|  | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**UpdateResponse**](UpdateResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | 400 OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

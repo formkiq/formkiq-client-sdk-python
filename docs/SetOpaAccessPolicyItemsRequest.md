@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policy_items** | [**List[OpaPolicyItem]**](OpaPolicyItem.md) | List of OPA policy items | [optional] 
+**policy_items** | [**List[OpaPolicyItem]**](OpaPolicyItem.md) | List of OPA policy items | 
 
 ## Example
 
