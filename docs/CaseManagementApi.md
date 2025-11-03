@@ -1,4 +1,4 @@
-# openapi_client.CaseManagementApi
+# formkiq_client.CaseManagementApi
 
 All URIs are relative to *http://localhost*
 
@@ -38,15 +38,15 @@ Adds new case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_case_request import AddCaseRequest
-from openapi_client.models.add_case_response import AddCaseResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_case_request import AddCaseRequest
+from formkiq_client.models.add_case_response import AddCaseResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -56,10 +56,10 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
-    add_case_request = openapi_client.AddCaseRequest() # AddCaseRequest | 
+    api_instance = formkiq_client.CaseManagementApi(api_client)
+    add_case_request = formkiq_client.AddCaseRequest() # AddCaseRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -113,15 +113,15 @@ Adds new nigo; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_nigo_request import AddNigoRequest
-from openapi_client.models.add_nigo_response import AddNigoResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_nigo_request import AddNigoRequest
+from formkiq_client.models.add_nigo_response import AddNigoResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -131,11 +131,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
-    add_nigo_request = openapi_client.AddNigoRequest() # AddNigoRequest | 
+    add_nigo_request = formkiq_client.AddNigoRequest() # AddNigoRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -190,15 +190,15 @@ Adds new task; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_task_request import AddTaskRequest
-from openapi_client.models.add_task_response import AddTaskResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_task_request import AddTaskRequest
+from formkiq_client.models.add_task_response import AddTaskResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -208,11 +208,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
-    add_task_request = openapi_client.AddTaskRequest() # AddTaskRequest | 
+    add_task_request = formkiq_client.AddTaskRequest() # AddTaskRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -267,14 +267,14 @@ Delete Case
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_case_response import DeleteCaseResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_case_response import DeleteCaseResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -284,9 +284,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -341,14 +341,14 @@ Delete Document from Case
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_case_document_response import DeleteCaseDocumentResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_case_document_response import DeleteCaseDocumentResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -358,9 +358,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -417,14 +417,14 @@ Delete Nigo
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_case_nigo_response import DeleteCaseNigoResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_case_nigo_response import DeleteCaseNigoResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -434,9 +434,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     nigo_id = 'nigo_id_example' # str | Nigo Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -493,14 +493,14 @@ Delete Document from Nigo
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_case_nigo_document_response import DeleteCaseNigoDocumentResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_case_nigo_document_response import DeleteCaseNigoDocumentResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -510,9 +510,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     nigo_id = 'nigo_id_example' # str | Nigo Identifier
     document_id = 'document_id_example' # str | Document Identifier
@@ -571,14 +571,14 @@ Delete Task
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_case_task_response import DeleteCaseTaskResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_case_task_response import DeleteCaseTaskResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -588,9 +588,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     task_id = 'task_id_example' # str | Task Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -647,14 +647,14 @@ Delete Document from Task
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_case_task_document_response import DeleteCaseTaskDocumentResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_case_task_document_response import DeleteCaseTaskDocumentResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -664,9 +664,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     task_id = 'task_id_example' # str | Task Identifier
     document_id = 'document_id_example' # str | Document Identifier
@@ -725,14 +725,14 @@ Returns a Case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_case_response import GetCaseResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_case_response import GetCaseResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -742,9 +742,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -799,14 +799,14 @@ Returns documents in a Case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_case_documents_response import GetCaseDocumentsResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_case_documents_response import GetCaseDocumentsResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -816,9 +816,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
@@ -877,14 +877,14 @@ Returns a Nigo in Case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_case_nigo_response import GetCaseNigoResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_case_nigo_response import GetCaseNigoResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -894,9 +894,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     nigo_id = 'nigo_id_example' # str | Nigo Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -953,14 +953,14 @@ Returns a Nigos of Case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_case_nigos_response import GetCaseNigosResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_case_nigos_response import GetCaseNigosResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -970,9 +970,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
@@ -1031,14 +1031,14 @@ Returns a Task in Case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_case_task_response import GetCaseTaskResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_case_task_response import GetCaseTaskResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1048,9 +1048,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     task_id = 'task_id_example' # str | Task Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -1107,14 +1107,14 @@ Returns a Case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_case_tasks_response import GetCaseTasksResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_case_tasks_response import GetCaseTasksResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1124,9 +1124,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
@@ -1185,14 +1185,14 @@ Returns a list of the Cases; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_cases_response import GetCasesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_cases_response import GetCasesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1202,9 +1202,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -1261,14 +1261,14 @@ Returns a list documents in a Case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_case_documents_response import GetCaseDocumentsResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_case_documents_response import GetCaseDocumentsResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1278,9 +1278,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     nigo_id = 'nigo_id_example' # str | Nigo Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -1341,14 +1341,14 @@ Returns a list documents in a Case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_case_documents_response import GetCaseDocumentsResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_case_documents_response import GetCaseDocumentsResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1358,9 +1358,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     task_id = 'task_id_example' # str | Task Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -1421,15 +1421,15 @@ Updates existing case; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.update_case_request import UpdateCaseRequest
-from openapi_client.models.update_case_response import UpdateCaseResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.update_case_request import UpdateCaseRequest
+from formkiq_client.models.update_case_response import UpdateCaseResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1439,11 +1439,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
-    update_case_request = openapi_client.UpdateCaseRequest() # UpdateCaseRequest | 
+    update_case_request = formkiq_client.UpdateCaseRequest() # UpdateCaseRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -1498,15 +1498,15 @@ Updates existing nigo; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.update_nigo_request import UpdateNigoRequest
-from openapi_client.models.update_nigo_response import UpdateNigoResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.update_nigo_request import UpdateNigoRequest
+from formkiq_client.models.update_nigo_response import UpdateNigoResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1516,12 +1516,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     nigo_id = 'nigo_id_example' # str | Nigo Identifier
-    update_nigo_request = openapi_client.UpdateNigoRequest() # UpdateNigoRequest | 
+    update_nigo_request = formkiq_client.UpdateNigoRequest() # UpdateNigoRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -1577,15 +1577,15 @@ Updates existing task; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.update_task_request import UpdateTaskRequest
-from openapi_client.models.update_task_response import UpdateTaskResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.update_task_request import UpdateTaskRequest
+from formkiq_client.models.update_task_response import UpdateTaskResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1595,12 +1595,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CaseManagementApi(api_client)
+    api_instance = formkiq_client.CaseManagementApi(api_client)
     case_id = 'case_id_example' # str | Case Identifier
     task_id = 'task_id_example' # str | Task Identifier
-    update_task_request = openapi_client.UpdateTaskRequest() # UpdateTaskRequest | 
+    update_task_request = formkiq_client.UpdateTaskRequest() # UpdateTaskRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

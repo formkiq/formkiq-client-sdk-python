@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_folders_api import DocumentFoldersApi
+from formkiq_client.api.document_folders_api import DocumentFoldersApi
 
 
 class TestDocumentFoldersApi(unittest.TestCase):

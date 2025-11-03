@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_webhooks_response import GetWebhooksResponse
+from formkiq_client.models.get_webhooks_response import GetWebhooksResponse
 
 class TestGetWebhooksResponse(unittest.TestCase):
     """GetWebhooksResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetWebhooksResponse(unittest.TestCase):
             return GetWebhooksResponse(
                 next = '',
                 webhooks = [
-                    openapi_client.models.get_webhook_response.GetWebhookResponse(
+                    formkiq_client.models.get_webhook_response.GetWebhookResponse(
                         site_id = '', 
                         name = '', 
                         url = '', 

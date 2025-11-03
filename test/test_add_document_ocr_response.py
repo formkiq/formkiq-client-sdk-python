@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_ocr_response import AddDocumentOcrResponse
+from formkiq_client.models.add_document_ocr_response import AddDocumentOcrResponse
 
 class TestAddDocumentOcrResponse(unittest.TestCase):
     """AddDocumentOcrResponse unit test stubs"""

@@ -1,4 +1,4 @@
-# openapi_client.DocumentDataClassificationApi
+# formkiq_client.DocumentDataClassificationApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,14 +19,14 @@ Retrieve an document's data classification; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_data_classification_response import GetDocumentDataClassificationResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_data_classification_response import GetDocumentDataClassificationResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -36,9 +36,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentDataClassificationApi(api_client)
+    api_instance = formkiq_client.DocumentDataClassificationApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -97,15 +97,15 @@ Generate Data Classfication attributes within a document; available as an Add-On
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_document_data_classification_request import SetDocumentDataClassificationRequest
-from openapi_client.models.set_document_data_classification_response import SetDocumentDataClassificationResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_document_data_classification_request import SetDocumentDataClassificationRequest
+from formkiq_client.models.set_document_data_classification_response import SetDocumentDataClassificationResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -115,12 +115,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentDataClassificationApi(api_client)
+    api_instance = formkiq_client.DocumentDataClassificationApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    set_document_data_classification_request = openapi_client.SetDocumentDataClassificationRequest() # SetDocumentDataClassificationRequest |  (optional)
+    set_document_data_classification_request = formkiq_client.SetDocumentDataClassificationRequest() # SetDocumentDataClassificationRequest |  (optional)
 
     try:
         # Set document's data classification

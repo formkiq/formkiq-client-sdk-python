@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_configuration_response import UpdateConfigurationResponse
+from formkiq_client.models.update_configuration_response import UpdateConfigurationResponse
 
 class TestUpdateConfigurationResponse(unittest.TestCase):
     """UpdateConfigurationResponse unit test stubs"""

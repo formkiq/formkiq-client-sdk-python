@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_content_response import GetDocumentContentResponse
+from formkiq_client.models.get_document_content_response import GetDocumentContentResponse
 
 class TestGetDocumentContentResponse(unittest.TestCase):
     """GetDocumentContentResponse unit test stubs"""

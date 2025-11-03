@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_fulltext_search import DocumentFulltextSearch
+from formkiq_client.models.document_fulltext_search import DocumentFulltextSearch
 
 class TestDocumentFulltextSearch(unittest.TestCase):
     """DocumentFulltextSearch unit test stubs"""
@@ -39,7 +39,7 @@ class TestDocumentFulltextSearch(unittest.TestCase):
                 page = 56,
                 text = '',
                 tags = [
-                    openapi_client.models.document_fulltext_tag.DocumentFulltextTag(
+                    formkiq_client.models.document_fulltext_tag.DocumentFulltextTag(
                         eq = '', 
                         eq_or = [
                             ''
@@ -47,13 +47,13 @@ class TestDocumentFulltextSearch(unittest.TestCase):
                         key = '', )
                     ],
                 attributes = [
-                    openapi_client.models.document_fulltext_attribute.DocumentFulltextAttribute(
-                        eq = openapi_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
+                    formkiq_client.models.document_fulltext_attribute.DocumentFulltextAttribute(
+                        eq = formkiq_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
                             string_value = '', 
                             number_value = 1.337, 
                             boolean_value = True, ), 
                         eq_or = [
-                            openapi_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
+                            formkiq_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
                                 string_value = '', 
                                 number_value = 1.337, 
                                 boolean_value = True, )

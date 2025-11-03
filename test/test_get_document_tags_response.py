@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_tags_response import GetDocumentTagsResponse
+from formkiq_client.models.get_document_tags_response import GetDocumentTagsResponse
 
 class TestGetDocumentTagsResponse(unittest.TestCase):
     """GetDocumentTagsResponse unit test stubs"""
@@ -39,7 +39,7 @@ class TestGetDocumentTagsResponse(unittest.TestCase):
                 next = '',
                 previous = '',
                 tags = [
-                    openapi_client.models.document_tag.DocumentTag(
+                    formkiq_client.models.document_tag.DocumentTag(
                         inserted_date = '', 
                         document_id = '', 
                         type = '', 

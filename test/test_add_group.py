@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_group import AddGroup
+from formkiq_client.models.add_group import AddGroup
 
 class TestAddGroup(unittest.TestCase):
     """AddGroup unit test stubs"""

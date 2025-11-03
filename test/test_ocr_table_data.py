@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.ocr_table_data import OcrTableData
+from formkiq_client.models.ocr_table_data import OcrTableData
 
 class TestOcrTableData(unittest.TestCase):
     """OcrTableData unit test stubs"""

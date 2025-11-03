@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.site_usage import SiteUsage
+from formkiq_client.models.site_usage import SiteUsage
 
 class TestSiteUsage(unittest.TestCase):
     """SiteUsage unit test stubs"""

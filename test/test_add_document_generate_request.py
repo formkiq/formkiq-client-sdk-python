@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_generate_request import AddDocumentGenerateRequest
+from formkiq_client.models.add_document_generate_request import AddDocumentGenerateRequest
 
 class TestAddDocumentGenerateRequest(unittest.TestCase):
     """AddDocumentGenerateRequest unit test stubs"""
@@ -36,15 +36,15 @@ class TestAddDocumentGenerateRequest(unittest.TestCase):
         model = AddDocumentGenerateRequest()
         if include_optional:
             return AddDocumentGenerateRequest(
-                locale = openapi_client.models.locale_info.LocaleInfo(
+                locale = formkiq_client.models.locale_info.LocaleInfo(
                     locale = '', ),
                 insert_documents = [
-                    openapi_client.models.document_generate_insert_document.DocumentGenerateInsertDocument(
+                    formkiq_client.models.document_generate_insert_document.DocumentGenerateInsertDocument(
                         position = 'APPEND', 
                         document_id = '', )
                     ],
                 datasources = [
-                    openapi_client.models.document_generate_data_source.DocumentGenerateDataSource(
+                    formkiq_client.models.document_generate_data_source.DocumentGenerateDataSource(
                         name = '', 
                         document_id = '', 
                         data_root = 'data', )

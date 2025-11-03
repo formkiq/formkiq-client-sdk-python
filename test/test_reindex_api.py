@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.reindex_api import ReindexApi
+from formkiq_client.api.reindex_api import ReindexApi
 
 
 class TestReindexApi(unittest.TestCase):

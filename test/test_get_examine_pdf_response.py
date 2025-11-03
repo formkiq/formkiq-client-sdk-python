@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_examine_pdf_response import GetExaminePdfResponse
+from formkiq_client.models.get_examine_pdf_response import GetExaminePdfResponse
 
 class TestGetExaminePdfResponse(unittest.TestCase):
     """GetExaminePdfResponse unit test stubs"""
@@ -36,9 +36,9 @@ class TestGetExaminePdfResponse(unittest.TestCase):
         model = GetExaminePdfResponse()
         if include_optional:
             return GetExaminePdfResponse(
-                fileinfo = openapi_client.models.pdf_document.PdfDocument(
+                fileinfo = formkiq_client.models.pdf_document.PdfDocument(
                     fields = [
-                        openapi_client.models.pdf_document_field.PdfDocumentField(
+                        formkiq_client.models.pdf_document_field.PdfDocumentField(
                             field = '', 
                             value = '', )
                         ], )

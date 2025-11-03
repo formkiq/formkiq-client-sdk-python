@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.documents_compress_request import DocumentsCompressRequest
+from formkiq_client.models.documents_compress_request import DocumentsCompressRequest
 
 # TODO update the JSON string below
 json = "{}"

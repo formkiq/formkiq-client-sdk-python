@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_workflow_response import AddDocumentWorkflowResponse
+from formkiq_client.models.add_document_workflow_response import AddDocumentWorkflowResponse
 
 class TestAddDocumentWorkflowResponse(unittest.TestCase):
     """AddDocumentWorkflowResponse unit test stubs"""

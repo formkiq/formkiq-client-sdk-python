@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_workflow_request import UpdateWorkflowRequest
+from formkiq_client.models.update_workflow_request import UpdateWorkflowRequest
 
 class TestUpdateWorkflowRequest(unittest.TestCase):
     """UpdateWorkflowRequest unit test stubs"""

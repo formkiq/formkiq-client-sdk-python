@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_google_document_export_request import AddGoogleDocumentExportRequest
+from formkiq_client.models.add_google_document_export_request import AddGoogleDocumentExportRequest
 
 class TestAddGoogleDocumentExportRequest(unittest.TestCase):
     """AddGoogleDocumentExportRequest unit test stubs"""

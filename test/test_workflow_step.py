@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.workflow_step import WorkflowStep
+from formkiq_client.models.workflow_step import WorkflowStep
 
 class TestWorkflowStep(unittest.TestCase):
     """WorkflowStep unit test stubs"""
@@ -37,7 +37,7 @@ class TestWorkflowStep(unittest.TestCase):
         if include_optional:
             return WorkflowStep(
                 step_id = '',
-                action = openapi_client.models.document_action.DocumentAction(
+                action = formkiq_client.models.document_action.DocumentAction(
                     status = 'COMPLETE', 
                     type = 'ANTIVIRUS', 
                     retry_count = 1.337, 
@@ -56,13 +56,13 @@ class TestWorkflowStep(unittest.TestCase):
                     metadata = {
                         'key' : ''
                         }, ),
-                queue = openapi_client.models.workflow_queue.WorkflowQueue(
+                queue = formkiq_client.models.workflow_queue.WorkflowQueue(
                     queue_id = '', 
                     approval_groups = [
                         ''
                         ], ),
                 decisions = [
-                    openapi_client.models.workflow_step_decision.WorkflowStepDecision(
+                    formkiq_client.models.workflow_step_decision.WorkflowStepDecision(
                         type = 'APPROVE', 
                         next_step_id = '', )
                     ]

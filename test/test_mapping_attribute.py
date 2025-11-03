@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.mapping_attribute import MappingAttribute
+from formkiq_client.models.mapping_attribute import MappingAttribute
 
 class TestMappingAttribute(unittest.TestCase):
     """MappingAttribute unit test stubs"""

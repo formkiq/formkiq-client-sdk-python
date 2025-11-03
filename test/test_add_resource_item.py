@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_resource_item import AddResourceItem
+from formkiq_client.models.add_resource_item import AddResourceItem
 
 class TestAddResourceItem(unittest.TestCase):
     """AddResourceItem unit test stubs"""

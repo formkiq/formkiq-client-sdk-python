@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_search_match_attribute import DocumentSearchMatchAttribute
+from formkiq_client.models.document_search_match_attribute import DocumentSearchMatchAttribute
 
 class TestDocumentSearchMatchAttribute(unittest.TestCase):
     """DocumentSearchMatchAttribute unit test stubs"""

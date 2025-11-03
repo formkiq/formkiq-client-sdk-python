@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_tags_request import AddDocumentTagsRequest
+from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
 
 class TestAddDocumentTagsRequest(unittest.TestCase):
     """AddDocumentTagsRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestAddDocumentTagsRequest(unittest.TestCase):
         if include_optional:
             return AddDocumentTagsRequest(
                 tags = [
-                    openapi_client.models.add_document_tag.AddDocumentTag(
+                    formkiq_client.models.add_document_tag.AddDocumentTag(
                         key = '', 
                         value = '', 
                         values = [

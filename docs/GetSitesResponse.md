@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.get_sites_response import GetSitesResponse
+from formkiq_client.models.get_sites_response import GetSitesResponse
 
 # TODO update the JSON string below
 json = "{}"

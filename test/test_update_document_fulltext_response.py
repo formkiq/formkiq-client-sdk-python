@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_document_fulltext_response import UpdateDocumentFulltextResponse
+from formkiq_client.models.update_document_fulltext_response import UpdateDocumentFulltextResponse
 
 class TestUpdateDocumentFulltextResponse(unittest.TestCase):
     """UpdateDocumentFulltextResponse unit test stubs"""

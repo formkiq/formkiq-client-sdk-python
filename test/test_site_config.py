@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.site_config import SiteConfig
+from formkiq_client.models.site_config import SiteConfig
 
 class TestSiteConfig(unittest.TestCase):
     """SiteConfig unit test stubs"""
@@ -39,7 +39,7 @@ class TestSiteConfig(unittest.TestCase):
                 max_content_length_bytes = '',
                 max_documents = '',
                 max_webhooks = '',
-                ocr = openapi_client.models.ocr_config.OcrConfig(
+                ocr = formkiq_client.models.ocr_config.OcrConfig(
                     max_pages_per_transaction = 1.337, 
                     max_transactions = 1.337, )
             )

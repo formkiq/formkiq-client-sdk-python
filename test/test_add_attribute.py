@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_attribute import AddAttribute
+from formkiq_client.models.add_attribute import AddAttribute
 
 class TestAddAttribute(unittest.TestCase):
     """AddAttribute unit test stubs"""
@@ -39,13 +39,13 @@ class TestAddAttribute(unittest.TestCase):
                 key = '',
                 data_type = 'STRING',
                 type = 'STANDARD',
-                watermark = openapi_client.models.watermark.Watermark(
+                watermark = formkiq_client.models.watermark.Watermark(
                     font_size = 1.337, 
                     text = '', 
                     rotation = 1.337, 
                     image_document_id = '', 
                     scale = 'FIT_BEST', 
-                    position = openapi_client.models.watermark_position.WatermarkPosition(
+                    position = formkiq_client.models.watermark_position.WatermarkPosition(
                         x_anchor = 'LEFT', 
                         y_anchor = 'TOP', 
                         x_offset = 1.337, 

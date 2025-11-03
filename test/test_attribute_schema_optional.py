@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.attribute_schema_optional import AttributeSchemaOptional
+from formkiq_client.models.attribute_schema_optional import AttributeSchemaOptional
 
 class TestAttributeSchemaOptional(unittest.TestCase):
     """AttributeSchemaOptional unit test stubs"""

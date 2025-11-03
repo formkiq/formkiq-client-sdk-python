@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_response import AddDocumentResponse
+from formkiq_client.models.add_document_response import AddDocumentResponse
 
 class TestAddDocumentResponse(unittest.TestCase):
     """AddDocumentResponse unit test stubs"""
@@ -43,7 +43,7 @@ class TestAddDocumentResponse(unittest.TestCase):
                     'key' : None
                     },
                 documents = [
-                    openapi_client.models.add_child_document_response.AddChildDocumentResponse(
+                    formkiq_client.models.add_child_document_response.AddChildDocumentResponse(
                         document_id = '', 
                         upload_url = '', 
                         headers = {

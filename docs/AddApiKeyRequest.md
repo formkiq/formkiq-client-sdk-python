@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.add_api_key_request import AddApiKeyRequest
+from formkiq_client.models.add_api_key_request import AddApiKeyRequest
 
 # TODO update the JSON string below
 json = "{}"

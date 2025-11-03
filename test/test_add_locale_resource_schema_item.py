@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_locale_resource_schema_item import AddLocaleResourceSchemaItem
+from formkiq_client.models.add_locale_resource_schema_item import AddLocaleResourceSchemaItem
 
 class TestAddLocaleResourceSchemaItem(unittest.TestCase):
     """AddLocaleResourceSchemaItem unit test stubs"""

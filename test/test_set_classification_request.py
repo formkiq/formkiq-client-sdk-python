@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_classification_request import SetClassificationRequest
+from formkiq_client.models.set_classification_request import SetClassificationRequest
 
 class TestSetClassificationRequest(unittest.TestCase):
     """SetClassificationRequest unit test stubs"""
@@ -36,17 +36,17 @@ class TestSetClassificationRequest(unittest.TestCase):
         model = SetClassificationRequest()
         if include_optional:
             return SetClassificationRequest(
-                classification = openapi_client.models.add_classification.AddClassification(
+                classification = formkiq_client.models.add_classification.AddClassification(
                     name = '', 
-                    attributes = openapi_client.models.set_schema_attributes.SetSchemaAttributes(
+                    attributes = formkiq_client.models.set_schema_attributes.SetSchemaAttributes(
                         composite_keys = [
-                            openapi_client.models.attribute_schema_composite_key.AttributeSchemaCompositeKey(
+                            formkiq_client.models.attribute_schema_composite_key.AttributeSchemaCompositeKey(
                                 attribute_keys = [
                                     ''
                                     ], )
                             ], 
                         required = [
-                            openapi_client.models.add_attribute_schema_required.AddAttributeSchemaRequired(
+                            formkiq_client.models.add_attribute_schema_required.AddAttributeSchemaRequired(
                                 min_number_of_values = 1.337, 
                                 max_number_of_values = 1.337, 
                                 attribute_key = '', 
@@ -59,7 +59,7 @@ class TestSetClassificationRequest(unittest.TestCase):
                                     ], )
                             ], 
                         optional = [
-                            openapi_client.models.add_attribute_schema_optional.AddAttributeSchemaOptional(
+                            formkiq_client.models.add_attribute_schema_optional.AddAttributeSchemaOptional(
                                 min_number_of_values = 1.337, 
                                 max_number_of_values = 1.337, 
                                 attribute_key = '', )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_ruleset_request import AddRulesetRequest
+from formkiq_client.models.add_ruleset_request import AddRulesetRequest
 
 class TestAddRulesetRequest(unittest.TestCase):
     """AddRulesetRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAddRulesetRequest(unittest.TestCase):
         model = AddRulesetRequest()
         if include_optional:
             return AddRulesetRequest(
-                ruleset = openapi_client.models.add_ruleset.AddRuleset(
+                ruleset = formkiq_client.models.add_ruleset.AddRuleset(
                     description = '', 
                     priority = 1.337, 
                     version = 1.337, 
@@ -44,7 +44,7 @@ class TestAddRulesetRequest(unittest.TestCase):
             )
         else:
             return AddRulesetRequest(
-                ruleset = openapi_client.models.add_ruleset.AddRuleset(
+                ruleset = formkiq_client.models.add_ruleset.AddRuleset(
                     description = '', 
                     priority = 1.337, 
                     version = 1.337, 

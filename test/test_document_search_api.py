@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_search_api import DocumentSearchApi
+from formkiq_client.api.document_search_api import DocumentSearchApi
 
 
 class TestDocumentSearchApi(unittest.TestCase):

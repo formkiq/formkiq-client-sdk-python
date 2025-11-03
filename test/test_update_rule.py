@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_rule import UpdateRule
+from formkiq_client.models.update_rule import UpdateRule
 
 class TestUpdateRule(unittest.TestCase):
     """UpdateRule unit test stubs"""
@@ -40,9 +40,9 @@ class TestUpdateRule(unittest.TestCase):
                 description = '',
                 status = 'ACTIVE',
                 workflow_id = '',
-                conditions = openapi_client.models.rule_condition.RuleCondition(
+                conditions = formkiq_client.models.rule_condition.RuleCondition(
                     must = [
-                        openapi_client.models.rule_condition_must.RuleConditionMust(
+                        formkiq_client.models.rule_condition_must.RuleConditionMust(
                             attribute = 'TEXT', 
                             criterion = 'TEXT', 
                             attribute_key = '', 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.opa_policy_attribute import OpaPolicyAttribute
+from formkiq_client.models.opa_policy_attribute import OpaPolicyAttribute
 
 class TestOpaPolicyAttribute(unittest.TestCase):
     """OpaPolicyAttribute unit test stubs"""
@@ -37,27 +37,27 @@ class TestOpaPolicyAttribute(unittest.TestCase):
         if include_optional:
             return OpaPolicyAttribute(
                 key = '',
-                eq = openapi_client.models.opa_policy_attribute_eq.OpaPolicyAttributeEq(
+                eq = formkiq_client.models.opa_policy_attribute_eq.OpaPolicyAttributeEq(
                     string_value = '', 
                     number_value = 1.337, 
                     boolean_value = True, 
-                    input = openapi_client.models.opa_policy_attribute_input.OpaPolicyAttributeInput(
+                    input = formkiq_client.models.opa_policy_attribute_input.OpaPolicyAttributeInput(
                         match_username = True, ), ),
-                gt = openapi_client.models.opa_policy_attribute_gt.OpaPolicyAttributeGt(
+                gt = formkiq_client.models.opa_policy_attribute_gt.OpaPolicyAttributeGt(
                     number_value = 1.337, ),
-                gte = openapi_client.models.opa_policy_attribute_gte.OpaPolicyAttributeGte(
+                gte = formkiq_client.models.opa_policy_attribute_gte.OpaPolicyAttributeGte(
                     number_value = 1.337, ),
-                lt = openapi_client.models.opa_policy_attribute_lt.OpaPolicyAttributeLt(
+                lt = formkiq_client.models.opa_policy_attribute_lt.OpaPolicyAttributeLt(
                     number_value = 1.337, ),
-                lte = openapi_client.models.opa_policy_attribute_lte.OpaPolicyAttributeLte(
+                lte = formkiq_client.models.opa_policy_attribute_lte.OpaPolicyAttributeLte(
                     number_value = 1.337, ),
-                neq = openapi_client.models.opa_policy_attribute_neq.OpaPolicyAttributeNeq(
+                neq = formkiq_client.models.opa_policy_attribute_neq.OpaPolicyAttributeNeq(
                     string_value = '', ),
-                var_in = openapi_client.models.opa_policy_attribute_in.OpaPolicyAttributeIn(
+                var_in = formkiq_client.models.opa_policy_attribute_in.OpaPolicyAttributeIn(
                     string_values = [
                         ''
                         ], ),
-                not_in = openapi_client.models.opa_policy_attribute_not_in.OpaPolicyAttributeNotIn(
+                not_in = formkiq_client.models.opa_policy_attribute_not_in.OpaPolicyAttributeNotIn(
                     string_values = [
                         ''
                         ], )

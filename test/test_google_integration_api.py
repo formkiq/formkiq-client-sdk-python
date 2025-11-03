@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.google_integration_api import GoogleIntegrationApi
+from formkiq_client.api.google_integration_api import GoogleIntegrationApi
 
 
 class TestGoogleIntegrationApi(unittest.TestCase):

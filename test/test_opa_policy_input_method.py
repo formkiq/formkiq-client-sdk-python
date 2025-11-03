@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.opa_policy_input_method import OpaPolicyInputMethod
+from formkiq_client.models.opa_policy_input_method import OpaPolicyInputMethod
 
 class TestOpaPolicyInputMethod(unittest.TestCase):
     """OpaPolicyInputMethod unit test stubs"""

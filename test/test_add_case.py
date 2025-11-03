@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_case import AddCase
+from formkiq_client.models.add_case import AddCase
 
 class TestAddCase(unittest.TestCase):
     """AddCase unit test stubs"""
@@ -44,13 +44,13 @@ class TestAddCase(unittest.TestCase):
                 due_date = '',
                 description = '',
                 document_number_format = [
-                    openapi_client.models.string_format.StringFormat(
+                    formkiq_client.models.string_format.StringFormat(
                         type = 'AUTO_INCREMENT', 
                         static_value = '', 
                         padding = 56, )
                     ],
                 case_number_format = [
-                    openapi_client.models.string_format.StringFormat(
+                    formkiq_client.models.string_format.StringFormat(
                         type = 'AUTO_INCREMENT', 
                         static_value = '', 
                         padding = 56, )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.string_format import StringFormat
+from formkiq_client.models.string_format import StringFormat
 
 class TestStringFormat(unittest.TestCase):
     """StringFormat unit test stubs"""

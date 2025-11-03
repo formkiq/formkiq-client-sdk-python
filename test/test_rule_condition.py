@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.rule_condition import RuleCondition
+from formkiq_client.models.rule_condition import RuleCondition
 
 class TestRuleCondition(unittest.TestCase):
     """RuleCondition unit test stubs"""
@@ -37,7 +37,7 @@ class TestRuleCondition(unittest.TestCase):
         if include_optional:
             return RuleCondition(
                 must = [
-                    openapi_client.models.rule_condition_must.RuleConditionMust(
+                    formkiq_client.models.rule_condition_must.RuleConditionMust(
                         attribute = 'TEXT', 
                         criterion = 'TEXT', 
                         attribute_key = '', 

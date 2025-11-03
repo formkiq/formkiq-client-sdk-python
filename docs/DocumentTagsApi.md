@@ -1,4 +1,4 @@
-# openapi_client.DocumentTagsApi
+# formkiq_client.DocumentTagsApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,15 +26,15 @@ Add multiple tags to a document; this endpoint also accepts a different body par
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_tags_request import AddDocumentTagsRequest
-from openapi_client.models.add_response import AddResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
+from formkiq_client.models.add_response import AddResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -44,9 +44,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentTagsApi(api_client)
+    api_instance = formkiq_client.DocumentTagsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     add_document_tags_request = {"key":"category"} # AddDocumentTagsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -103,14 +103,14 @@ Delete a document tag by using its key
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -120,9 +120,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentTagsApi(api_client)
+    api_instance = formkiq_client.DocumentTagsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     tag_key = 'tag_key_example' # str | Tag Key
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -179,14 +179,14 @@ Delete a specific document tag's key/value combination; the request will be igno
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -196,9 +196,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentTagsApi(api_client)
+    api_instance = formkiq_client.DocumentTagsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     tag_key = 'tag_key_example' # str | Tag Key
     tag_value = 'tag_value_example' # str | Tag Key Value
@@ -259,14 +259,14 @@ Get a document tag by using its key
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_tag_response import GetDocumentTagResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_tag_response import GetDocumentTagResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -276,9 +276,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentTagsApi(api_client)
+    api_instance = formkiq_client.DocumentTagsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     tag_key = 'tag_key_example' # str | Tag Key
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -337,14 +337,14 @@ Get a listing of a document's tags
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_tags_response import GetDocumentTagsResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_tags_response import GetDocumentTagsResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -354,9 +354,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentTagsApi(api_client)
+    api_instance = formkiq_client.DocumentTagsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -419,14 +419,14 @@ Update any and all values of a document tag, by using its key; you can supply on
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_document_tag_key_request import SetDocumentTagKeyRequest
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_document_tag_key_request import SetDocumentTagKeyRequest
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -436,12 +436,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentTagsApi(api_client)
+    api_instance = formkiq_client.DocumentTagsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     tag_key = 'tag_key_example' # str | Tag Key
-    set_document_tag_key_request = openapi_client.SetDocumentTagKeyRequest() # SetDocumentTagKeyRequest | 
+    set_document_tag_key_request = formkiq_client.SetDocumentTagKeyRequest() # SetDocumentTagKeyRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -495,14 +495,14 @@ Set multiple tags to a document; this endpoint also accepts a different body par
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_tags_request import AddDocumentTagsRequest
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -512,9 +512,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentTagsApi(api_client)
+    api_instance = formkiq_client.DocumentTagsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     add_document_tags_request = {"tags":[{"key":"category"}]} # AddDocumentTagsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -569,14 +569,14 @@ Updates multiple tags to a document; this endpoint also accepts a different body
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_tags_request import AddDocumentTagsRequest
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -586,9 +586,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentTagsApi(api_client)
+    api_instance = formkiq_client.DocumentTagsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     add_document_tags_request = {"tags":[{"key":"category"}]} # AddDocumentTagsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -643,15 +643,15 @@ This API request allows the adding/updating of multiple document tag(s) based on
 
 
 ```python
-import openapi_client
-from openapi_client.models.update_matching_document_tags_request import UpdateMatchingDocumentTagsRequest
-from openapi_client.models.update_matching_document_tags_response import UpdateMatchingDocumentTagsResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.update_matching_document_tags_request import UpdateMatchingDocumentTagsRequest
+from formkiq_client.models.update_matching_document_tags_response import UpdateMatchingDocumentTagsResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -661,10 +661,10 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentTagsApi(api_client)
-    update_matching_document_tags_request = openapi_client.UpdateMatchingDocumentTagsRequest() # UpdateMatchingDocumentTagsRequest | 
+    api_instance = formkiq_client.DocumentTagsApi(api_client)
+    update_matching_document_tags_request = formkiq_client.UpdateMatchingDocumentTagsRequest() # UpdateMatchingDocumentTagsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

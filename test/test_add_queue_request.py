@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_queue_request import AddQueueRequest
+from formkiq_client.models.add_queue_request import AddQueueRequest
 
 class TestAddQueueRequest(unittest.TestCase):
     """AddQueueRequest unit test stubs"""

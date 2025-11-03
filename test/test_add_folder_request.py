@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_folder_request import AddFolderRequest
+from formkiq_client.models.add_folder_request import AddFolderRequest
 
 class TestAddFolderRequest(unittest.TestCase):
     """AddFolderRequest unit test stubs"""

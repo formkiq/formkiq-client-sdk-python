@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_action import AddAction
+from formkiq_client.models.add_action import AddAction
 
 class TestAddAction(unittest.TestCase):
     """AddAction unit test stubs"""
@@ -37,9 +37,9 @@ class TestAddAction(unittest.TestCase):
         if include_optional:
             return AddAction(
                 type = 'ANTIVIRUS',
-                parameters = openapi_client.models.add_action_parameters.AddActionParameters(
+                parameters = formkiq_client.models.add_action_parameters.AddActionParameters(
                     ocr_textract_queries = [
-                        openapi_client.models.textract_query.TextractQuery(
+                        formkiq_client.models.textract_query.TextractQuery(
                             text = '', 
                             alias = '', 
                             pages = [

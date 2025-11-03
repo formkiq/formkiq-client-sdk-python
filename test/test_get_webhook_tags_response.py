@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_webhook_tags_response import GetWebhookTagsResponse
+from formkiq_client.models.get_webhook_tags_response import GetWebhookTagsResponse
 
 class TestGetWebhookTagsResponse(unittest.TestCase):
     """GetWebhookTagsResponse unit test stubs"""
@@ -39,7 +39,7 @@ class TestGetWebhookTagsResponse(unittest.TestCase):
                 next = '',
                 previous = '',
                 tags = [
-                    openapi_client.models.webhook_tag.WebhookTag(
+                    formkiq_client.models.webhook_tag.WebhookTag(
                         inserted_date = '', 
                         webhook_id = '', 
                         type = '', 

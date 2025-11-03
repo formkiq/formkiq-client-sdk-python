@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_document_tag_key_request import SetDocumentTagKeyRequest
+from formkiq_client.models.set_document_tag_key_request import SetDocumentTagKeyRequest
 
 class TestSetDocumentTagKeyRequest(unittest.TestCase):
     """SetDocumentTagKeyRequest unit test stubs"""

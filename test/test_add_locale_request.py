@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_locale_request import AddLocaleRequest
+from formkiq_client.models.add_locale_request import AddLocaleRequest
 
 class TestAddLocaleRequest(unittest.TestCase):
     """AddLocaleRequest unit test stubs"""

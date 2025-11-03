@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.google_config import GoogleConfig
+from formkiq_client.models.google_config import GoogleConfig
 
 class TestGoogleConfig(unittest.TestCase):
     """GoogleConfig unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.webhook_tag import WebhookTag
+from formkiq_client.models.webhook_tag import WebhookTag
 
 class TestWebhookTag(unittest.TestCase):
     """WebhookTag unit test stubs"""

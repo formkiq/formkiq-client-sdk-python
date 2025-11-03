@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_workflows_response import GetDocumentWorkflowsResponse
+from formkiq_client.models.get_document_workflows_response import GetDocumentWorkflowsResponse
 
 class TestGetDocumentWorkflowsResponse(unittest.TestCase):
     """GetDocumentWorkflowsResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestGetDocumentWorkflowsResponse(unittest.TestCase):
         if include_optional:
             return GetDocumentWorkflowsResponse(
                 workflows = [
-                    openapi_client.models.document_workflow.DocumentWorkflow(
+                    formkiq_client.models.document_workflow.DocumentWorkflow(
                         workflow_id = '', 
                         name = '', 
                         description = '', 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.system_management_api import SystemManagementApi
+from formkiq_client.api.system_management_api import SystemManagementApi
 
 
 class TestSystemManagementApi(unittest.TestCase):

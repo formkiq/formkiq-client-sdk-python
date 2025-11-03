@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.queue import Queue
+from formkiq_client.models.queue import Queue
 
 class TestQueue(unittest.TestCase):
     """Queue unit test stubs"""

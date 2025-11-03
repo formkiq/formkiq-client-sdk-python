@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.index_search_request import IndexSearchRequest
+from formkiq_client.models.index_search_request import IndexSearchRequest
 
 class TestIndexSearchRequest(unittest.TestCase):
     """IndexSearchRequest unit test stubs"""

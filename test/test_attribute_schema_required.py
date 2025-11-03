@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.attribute_schema_required import AttributeSchemaRequired
+from formkiq_client.models.attribute_schema_required import AttributeSchemaRequired
 
 class TestAttributeSchemaRequired(unittest.TestCase):
     """AttributeSchemaRequired unit test stubs"""

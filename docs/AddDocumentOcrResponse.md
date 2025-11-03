@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.add_document_ocr_response import AddDocumentOcrResponse
+from formkiq_client.models.add_document_ocr_response import AddDocumentOcrResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_queues_response import GetQueuesResponse
+from formkiq_client.models.get_queues_response import GetQueuesResponse
 
 class TestGetQueuesResponse(unittest.TestCase):
     """GetQueuesResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetQueuesResponse(unittest.TestCase):
             return GetQueuesResponse(
                 next = '',
                 queues = [
-                    openapi_client.models.queue.Queue(
+                    formkiq_client.models.queue.Queue(
                         name = '', 
                         queue_id = '', )
                     ]

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.mapping_attribute_metadata_field import MappingAttributeMetadataField
+from formkiq_client.models.mapping_attribute_metadata_field import MappingAttributeMetadataField
 
 class TestMappingAttributeMetadataField(unittest.TestCase):
     """MappingAttributeMetadataField unit test stubs"""

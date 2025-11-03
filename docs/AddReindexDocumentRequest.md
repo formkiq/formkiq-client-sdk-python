@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.add_reindex_document_request import AddReindexDocumentRequest
+from formkiq_client.models.add_reindex_document_request import AddReindexDocumentRequest
 
 # TODO update the JSON string below
 json = "{}"

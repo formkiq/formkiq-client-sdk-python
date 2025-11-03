@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_matching_document_tags_request import UpdateMatchingDocumentTagsRequest
+from formkiq_client.models.update_matching_document_tags_request import UpdateMatchingDocumentTagsRequest
 
 class TestUpdateMatchingDocumentTagsRequest(unittest.TestCase):
     """UpdateMatchingDocumentTagsRequest unit test stubs"""
@@ -36,14 +36,14 @@ class TestUpdateMatchingDocumentTagsRequest(unittest.TestCase):
         model = UpdateMatchingDocumentTagsRequest()
         if include_optional:
             return UpdateMatchingDocumentTagsRequest(
-                match = openapi_client.models.update_matching_document_tags_request_match.UpdateMatchingDocumentTagsRequest_match(
-                    tag = openapi_client.models.match_document_tag.MatchDocumentTag(
+                match = formkiq_client.models.update_matching_document_tags_request_match.UpdateMatchingDocumentTagsRequest_match(
+                    tag = formkiq_client.models.match_document_tag.MatchDocumentTag(
                         key = '', 
                         begins_with = '', 
                         eq = '', ), ),
-                update = openapi_client.models.update_matching_document_tags_request_update.UpdateMatchingDocumentTagsRequest_update(
+                update = formkiq_client.models.update_matching_document_tags_request_update.UpdateMatchingDocumentTagsRequest_update(
                     tags = [
-                        openapi_client.models.add_document_tag.AddDocumentTag(
+                        formkiq_client.models.add_document_tag.AddDocumentTag(
                             key = '', 
                             value = '', 
                             values = [
@@ -53,14 +53,14 @@ class TestUpdateMatchingDocumentTagsRequest(unittest.TestCase):
             )
         else:
             return UpdateMatchingDocumentTagsRequest(
-                match = openapi_client.models.update_matching_document_tags_request_match.UpdateMatchingDocumentTagsRequest_match(
-                    tag = openapi_client.models.match_document_tag.MatchDocumentTag(
+                match = formkiq_client.models.update_matching_document_tags_request_match.UpdateMatchingDocumentTagsRequest_match(
+                    tag = formkiq_client.models.match_document_tag.MatchDocumentTag(
                         key = '', 
                         begins_with = '', 
                         eq = '', ), ),
-                update = openapi_client.models.update_matching_document_tags_request_update.UpdateMatchingDocumentTagsRequest_update(
+                update = formkiq_client.models.update_matching_document_tags_request_update.UpdateMatchingDocumentTagsRequest_update(
                     tags = [
-                        openapi_client.models.add_document_tag.AddDocumentTag(
+                        formkiq_client.models.add_document_tag.AddDocumentTag(
                             key = '', 
                             value = '', 
                             values = [

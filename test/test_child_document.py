@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.child_document import ChildDocument
+from formkiq_client.models.child_document import ChildDocument
 
 class TestChildDocument(unittest.TestCase):
     """ChildDocument unit test stubs"""

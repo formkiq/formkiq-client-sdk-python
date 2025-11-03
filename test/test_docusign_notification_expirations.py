@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.docusign_notification_expirations import DocusignNotificationExpirations
+from formkiq_client.models.docusign_notification_expirations import DocusignNotificationExpirations
 
 class TestDocusignNotificationExpirations(unittest.TestCase):
     """DocusignNotificationExpirations unit test stubs"""

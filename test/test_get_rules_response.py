@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_rules_response import GetRulesResponse
+from formkiq_client.models.get_rules_response import GetRulesResponse
 
 class TestGetRulesResponse(unittest.TestCase):
     """GetRulesResponse unit test stubs"""
@@ -38,15 +38,15 @@ class TestGetRulesResponse(unittest.TestCase):
             return GetRulesResponse(
                 next = '',
                 rules = [
-                    openapi_client.models.rule.Rule(
+                    formkiq_client.models.rule.Rule(
                         rule_id = '', 
                         priority = 1.337, 
                         description = '', 
                         workflow_id = '', 
                         status = 'ACTIVE', 
-                        conditions = openapi_client.models.rule_condition.RuleCondition(
+                        conditions = formkiq_client.models.rule_condition.RuleCondition(
                             must = [
-                                openapi_client.models.rule_condition_must.RuleConditionMust(
+                                formkiq_client.models.rule_condition_must.RuleConditionMust(
                                     attribute = 'TEXT', 
                                     criterion = 'TEXT', 
                                     attribute_key = '', 

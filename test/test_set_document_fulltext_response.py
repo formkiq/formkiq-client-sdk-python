@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_document_fulltext_response import SetDocumentFulltextResponse
+from formkiq_client.models.set_document_fulltext_response import SetDocumentFulltextResponse
 
 class TestSetDocumentFulltextResponse(unittest.TestCase):
     """SetDocumentFulltextResponse unit test stubs"""

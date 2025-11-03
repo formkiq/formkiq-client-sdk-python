@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.examine_objects_api import ExamineObjectsApi
+from formkiq_client.api.examine_objects_api import ExamineObjectsApi
 
 
 class TestExamineObjectsApi(unittest.TestCase):

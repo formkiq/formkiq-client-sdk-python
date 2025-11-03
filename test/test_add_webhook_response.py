@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_webhook_response import AddWebhookResponse
+from formkiq_client.models.add_webhook_response import AddWebhookResponse
 
 class TestAddWebhookResponse(unittest.TestCase):
     """AddWebhookResponse unit test stubs"""

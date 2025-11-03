@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.user_activity_changes import UserActivityChanges
+from formkiq_client.models.user_activity_changes import UserActivityChanges
 
 class TestUserActivityChanges(unittest.TestCase):
     """UserActivityChanges unit test stubs"""
@@ -36,8 +36,8 @@ class TestUserActivityChanges(unittest.TestCase):
         model = UserActivityChanges()
         if include_optional:
             return UserActivityChanges(
-                old_value = openapi_client.models.old_value.oldValue(),
-                new_value = openapi_client.models.new_value.newValue()
+                old_value = formkiq_client.models.old_value.oldValue(),
+                new_value = formkiq_client.models.new_value.newValue()
             )
         else:
             return UserActivityChanges(

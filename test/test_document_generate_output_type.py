@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_generate_output_type import DocumentGenerateOutputType
+from formkiq_client.models.document_generate_output_type import DocumentGenerateOutputType
 
 class TestDocumentGenerateOutputType(unittest.TestCase):
     """DocumentGenerateOutputType unit test stubs"""

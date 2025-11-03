@@ -1,4 +1,4 @@
-# openapi_client.DocumentsApi
+# formkiq_client.DocumentsApi
 
 All URIs are relative to *http://localhost*
 
@@ -43,15 +43,15 @@ See POST /documents/{documentId}/actions for adding actions to document schema
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_request import AddDocumentRequest
-from openapi_client.models.add_document_response import AddDocumentResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_request import AddDocumentRequest
+from formkiq_client.models.add_document_response import AddDocumentResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -61,9 +61,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     add_document_request = {"path":"test.txt","contentType":"text/plain","isBase64":false,"content":"This is sample data file","tags":[{"key":"category","value":"sample"},{"key":"players","values":["111","222"]}],"metadata":[{"key":"info","value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}]} # AddDocumentRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
@@ -121,15 +121,15 @@ Add a document to a service
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_sync_request import AddDocumentSyncRequest
-from openapi_client.models.add_response import AddResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_sync_request import AddDocumentSyncRequest
+from formkiq_client.models.add_response import AddResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -139,12 +139,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    add_document_sync_request = openapi_client.AddDocumentSyncRequest() # AddDocumentSyncRequest |  (optional)
+    add_document_sync_request = formkiq_client.AddDocumentSyncRequest() # AddDocumentSyncRequest |  (optional)
 
     try:
         # Add document sync to service
@@ -198,15 +198,15 @@ Returns a URL that can be used to upload document content and create a new docum
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_upload_request import AddDocumentUploadRequest
-from openapi_client.models.get_document_url_response import GetDocumentUrlResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_upload_request import AddDocumentUploadRequest
+from formkiq_client.models.get_document_url_response import GetDocumentUrlResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -216,9 +216,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     add_document_upload_request = {"path":"test.txt","contentType":"text/plain","tags":[{"key":"category","value":"sample"},{"key":"players","values":["111","222"]}],"metadata":[{"key":"info","value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}]} # AddDocumentUploadRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     content_length = 56 # int | Indicates the size of the entity-body (optional)
@@ -279,15 +279,15 @@ Compress documents into an .ZIP archive file, and returns a S3 presigned url for
 
 
 ```python
-import openapi_client
-from openapi_client.models.documents_compress_request import DocumentsCompressRequest
-from openapi_client.models.documents_compress_response import DocumentsCompressResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.documents_compress_request import DocumentsCompressRequest
+from formkiq_client.models.documents_compress_response import DocumentsCompressResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -297,10 +297,10 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
-    documents_compress_request = openapi_client.DocumentsCompressRequest() # DocumentsCompressRequest | 
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    documents_compress_request = formkiq_client.DocumentsCompressRequest() # DocumentsCompressRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -362,14 +362,14 @@ Only the GET /documents?deleted=true will return all the soft deleted documents.
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -379,9 +379,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     soft_delete = True # bool | Whether to soft delete document (optional)
@@ -439,14 +439,14 @@ Removes a legal hold checkout for the document; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -456,9 +456,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -513,14 +513,14 @@ Delete a published document's contents. Certain content types, text/*, applicati
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -530,9 +530,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -587,14 +587,14 @@ Retrieves a document's details, i.e., metadata
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_response import GetDocumentResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_response import GetDocumentResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -604,9 +604,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
@@ -671,14 +671,14 @@ All other Content-Type, the contentUrl field will be returned, which is a S3 Pre
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_content_response import GetDocumentContentResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_content_response import GetDocumentContentResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -688,9 +688,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     version_key = 'version_key_example' # str | Version Key (version key required URL encoding) (optional)
@@ -749,14 +749,14 @@ Returns a URL that can be used to upload documents for a specific documentId; th
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_url_response import GetDocumentUrlResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_url_response import GetDocumentUrlResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -766,9 +766,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     checksum_type = 'checksum_type_example' # str | Checksum Type (optional)
@@ -833,14 +833,14 @@ Retrieve the document syncs with external services status
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_sync_response import GetDocumentSyncResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_sync_response import GetDocumentSyncResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -850,9 +850,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -911,14 +911,14 @@ Returns a URL that can be used to upload document content and create a new docum
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_url_response import GetDocumentUrlResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_url_response import GetDocumentUrlResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -928,9 +928,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     path = 'path_example' # str | The upload file's path (optional)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     checksum_type = 'checksum_type_example' # str | Checksum Type (optional)
@@ -995,14 +995,14 @@ Returns a URL for the document's contents; this URL will expire (the default is 
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_url_response import GetDocumentUrlResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_url_response import GetDocumentUrlResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1012,9 +1012,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     version_key = 'version_key_example' # str | Version Key (version key required URL encoding) (optional)
@@ -1079,14 +1079,14 @@ Returns a list of the most recent documents added, ordered by inserted, descendi
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_documents_response import GetDocumentsResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_documents_response import GetDocumentsResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1096,9 +1096,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     action_status = 'action_status_example' # str | Fetch documents with an action status (optional)
     sync_status = 'sync_status_example' # str | Fetch documents with an sync status (optional)
@@ -1167,13 +1167,13 @@ Get a published document's contents. Certain content types, text/*, application/
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1183,9 +1183,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -1238,14 +1238,14 @@ Remove all objects from the S3 bucket, including previous versions and current v
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1255,9 +1255,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -1313,14 +1313,14 @@ Creates a checkout for the document. Fails with **409 Conflict** if the document
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_response import SetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1330,9 +1330,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -1388,14 +1388,14 @@ Creates a legal hold checkout for the document. Fails with **409 Conflict** if t
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_response import SetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1405,9 +1405,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -1462,14 +1462,14 @@ Restores a soft deleted document
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_document_restore_response import SetDocumentRestoreResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_document_restore_response import SetDocumentRestoreResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1479,9 +1479,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -1541,15 +1541,15 @@ NOTE:
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_response import AddDocumentResponse
-from openapi_client.models.update_document_request import UpdateDocumentRequest
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_response import AddDocumentResponse
+from formkiq_client.models.update_document_request import UpdateDocumentRequest
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1559,9 +1559,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentsApi(api_client)
+    api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     update_document_request = {"path":"test.txt","contentType":"text/plain","isBase64":false,"content":"This is sample data file","tags":[{"key":"category","value":"sample"},{"key":"players","values":["111","222"]}],"metadata":[{"key":"info","value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}]} # UpdateDocumentRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)

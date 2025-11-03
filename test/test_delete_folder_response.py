@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.delete_folder_response import DeleteFolderResponse
+from formkiq_client.models.delete_folder_response import DeleteFolderResponse
 
 class TestDeleteFolderResponse(unittest.TestCase):
     """DeleteFolderResponse unit test stubs"""

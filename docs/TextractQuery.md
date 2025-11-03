@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.textract_query import TextractQuery
+from formkiq_client.models.textract_query import TextractQuery
 
 # TODO update the JSON string below
 json = "{}"

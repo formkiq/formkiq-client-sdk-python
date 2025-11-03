@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.fulltext_search_item import FulltextSearchItem
+from formkiq_client.models.fulltext_search_item import FulltextSearchItem
 
 class TestFulltextSearchItem(unittest.TestCase):
     """FulltextSearchItem unit test stubs"""
@@ -56,7 +56,7 @@ class TestFulltextSearchItem(unittest.TestCase):
                     'key' : None
                     },
                 attributes = {
-                    'key' : openapi_client.models.fulltext_attribute.FulltextAttribute(
+                    'key' : formkiq_client.models.fulltext_attribute.FulltextAttribute(
                         string_values = [
                             ''
                             ], 

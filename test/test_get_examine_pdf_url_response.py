@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_examine_pdf_url_response import GetExaminePdfUrlResponse
+from formkiq_client.models.get_examine_pdf_url_response import GetExaminePdfUrlResponse
 
 class TestGetExaminePdfUrlResponse(unittest.TestCase):
     """GetExaminePdfUrlResponse unit test stubs"""

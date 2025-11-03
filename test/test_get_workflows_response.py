@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_workflows_response import GetWorkflowsResponse
+from formkiq_client.models.get_workflows_response import GetWorkflowsResponse
 
 class TestGetWorkflowsResponse(unittest.TestCase):
     """GetWorkflowsResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetWorkflowsResponse(unittest.TestCase):
             return GetWorkflowsResponse(
                 next = '',
                 workflows = [
-                    openapi_client.models.workflow_summary.WorkflowSummary(
+                    formkiq_client.models.workflow_summary.WorkflowSummary(
                         name = '', 
                         workflow_id = '', 
                         description = '', 

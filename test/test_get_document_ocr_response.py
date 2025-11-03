@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_ocr_response import GetDocumentOcrResponse
+from formkiq_client.models.get_document_ocr_response import GetDocumentOcrResponse
 
 class TestGetDocumentOcrResponse(unittest.TestCase):
     """GetDocumentOcrResponse unit test stubs"""
@@ -40,20 +40,20 @@ class TestGetDocumentOcrResponse(unittest.TestCase):
                     ''
                     ],
                 key_values = [
-                    openapi_client.models.ocr_key_values.OcrKeyValues(
+                    formkiq_client.models.ocr_key_values.OcrKeyValues(
                         key = '', 
                         values = [
                             ''
                             ], )
                     ],
                 tables = [
-                    openapi_client.models.ocr_table.OcrTable(
+                    formkiq_client.models.ocr_table.OcrTable(
                         headers = [
                             ''
                             ], 
                         data = [
                             [
-                                openapi_client.models.ocr_table_data.OcrTableData(
+                                formkiq_client.models.ocr_table_data.OcrTableData(
                                     value = '', )
                                 ]
                             ], )

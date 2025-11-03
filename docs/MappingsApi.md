@@ -1,4 +1,4 @@
-# openapi_client.MappingsApi
+# formkiq_client.MappingsApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,15 +22,15 @@ Creates a new mapping; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_mapping_request import AddMappingRequest
-from openapi_client.models.add_mapping_response import AddMappingResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_mapping_request import AddMappingRequest
+from formkiq_client.models.add_mapping_response import AddMappingResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,10 +40,10 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MappingsApi(api_client)
-    add_mapping_request = openapi_client.AddMappingRequest() # AddMappingRequest | 
+    api_instance = formkiq_client.MappingsApi(api_client)
+    add_mapping_request = formkiq_client.AddMappingRequest() # AddMappingRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -98,14 +98,14 @@ Delete Mapping; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -115,9 +115,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MappingsApi(api_client)
+    api_instance = formkiq_client.MappingsApi(api_client)
     mapping_id = 'mapping_id_example' # str | Mapping Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -172,14 +172,14 @@ Get a mapping; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_mapping_response import GetMappingResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_mapping_response import GetMappingResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -189,9 +189,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MappingsApi(api_client)
+    api_instance = formkiq_client.MappingsApi(api_client)
     mapping_id = 'mapping_id_example' # str | Mapping Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -246,14 +246,14 @@ Returns a list of mappings; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_mappings_response import GetMappingsResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_mappings_response import GetMappingsResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -263,9 +263,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MappingsApi(api_client)
+    api_instance = formkiq_client.MappingsApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)
@@ -322,15 +322,15 @@ Sets an mapping; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_mapping_request import SetMappingRequest
-from openapi_client.models.set_response import SetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_mapping_request import SetMappingRequest
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -340,11 +340,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MappingsApi(api_client)
+    api_instance = formkiq_client.MappingsApi(api_client)
     mapping_id = 'mapping_id_example' # str | Mapping Identifier
-    set_mapping_request = openapi_client.SetMappingRequest() # SetMappingRequest | 
+    set_mapping_request = formkiq_client.SetMappingRequest() # SetMappingRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

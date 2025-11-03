@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_actions_api import DocumentActionsApi
+from formkiq_client.api.document_actions_api import DocumentActionsApi
 
 
 class TestDocumentActionsApi(unittest.TestCase):

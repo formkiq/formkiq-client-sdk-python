@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_attribute_classification import AddDocumentAttributeClassification
+from formkiq_client.models.add_document_attribute_classification import AddDocumentAttributeClassification
 
 class TestAddDocumentAttributeClassification(unittest.TestCase):
     """AddDocumentAttributeClassification unit test stubs"""

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.open_search_alias import OpenSearchAlias
+from formkiq_client.models.open_search_alias import OpenSearchAlias
 
 # TODO update the JSON string below
 json = "{}"

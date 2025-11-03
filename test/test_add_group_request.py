@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_group_request import AddGroupRequest
+from formkiq_client.models.add_group_request import AddGroupRequest
 
 class TestAddGroupRequest(unittest.TestCase):
     """AddGroupRequest unit test stubs"""
@@ -36,13 +36,13 @@ class TestAddGroupRequest(unittest.TestCase):
         model = AddGroupRequest()
         if include_optional:
             return AddGroupRequest(
-                group = openapi_client.models.add_group.AddGroup(
+                group = formkiq_client.models.add_group.AddGroup(
                     name = '', 
                     description = '', )
             )
         else:
             return AddGroupRequest(
-                group = openapi_client.models.add_group.AddGroup(
+                group = formkiq_client.models.add_group.AddGroup(
                     name = '', 
                     description = '', ),
         )

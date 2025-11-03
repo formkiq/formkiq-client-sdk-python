@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_docusign_envelopes_response import AddDocusignEnvelopesResponse
+from formkiq_client.models.add_docusign_envelopes_response import AddDocusignEnvelopesResponse
 
 class TestAddDocusignEnvelopesResponse(unittest.TestCase):
     """AddDocusignEnvelopesResponse unit test stubs"""

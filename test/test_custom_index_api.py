@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.custom_index_api import CustomIndexApi
+from formkiq_client.api.custom_index_api import CustomIndexApi
 
 
 class TestCustomIndexApi(unittest.TestCase):

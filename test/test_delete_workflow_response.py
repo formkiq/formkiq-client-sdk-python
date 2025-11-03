@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.delete_workflow_response import DeleteWorkflowResponse
+from formkiq_client.models.delete_workflow_response import DeleteWorkflowResponse
 
 class TestDeleteWorkflowResponse(unittest.TestCase):
     """DeleteWorkflowResponse unit test stubs"""

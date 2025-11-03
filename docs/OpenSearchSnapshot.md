@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.open_search_snapshot import OpenSearchSnapshot
+from formkiq_client.models.open_search_snapshot import OpenSearchSnapshot
 
 # TODO update the JSON string below
 json = "{}"

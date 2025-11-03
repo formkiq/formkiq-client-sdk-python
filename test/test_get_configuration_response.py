@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_configuration_response import GetConfigurationResponse
+from formkiq_client.models.get_configuration_response import GetConfigurationResponse
 
 class TestGetConfigurationResponse(unittest.TestCase):
     """GetConfigurationResponse unit test stubs"""
@@ -41,13 +41,13 @@ class TestGetConfigurationResponse(unittest.TestCase):
                 max_documents = '',
                 max_webhooks = '',
                 notification_email = '',
-                ocr = openapi_client.models.ocr_config.OcrConfig(
+                ocr = formkiq_client.models.ocr_config.OcrConfig(
                     max_pages_per_transaction = 1.337, 
                     max_transactions = 1.337, ),
-                google = openapi_client.models.google_config.GoogleConfig(
+                google = formkiq_client.models.google_config.GoogleConfig(
                     workload_identity_audience = '', 
                     workload_identity_service_account = '', ),
-                docusign = openapi_client.models.docusign_config.DocusignConfig(
+                docusign = formkiq_client.models.docusign_config.DocusignConfig(
                     user_id = '', 
                     integration_key = '', 
                     rsa_private_key = '', 

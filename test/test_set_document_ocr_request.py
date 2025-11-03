@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_document_ocr_request import SetDocumentOcrRequest
+from formkiq_client.models.set_document_ocr_request import SetDocumentOcrRequest
 
 class TestSetDocumentOcrRequest(unittest.TestCase):
     """SetDocumentOcrRequest unit test stubs"""

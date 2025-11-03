@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_fulltext_attribute_eq import DocumentFulltextAttributeEq
+from formkiq_client.models.document_fulltext_attribute_eq import DocumentFulltextAttributeEq
 
 class TestDocumentFulltextAttributeEq(unittest.TestCase):
     """DocumentFulltextAttributeEq unit test stubs"""

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.update_matching_document_tags_request_update import UpdateMatchingDocumentTagsRequestUpdate
+from formkiq_client.models.update_matching_document_tags_request_update import UpdateMatchingDocumentTagsRequestUpdate
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_data_classification_api import DocumentDataClassificationApi
+from formkiq_client.api.document_data_classification_api import DocumentDataClassificationApi
 
 
 class TestDocumentDataClassificationApi(unittest.TestCase):

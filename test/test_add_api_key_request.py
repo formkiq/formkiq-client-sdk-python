@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_api_key_request import AddApiKeyRequest
+from formkiq_client.models.add_api_key_request import AddApiKeyRequest
 
 class TestAddApiKeyRequest(unittest.TestCase):
     """AddApiKeyRequest unit test stubs"""

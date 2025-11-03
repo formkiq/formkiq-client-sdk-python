@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_folder_response import AddFolderResponse
+from formkiq_client.models.add_folder_response import AddFolderResponse
 
 class TestAddFolderResponse(unittest.TestCase):
     """AddFolderResponse unit test stubs"""

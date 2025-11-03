@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.rule_condition_criterion import RuleConditionCriterion
+from formkiq_client.models.rule_condition_criterion import RuleConditionCriterion
 
 class TestRuleConditionCriterion(unittest.TestCase):
     """RuleConditionCriterion unit test stubs"""

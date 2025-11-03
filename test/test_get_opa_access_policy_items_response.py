@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_opa_access_policy_items_response import GetOpaAccessPolicyItemsResponse
+from formkiq_client.models.get_opa_access_policy_items_response import GetOpaAccessPolicyItemsResponse
 
 class TestGetOpaAccessPolicyItemsResponse(unittest.TestCase):
     """GetOpaAccessPolicyItemsResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestGetOpaAccessPolicyItemsResponse(unittest.TestCase):
         if include_optional:
             return GetOpaAccessPolicyItemsResponse(
                 policy_items = [
-                    openapi_client.models.opa_policy_item.OpaPolicyItem(
+                    formkiq_client.models.opa_policy_item.OpaPolicyItem(
                         policy = '', 
                         all_roles = [
                             ''
@@ -49,33 +49,33 @@ class TestGetOpaAccessPolicyItemsResponse(unittest.TestCase):
                             ''
                             ], 
                         attributes = [
-                            openapi_client.models.opa_policy_attribute.OpaPolicyAttribute(
+                            formkiq_client.models.opa_policy_attribute.OpaPolicyAttribute(
                                 key = '', 
-                                eq = openapi_client.models.opa_policy_attribute_eq.OpaPolicyAttributeEq(
+                                eq = formkiq_client.models.opa_policy_attribute_eq.OpaPolicyAttributeEq(
                                     string_value = '', 
                                     number_value = 1.337, 
                                     boolean_value = True, 
-                                    input = openapi_client.models.opa_policy_attribute_input.OpaPolicyAttributeInput(
+                                    input = formkiq_client.models.opa_policy_attribute_input.OpaPolicyAttributeInput(
                                         match_username = True, ), ), 
-                                gt = openapi_client.models.opa_policy_attribute_gt.OpaPolicyAttributeGt(
+                                gt = formkiq_client.models.opa_policy_attribute_gt.OpaPolicyAttributeGt(
                                     number_value = 1.337, ), 
-                                gte = openapi_client.models.opa_policy_attribute_gte.OpaPolicyAttributeGte(
+                                gte = formkiq_client.models.opa_policy_attribute_gte.OpaPolicyAttributeGte(
                                     number_value = 1.337, ), 
-                                lt = openapi_client.models.opa_policy_attribute_lt.OpaPolicyAttributeLt(
+                                lt = formkiq_client.models.opa_policy_attribute_lt.OpaPolicyAttributeLt(
                                     number_value = 1.337, ), 
-                                lte = openapi_client.models.opa_policy_attribute_lte.OpaPolicyAttributeLte(
+                                lte = formkiq_client.models.opa_policy_attribute_lte.OpaPolicyAttributeLte(
                                     number_value = 1.337, ), 
-                                neq = openapi_client.models.opa_policy_attribute_neq.OpaPolicyAttributeNeq(
+                                neq = formkiq_client.models.opa_policy_attribute_neq.OpaPolicyAttributeNeq(
                                     string_value = '', ), 
-                                in = openapi_client.models.opa_policy_attribute_in.OpaPolicyAttributeIn(
+                                in = formkiq_client.models.opa_policy_attribute_in.OpaPolicyAttributeIn(
                                     string_values = [
                                         ''
                                         ], ), 
-                                not_in = openapi_client.models.opa_policy_attribute_not_in.OpaPolicyAttributeNotIn(), )
+                                not_in = formkiq_client.models.opa_policy_attribute_not_in.OpaPolicyAttributeNotIn(), )
                             ], 
-                        input = openapi_client.models.opa_policy_input.OpaPolicyInput(
-                            http_method = openapi_client.models.opa_policy_input_method.OpaPolicyInputMethod(), 
-                            resource = openapi_client.models.opa_policy_input_resource.OpaPolicyInputResource(), ), )
+                        input = formkiq_client.models.opa_policy_input.OpaPolicyInput(
+                            http_method = formkiq_client.models.opa_policy_input_method.OpaPolicyInputMethod(), 
+                            resource = formkiq_client.models.opa_policy_input_resource.OpaPolicyInputResource(), ), )
                     ]
             )
         else:

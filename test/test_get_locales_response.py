@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_locales_response import GetLocalesResponse
+from formkiq_client.models.get_locales_response import GetLocalesResponse
 
 class TestGetLocalesResponse(unittest.TestCase):
     """GetLocalesResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetLocalesResponse(unittest.TestCase):
             return GetLocalesResponse(
                 next = '',
                 locales = [
-                    openapi_client.models.locale_info.LocaleInfo(
+                    formkiq_client.models.locale_info.LocaleInfo(
                         locale = '', )
                     ]
             )

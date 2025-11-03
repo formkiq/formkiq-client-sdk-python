@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.schemas_api import SchemasApi
+from formkiq_client.api.schemas_api import SchemasApi
 
 
 class TestSchemasApi(unittest.TestCase):

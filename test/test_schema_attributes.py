@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.schema_attributes import SchemaAttributes
+from formkiq_client.models.schema_attributes import SchemaAttributes
 
 class TestSchemaAttributes(unittest.TestCase):
     """SchemaAttributes unit test stubs"""
@@ -37,13 +37,13 @@ class TestSchemaAttributes(unittest.TestCase):
         if include_optional:
             return SchemaAttributes(
                 composite_keys = [
-                    openapi_client.models.attribute_schema_composite_key.AttributeSchemaCompositeKey(
+                    formkiq_client.models.attribute_schema_composite_key.AttributeSchemaCompositeKey(
                         attribute_keys = [
                             ''
                             ], )
                     ],
                 required = [
-                    openapi_client.models.attribute_schema_required.AttributeSchemaRequired(
+                    formkiq_client.models.attribute_schema_required.AttributeSchemaRequired(
                         attribute_key = '', 
                         min_number_of_values = 1.337, 
                         max_number_of_values = 1.337, 
@@ -59,7 +59,7 @@ class TestSchemaAttributes(unittest.TestCase):
                             }, )
                     ],
                 optional = [
-                    openapi_client.models.attribute_schema_optional.AttributeSchemaOptional(
+                    formkiq_client.models.attribute_schema_optional.AttributeSchemaOptional(
                         min_number_of_values = 1.337, 
                         max_number_of_values = 1.337, 
                         attribute_key = '', 

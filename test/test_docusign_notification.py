@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.docusign_notification import DocusignNotification
+from formkiq_client.models.docusign_notification import DocusignNotification
 
 class TestDocusignNotification(unittest.TestCase):
     """DocusignNotification unit test stubs"""
@@ -37,11 +37,11 @@ class TestDocusignNotification(unittest.TestCase):
         if include_optional:
             return DocusignNotification(
                 use_account_defaults = '',
-                expirations = openapi_client.models.docusign_notification_expirations.DocusignNotificationExpirations(
+                expirations = formkiq_client.models.docusign_notification_expirations.DocusignNotificationExpirations(
                     expire_after = '', 
                     expire_enabled = '', 
                     expire_warn = '', ),
-                reminders = openapi_client.models.docusign_notification_reminders.DocusignNotificationReminders(
+                reminders = formkiq_client.models.docusign_notification_reminders.DocusignNotificationReminders(
                     reminder_delay = '', 
                     reminder_enabled = '', 
                     reminder_frequency = '', )

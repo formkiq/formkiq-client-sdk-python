@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.validation_errors_response import ValidationErrorsResponse
+from formkiq_client.models.validation_errors_response import ValidationErrorsResponse
 
 class TestValidationErrorsResponse(unittest.TestCase):
     """ValidationErrorsResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestValidationErrorsResponse(unittest.TestCase):
         if include_optional:
             return ValidationErrorsResponse(
                 errors = [
-                    openapi_client.models.validation_error.ValidationError(
+                    formkiq_client.models.validation_error.ValidationError(
                         key = '', 
                         error = '', )
                     ]

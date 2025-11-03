@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_search_response import DocumentSearchResponse
+from formkiq_client.models.document_search_response import DocumentSearchResponse
 
 class TestDocumentSearchResponse(unittest.TestCase):
     """DocumentSearchResponse unit test stubs"""
@@ -39,7 +39,7 @@ class TestDocumentSearchResponse(unittest.TestCase):
                 next = '',
                 previous = '',
                 documents = [
-                    openapi_client.models.search_result_document.SearchResultDocument(
+                    formkiq_client.models.search_result_document.SearchResultDocument(
                         site_id = '', 
                         path = '', 
                         width = '', 
@@ -57,24 +57,24 @@ class TestDocumentSearchResponse(unittest.TestCase):
                         content_length = 56, 
                         version_id = '', 
                         belongs_to_document_id = '', 
-                        matched_attribute = openapi_client.models.document_search_match_attribute.DocumentSearchMatchAttribute(
+                        matched_attribute = formkiq_client.models.document_search_match_attribute.DocumentSearchMatchAttribute(
                             key = '', 
                             string_value = '', 
                             number_value = 1.337, 
                             boolean_value = True, ), 
-                        matched_tag = openapi_client.models.document_search_match_tag.DocumentSearchMatchTag(
+                        matched_tag = formkiq_client.models.document_search_match_tag.DocumentSearchMatchTag(
                             key = '', 
                             value = '', 
                             type = '', ), 
                         matched_tags = [
-                            openapi_client.models.document_search_match_tag.DocumentSearchMatchTag(
+                            formkiq_client.models.document_search_match_tag.DocumentSearchMatchTag(
                                 key = '', 
                                 value = '', 
                                 type = '', )
                             ], 
                         tags = { }, 
                         attributes = {
-                            'key' : openapi_client.models.search_result_document_attribute.SearchResultDocumentAttribute(
+                            'key' : formkiq_client.models.search_result_document_attribute.SearchResultDocumentAttribute(
                                 string_values = [
                                     ''
                                     ], 
@@ -85,7 +85,7 @@ class TestDocumentSearchResponse(unittest.TestCase):
                                 value_type = 'BOOLEAN', )
                             }, 
                         metadata = [
-                            openapi_client.models.document_metadata.DocumentMetadata(
+                            formkiq_client.models.document_metadata.DocumentMetadata(
                                 key = '', 
                                 value = '', 
                                 values = [

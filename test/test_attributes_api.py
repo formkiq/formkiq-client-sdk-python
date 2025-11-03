@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.attributes_api import AttributesApi
+from formkiq_client.api.attributes_api import AttributesApi
 
 
 class TestAttributesApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_group_permissions_request import SetGroupPermissionsRequest
+from formkiq_client.models.set_group_permissions_request import SetGroupPermissionsRequest
 
 class TestSetGroupPermissionsRequest(unittest.TestCase):
     """SetGroupPermissionsRequest unit test stubs"""

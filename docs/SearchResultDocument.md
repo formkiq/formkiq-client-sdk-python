@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.search_result_document import SearchResultDocument
+from formkiq_client.models.search_result_document import SearchResultDocument
 
 # TODO update the JSON string below
 json = "{}"

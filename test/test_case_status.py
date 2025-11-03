@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.case_status import CaseStatus
+from formkiq_client.models.case_status import CaseStatus
 
 class TestCaseStatus(unittest.TestCase):
     """CaseStatus unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_open_search_index_response import SetOpenSearchIndexResponse
+from formkiq_client.models.set_open_search_index_response import SetOpenSearchIndexResponse
 
 class TestSetOpenSearchIndexResponse(unittest.TestCase):
     """SetOpenSearchIndexResponse unit test stubs"""

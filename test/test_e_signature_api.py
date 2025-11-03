@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.e_signature_api import ESignatureApi
+from formkiq_client.api.e_signature_api import ESignatureApi
 
 
 class TestESignatureApi(unittest.TestCase):

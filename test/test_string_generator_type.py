@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.string_generator_type import StringGeneratorType
+from formkiq_client.models.string_generator_type import StringGeneratorType
 
 class TestStringGeneratorType(unittest.TestCase):
     """StringGeneratorType unit test stubs"""

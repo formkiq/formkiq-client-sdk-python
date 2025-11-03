@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_request import AddDocumentRequest
+from formkiq_client.models.add_document_request import AddDocumentRequest
 
 class TestAddDocumentRequest(unittest.TestCase):
     """AddDocumentRequest unit test stubs"""
@@ -47,7 +47,7 @@ class TestAddDocumentRequest(unittest.TestCase):
                 is_base64 = True,
                 content = '',
                 tags = [
-                    openapi_client.models.add_document_tag.AddDocumentTag(
+                    formkiq_client.models.add_document_tag.AddDocumentTag(
                         key = '', 
                         value = '', 
                         values = [
@@ -55,7 +55,7 @@ class TestAddDocumentRequest(unittest.TestCase):
                             ], )
                     ],
                 metadata = [
-                    openapi_client.models.add_document_metadata.AddDocumentMetadata(
+                    formkiq_client.models.add_document_metadata.AddDocumentMetadata(
                         key = '', 
                         value = '', 
                         values = [
@@ -63,11 +63,11 @@ class TestAddDocumentRequest(unittest.TestCase):
                             ], )
                     ],
                 actions = [
-                    openapi_client.models.add_action.AddAction(
+                    formkiq_client.models.add_action.AddAction(
                         type = 'ANTIVIRUS', 
-                        parameters = openapi_client.models.add_action_parameters.AddActionParameters(
+                        parameters = formkiq_client.models.add_action_parameters.AddActionParameters(
                             ocr_textract_queries = [
-                                openapi_client.models.textract_query.TextractQuery(
+                                formkiq_client.models.textract_query.TextractQuery(
                                     text = '', 
                                     alias = '', 
                                     pages = [
@@ -102,7 +102,7 @@ class TestAddDocumentRequest(unittest.TestCase):
                     null
                     ],
                 documents = [
-                    openapi_client.models.add_child_document.AddChildDocument(
+                    formkiq_client.models.add_child_document.AddChildDocument(
                         path = '', 
                         width = '', 
                         height = '', 
@@ -113,7 +113,7 @@ class TestAddDocumentRequest(unittest.TestCase):
                         is_base64 = True, 
                         content = '', 
                         tags = [
-                            openapi_client.models.add_document_tag.AddDocumentTag(
+                            formkiq_client.models.add_document_tag.AddDocumentTag(
                                 key = '', 
                                 value = '', 
                                 values = [
@@ -121,7 +121,7 @@ class TestAddDocumentRequest(unittest.TestCase):
                                     ], )
                             ], 
                         metadata = [
-                            openapi_client.models.add_document_metadata.AddDocumentMetadata(
+                            formkiq_client.models.add_document_metadata.AddDocumentMetadata(
                                 key = '', 
                                 value = '', )
                             ], )

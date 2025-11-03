@@ -1,4 +1,4 @@
-# openapi_client.RulesetsApi
+# formkiq_client.RulesetsApi
 
 All URIs are relative to *http://localhost*
 
@@ -27,15 +27,15 @@ Creates a new rule; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_rule_request import AddRuleRequest
-from openapi_client.models.add_rule_response import AddRuleResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_rule_request import AddRuleRequest
+from formkiq_client.models.add_rule_response import AddRuleResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -45,11 +45,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
+    api_instance = formkiq_client.RulesetsApi(api_client)
     ruleset_id = 'ruleset_id_example' # str | Ruleset Identifier
-    add_rule_request = openapi_client.AddRuleRequest() # AddRuleRequest | 
+    add_rule_request = formkiq_client.AddRuleRequest() # AddRuleRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -105,15 +105,15 @@ Creates a new ruleset; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_ruleset_request import AddRulesetRequest
-from openapi_client.models.add_ruleset_response import AddRulesetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_ruleset_request import AddRulesetRequest
+from formkiq_client.models.add_ruleset_response import AddRulesetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -123,10 +123,10 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
-    add_ruleset_request = openapi_client.AddRulesetRequest() # AddRulesetRequest | 
+    api_instance = formkiq_client.RulesetsApi(api_client)
+    add_ruleset_request = formkiq_client.AddRulesetRequest() # AddRulesetRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -181,14 +181,14 @@ Delete Rule; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_rule_response import DeleteRuleResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_rule_response import DeleteRuleResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -198,9 +198,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
+    api_instance = formkiq_client.RulesetsApi(api_client)
     ruleset_id = 'ruleset_id_example' # str | Ruleset Identifier
     rule_id = 'rule_id_example' # str | Rule Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -257,14 +257,14 @@ Delete Ruleset; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_ruleset_response import DeleteRulesetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_ruleset_response import DeleteRulesetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -274,9 +274,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
+    api_instance = formkiq_client.RulesetsApi(api_client)
     ruleset_id = 'ruleset_id_example' # str | Ruleset Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -331,14 +331,14 @@ Returns a rule in a ruleset; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_rule_response import GetRuleResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_rule_response import GetRuleResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -348,9 +348,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
+    api_instance = formkiq_client.RulesetsApi(api_client)
     ruleset_id = 'ruleset_id_example' # str | Ruleset Identifier
     rule_id = 'rule_id_example' # str | Rule Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -407,14 +407,14 @@ Returns a list of rules in a ruleset; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_rules_response import GetRulesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_rules_response import GetRulesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -424,9 +424,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
+    api_instance = formkiq_client.RulesetsApi(api_client)
     ruleset_id = 'ruleset_id_example' # str | Ruleset Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
@@ -485,14 +485,14 @@ Get a rule sets; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_ruleset_response import GetRulesetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_ruleset_response import GetRulesetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -502,9 +502,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
+    api_instance = formkiq_client.RulesetsApi(api_client)
     ruleset_id = 'ruleset_id_example' # str | Ruleset Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -559,14 +559,14 @@ Returns a list of rule sets; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_rulesets_response import GetRulesetsResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_rulesets_response import GetRulesetsResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -576,9 +576,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
+    api_instance = formkiq_client.RulesetsApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -635,15 +635,15 @@ Update Rule; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.update_rule_request import UpdateRuleRequest
-from openapi_client.models.update_rule_response import UpdateRuleResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.update_rule_request import UpdateRuleRequest
+from formkiq_client.models.update_rule_response import UpdateRuleResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -653,12 +653,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
+    api_instance = formkiq_client.RulesetsApi(api_client)
     ruleset_id = 'ruleset_id_example' # str | Ruleset Identifier
     rule_id = 'rule_id_example' # str | Rule Identifier
-    update_rule_request = openapi_client.UpdateRuleRequest() # UpdateRuleRequest | 
+    update_rule_request = formkiq_client.UpdateRuleRequest() # UpdateRuleRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -715,15 +715,15 @@ Updates an existing ruleset; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.update_ruleset_request import UpdateRulesetRequest
-from openapi_client.models.update_ruleset_response import UpdateRulesetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.update_ruleset_request import UpdateRulesetRequest
+from formkiq_client.models.update_ruleset_response import UpdateRulesetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -733,11 +733,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RulesetsApi(api_client)
+    api_instance = formkiq_client.RulesetsApi(api_client)
     ruleset_id = 'ruleset_id_example' # str | Ruleset Identifier
-    update_ruleset_request = openapi_client.UpdateRulesetRequest() # UpdateRulesetRequest | 
+    update_ruleset_request = formkiq_client.UpdateRulesetRequest() # UpdateRulesetRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

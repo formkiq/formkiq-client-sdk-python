@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_mapping import AddMapping
+from formkiq_client.models.add_mapping import AddMapping
 
 class TestAddMapping(unittest.TestCase):
     """AddMapping unit test stubs"""
@@ -39,7 +39,7 @@ class TestAddMapping(unittest.TestCase):
                 name = '',
                 description = '',
                 attributes = [
-                    openapi_client.models.mapping_attribute.MappingAttribute(
+                    formkiq_client.models.mapping_attribute.MappingAttribute(
                         attribute_key = '', 
                         source_type = 'CONTENT', 
                         default_value = '', 

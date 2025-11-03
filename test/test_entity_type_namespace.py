@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.entity_type_namespace import EntityTypeNamespace
+from formkiq_client.models.entity_type_namespace import EntityTypeNamespace
 
 class TestEntityTypeNamespace(unittest.TestCase):
     """EntityTypeNamespace unit test stubs"""

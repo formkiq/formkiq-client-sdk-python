@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.delete_share_response import DeleteShareResponse
+from formkiq_client.models.delete_share_response import DeleteShareResponse
 
 class TestDeleteShareResponse(unittest.TestCase):
     """DeleteShareResponse unit test stubs"""

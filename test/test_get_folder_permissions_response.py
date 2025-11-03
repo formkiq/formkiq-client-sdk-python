@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_folder_permissions_response import GetFolderPermissionsResponse
+from formkiq_client.models.get_folder_permissions_response import GetFolderPermissionsResponse
 
 class TestGetFolderPermissionsResponse(unittest.TestCase):
     """GetFolderPermissionsResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestGetFolderPermissionsResponse(unittest.TestCase):
         if include_optional:
             return GetFolderPermissionsResponse(
                 roles = [
-                    openapi_client.models.folder_permission.FolderPermission(
+                    formkiq_client.models.folder_permission.FolderPermission(
                         role_name = '', 
                         permissions = [
                             'READ'

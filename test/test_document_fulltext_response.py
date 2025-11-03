@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_fulltext_response import DocumentFulltextResponse
+from formkiq_client.models.document_fulltext_response import DocumentFulltextResponse
 
 class TestDocumentFulltextResponse(unittest.TestCase):
     """DocumentFulltextResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestDocumentFulltextResponse(unittest.TestCase):
         if include_optional:
             return DocumentFulltextResponse(
                 documents = [
-                    openapi_client.models.fulltext_search_item.FulltextSearchItem(
+                    formkiq_client.models.fulltext_search_item.FulltextSearchItem(
                         site_id = '', 
                         path = '', 
                         content_type = '', 
@@ -58,7 +58,7 @@ class TestDocumentFulltextResponse(unittest.TestCase):
                             'key' : None
                             }, 
                         attributes = {
-                            'key' : openapi_client.models.fulltext_attribute.FulltextAttribute(
+                            'key' : formkiq_client.models.fulltext_attribute.FulltextAttribute(
                                 string_values = [
                                     ''
                                     ], 

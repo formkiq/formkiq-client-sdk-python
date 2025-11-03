@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_site import AddSite
+from formkiq_client.models.add_site import AddSite
 
 class TestAddSite(unittest.TestCase):
     """AddSite unit test stubs"""

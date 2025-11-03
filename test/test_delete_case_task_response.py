@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.delete_case_task_response import DeleteCaseTaskResponse
+from formkiq_client.models.delete_case_task_response import DeleteCaseTaskResponse
 
 class TestDeleteCaseTaskResponse(unittest.TestCase):
     """DeleteCaseTaskResponse unit test stubs"""

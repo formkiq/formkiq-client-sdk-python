@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.ocr_engine import OcrEngine
+from formkiq_client.models.ocr_engine import OcrEngine
 
 class TestOcrEngine(unittest.TestCase):
     """OcrEngine unit test stubs"""

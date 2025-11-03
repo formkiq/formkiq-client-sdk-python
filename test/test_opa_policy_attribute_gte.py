@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.opa_policy_attribute_gte import OpaPolicyAttributeGte
+from formkiq_client.models.opa_policy_attribute_gte import OpaPolicyAttributeGte
 
 class TestOpaPolicyAttributeGte(unittest.TestCase):
     """OpaPolicyAttributeGte unit test stubs"""

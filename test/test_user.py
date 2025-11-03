@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.user import User
+from formkiq_client.models.user import User
 
 class TestUser(unittest.TestCase):
     """User unit test stubs"""
@@ -42,7 +42,7 @@ class TestUser(unittest.TestCase):
                 user_status = '',
                 inserted_date = '',
                 last_modified_date = '',
-                attributes = openapi_client.models.user_attributes.UserAttributes(
+                attributes = formkiq_client.models.user_attributes.UserAttributes(
                     address = '', 
                     birthdate = '', 
                     family_name = '', 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.docusign_notification import DocusignNotification
+from formkiq_client.models.docusign_notification import DocusignNotification
 
 # TODO update the JSON string below
 json = "{}"

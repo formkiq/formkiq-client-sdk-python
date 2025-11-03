@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_task_request import AddTaskRequest
+from formkiq_client.models.add_task_request import AddTaskRequest
 
 class TestAddTaskRequest(unittest.TestCase):
     """AddTaskRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAddTaskRequest(unittest.TestCase):
         model = AddTaskRequest()
         if include_optional:
             return AddTaskRequest(
-                task = openapi_client.models.add_task.AddTask(
+                task = formkiq_client.models.add_task.AddTask(
                     name = '', 
                     description = '', 
                     status = 'NEW', 
@@ -53,7 +53,7 @@ class TestAddTaskRequest(unittest.TestCase):
             )
         else:
             return AddTaskRequest(
-                task = openapi_client.models.add_task.AddTask(
+                task = formkiq_client.models.add_task.AddTask(
                     name = '', 
                     description = '', 
                     status = 'NEW', 

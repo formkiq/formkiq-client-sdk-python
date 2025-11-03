@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.user_share_permission import UserSharePermission
+from formkiq_client.models.user_share_permission import UserSharePermission
 
 class TestUserSharePermission(unittest.TestCase):
     """UserSharePermission unit test stubs"""

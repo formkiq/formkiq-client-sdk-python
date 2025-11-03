@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_relationship_type import DocumentRelationshipType
+from formkiq_client.models.document_relationship_type import DocumentRelationshipType
 
 class TestDocumentRelationshipType(unittest.TestCase):
     """DocumentRelationshipType unit test stubs"""

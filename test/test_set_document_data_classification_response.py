@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_document_data_classification_response import SetDocumentDataClassificationResponse
+from formkiq_client.models.set_document_data_classification_response import SetDocumentDataClassificationResponse
 
 class TestSetDocumentDataClassificationResponse(unittest.TestCase):
     """SetDocumentDataClassificationResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestSetDocumentDataClassificationResponse(unittest.TestCase):
             return SetDocumentDataClassificationResponse(
                 content = '',
                 attributes = [
-                    openapi_client.models.data_classification_attribute.DataClassificationAttribute(
+                    formkiq_client.models.data_classification_attribute.DataClassificationAttribute(
                         key = '', 
                         value = '', )
                     ]

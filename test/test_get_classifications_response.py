@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_classifications_response import GetClassificationsResponse
+from formkiq_client.models.get_classifications_response import GetClassificationsResponse
 
 class TestGetClassificationsResponse(unittest.TestCase):
     """GetClassificationsResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetClassificationsResponse(unittest.TestCase):
             return GetClassificationsResponse(
                 next = '',
                 classifications = [
-                    openapi_client.models.classification_summary.ClassificationSummary(
+                    formkiq_client.models.classification_summary.ClassificationSummary(
                         classification_id = '', 
                         name = '', 
                         user_id = '', 

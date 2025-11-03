@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_case_request import AddCaseRequest
+from formkiq_client.models.add_case_request import AddCaseRequest
 
 class TestAddCaseRequest(unittest.TestCase):
     """AddCaseRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAddCaseRequest(unittest.TestCase):
         model = AddCaseRequest()
         if include_optional:
             return AddCaseRequest(
-                case = openapi_client.models.add_case.AddCase(
+                case = formkiq_client.models.add_case.AddCase(
                     name = '', 
                     status = 'NEW', 
                     planned_start_date = '', 
@@ -45,13 +45,13 @@ class TestAddCaseRequest(unittest.TestCase):
                     due_date = '', 
                     description = '', 
                     document_number_format = [
-                        openapi_client.models.string_format.StringFormat(
+                        formkiq_client.models.string_format.StringFormat(
                             type = 'AUTO_INCREMENT', 
                             static_value = '', 
                             padding = 56, )
                         ], 
                     case_number_format = [
-                        openapi_client.models.string_format.StringFormat(
+                        formkiq_client.models.string_format.StringFormat(
                             static_value = '', 
                             padding = 56, )
                         ], 
@@ -64,7 +64,7 @@ class TestAddCaseRequest(unittest.TestCase):
             )
         else:
             return AddCaseRequest(
-                case = openapi_client.models.add_case.AddCase(
+                case = formkiq_client.models.add_case.AddCase(
                     name = '', 
                     status = 'NEW', 
                     planned_start_date = '', 
@@ -73,13 +73,13 @@ class TestAddCaseRequest(unittest.TestCase):
                     due_date = '', 
                     description = '', 
                     document_number_format = [
-                        openapi_client.models.string_format.StringFormat(
+                        formkiq_client.models.string_format.StringFormat(
                             type = 'AUTO_INCREMENT', 
                             static_value = '', 
                             padding = 56, )
                         ], 
                     case_number_format = [
-                        openapi_client.models.string_format.StringFormat(
+                        formkiq_client.models.string_format.StringFormat(
                             static_value = '', 
                             padding = 56, )
                         ], 

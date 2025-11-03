@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.get_document_attribute_response import GetDocumentAttributeResponse
+from formkiq_client.models.get_document_attribute_response import GetDocumentAttributeResponse
 
 # TODO update the JSON string below
 json = "{}"

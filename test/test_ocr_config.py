@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.ocr_config import OcrConfig
+from formkiq_client.models.ocr_config import OcrConfig
 
 class TestOcrConfig(unittest.TestCase):
     """OcrConfig unit test stubs"""

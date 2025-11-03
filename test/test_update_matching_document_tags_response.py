@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_matching_document_tags_response import UpdateMatchingDocumentTagsResponse
+from formkiq_client.models.update_matching_document_tags_response import UpdateMatchingDocumentTagsResponse
 
 class TestUpdateMatchingDocumentTagsResponse(unittest.TestCase):
     """UpdateMatchingDocumentTagsResponse unit test stubs"""

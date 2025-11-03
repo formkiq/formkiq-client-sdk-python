@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.site_group import SiteGroup
+from formkiq_client.models.site_group import SiteGroup
 
 class TestSiteGroup(unittest.TestCase):
     """SiteGroup unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.docusign_signing_tabs import DocusignSigningTabs
+from formkiq_client.models.docusign_signing_tabs import DocusignSigningTabs
 
 class TestDocusignSigningTabs(unittest.TestCase):
     """DocusignSigningTabs unit test stubs"""
@@ -37,7 +37,7 @@ class TestDocusignSigningTabs(unittest.TestCase):
         if include_optional:
             return DocusignSigningTabs(
                 sign_here_tabs = [
-                    openapi_client.models.docusign_sign_here_tabs.DocusignSignHereTabs(
+                    formkiq_client.models.docusign_sign_here_tabs.DocusignSignHereTabs(
                         anchor_string = '', 
                         anchor_x_offset = '', 
                         anchor_y_offset = '', 

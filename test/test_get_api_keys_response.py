@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_api_keys_response import GetApiKeysResponse
+from formkiq_client.models.get_api_keys_response import GetApiKeysResponse
 
 class TestGetApiKeysResponse(unittest.TestCase):
     """GetApiKeysResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetApiKeysResponse(unittest.TestCase):
             return GetApiKeysResponse(
                 next = '',
                 api_keys = [
-                    openapi_client.models.api_key.ApiKey(
+                    formkiq_client.models.api_key.ApiKey(
                         name = '', 
                         api_key = '', 
                         user_id = '', 

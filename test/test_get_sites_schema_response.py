@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_sites_schema_response import GetSitesSchemaResponse
+from formkiq_client.models.get_sites_schema_response import GetSitesSchemaResponse
 
 class TestGetSitesSchemaResponse(unittest.TestCase):
     """GetSitesSchemaResponse unit test stubs"""
@@ -37,15 +37,15 @@ class TestGetSitesSchemaResponse(unittest.TestCase):
         if include_optional:
             return GetSitesSchemaResponse(
                 name = '',
-                attributes = openapi_client.models.schema_attributes.SchemaAttributes(
+                attributes = formkiq_client.models.schema_attributes.SchemaAttributes(
                     composite_keys = [
-                        openapi_client.models.attribute_schema_composite_key.AttributeSchemaCompositeKey(
+                        formkiq_client.models.attribute_schema_composite_key.AttributeSchemaCompositeKey(
                             attribute_keys = [
                                 ''
                                 ], )
                         ], 
                     required = [
-                        openapi_client.models.attribute_schema_required.AttributeSchemaRequired(
+                        formkiq_client.models.attribute_schema_required.AttributeSchemaRequired(
                             attribute_key = '', 
                             min_number_of_values = 1.337, 
                             max_number_of_values = 1.337, 
@@ -61,7 +61,7 @@ class TestGetSitesSchemaResponse(unittest.TestCase):
                                 }, )
                         ], 
                     optional = [
-                        openapi_client.models.attribute_schema_optional.AttributeSchemaOptional(
+                        formkiq_client.models.attribute_schema_optional.AttributeSchemaOptional(
                             min_number_of_values = 1.337, 
                             max_number_of_values = 1.337, 
                             attribute_key = '', )

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.open_search_snapshot_shard import OpenSearchSnapshotShard
+from formkiq_client.models.open_search_snapshot_shard import OpenSearchSnapshotShard
 
 class TestOpenSearchSnapshotShard(unittest.TestCase):
     """OpenSearchSnapshotShard unit test stubs"""

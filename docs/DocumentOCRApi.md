@@ -1,4 +1,4 @@
-# openapi_client.DocumentOCRApi
+# formkiq_client.DocumentOCRApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,15 +23,15 @@ Tesseract available for all editions, but Textract engine and tables and forms o
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_ocr_request import AddDocumentOcrRequest
-from openapi_client.models.add_document_ocr_response import AddDocumentOcrResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_ocr_request import AddDocumentOcrRequest
+from formkiq_client.models.add_document_ocr_response import AddDocumentOcrResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -41,12 +41,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentOCRApi(api_client)
+    api_instance = formkiq_client.DocumentOCRApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    add_document_ocr_request = openapi_client.AddDocumentOcrRequest() # AddDocumentOcrRequest |  (optional)
+    add_document_ocr_request = formkiq_client.AddDocumentOcrRequest() # AddDocumentOcrRequest |  (optional)
 
     try:
         # Perform document ocr
@@ -102,14 +102,14 @@ Tesseract available for all editions, but Textract engine and tables and forms o
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -119,9 +119,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentOCRApi(api_client)
+    api_instance = formkiq_client.DocumentOCRApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -178,14 +178,14 @@ Tesseract available for all editions, but Textract engine and tables and forms o
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_ocr_response import GetDocumentOcrResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_ocr_response import GetDocumentOcrResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -195,9 +195,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentOCRApi(api_client)
+    api_instance = formkiq_client.DocumentOCRApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     output_type = 'output_type_example' # str | Output Format Type (optional)
@@ -262,15 +262,15 @@ Tesseract available for all editions, but Textract engine and tables and forms o
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_ocr_response import AddDocumentOcrResponse
-from openapi_client.models.set_document_ocr_request import SetDocumentOcrRequest
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_ocr_response import AddDocumentOcrResponse
+from formkiq_client.models.set_document_ocr_request import SetDocumentOcrRequest
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -280,12 +280,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentOCRApi(api_client)
+    api_instance = formkiq_client.DocumentOCRApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    set_document_ocr_request = openapi_client.SetDocumentOcrRequest() # SetDocumentOcrRequest |  (optional)
+    set_document_ocr_request = formkiq_client.SetDocumentOcrRequest() # SetDocumentOcrRequest |  (optional)
 
     try:
         # Set document ocr result

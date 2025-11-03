@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.tag_index_api import TagIndexApi
+from formkiq_client.api.tag_index_api import TagIndexApi
 
 
 class TestTagIndexApi(unittest.TestCase):

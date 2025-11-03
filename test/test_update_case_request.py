@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_case_request import UpdateCaseRequest
+from formkiq_client.models.update_case_request import UpdateCaseRequest
 
 class TestUpdateCaseRequest(unittest.TestCase):
     """UpdateCaseRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestUpdateCaseRequest(unittest.TestCase):
         model = UpdateCaseRequest()
         if include_optional:
             return UpdateCaseRequest(
-                case = openapi_client.models.update_case.UpdateCase(
+                case = formkiq_client.models.update_case.UpdateCase(
                     name = '', 
                     status = 'NEW', 
                     description = '', 

@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.nigo import Nigo
+from formkiq_client.models.nigo import Nigo
 
 # TODO update the JSON string below
 json = "{}"

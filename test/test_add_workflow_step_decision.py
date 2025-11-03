@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_workflow_step_decision import AddWorkflowStepDecision
+from formkiq_client.models.add_workflow_step_decision import AddWorkflowStepDecision
 
 class TestAddWorkflowStepDecision(unittest.TestCase):
     """AddWorkflowStepDecision unit test stubs"""

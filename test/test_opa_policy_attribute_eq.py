@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.opa_policy_attribute_eq import OpaPolicyAttributeEq
+from formkiq_client.models.opa_policy_attribute_eq import OpaPolicyAttributeEq
 
 class TestOpaPolicyAttributeEq(unittest.TestCase):
     """OpaPolicyAttributeEq unit test stubs"""
@@ -39,7 +39,7 @@ class TestOpaPolicyAttributeEq(unittest.TestCase):
                 string_value = '',
                 number_value = 1.337,
                 boolean_value = True,
-                input = openapi_client.models.opa_policy_attribute_input.OpaPolicyAttributeInput(
+                input = formkiq_client.models.opa_policy_attribute_input.OpaPolicyAttributeInput(
                     match_username = True, )
             )
         else:

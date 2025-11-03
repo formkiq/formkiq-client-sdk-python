@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_docusign_recipient_view_request import AddDocusignRecipientViewRequest
+from formkiq_client.models.add_docusign_recipient_view_request import AddDocusignRecipientViewRequest
 
 class TestAddDocusignRecipientViewRequest(unittest.TestCase):
     """AddDocusignRecipientViewRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestAddDocusignRecipientViewRequest(unittest.TestCase):
         if include_optional:
             return AddDocusignRecipientViewRequest(
                 environment = 'PRODUCTION',
-                recipient_view = openapi_client.models.docusign_recipient_view.DocusignRecipientView(
+                recipient_view = formkiq_client.models.docusign_recipient_view.DocusignRecipientView(
                     return_url = '', 
                     recipient_id = '', 
                     user_name = '', 
@@ -53,7 +53,7 @@ class TestAddDocusignRecipientViewRequest(unittest.TestCase):
         else:
             return AddDocusignRecipientViewRequest(
                 environment = 'PRODUCTION',
-                recipient_view = openapi_client.models.docusign_recipient_view.DocusignRecipientView(
+                recipient_view = formkiq_client.models.docusign_recipient_view.DocusignRecipientView(
                     return_url = '', 
                     recipient_id = '', 
                     user_name = '', 

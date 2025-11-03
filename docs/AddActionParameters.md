@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.add_action_parameters import AddActionParameters
+from formkiq_client.models.add_action_parameters import AddActionParameters
 
 # TODO update the JSON string below
 json = "{}"

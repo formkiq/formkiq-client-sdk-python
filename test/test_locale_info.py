@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.locale_info import LocaleInfo
+from formkiq_client.models.locale_info import LocaleInfo
 
 class TestLocaleInfo(unittest.TestCase):
     """LocaleInfo unit test stubs"""

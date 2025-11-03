@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_entity_response import AddEntityResponse
+from formkiq_client.models.add_entity_response import AddEntityResponse
 
 class TestAddEntityResponse(unittest.TestCase):
     """AddEntityResponse unit test stubs"""

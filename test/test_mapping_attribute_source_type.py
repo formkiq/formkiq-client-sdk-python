@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.mapping_attribute_source_type import MappingAttributeSourceType
+from formkiq_client.models.mapping_attribute_source_type import MappingAttributeSourceType
 
 class TestMappingAttributeSourceType(unittest.TestCase):
     """MappingAttributeSourceType unit test stubs"""

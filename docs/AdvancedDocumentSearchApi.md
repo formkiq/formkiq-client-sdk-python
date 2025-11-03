@@ -1,4 +1,4 @@
-# openapi_client.AdvancedDocumentSearchApi
+# formkiq_client.AdvancedDocumentSearchApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,15 +26,15 @@ Add a document to OpenSearch; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_fulltext_request import AddDocumentFulltextRequest
-from openapi_client.models.add_document_fulltext_response import AddDocumentFulltextResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_fulltext_request import AddDocumentFulltextRequest
+from formkiq_client.models.add_document_fulltext_response import AddDocumentFulltextResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -44,12 +44,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AdvancedDocumentSearchApi(api_client)
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    add_document_fulltext_request = openapi_client.AddDocumentFulltextRequest() # AddDocumentFulltextRequest |  (optional)
+    add_document_fulltext_request = formkiq_client.AddDocumentFulltextRequest() # AddDocumentFulltextRequest |  (optional)
 
     try:
         # Add document's full-text
@@ -103,14 +103,14 @@ Remove full text search for a document from OpenSearch; available as an Add-On M
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_fulltext_response import DeleteFulltextResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_fulltext_response import DeleteFulltextResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -120,9 +120,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AdvancedDocumentSearchApi(api_client)
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -177,13 +177,13 @@ Remove document tags from OpenSearch; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -193,9 +193,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AdvancedDocumentSearchApi(api_client)
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     tag_key = 'tag_key_example' # str | Tag Key
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -252,13 +252,13 @@ Remove document tag/value from OpenSearch; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -268,9 +268,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AdvancedDocumentSearchApi(api_client)
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     tag_key = 'tag_key_example' # str | Tag Key
     tag_value = 'tag_value_example' # str | Tag Key Value
@@ -329,14 +329,14 @@ Retrieve an OpenSearch document's details, i.e., metadata
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_fulltext_response import GetDocumentFulltextResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_fulltext_response import GetDocumentFulltextResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -346,9 +346,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AdvancedDocumentSearchApi(api_client)
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
@@ -407,14 +407,14 @@ Example Request Body: { "query": { "match_all": {} }}
 
 
 ```python
-import openapi_client
-from openapi_client.models.query_fulltext_response import QueryFulltextResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.query_fulltext_response import QueryFulltextResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -424,9 +424,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AdvancedDocumentSearchApi(api_client)
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     body = None # object | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     index_name = 'index_name_example' # str | IndexName to query (optional)
@@ -483,15 +483,15 @@ Document full-text search (and more robust multi-tag search queries, powered by 
 
 
 ```python
-import openapi_client
-from openapi_client.models.document_fulltext_request import DocumentFulltextRequest
-from openapi_client.models.document_fulltext_response import DocumentFulltextResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.document_fulltext_request import DocumentFulltextRequest
+from formkiq_client.models.document_fulltext_response import DocumentFulltextResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -501,10 +501,10 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AdvancedDocumentSearchApi(api_client)
-    document_fulltext_request = openapi_client.DocumentFulltextRequest() # DocumentFulltextRequest | 
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
+    document_fulltext_request = formkiq_client.DocumentFulltextRequest() # DocumentFulltextRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     index_name = 'index_name_example' # str | IndexName to query (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -563,15 +563,15 @@ Set all text/tags found within a document to OpenSearch; available as an Add-On 
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_document_fulltext_request import SetDocumentFulltextRequest
-from openapi_client.models.set_document_fulltext_response import SetDocumentFulltextResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_document_fulltext_request import SetDocumentFulltextRequest
+from formkiq_client.models.set_document_fulltext_response import SetDocumentFulltextResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -581,12 +581,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AdvancedDocumentSearchApi(api_client)
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    set_document_fulltext_request = openapi_client.SetDocumentFulltextRequest() # SetDocumentFulltextRequest |  (optional)
+    set_document_fulltext_request = formkiq_client.SetDocumentFulltextRequest() # SetDocumentFulltextRequest |  (optional)
 
     try:
         # Set document's full-text
@@ -640,15 +640,15 @@ Update a document in OpenSearch; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.update_document_fulltext_request import UpdateDocumentFulltextRequest
-from openapi_client.models.update_document_fulltext_response import UpdateDocumentFulltextResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.update_document_fulltext_request import UpdateDocumentFulltextRequest
+from formkiq_client.models.update_document_fulltext_response import UpdateDocumentFulltextResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -658,12 +658,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AdvancedDocumentSearchApi(api_client)
+    api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
-    update_document_fulltext_request = openapi_client.UpdateDocumentFulltextRequest() # UpdateDocumentFulltextRequest |  (optional)
+    update_document_fulltext_request = formkiq_client.UpdateDocumentFulltextRequest() # UpdateDocumentFulltextRequest |  (optional)
 
     try:
         # Update document's full-text

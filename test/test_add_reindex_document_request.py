@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_reindex_document_request import AddReindexDocumentRequest
+from formkiq_client.models.add_reindex_document_request import AddReindexDocumentRequest
 
 class TestAddReindexDocumentRequest(unittest.TestCase):
     """AddReindexDocumentRequest unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_tags_api import DocumentTagsApi
+from formkiq_client.api.document_tags_api import DocumentTagsApi
 
 
 class TestDocumentTagsApi(unittest.TestCase):

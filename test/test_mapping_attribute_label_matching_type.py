@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.mapping_attribute_label_matching_type import MappingAttributeLabelMatchingType
+from formkiq_client.models.mapping_attribute_label_matching_type import MappingAttributeLabelMatchingType
 
 class TestMappingAttributeLabelMatchingType(unittest.TestCase):
     """MappingAttributeLabelMatchingType unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_versions_response import GetDocumentVersionsResponse
+from formkiq_client.models.get_document_versions_response import GetDocumentVersionsResponse
 
 class TestGetDocumentVersionsResponse(unittest.TestCase):
     """GetDocumentVersionsResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetDocumentVersionsResponse(unittest.TestCase):
             return GetDocumentVersionsResponse(
                 next = '',
                 documents = [
-                    openapi_client.models.document_version.DocumentVersion(
+                    formkiq_client.models.document_version.DocumentVersion(
                         inserted_date = '', 
                         checksum = '', 
                         checksum_type = 'SHA1', 

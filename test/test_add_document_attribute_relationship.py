@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_attribute_relationship import AddDocumentAttributeRelationship
+from formkiq_client.models.add_document_attribute_relationship import AddDocumentAttributeRelationship
 
 class TestAddDocumentAttributeRelationship(unittest.TestCase):
     """AddDocumentAttributeRelationship unit test stubs"""

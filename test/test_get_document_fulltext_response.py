@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_fulltext_response import GetDocumentFulltextResponse
+from formkiq_client.models.get_document_fulltext_response import GetDocumentFulltextResponse
 
 class TestGetDocumentFulltextResponse(unittest.TestCase):
     """GetDocumentFulltextResponse unit test stubs"""
@@ -57,7 +57,7 @@ class TestGetDocumentFulltextResponse(unittest.TestCase):
                     'key' : None
                     },
                 attributes = {
-                    'key' : openapi_client.models.fulltext_attribute.FulltextAttribute(
+                    'key' : formkiq_client.models.fulltext_attribute.FulltextAttribute(
                         string_values = [
                             ''
                             ], 

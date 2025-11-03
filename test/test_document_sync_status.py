@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_sync_status import DocumentSyncStatus
+from formkiq_client.models.document_sync_status import DocumentSyncStatus
 
 class TestDocumentSyncStatus(unittest.TestCase):
     """DocumentSyncStatus unit test stubs"""

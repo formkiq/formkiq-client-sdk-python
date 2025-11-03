@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.attribute_schema_composite_key import AttributeSchemaCompositeKey
+from formkiq_client.models.attribute_schema_composite_key import AttributeSchemaCompositeKey
 
 class TestAttributeSchemaCompositeKey(unittest.TestCase):
     """AttributeSchemaCompositeKey unit test stubs"""

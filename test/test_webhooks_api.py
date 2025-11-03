@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.webhooks_api import WebhooksApi
+from formkiq_client.api.webhooks_api import WebhooksApi
 
 
 class TestWebhooksApi(unittest.TestCase):

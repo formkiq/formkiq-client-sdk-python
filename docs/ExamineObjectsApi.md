@@ -1,4 +1,4 @@
-# openapi_client.ExamineObjectsApi
+# formkiq_client.ExamineObjectsApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,14 +21,14 @@ File must have been uploaded previously using the GET /objects/examine/pdf API.
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_examine_pdf_response import GetExaminePdfResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_examine_pdf_response import GetExaminePdfResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -38,9 +38,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ExamineObjectsApi(api_client)
+    api_instance = formkiq_client.ExamineObjectsApi(api_client)
     id = 'id_example' # str | Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -95,14 +95,14 @@ Get Signed URL for PDF Object Upload of a document to be examined by calling GET
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_examine_pdf_url_response import GetExaminePdfUrlResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_examine_pdf_url_response import GetExaminePdfUrlResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -112,9 +112,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ExamineObjectsApi(api_client)
+    api_instance = formkiq_client.ExamineObjectsApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

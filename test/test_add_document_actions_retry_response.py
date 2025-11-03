@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_actions_retry_response import AddDocumentActionsRetryResponse
+from formkiq_client.models.add_document_actions_retry_response import AddDocumentActionsRetryResponse
 
 class TestAddDocumentActionsRetryResponse(unittest.TestCase):
     """AddDocumentActionsRetryResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_entities_response import GetEntitiesResponse
+from formkiq_client.models.get_entities_response import GetEntitiesResponse
 
 class TestGetEntitiesResponse(unittest.TestCase):
     """GetEntitiesResponse unit test stubs"""
@@ -38,13 +38,13 @@ class TestGetEntitiesResponse(unittest.TestCase):
             return GetEntitiesResponse(
                 next = '',
                 entities = [
-                    openapi_client.models.entity.Entity(
+                    formkiq_client.models.entity.Entity(
                         entity_id = '', 
                         entity_type_id = '', 
                         name = '', 
                         inserted_date = '', 
                         attributes = [
-                            openapi_client.models.entity_attribute.EntityAttribute(
+                            formkiq_client.models.entity_attribute.EntityAttribute(
                                 key = '', 
                                 string_value = '', 
                                 string_values = [

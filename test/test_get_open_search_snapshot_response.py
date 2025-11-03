@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_open_search_snapshot_response import GetOpenSearchSnapshotResponse
+from formkiq_client.models.get_open_search_snapshot_response import GetOpenSearchSnapshotResponse
 
 class TestGetOpenSearchSnapshotResponse(unittest.TestCase):
     """GetOpenSearchSnapshotResponse unit test stubs"""
@@ -37,19 +37,19 @@ class TestGetOpenSearchSnapshotResponse(unittest.TestCase):
         if include_optional:
             return GetOpenSearchSnapshotResponse(
                 snapshots = [
-                    openapi_client.models.open_search_snapshot.OpenSearchSnapshot(
+                    formkiq_client.models.open_search_snapshot.OpenSearchSnapshot(
                         snapshot = '', 
                         uuid = '', 
                         version = '', 
                         indices = [
                             ''
                             ], 
-                        shards = openapi_client.models.open_search_snapshot_shard.OpenSearchSnapshotShard(
+                        shards = formkiq_client.models.open_search_snapshot_shard.OpenSearchSnapshotShard(
                             total = 1.337, 
                             failed = 1.337, 
                             successful = 1.337, ), 
                         failures = [
-                            openapi_client.models.open_search_snapshot_failure.OpenSearchSnapshotFailure(
+                            formkiq_client.models.open_search_snapshot_failure.OpenSearchSnapshotFailure(
                                 index = '', 
                                 index_uuid = '', 
                                 shard_id = 56, 

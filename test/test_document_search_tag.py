@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_search_tag import DocumentSearchTag
+from formkiq_client.models.document_search_tag import DocumentSearchTag
 
 class TestDocumentSearchTag(unittest.TestCase):
     """DocumentSearchTag unit test stubs"""
@@ -41,7 +41,7 @@ class TestDocumentSearchTag(unittest.TestCase):
                 eq_or = [
                     ''
                     ],
-                range = openapi_client.models.document_search_range.DocumentSearchRange(
+                range = formkiq_client.models.document_search_range.DocumentSearchRange(
                     start = '', 
                     end = '', 
                     type = 'STRING', ),

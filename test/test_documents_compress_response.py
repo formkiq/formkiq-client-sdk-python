@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.documents_compress_response import DocumentsCompressResponse
+from formkiq_client.models.documents_compress_response import DocumentsCompressResponse
 
 class TestDocumentsCompressResponse(unittest.TestCase):
     """DocumentsCompressResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_version_response import GetVersionResponse
+from formkiq_client.models.get_version_response import GetVersionResponse
 
 class TestGetVersionResponse(unittest.TestCase):
     """GetVersionResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.entity_api import EntityApi
+from formkiq_client.api.entity_api import EntityApi
 
 
 class TestEntityApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.delete_indices_response import DeleteIndicesResponse
+from formkiq_client.models.delete_indices_response import DeleteIndicesResponse
 
 class TestDeleteIndicesResponse(unittest.TestCase):
     """DeleteIndicesResponse unit test stubs"""

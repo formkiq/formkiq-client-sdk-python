@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.advanced_document_search_api import AdvancedDocumentSearchApi
+from formkiq_client.api.advanced_document_search_api import AdvancedDocumentSearchApi
 
 
 class TestAdvancedDocumentSearchApi(unittest.TestCase):

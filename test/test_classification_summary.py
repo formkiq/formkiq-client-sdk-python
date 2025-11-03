@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.classification_summary import ClassificationSummary
+from formkiq_client.models.classification_summary import ClassificationSummary
 
 class TestClassificationSummary(unittest.TestCase):
     """ClassificationSummary unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_attribute_response import GetDocumentAttributeResponse
+from formkiq_client.models.get_document_attribute_response import GetDocumentAttributeResponse
 
 class TestGetDocumentAttributeResponse(unittest.TestCase):
     """GetDocumentAttributeResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGetDocumentAttributeResponse(unittest.TestCase):
         model = GetDocumentAttributeResponse()
         if include_optional:
             return GetDocumentAttributeResponse(
-                attribute = openapi_client.models.document_attribute.DocumentAttribute(
+                attribute = formkiq_client.models.document_attribute.DocumentAttribute(
                     key = '', 
                     string_value = '', 
                     string_values = [

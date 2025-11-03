@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_locale_resource_item_response import GetLocaleResourceItemResponse
+from formkiq_client.models.get_locale_resource_item_response import GetLocaleResourceItemResponse
 
 class TestGetLocaleResourceItemResponse(unittest.TestCase):
     """GetLocaleResourceItemResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGetLocaleResourceItemResponse(unittest.TestCase):
         model = GetLocaleResourceItemResponse()
         if include_optional:
             return GetLocaleResourceItemResponse(
-                resource_item = openapi_client.models.resource_item.ResourceItem(
+                resource_item = formkiq_client.models.resource_item.ResourceItem(
                     item_type = 'INTERFACE', 
                     localized_value = '', 
                     interface_key = '', 

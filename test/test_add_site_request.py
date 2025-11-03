@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_site_request import AddSiteRequest
+from formkiq_client.models.add_site_request import AddSiteRequest
 
 class TestAddSiteRequest(unittest.TestCase):
     """AddSiteRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAddSiteRequest(unittest.TestCase):
         model = AddSiteRequest()
         if include_optional:
             return AddSiteRequest(
-                site = openapi_client.models.add_site.AddSite(
+                site = formkiq_client.models.add_site.AddSite(
                     id = '', 
                     title = '', 
                     status = 'ACTIVE', )

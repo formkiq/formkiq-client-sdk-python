@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_workflow_decisions_request import AddDocumentWorkflowDecisionsRequest
+from formkiq_client.models.add_document_workflow_decisions_request import AddDocumentWorkflowDecisionsRequest
 
 class TestAddDocumentWorkflowDecisionsRequest(unittest.TestCase):
     """AddDocumentWorkflowDecisionsRequest unit test stubs"""

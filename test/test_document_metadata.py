@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_metadata import DocumentMetadata
+from formkiq_client.models.document_metadata import DocumentMetadata
 
 class TestDocumentMetadata(unittest.TestCase):
     """DocumentMetadata unit test stubs"""

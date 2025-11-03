@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_document_version_request import SetDocumentVersionRequest
+from formkiq_client.models.set_document_version_request import SetDocumentVersionRequest
 
 class TestSetDocumentVersionRequest(unittest.TestCase):
     """SetDocumentVersionRequest unit test stubs"""

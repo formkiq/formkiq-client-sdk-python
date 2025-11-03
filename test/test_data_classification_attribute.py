@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.data_classification_attribute import DataClassificationAttribute
+from formkiq_client.models.data_classification_attribute import DataClassificationAttribute
 
 class TestDataClassificationAttribute(unittest.TestCase):
     """DataClassificationAttribute unit test stubs"""

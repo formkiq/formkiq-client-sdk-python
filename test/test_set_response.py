@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_response import SetResponse
+from formkiq_client.models.set_response import SetResponse
 
 class TestSetResponse(unittest.TestCase):
     """SetResponse unit test stubs"""

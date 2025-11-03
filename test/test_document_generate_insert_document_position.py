@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_generate_insert_document_position import DocumentGenerateInsertDocumentPosition
+from formkiq_client.models.document_generate_insert_document_position import DocumentGenerateInsertDocumentPosition
 
 class TestDocumentGenerateInsertDocumentPosition(unittest.TestCase):
     """DocumentGenerateInsertDocumentPosition unit test stubs"""

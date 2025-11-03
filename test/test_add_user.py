@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_user import AddUser
+from formkiq_client.models.add_user import AddUser
 
 class TestAddUser(unittest.TestCase):
     """AddUser unit test stubs"""
@@ -37,7 +37,7 @@ class TestAddUser(unittest.TestCase):
         if include_optional:
             return AddUser(
                 username = '',
-                attributes = openapi_client.models.user_attributes.UserAttributes(
+                attributes = formkiq_client.models.user_attributes.UserAttributes(
                     address = '', 
                     birthdate = '', 
                     family_name = '', 

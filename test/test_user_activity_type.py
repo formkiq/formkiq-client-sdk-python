@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.user_activity_type import UserActivityType
+from formkiq_client.models.user_activity_type import UserActivityType
 
 class TestUserActivityType(unittest.TestCase):
     """UserActivityType unit test stubs"""

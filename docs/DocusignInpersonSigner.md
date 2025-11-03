@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.docusign_inperson_signer import DocusignInpersonSigner
+from formkiq_client.models.docusign_inperson_signer import DocusignInpersonSigner
 
 # TODO update the JSON string below
 json = "{}"

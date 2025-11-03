@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_user_request import AddUserRequest
+from formkiq_client.models.add_user_request import AddUserRequest
 
 class TestAddUserRequest(unittest.TestCase):
     """AddUserRequest unit test stubs"""
@@ -36,9 +36,9 @@ class TestAddUserRequest(unittest.TestCase):
         model = AddUserRequest()
         if include_optional:
             return AddUserRequest(
-                user = openapi_client.models.add_user.AddUser(
+                user = formkiq_client.models.add_user.AddUser(
                     username = '', 
-                    attributes = openapi_client.models.user_attributes.UserAttributes(
+                    attributes = formkiq_client.models.user_attributes.UserAttributes(
                         address = '', 
                         birthdate = '', 
                         family_name = '', 
@@ -58,9 +58,9 @@ class TestAddUserRequest(unittest.TestCase):
             )
         else:
             return AddUserRequest(
-                user = openapi_client.models.add_user.AddUser(
+                user = formkiq_client.models.add_user.AddUser(
                     username = '', 
-                    attributes = openapi_client.models.user_attributes.UserAttributes(
+                    attributes = formkiq_client.models.user_attributes.UserAttributes(
                         address = '', 
                         birthdate = '', 
                         family_name = '', 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.search_response_fields import SearchResponseFields
+from formkiq_client.models.search_response_fields import SearchResponseFields
 
 class TestSearchResponseFields(unittest.TestCase):
     """SearchResponseFields unit test stubs"""

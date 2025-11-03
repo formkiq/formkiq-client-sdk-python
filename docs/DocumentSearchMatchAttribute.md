@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.document_search_match_attribute import DocumentSearchMatchAttribute
+from formkiq_client.models.document_search_match_attribute import DocumentSearchMatchAttribute
 
 # TODO update the JSON string below
 json = "{}"

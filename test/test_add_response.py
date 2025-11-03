@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_response import AddResponse
+from formkiq_client.models.add_response import AddResponse
 
 class TestAddResponse(unittest.TestCase):
     """AddResponse unit test stubs"""

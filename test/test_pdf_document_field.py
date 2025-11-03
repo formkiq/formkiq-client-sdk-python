@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.pdf_document_field import PdfDocumentField
+from formkiq_client.models.pdf_document_field import PdfDocumentField
 
 class TestPdfDocumentField(unittest.TestCase):
     """PdfDocumentField unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_document_restore_response import SetDocumentRestoreResponse
+from formkiq_client.models.set_document_restore_response import SetDocumentRestoreResponse
 
 class TestSetDocumentRestoreResponse(unittest.TestCase):
     """SetDocumentRestoreResponse unit test stubs"""

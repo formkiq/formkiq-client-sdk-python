@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.folder_permission import FolderPermission
+from formkiq_client.models.folder_permission import FolderPermission
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_tag import DocumentTag
+from formkiq_client.models.document_tag import DocumentTag
 
 class TestDocumentTag(unittest.TestCase):
     """DocumentTag unit test stubs"""

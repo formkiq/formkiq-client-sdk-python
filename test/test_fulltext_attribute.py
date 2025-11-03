@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.fulltext_attribute import FulltextAttribute
+from formkiq_client.models.fulltext_attribute import FulltextAttribute
 
 class TestFulltextAttribute(unittest.TestCase):
     """FulltextAttribute unit test stubs"""

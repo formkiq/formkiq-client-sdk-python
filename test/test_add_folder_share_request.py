@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_folder_share_request import AddFolderShareRequest
+from formkiq_client.models.add_folder_share_request import AddFolderShareRequest
 
 class TestAddFolderShareRequest(unittest.TestCase):
     """AddFolderShareRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAddFolderShareRequest(unittest.TestCase):
         model = AddFolderShareRequest()
         if include_optional:
             return AddFolderShareRequest(
-                share = openapi_client.models.add_share.AddShare(
+                share = formkiq_client.models.add_share.AddShare(
                     group = '', 
                     permissions = [
                         'READ'

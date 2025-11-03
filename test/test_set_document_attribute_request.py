@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_document_attribute_request import SetDocumentAttributeRequest
+from formkiq_client.models.set_document_attribute_request import SetDocumentAttributeRequest
 
 class TestSetDocumentAttributeRequest(unittest.TestCase):
     """SetDocumentAttributeRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestSetDocumentAttributeRequest(unittest.TestCase):
         model = SetDocumentAttributeRequest()
         if include_optional:
             return SetDocumentAttributeRequest(
-                attribute = openapi_client.models.add_document_attribute_value.AddDocumentAttributeValue(
+                attribute = formkiq_client.models.add_document_attribute_value.AddDocumentAttributeValue(
                     string_value = '', 
                     string_values = [
                         ''

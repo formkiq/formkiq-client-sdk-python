@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_mapping_response import AddMappingResponse
+from formkiq_client.models.add_mapping_response import AddMappingResponse
 
 class TestAddMappingResponse(unittest.TestCase):
     """AddMappingResponse unit test stubs"""

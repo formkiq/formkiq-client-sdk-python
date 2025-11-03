@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_docusign_recipient_view_response import AddDocusignRecipientViewResponse
+from formkiq_client.models.add_docusign_recipient_view_response import AddDocusignRecipientViewResponse
 
 class TestAddDocusignRecipientViewResponse(unittest.TestCase):
     """AddDocusignRecipientViewResponse unit test stubs"""

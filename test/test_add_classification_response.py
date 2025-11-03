@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_classification_response import AddClassificationResponse
+from formkiq_client.models.add_classification_response import AddClassificationResponse
 
 class TestAddClassificationResponse(unittest.TestCase):
     """AddClassificationResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.user_attributes import UserAttributes
+from formkiq_client.models.user_attributes import UserAttributes
 
 class TestUserAttributes(unittest.TestCase):
     """UserAttributes unit test stubs"""

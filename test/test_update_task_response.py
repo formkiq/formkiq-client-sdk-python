@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_task_response import UpdateTaskResponse
+from formkiq_client.models.update_task_response import UpdateTaskResponse
 
 class TestUpdateTaskResponse(unittest.TestCase):
     """UpdateTaskResponse unit test stubs"""

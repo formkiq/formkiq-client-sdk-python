@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_site_group_response import GetSiteGroupResponse
+from formkiq_client.models.get_site_group_response import GetSiteGroupResponse
 
 class TestGetSiteGroupResponse(unittest.TestCase):
     """GetSiteGroupResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGetSiteGroupResponse(unittest.TestCase):
         model = GetSiteGroupResponse()
         if include_optional:
             return GetSiteGroupResponse(
-                group = openapi_client.models.site_group.SiteGroup(
+                group = formkiq_client.models.site_group.SiteGroup(
                     permissions = [
                         'ADMIN'
                         ], )

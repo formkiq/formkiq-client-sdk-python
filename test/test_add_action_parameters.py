@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_action_parameters import AddActionParameters
+from formkiq_client.models.add_action_parameters import AddActionParameters
 
 class TestAddActionParameters(unittest.TestCase):
     """AddActionParameters unit test stubs"""
@@ -37,7 +37,7 @@ class TestAddActionParameters(unittest.TestCase):
         if include_optional:
             return AddActionParameters(
                 ocr_textract_queries = [
-                    openapi_client.models.textract_query.TextractQuery(
+                    formkiq_client.models.textract_query.TextractQuery(
                         text = '', 
                         alias = '', 
                         pages = [

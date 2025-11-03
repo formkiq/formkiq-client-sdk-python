@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_nigo_response import UpdateNigoResponse
+from formkiq_client.models.update_nigo_response import UpdateNigoResponse
 
 class TestUpdateNigoResponse(unittest.TestCase):
     """UpdateNigoResponse unit test stubs"""

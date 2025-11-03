@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_sites_response import GetSitesResponse
+from formkiq_client.models.get_sites_response import GetSitesResponse
 
 class TestGetSitesResponse(unittest.TestCase):
     """GetSitesResponse unit test stubs"""
@@ -41,7 +41,7 @@ class TestGetSitesResponse(unittest.TestCase):
                     ''
                     ],
                 sites = [
-                    openapi_client.models.site.Site(
+                    formkiq_client.models.site.Site(
                         site_id = '', 
                         title = '', 
                         status = 'ACTIVE', 
@@ -50,14 +50,14 @@ class TestGetSitesResponse(unittest.TestCase):
                             'ADMIN'
                             ], 
                         upload_email = '', 
-                        config = openapi_client.models.site_config.SiteConfig(
+                        config = formkiq_client.models.site_config.SiteConfig(
                             max_content_length_bytes = '', 
                             max_documents = '', 
                             max_webhooks = '', 
-                            ocr = openapi_client.models.ocr_config.OcrConfig(
+                            ocr = formkiq_client.models.ocr_config.OcrConfig(
                                 max_pages_per_transaction = 1.337, 
                                 max_transactions = 1.337, ), ), 
-                        usage = openapi_client.models.site_usage.SiteUsage(
+                        usage = formkiq_client.models.site_usage.SiteUsage(
                             document_count = 1.337, 
                             ocr_transaction_count = 1.337, ), )
                     ]

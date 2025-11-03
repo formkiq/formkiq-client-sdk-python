@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.ocr_output_type import OcrOutputType
+from formkiq_client.models.ocr_output_type import OcrOutputType
 
 class TestOcrOutputType(unittest.TestCase):
     """OcrOutputType unit test stubs"""

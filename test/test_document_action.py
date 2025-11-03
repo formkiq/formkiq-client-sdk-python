@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_action import DocumentAction
+from formkiq_client.models.document_action import DocumentAction
 
 class TestDocumentAction(unittest.TestCase):
     """DocumentAction unit test stubs"""

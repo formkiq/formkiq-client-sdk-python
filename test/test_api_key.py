@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.api_key import ApiKey
+from formkiq_client.models.api_key import ApiKey
 
 class TestApiKey(unittest.TestCase):
     """ApiKey unit test stubs"""

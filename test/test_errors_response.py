@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.errors_response import ErrorsResponse
+from formkiq_client.models.errors_response import ErrorsResponse
 
 class TestErrorsResponse(unittest.TestCase):
     """ErrorsResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestErrorsResponse(unittest.TestCase):
         if include_optional:
             return ErrorsResponse(
                 errors = [
-                    openapi_client.models.error.Error(
+                    formkiq_client.models.error.Error(
                         key = '', 
                         error = '', )
                     ]

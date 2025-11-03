@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.set_document_attributes_request import SetDocumentAttributesRequest
+from formkiq_client.models.set_document_attributes_request import SetDocumentAttributesRequest
 
 class TestSetDocumentAttributesRequest(unittest.TestCase):
     """SetDocumentAttributesRequest unit test stubs"""

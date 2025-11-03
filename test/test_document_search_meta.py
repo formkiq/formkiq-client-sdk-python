@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_search_meta import DocumentSearchMeta
+from formkiq_client.models.document_search_meta import DocumentSearchMeta
 
 class TestDocumentSearchMeta(unittest.TestCase):
     """DocumentSearchMeta unit test stubs"""

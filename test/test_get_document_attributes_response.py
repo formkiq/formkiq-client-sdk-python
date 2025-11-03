@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_attributes_response import GetDocumentAttributesResponse
+from formkiq_client.models.get_document_attributes_response import GetDocumentAttributesResponse
 
 class TestGetDocumentAttributesResponse(unittest.TestCase):
     """GetDocumentAttributesResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetDocumentAttributesResponse(unittest.TestCase):
             return GetDocumentAttributesResponse(
                 next = '',
                 attributes = [
-                    openapi_client.models.document_attribute.DocumentAttribute(
+                    formkiq_client.models.document_attribute.DocumentAttribute(
                         key = '', 
                         string_value = '', 
                         string_values = [

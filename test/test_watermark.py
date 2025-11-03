@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.watermark import Watermark
+from formkiq_client.models.watermark import Watermark
 
 class TestWatermark(unittest.TestCase):
     """Watermark unit test stubs"""
@@ -41,7 +41,7 @@ class TestWatermark(unittest.TestCase):
                 rotation = 1.337,
                 image_document_id = '',
                 scale = 'FIT_BEST',
-                position = openapi_client.models.watermark_position.WatermarkPosition(
+                position = formkiq_client.models.watermark_position.WatermarkPosition(
                     x_anchor = 'LEFT', 
                     y_anchor = 'TOP', 
                     x_offset = 1.337, 

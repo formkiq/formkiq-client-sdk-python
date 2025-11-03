@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.workflow_status import WorkflowStatus
+from formkiq_client.models.workflow_status import WorkflowStatus
 
 class TestWorkflowStatus(unittest.TestCase):
     """WorkflowStatus unit test stubs"""

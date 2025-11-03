@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_documents_response import GetDocumentsResponse
+from formkiq_client.models.get_documents_response import GetDocumentsResponse
 
 class TestGetDocumentsResponse(unittest.TestCase):
     """GetDocumentsResponse unit test stubs"""
@@ -39,7 +39,7 @@ class TestGetDocumentsResponse(unittest.TestCase):
                 next = '',
                 previous = '',
                 documents = [
-                    openapi_client.models.document.Document(
+                    formkiq_client.models.document.Document(
                         site_id = '', 
                         path = '', 
                         width = '', 
@@ -58,7 +58,7 @@ class TestGetDocumentsResponse(unittest.TestCase):
                         s3version = '', 
                         belongs_to_document_id = '', 
                         metadata = [
-                            openapi_client.models.document_metadata.DocumentMetadata(
+                            formkiq_client.models.document_metadata.DocumentMetadata(
                                 key = '', 
                                 value = '', 
                                 values = [

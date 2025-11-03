@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.docusign_config import DocusignConfig
+from formkiq_client.models.docusign_config import DocusignConfig
 
 class TestDocusignConfig(unittest.TestCase):
     """DocusignConfig unit test stubs"""

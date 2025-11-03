@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_sync_response import GetDocumentSyncResponse
+from formkiq_client.models.get_document_sync_response import GetDocumentSyncResponse
 
 class TestGetDocumentSyncResponse(unittest.TestCase):
     """GetDocumentSyncResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetDocumentSyncResponse(unittest.TestCase):
             return GetDocumentSyncResponse(
                 next = '',
                 syncs = [
-                    openapi_client.models.document_sync.DocumentSync(
+                    formkiq_client.models.document_sync.DocumentSync(
                         service = 'TYPESENSE', 
                         status = 'COMPLETE', 
                         type = 'METADATA', 

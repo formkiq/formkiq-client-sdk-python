@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.ocr_table import OcrTable
+from formkiq_client.models.ocr_table import OcrTable
 
 class TestOcrTable(unittest.TestCase):
     """OcrTable unit test stubs"""
@@ -41,7 +41,7 @@ class TestOcrTable(unittest.TestCase):
                     ],
                 data = [
                     [
-                        openapi_client.models.ocr_table_data.OcrTableData(
+                        formkiq_client.models.ocr_table_data.OcrTableData(
                             value = '', )
                         ]
                     ]

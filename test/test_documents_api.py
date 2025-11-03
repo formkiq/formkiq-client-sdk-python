@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.documents_api import DocumentsApi
+from formkiq_client.api.documents_api import DocumentsApi
 
 
 class TestDocumentsApi(unittest.TestCase):

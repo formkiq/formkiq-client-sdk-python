@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.set_document_version_request import SetDocumentVersionRequest
+from formkiq_client.models.set_document_version_request import SetDocumentVersionRequest
 
 # TODO update the JSON string below
 json = "{}"

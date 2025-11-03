@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_user_activites_response import GetUserActivitesResponse
+from formkiq_client.models.get_user_activites_response import GetUserActivitesResponse
 
 class TestGetUserActivitesResponse(unittest.TestCase):
     """GetUserActivitesResponse unit test stubs"""
@@ -38,11 +38,11 @@ class TestGetUserActivitesResponse(unittest.TestCase):
             return GetUserActivitesResponse(
                 next = '',
                 user_activities = [
-                    openapi_client.models.user_activity.UserActivity(
+                    formkiq_client.models.user_activity.UserActivity(
                         type = 'VIEW', 
                         inserted_date = '', 
                         user_id = '', 
-                        document = openapi_client.models.document.Document(
+                        document = formkiq_client.models.document.Document(
                             site_id = '', 
                             path = '', 
                             width = '', 
@@ -61,7 +61,7 @@ class TestGetUserActivitesResponse(unittest.TestCase):
                             s3version = '', 
                             belongs_to_document_id = '', 
                             metadata = [
-                                openapi_client.models.document_metadata.DocumentMetadata(
+                                formkiq_client.models.document_metadata.DocumentMetadata(
                                     key = '', 
                                     value = '', 
                                     values = [
@@ -69,9 +69,9 @@ class TestGetUserActivitesResponse(unittest.TestCase):
                                         ], )
                                 ], ), 
                         changes = {
-                            'key' : openapi_client.models.user_activity_changes.UserActivityChanges(
-                                old_value = openapi_client.models.old_value.oldValue(), 
-                                new_value = openapi_client.models.new_value.newValue(), )
+                            'key' : formkiq_client.models.user_activity_changes.UserActivityChanges(
+                                old_value = formkiq_client.models.old_value.oldValue(), 
+                                new_value = formkiq_client.models.new_value.newValue(), )
                             }, )
                     ]
             )

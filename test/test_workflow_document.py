@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.workflow_document import WorkflowDocument
+from formkiq_client.models.workflow_document import WorkflowDocument
 
 class TestWorkflowDocument(unittest.TestCase):
     """WorkflowDocument unit test stubs"""
@@ -36,7 +36,7 @@ class TestWorkflowDocument(unittest.TestCase):
         model = WorkflowDocument()
         if include_optional:
             return WorkflowDocument(
-                workflow = openapi_client.models.workflow_summary.WorkflowSummary(
+                workflow = formkiq_client.models.workflow_summary.WorkflowSummary(
                     name = '', 
                     workflow_id = '', 
                     description = '', 
@@ -44,7 +44,7 @@ class TestWorkflowDocument(unittest.TestCase):
                     user_id = '', 
                     in_use = True, 
                     status = 'ACTIVE', ),
-                document = openapi_client.models.document.Document(
+                document = formkiq_client.models.document.Document(
                     site_id = '', 
                     path = '', 
                     width = '', 
@@ -63,7 +63,7 @@ class TestWorkflowDocument(unittest.TestCase):
                     s3version = '', 
                     belongs_to_document_id = '', 
                     metadata = [
-                        openapi_client.models.document_metadata.DocumentMetadata(
+                        formkiq_client.models.document_metadata.DocumentMetadata(
                             key = '', 
                             value = '', 
                             values = [

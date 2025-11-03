@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_generation_api import DocumentGenerationApi
+from formkiq_client.api.document_generation_api import DocumentGenerationApi
 
 
 class TestDocumentGenerationApi(unittest.TestCase):

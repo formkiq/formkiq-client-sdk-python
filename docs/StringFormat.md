@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.string_format import StringFormat
+from formkiq_client.models.string_format import StringFormat
 
 # TODO update the JSON string below
 json = "{}"

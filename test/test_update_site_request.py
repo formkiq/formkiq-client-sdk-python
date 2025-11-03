@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_site_request import UpdateSiteRequest
+from formkiq_client.models.update_site_request import UpdateSiteRequest
 
 class TestUpdateSiteRequest(unittest.TestCase):
     """UpdateSiteRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestUpdateSiteRequest(unittest.TestCase):
         model = UpdateSiteRequest()
         if include_optional:
             return UpdateSiteRequest(
-                site = openapi_client.models.update_site.UpdateSite(
+                site = formkiq_client.models.update_site.UpdateSite(
                     title = '', 
                     status = 'ACTIVE', )
             )

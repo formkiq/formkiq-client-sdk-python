@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_mappings_response import GetMappingsResponse
+from formkiq_client.models.get_mappings_response import GetMappingsResponse
 
 class TestGetMappingsResponse(unittest.TestCase):
     """GetMappingsResponse unit test stubs"""
@@ -37,12 +37,12 @@ class TestGetMappingsResponse(unittest.TestCase):
         if include_optional:
             return GetMappingsResponse(
                 mappings = [
-                    openapi_client.models.mapping.Mapping(
+                    formkiq_client.models.mapping.Mapping(
                         mapping_id = '', 
                         name = '', 
                         description = '', 
                         attributes = [
-                            openapi_client.models.mapping_attribute.MappingAttribute(
+                            formkiq_client.models.mapping_attribute.MappingAttribute(
                                 attribute_key = '', 
                                 source_type = 'CONTENT', 
                                 default_value = '', 

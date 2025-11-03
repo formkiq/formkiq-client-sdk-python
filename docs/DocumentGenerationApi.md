@@ -1,4 +1,4 @@
-# openapi_client.DocumentGenerationApi
+# formkiq_client.DocumentGenerationApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,15 +22,15 @@ By Default data source must include a `data` object, which contains key-value pa
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_generate_request import AddDocumentGenerateRequest
-from openapi_client.models.add_document_generate_response import AddDocumentGenerateResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_generate_request import AddDocumentGenerateRequest
+from formkiq_client.models.add_document_generate_response import AddDocumentGenerateResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,11 +40,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentGenerationApi(api_client)
+    api_instance = formkiq_client.DocumentGenerationApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    add_document_generate_request = openapi_client.AddDocumentGenerateRequest() # AddDocumentGenerateRequest | 
+    add_document_generate_request = formkiq_client.AddDocumentGenerateRequest() # AddDocumentGenerateRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

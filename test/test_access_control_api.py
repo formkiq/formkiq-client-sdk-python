@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.access_control_api import AccessControlApi
+from formkiq_client.api.access_control_api import AccessControlApi
 
 
 class TestAccessControlApi(unittest.TestCase):

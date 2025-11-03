@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.get_workflow_queue_documents_response import GetWorkflowQueueDocumentsResponse
+from formkiq_client.models.get_workflow_queue_documents_response import GetWorkflowQueueDocumentsResponse
 
 # TODO update the JSON string below
 json = "{}"

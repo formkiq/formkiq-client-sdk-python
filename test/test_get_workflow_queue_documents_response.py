@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_workflow_queue_documents_response import GetWorkflowQueueDocumentsResponse
+from formkiq_client.models.get_workflow_queue_documents_response import GetWorkflowQueueDocumentsResponse
 
 class TestGetWorkflowQueueDocumentsResponse(unittest.TestCase):
     """GetWorkflowQueueDocumentsResponse unit test stubs"""
@@ -38,8 +38,8 @@ class TestGetWorkflowQueueDocumentsResponse(unittest.TestCase):
             return GetWorkflowQueueDocumentsResponse(
                 next = '',
                 documents = [
-                    openapi_client.models.workflow_document.WorkflowDocument(
-                        workflow = openapi_client.models.workflow_summary.WorkflowSummary(
+                    formkiq_client.models.workflow_document.WorkflowDocument(
+                        workflow = formkiq_client.models.workflow_summary.WorkflowSummary(
                             name = '', 
                             workflow_id = '', 
                             description = '', 
@@ -47,7 +47,7 @@ class TestGetWorkflowQueueDocumentsResponse(unittest.TestCase):
                             user_id = '', 
                             in_use = True, 
                             status = 'ACTIVE', ), 
-                        document = openapi_client.models.document.Document(
+                        document = formkiq_client.models.document.Document(
                             site_id = '', 
                             path = '', 
                             width = '', 
@@ -66,7 +66,7 @@ class TestGetWorkflowQueueDocumentsResponse(unittest.TestCase):
                             s3version = '', 
                             belongs_to_document_id = '', 
                             metadata = [
-                                openapi_client.models.document_metadata.DocumentMetadata(
+                                formkiq_client.models.document_metadata.DocumentMetadata(
                                     key = '', 
                                     value = '', 
                                     values = [

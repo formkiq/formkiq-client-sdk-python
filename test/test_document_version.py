@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_version import DocumentVersion
+from formkiq_client.models.document_version import DocumentVersion
 
 class TestDocumentVersion(unittest.TestCase):
     """DocumentVersion unit test stubs"""

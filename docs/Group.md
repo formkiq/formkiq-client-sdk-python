@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.group import Group
+from formkiq_client.models.group import Group
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.rulesets_api import RulesetsApi
+from formkiq_client.api.rulesets_api import RulesetsApi
 
 
 class TestRulesetsApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_opa_access_policy_response import GetOpaAccessPolicyResponse
+from formkiq_client.models.get_opa_access_policy_response import GetOpaAccessPolicyResponse
 
 class TestGetOpaAccessPolicyResponse(unittest.TestCase):
     """GetOpaAccessPolicyResponse unit test stubs"""

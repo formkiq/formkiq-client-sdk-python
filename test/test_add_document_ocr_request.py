@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_ocr_request import AddDocumentOcrRequest
+from formkiq_client.models.add_document_ocr_request import AddDocumentOcrRequest
 
 class TestAddDocumentOcrRequest(unittest.TestCase):
     """AddDocumentOcrRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestAddDocumentOcrRequest(unittest.TestCase):
         if include_optional:
             return AddDocumentOcrRequest(
                 textract_queries = [
-                    openapi_client.models.textract_query.TextractQuery(
+                    formkiq_client.models.textract_query.TextractQuery(
                         text = '', 
                         alias = '', 
                         pages = [

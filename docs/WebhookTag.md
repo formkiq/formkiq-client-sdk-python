@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.webhook_tag import WebhookTag
+from formkiq_client.models.webhook_tag import WebhookTag
 
 # TODO update the JSON string below
 json = "{}"

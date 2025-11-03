@@ -1,4 +1,4 @@
-# openapi_client.DocumentSharesApi
+# formkiq_client.DocumentSharesApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,15 +20,15 @@ Creates a new folder share; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_folder_share_request import AddFolderShareRequest
-from openapi_client.models.add_folder_share_response import AddFolderShareResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_folder_share_request import AddFolderShareRequest
+from formkiq_client.models.add_folder_share_response import AddFolderShareResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -38,11 +38,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentSharesApi(api_client)
+    api_instance = formkiq_client.DocumentSharesApi(api_client)
     index_key = 'index_key_example' # str | Index Key Identifier
-    add_folder_share_request = openapi_client.AddFolderShareRequest() # AddFolderShareRequest | 
+    add_folder_share_request = formkiq_client.AddFolderShareRequest() # AddFolderShareRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -98,14 +98,14 @@ Delete a specific document share; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_share_response import DeleteShareResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_share_response import DeleteShareResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -115,9 +115,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentSharesApi(api_client)
+    api_instance = formkiq_client.DocumentSharesApi(api_client)
     share_key = 'share_key_example' # str | Share Identifier
 
     try:
@@ -170,14 +170,14 @@ Get a listing of user folder/document shares; available as an Add-On Module
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_user_shares_response import GetUserSharesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_user_shares_response import GetUserSharesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -187,9 +187,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentSharesApi(api_client)
+    api_instance = formkiq_client.DocumentSharesApi(api_client)
     group = 'group_example' # str | Group Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)

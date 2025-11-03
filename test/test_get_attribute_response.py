@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_attribute_response import GetAttributeResponse
+from formkiq_client.models.get_attribute_response import GetAttributeResponse
 
 class TestGetAttributeResponse(unittest.TestCase):
     """GetAttributeResponse unit test stubs"""
@@ -36,17 +36,17 @@ class TestGetAttributeResponse(unittest.TestCase):
         model = GetAttributeResponse()
         if include_optional:
             return GetAttributeResponse(
-                attribute = openapi_client.models.attribute.Attribute(
+                attribute = formkiq_client.models.attribute.Attribute(
                     type = 'STANDARD', 
                     key = '', 
                     data_type = 'STRING', 
-                    watermark = openapi_client.models.watermark.Watermark(
+                    watermark = formkiq_client.models.watermark.Watermark(
                         font_size = 1.337, 
                         text = '', 
                         rotation = 1.337, 
                         image_document_id = '', 
                         scale = 'FIT_BEST', 
-                        position = openapi_client.models.watermark_position.WatermarkPosition(
+                        position = formkiq_client.models.watermark_position.WatermarkPosition(
                             x_anchor = 'LEFT', 
                             y_anchor = 'TOP', 
                             x_offset = 1.337, 

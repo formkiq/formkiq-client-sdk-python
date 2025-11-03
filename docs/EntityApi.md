@@ -1,4 +1,4 @@
-# openapi_client.EntityApi
+# formkiq_client.EntityApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,15 +26,15 @@ Creates a Entity
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_entity_request import AddEntityRequest
-from openapi_client.models.add_entity_response import AddEntityResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_entity_request import AddEntityRequest
+from formkiq_client.models.add_entity_response import AddEntityResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -44,11 +44,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntityApi(api_client)
+    api_instance = formkiq_client.EntityApi(api_client)
     entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
-    add_entity_request = openapi_client.AddEntityRequest() # AddEntityRequest | 
+    add_entity_request = formkiq_client.AddEntityRequest() # AddEntityRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     namespace = 'namespace_example' # str | Namespace Identifier (optional)
 
@@ -106,15 +106,15 @@ Creates a Entity Type
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_entity_type_request import AddEntityTypeRequest
-from openapi_client.models.add_entity_type_response import AddEntityTypeResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_entity_type_request import AddEntityTypeRequest
+from formkiq_client.models.add_entity_type_response import AddEntityTypeResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -124,10 +124,10 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntityApi(api_client)
-    add_entity_type_request = openapi_client.AddEntityTypeRequest() # AddEntityTypeRequest | 
+    api_instance = formkiq_client.EntityApi(api_client)
+    add_entity_type_request = formkiq_client.AddEntityTypeRequest() # AddEntityTypeRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -182,14 +182,14 @@ Deletes Entity
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -199,9 +199,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntityApi(api_client)
+    api_instance = formkiq_client.EntityApi(api_client)
     entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
     entity_id = 'entity_id_example' # str | Entity Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -258,14 +258,14 @@ Deletes Entity Type
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -275,9 +275,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntityApi(api_client)
+    api_instance = formkiq_client.EntityApi(api_client)
     entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
@@ -332,14 +332,14 @@ Returns a list of entities
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_entities_response import GetEntitiesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_entities_response import GetEntitiesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -349,9 +349,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntityApi(api_client)
+    api_instance = formkiq_client.EntityApi(api_client)
     entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     namespace = 'namespace_example' # str | Namespace Identifier (optional)
@@ -412,14 +412,14 @@ Returns a entity
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_entity_response import GetEntityResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_entity_response import GetEntityResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -429,9 +429,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntityApi(api_client)
+    api_instance = formkiq_client.EntityApi(api_client)
     entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
     entity_id = 'entity_id_example' # str | Entity Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -490,14 +490,14 @@ Returns a entity type
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_entity_type_response import GetEntityTypeResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_entity_type_response import GetEntityTypeResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -507,9 +507,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntityApi(api_client)
+    api_instance = formkiq_client.EntityApi(api_client)
     entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     namespace = 'namespace_example' # str | Namespace Identifier (optional)
@@ -566,14 +566,14 @@ Returns a list of entity types
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_entity_types_response import GetEntityTypesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_entity_types_response import GetEntityTypesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -583,9 +583,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntityApi(api_client)
+    api_instance = formkiq_client.EntityApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     namespace = 'namespace_example' # str | Namespace Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
@@ -644,15 +644,15 @@ Updates a Entity
 
 
 ```python
-import openapi_client
-from openapi_client.models.update_entity_request import UpdateEntityRequest
-from openapi_client.models.update_response import UpdateResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.update_entity_request import UpdateEntityRequest
+from formkiq_client.models.update_response import UpdateResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -662,12 +662,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntityApi(api_client)
+    api_instance = formkiq_client.EntityApi(api_client)
     entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
     entity_id = 'entity_id_example' # str | Entity Identifier
-    update_entity_request = openapi_client.UpdateEntityRequest() # UpdateEntityRequest | 
+    update_entity_request = formkiq_client.UpdateEntityRequest() # UpdateEntityRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     namespace = 'namespace_example' # str | Namespace Identifier (optional)
 

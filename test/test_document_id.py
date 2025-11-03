@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_id import DocumentId
+from formkiq_client.models.document_id import DocumentId
 
 class TestDocumentId(unittest.TestCase):
     """DocumentId unit test stubs"""

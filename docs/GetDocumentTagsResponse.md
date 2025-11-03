@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.get_document_tags_response import GetDocumentTagsResponse
+from formkiq_client.models.get_document_tags_response import GetDocumentTagsResponse
 
 # TODO update the JSON string below
 json = "{}"

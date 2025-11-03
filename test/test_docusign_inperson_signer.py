@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.docusign_inperson_signer import DocusignInpersonSigner
+from formkiq_client.models.docusign_inperson_signer import DocusignInpersonSigner
 
 class TestDocusignInpersonSigner(unittest.TestCase):
     """DocusignInpersonSigner unit test stubs"""
@@ -43,9 +43,9 @@ class TestDocusignInpersonSigner(unittest.TestCase):
                 recipient_id = '',
                 routing_order = '',
                 suppress_emails = '',
-                tabs = openapi_client.models.docusign_signing_tabs.DocusignSigningTabs(
+                tabs = formkiq_client.models.docusign_signing_tabs.DocusignSigningTabs(
                     sign_here_tabs = [
-                        openapi_client.models.docusign_sign_here_tabs.DocusignSignHereTabs(
+                        formkiq_client.models.docusign_sign_here_tabs.DocusignSignHereTabs(
                             anchor_string = '', 
                             anchor_x_offset = '', 
                             anchor_y_offset = '', 

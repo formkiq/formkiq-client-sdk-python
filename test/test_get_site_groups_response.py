@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_site_groups_response import GetSiteGroupsResponse
+from formkiq_client.models.get_site_groups_response import GetSiteGroupsResponse
 
 class TestGetSiteGroupsResponse(unittest.TestCase):
     """GetSiteGroupsResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.opa_policy_attribute_not_in import OpaPolicyAttributeNotIn
+from formkiq_client.models.opa_policy_attribute_not_in import OpaPolicyAttributeNotIn
 
 class TestOpaPolicyAttributeNotIn(unittest.TestCase):
     """OpaPolicyAttributeNotIn unit test stubs"""

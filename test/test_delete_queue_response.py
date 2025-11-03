@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.delete_queue_response import DeleteQueueResponse
+from formkiq_client.models.delete_queue_response import DeleteQueueResponse
 
 class TestDeleteQueueResponse(unittest.TestCase):
     """DeleteQueueResponse unit test stubs"""

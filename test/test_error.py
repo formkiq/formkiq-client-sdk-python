@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.error import Error
+from formkiq_client.models.error import Error
 
 class TestError(unittest.TestCase):
     """Error unit test stubs"""

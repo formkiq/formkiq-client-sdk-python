@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.opa_policy_attribute_neq import OpaPolicyAttributeNeq
+from formkiq_client.models.opa_policy_attribute_neq import OpaPolicyAttributeNeq
 
 class TestOpaPolicyAttributeNeq(unittest.TestCase):
     """OpaPolicyAttributeNeq unit test stubs"""

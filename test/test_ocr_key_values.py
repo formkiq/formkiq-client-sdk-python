@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.ocr_key_values import OcrKeyValues
+from formkiq_client.models.ocr_key_values import OcrKeyValues
 
 class TestOcrKeyValues(unittest.TestCase):
     """OcrKeyValues unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_docusign_envelopes_request import AddDocusignEnvelopesRequest
+from formkiq_client.models.add_docusign_envelopes_request import AddDocusignEnvelopesRequest
 
 class TestAddDocusignEnvelopesRequest(unittest.TestCase):
     """AddDocusignEnvelopesRequest unit test stubs"""
@@ -39,16 +39,16 @@ class TestAddDocusignEnvelopesRequest(unittest.TestCase):
                 email_subject = '',
                 environment = 'PRODUCTION',
                 signers = [
-                    openapi_client.models.docusign_signer.DocusignSigner(
+                    formkiq_client.models.docusign_signer.DocusignSigner(
                         name = '', 
                         email = '', 
                         client_user_id = '', 
                         recipient_id = '', 
                         routing_order = '', 
                         suppress_emails = '', 
-                        tabs = openapi_client.models.docusign_signing_tabs.DocusignSigningTabs(
+                        tabs = formkiq_client.models.docusign_signing_tabs.DocusignSigningTabs(
                             sign_here_tabs = [
-                                openapi_client.models.docusign_sign_here_tabs.DocusignSignHereTabs(
+                                formkiq_client.models.docusign_sign_here_tabs.DocusignSignHereTabs(
                                     anchor_string = '', 
                                     anchor_x_offset = '', 
                                     anchor_y_offset = '', 
@@ -60,7 +60,7 @@ class TestAddDocusignEnvelopesRequest(unittest.TestCase):
                                 ], ), )
                     ],
                 inperson_signers = [
-                    openapi_client.models.docusign_inperson_signer.DocusignInpersonSigner(
+                    formkiq_client.models.docusign_inperson_signer.DocusignInpersonSigner(
                         host_email = '', 
                         host_name = '', 
                         signer_name = '', 
@@ -68,9 +68,9 @@ class TestAddDocusignEnvelopesRequest(unittest.TestCase):
                         recipient_id = '', 
                         routing_order = '', 
                         suppress_emails = '', 
-                        tabs = openapi_client.models.docusign_signing_tabs.DocusignSigningTabs(
+                        tabs = formkiq_client.models.docusign_signing_tabs.DocusignSigningTabs(
                             sign_here_tabs = [
-                                openapi_client.models.docusign_sign_here_tabs.DocusignSignHereTabs(
+                                formkiq_client.models.docusign_sign_here_tabs.DocusignSignHereTabs(
                                     anchor_string = '', 
                                     anchor_x_offset = '', 
                                     anchor_y_offset = '', 
@@ -81,13 +81,13 @@ class TestAddDocusignEnvelopesRequest(unittest.TestCase):
                                     page_number = '', )
                                 ], ), )
                     ],
-                notification = openapi_client.models.docusign_notification.DocusignNotification(
+                notification = formkiq_client.models.docusign_notification.DocusignNotification(
                     use_account_defaults = '', 
-                    expirations = openapi_client.models.docusign_notification_expirations.DocusignNotificationExpirations(
+                    expirations = formkiq_client.models.docusign_notification_expirations.DocusignNotificationExpirations(
                         expire_after = '', 
                         expire_enabled = '', 
                         expire_warn = '', ), 
-                    reminders = openapi_client.models.docusign_notification_reminders.DocusignNotificationReminders(
+                    reminders = formkiq_client.models.docusign_notification_reminders.DocusignNotificationReminders(
                         reminder_delay = '', 
                         reminder_enabled = '', 
                         reminder_frequency = '', ), )

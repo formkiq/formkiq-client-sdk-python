@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_workflow_documents_response import GetWorkflowDocumentsResponse
+from formkiq_client.models.get_workflow_documents_response import GetWorkflowDocumentsResponse
 
 class TestGetWorkflowDocumentsResponse(unittest.TestCase):
     """GetWorkflowDocumentsResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetWorkflowDocumentsResponse(unittest.TestCase):
             return GetWorkflowDocumentsResponse(
                 next = '',
                 documents = [
-                    openapi_client.models.document.Document(
+                    formkiq_client.models.document.Document(
                         site_id = '', 
                         path = '', 
                         width = '', 
@@ -57,7 +57,7 @@ class TestGetWorkflowDocumentsResponse(unittest.TestCase):
                         s3version = '', 
                         belongs_to_document_id = '', 
                         metadata = [
-                            openapi_client.models.document_metadata.DocumentMetadata(
+                            formkiq_client.models.document_metadata.DocumentMetadata(
                                 key = '', 
                                 value = '', 
                                 values = [

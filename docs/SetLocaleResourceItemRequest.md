@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.set_locale_resource_item_request import SetLocaleResourceItemRequest
+from formkiq_client.models.set_locale_resource_item_request import SetLocaleResourceItemRequest
 
 # TODO update the JSON string below
 json = "{}"

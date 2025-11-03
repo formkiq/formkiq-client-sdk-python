@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_workflow_request import AddWorkflowRequest
+from formkiq_client.models.add_workflow_request import AddWorkflowRequest
 
 class TestAddWorkflowRequest(unittest.TestCase):
     """AddWorkflowRequest unit test stubs"""
@@ -40,13 +40,13 @@ class TestAddWorkflowRequest(unittest.TestCase):
                 description = '',
                 status = 'ACTIVE',
                 steps = [
-                    openapi_client.models.add_workflow_step.AddWorkflowStep(
+                    formkiq_client.models.add_workflow_step.AddWorkflowStep(
                         step_id = '', 
-                        action = openapi_client.models.add_action.AddAction(
+                        action = formkiq_client.models.add_action.AddAction(
                             type = 'ANTIVIRUS', 
-                            parameters = openapi_client.models.add_action_parameters.AddActionParameters(
+                            parameters = formkiq_client.models.add_action_parameters.AddActionParameters(
                                 ocr_textract_queries = [
-                                    openapi_client.models.textract_query.TextractQuery(
+                                    formkiq_client.models.textract_query.TextractQuery(
                                         text = '', 
                                         alias = '', 
                                         pages = [
@@ -76,13 +76,13 @@ class TestAddWorkflowRequest(unittest.TestCase):
                                 path = '', 
                                 output_type = '', ), 
                             queue_id = '', ), 
-                        queue = openapi_client.models.add_workflow_step_queue.AddWorkflowStepQueue(
+                        queue = formkiq_client.models.add_workflow_step_queue.AddWorkflowStepQueue(
                             queue_id = '', 
                             approval_groups = [
                                 ''
                                 ], ), 
                         decisions = [
-                            openapi_client.models.add_workflow_step_decision.AddWorkflowStepDecision(
+                            formkiq_client.models.add_workflow_step_decision.AddWorkflowStepDecision(
                                 type = 'APPROVE', 
                                 next_step_id = '', )
                             ], )
@@ -93,13 +93,13 @@ class TestAddWorkflowRequest(unittest.TestCase):
                 name = '',
                 status = 'ACTIVE',
                 steps = [
-                    openapi_client.models.add_workflow_step.AddWorkflowStep(
+                    formkiq_client.models.add_workflow_step.AddWorkflowStep(
                         step_id = '', 
-                        action = openapi_client.models.add_action.AddAction(
+                        action = formkiq_client.models.add_action.AddAction(
                             type = 'ANTIVIRUS', 
-                            parameters = openapi_client.models.add_action_parameters.AddActionParameters(
+                            parameters = formkiq_client.models.add_action_parameters.AddActionParameters(
                                 ocr_textract_queries = [
-                                    openapi_client.models.textract_query.TextractQuery(
+                                    formkiq_client.models.textract_query.TextractQuery(
                                         text = '', 
                                         alias = '', 
                                         pages = [
@@ -129,13 +129,13 @@ class TestAddWorkflowRequest(unittest.TestCase):
                                 path = '', 
                                 output_type = '', ), 
                             queue_id = '', ), 
-                        queue = openapi_client.models.add_workflow_step_queue.AddWorkflowStepQueue(
+                        queue = formkiq_client.models.add_workflow_step_queue.AddWorkflowStepQueue(
                             queue_id = '', 
                             approval_groups = [
                                 ''
                                 ], ), 
                         decisions = [
-                            openapi_client.models.add_workflow_step_decision.AddWorkflowStepDecision(
+                            formkiq_client.models.add_workflow_step_decision.AddWorkflowStepDecision(
                                 type = 'APPROVE', 
                                 next_step_id = '', )
                             ], )

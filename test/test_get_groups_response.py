@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_groups_response import GetGroupsResponse
+from formkiq_client.models.get_groups_response import GetGroupsResponse
 
 class TestGetGroupsResponse(unittest.TestCase):
     """GetGroupsResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetGroupsResponse(unittest.TestCase):
             return GetGroupsResponse(
                 next = '',
                 groups = [
-                    openapi_client.models.group.Group(
+                    formkiq_client.models.group.Group(
                         name = '', 
                         description = '', 
                         inserted_date = '', 

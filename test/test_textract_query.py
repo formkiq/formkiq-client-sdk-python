@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.textract_query import TextractQuery
+from formkiq_client.models.textract_query import TextractQuery
 
 class TestTextractQuery(unittest.TestCase):
     """TextractQuery unit test stubs"""

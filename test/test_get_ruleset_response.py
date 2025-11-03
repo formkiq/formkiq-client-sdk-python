@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_ruleset_response import GetRulesetResponse
+from formkiq_client.models.get_ruleset_response import GetRulesetResponse
 
 class TestGetRulesetResponse(unittest.TestCase):
     """GetRulesetResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGetRulesetResponse(unittest.TestCase):
         model = GetRulesetResponse()
         if include_optional:
             return GetRulesetResponse(
-                ruleset = openapi_client.models.ruleset.Ruleset(
+                ruleset = formkiq_client.models.ruleset.Ruleset(
                     ruleset_id = '', 
                     description = '', 
                     priority = 1.337, 

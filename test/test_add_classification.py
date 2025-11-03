@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_classification import AddClassification
+from formkiq_client.models.add_classification import AddClassification
 
 class TestAddClassification(unittest.TestCase):
     """AddClassification unit test stubs"""
@@ -37,15 +37,15 @@ class TestAddClassification(unittest.TestCase):
         if include_optional:
             return AddClassification(
                 name = '',
-                attributes = openapi_client.models.set_schema_attributes.SetSchemaAttributes(
+                attributes = formkiq_client.models.set_schema_attributes.SetSchemaAttributes(
                     composite_keys = [
-                        openapi_client.models.attribute_schema_composite_key.AttributeSchemaCompositeKey(
+                        formkiq_client.models.attribute_schema_composite_key.AttributeSchemaCompositeKey(
                             attribute_keys = [
                                 ''
                                 ], )
                         ], 
                     required = [
-                        openapi_client.models.add_attribute_schema_required.AddAttributeSchemaRequired(
+                        formkiq_client.models.add_attribute_schema_required.AddAttributeSchemaRequired(
                             min_number_of_values = 1.337, 
                             max_number_of_values = 1.337, 
                             attribute_key = '', 
@@ -58,7 +58,7 @@ class TestAddClassification(unittest.TestCase):
                                 ], )
                         ], 
                     optional = [
-                        openapi_client.models.add_attribute_schema_optional.AddAttributeSchemaOptional(
+                        formkiq_client.models.add_attribute_schema_optional.AddAttributeSchemaOptional(
                             min_number_of_values = 1.337, 
                             max_number_of_values = 1.337, 
                             attribute_key = '', )

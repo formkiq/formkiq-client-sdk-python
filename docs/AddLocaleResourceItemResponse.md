@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.add_locale_resource_item_response import AddLocaleResourceItemResponse
+from formkiq_client.models.add_locale_resource_item_response import AddLocaleResourceItemResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.index_folder_move_request import IndexFolderMoveRequest
+from formkiq_client.models.index_folder_move_request import IndexFolderMoveRequest
 
 class TestIndexFolderMoveRequest(unittest.TestCase):
     """IndexFolderMoveRequest unit test stubs"""

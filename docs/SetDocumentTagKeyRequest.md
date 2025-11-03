@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.set_document_tag_key_request import SetDocumentTagKeyRequest
+from formkiq_client.models.set_document_tag_key_request import SetDocumentTagKeyRequest
 
 # TODO update the JSON string below
 json = "{}"

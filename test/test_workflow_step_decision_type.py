@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.workflow_step_decision_type import WorkflowStepDecisionType
+from formkiq_client.models.workflow_step_decision_type import WorkflowStepDecisionType
 
 class TestWorkflowStepDecisionType(unittest.TestCase):
     """WorkflowStepDecisionType unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_workflows_api import DocumentWorkflowsApi
+from formkiq_client.api.document_workflows_api import DocumentWorkflowsApi
 
 
 class TestDocumentWorkflowsApi(unittest.TestCase):

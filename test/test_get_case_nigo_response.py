@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_case_nigo_response import GetCaseNigoResponse
+from formkiq_client.models.get_case_nigo_response import GetCaseNigoResponse
 
 class TestGetCaseNigoResponse(unittest.TestCase):
     """GetCaseNigoResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGetCaseNigoResponse(unittest.TestCase):
         model = GetCaseNigoResponse()
         if include_optional:
             return GetCaseNigoResponse(
-                nigo = openapi_client.models.nigo.Nigo(
+                nigo = formkiq_client.models.nigo.Nigo(
                     nigo_id = '', 
                     inserted_date = '', 
                     name = '', 

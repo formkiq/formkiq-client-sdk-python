@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_search import DocumentSearch
+from formkiq_client.models.document_search import DocumentSearch
 
 class TestDocumentSearch(unittest.TestCase):
     """DocumentSearch unit test stubs"""
@@ -37,52 +37,52 @@ class TestDocumentSearch(unittest.TestCase):
         if include_optional:
             return DocumentSearch(
                 text = '',
-                meta = openapi_client.models.document_search_meta.DocumentSearchMeta(
+                meta = formkiq_client.models.document_search_meta.DocumentSearchMeta(
                     folder = '', 
                     path = '', 
                     eq = '', 
                     index_type = 'folder', 
                     index_filter_begins_with = '', ),
-                attribute = openapi_client.models.document_search_attribute.DocumentSearchAttribute(
+                attribute = formkiq_client.models.document_search_attribute.DocumentSearchAttribute(
                     eq = '', 
                     eq_or = [
                         ''
                         ], 
                     begins_with = '', 
-                    range = openapi_client.models.document_search_range.DocumentSearchRange(
+                    range = formkiq_client.models.document_search_range.DocumentSearchRange(
                         start = '', 
                         end = '', 
                         type = 'STRING', ), 
                     key = '', ),
                 attributes = [
-                    openapi_client.models.document_search_attribute.DocumentSearchAttribute(
+                    formkiq_client.models.document_search_attribute.DocumentSearchAttribute(
                         eq = '', 
                         eq_or = [
                             ''
                             ], 
                         begins_with = '', 
-                        range = openapi_client.models.document_search_range.DocumentSearchRange(
+                        range = formkiq_client.models.document_search_range.DocumentSearchRange(
                             start = '', 
                             end = '', 
                             type = 'STRING', ), 
                         key = '', )
                     ],
-                tag = openapi_client.models.document_search_tag.DocumentSearchTag(
+                tag = formkiq_client.models.document_search_tag.DocumentSearchTag(
                     begins_with = '', 
                     eq = '', 
                     eq_or = [
                         ''
                         ], 
-                    range = openapi_client.models.document_search_range.DocumentSearchRange(
+                    range = formkiq_client.models.document_search_range.DocumentSearchRange(
                         start = '', 
                         end = '', 
                         type = 'STRING', ), 
                     key = '', ),
                 tags = [
-                    openapi_client.models.document_search_tags.DocumentSearchTags(
+                    formkiq_client.models.document_search_tags.DocumentSearchTags(
                         eq = '', 
                         begins_with = '', 
-                        range = openapi_client.models.document_search_range.DocumentSearchRange(
+                        range = formkiq_client.models.document_search_range.DocumentSearchRange(
                             start = '', 
                             end = '', 
                             type = 'STRING', ), 

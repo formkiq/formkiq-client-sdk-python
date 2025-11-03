@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_webhook_request import AddWebhookRequest
+from formkiq_client.models.add_webhook_request import AddWebhookRequest
 
 class TestAddWebhookRequest(unittest.TestCase):
     """AddWebhookRequest unit test stubs"""
@@ -40,7 +40,7 @@ class TestAddWebhookRequest(unittest.TestCase):
                 ttl = '',
                 enabled = '',
                 tags = [
-                    openapi_client.models.add_document_tag.AddDocumentTag(
+                    formkiq_client.models.add_document_tag.AddDocumentTag(
                         key = '', 
                         value = '', 
                         values = [

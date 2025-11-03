@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.watermark_scale import WatermarkScale
+from formkiq_client.models.watermark_scale import WatermarkScale
 
 class TestWatermarkScale(unittest.TestCase):
     """WatermarkScale unit test stubs"""

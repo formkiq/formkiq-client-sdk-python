@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document import Document
+from formkiq_client.models.document import Document
 
 class TestDocument(unittest.TestCase):
     """Document unit test stubs"""
@@ -54,7 +54,7 @@ class TestDocument(unittest.TestCase):
                 s3version = '',
                 belongs_to_document_id = '',
                 metadata = [
-                    openapi_client.models.document_metadata.DocumentMetadata(
+                    formkiq_client.models.document_metadata.DocumentMetadata(
                         key = '', 
                         value = '', 
                         values = [

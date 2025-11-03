@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.pdf_document import PdfDocument
+from formkiq_client.models.pdf_document import PdfDocument
 
 class TestPdfDocument(unittest.TestCase):
     """PdfDocument unit test stubs"""
@@ -37,7 +37,7 @@ class TestPdfDocument(unittest.TestCase):
         if include_optional:
             return PdfDocument(
                 fields = [
-                    openapi_client.models.pdf_document_field.PdfDocumentField(
+                    formkiq_client.models.pdf_document_field.PdfDocumentField(
                         field = '', 
                         value = '', )
                     ]

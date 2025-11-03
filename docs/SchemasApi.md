@@ -1,4 +1,4 @@
-# openapi_client.SchemasApi
+# formkiq_client.SchemasApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,15 +26,15 @@ Add Classification
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_classification_request import AddClassificationRequest
-from openapi_client.models.add_classification_response import AddClassificationResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_classification_request import AddClassificationRequest
+from formkiq_client.models.add_classification_response import AddClassificationResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -44,11 +44,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemasApi(api_client)
+    api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
-    add_classification_request = openapi_client.AddClassificationRequest() # AddClassificationRequest | 
+    add_classification_request = formkiq_client.AddClassificationRequest() # AddClassificationRequest | 
 
     try:
         # Add Classification
@@ -102,14 +102,14 @@ Delete Classification
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -119,9 +119,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemasApi(api_client)
+    api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     classification_id = 'classification_id_example' # str | Classification Identifier
 
@@ -176,14 +176,14 @@ Get Classification
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_classification_response import GetClassificationResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_classification_response import GetClassificationResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -193,9 +193,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemasApi(api_client)
+    api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     classification_id = 'classification_id_example' # str | Classification Identifier
     locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166) (optional)
@@ -252,14 +252,14 @@ Returns an attribute's allowed values that spans for a specific classifications 
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -269,9 +269,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemasApi(api_client)
+    api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     classification_id = 'classification_id_example' # str | Classification Identifier
     key = 'key_example' # str | Key Identifier
@@ -330,14 +330,14 @@ Gets Sites Classifications
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_classifications_response import GetClassificationsResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_classifications_response import GetClassificationsResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -347,9 +347,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemasApi(api_client)
+    api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)
@@ -406,14 +406,14 @@ Gets Sites schema
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_sites_schema_response import GetSitesSchemaResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_sites_schema_response import GetSitesSchemaResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -423,9 +423,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemasApi(api_client)
+    api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166) (optional)
 
@@ -480,14 +480,14 @@ Returns an attribute's allowed values from the site schema
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -497,9 +497,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemasApi(api_client)
+    api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     key = 'key_example' # str | Key Identifier
     locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166) (optional)
@@ -556,15 +556,15 @@ Sets Classification
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_classification_request import SetClassificationRequest
-from openapi_client.models.set_response import SetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_classification_request import SetClassificationRequest
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -574,12 +574,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemasApi(api_client)
+    api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     classification_id = 'classification_id_example' # str | Classification Identifier
-    set_classification_request = openapi_client.SetClassificationRequest() # SetClassificationRequest | 
+    set_classification_request = formkiq_client.SetClassificationRequest() # SetClassificationRequest | 
 
     try:
         # Set Classification
@@ -634,15 +634,15 @@ Sets Sites schema
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_response import SetResponse
-from openapi_client.models.set_sites_schema_request import SetSitesSchemaRequest
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.models.set_sites_schema_request import SetSitesSchemaRequest
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -652,11 +652,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemasApi(api_client)
+    api_instance = formkiq_client.SchemasApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
-    set_sites_schema_request = openapi_client.SetSitesSchemaRequest() # SetSitesSchemaRequest | 
+    set_sites_schema_request = formkiq_client.SetSitesSchemaRequest() # SetSitesSchemaRequest | 
 
     try:
         # Set Sites Schema

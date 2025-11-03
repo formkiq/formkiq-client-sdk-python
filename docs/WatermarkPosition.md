@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.watermark_position import WatermarkPosition
+from formkiq_client.models.watermark_position import WatermarkPosition
 
 # TODO update the JSON string below
 json = "{}"

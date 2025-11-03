@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_document_fulltext_request import UpdateDocumentFulltextRequest
+from formkiq_client.models.update_document_fulltext_request import UpdateDocumentFulltextRequest
 
 class TestUpdateDocumentFulltextRequest(unittest.TestCase):
     """UpdateDocumentFulltextRequest unit test stubs"""
@@ -48,7 +48,7 @@ class TestUpdateDocumentFulltextRequest(unittest.TestCase):
                 checksum = '',
                 checksum_type = 'SHA1',
                 tags = [
-                    openapi_client.models.add_document_tag.AddDocumentTag(
+                    formkiq_client.models.add_document_tag.AddDocumentTag(
                         key = '', 
                         value = '', 
                         values = [
@@ -56,7 +56,7 @@ class TestUpdateDocumentFulltextRequest(unittest.TestCase):
                             ], )
                     ],
                 metadata = [
-                    openapi_client.models.add_document_metadata.AddDocumentMetadata(
+                    formkiq_client.models.add_document_metadata.AddDocumentMetadata(
                         key = '', 
                         value = '', 
                         values = [
@@ -64,7 +64,7 @@ class TestUpdateDocumentFulltextRequest(unittest.TestCase):
                             ], )
                     ],
                 attributes = {
-                    'key' : openapi_client.models.fulltext_attribute.FulltextAttribute(
+                    'key' : formkiq_client.models.fulltext_attribute.FulltextAttribute(
                         string_values = [
                             ''
                             ], 

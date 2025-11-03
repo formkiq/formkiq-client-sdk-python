@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_mapping_request import AddMappingRequest
+from formkiq_client.models.add_mapping_request import AddMappingRequest
 
 class TestAddMappingRequest(unittest.TestCase):
     """AddMappingRequest unit test stubs"""
@@ -36,11 +36,11 @@ class TestAddMappingRequest(unittest.TestCase):
         model = AddMappingRequest()
         if include_optional:
             return AddMappingRequest(
-                mapping = openapi_client.models.add_mapping.AddMapping(
+                mapping = formkiq_client.models.add_mapping.AddMapping(
                     name = '', 
                     description = '', 
                     attributes = [
-                        openapi_client.models.mapping_attribute.MappingAttribute(
+                        formkiq_client.models.mapping_attribute.MappingAttribute(
                             attribute_key = '', 
                             source_type = 'CONTENT', 
                             default_value = '', 

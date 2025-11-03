@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_fulltext_tag import DocumentFulltextTag
+from formkiq_client.models.document_fulltext_tag import DocumentFulltextTag
 
 class TestDocumentFulltextTag(unittest.TestCase):
     """DocumentFulltextTag unit test stubs"""

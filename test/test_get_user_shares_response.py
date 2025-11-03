@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_user_shares_response import GetUserSharesResponse
+from formkiq_client.models.get_user_shares_response import GetUserSharesResponse
 
 class TestGetUserSharesResponse(unittest.TestCase):
     """GetUserSharesResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetUserSharesResponse(unittest.TestCase):
             return GetUserSharesResponse(
                 next = '',
                 shares = [
-                    openapi_client.models.user_share.UserShare(
+                    formkiq_client.models.user_share.UserShare(
                         group = '', 
                         share_key = '', 
                         type = 'FOLDER', 

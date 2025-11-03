@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.open_search_snapshot_failure import OpenSearchSnapshotFailure
+from formkiq_client.models.open_search_snapshot_failure import OpenSearchSnapshotFailure
 
 class TestOpenSearchSnapshotFailure(unittest.TestCase):
     """OpenSearchSnapshotFailure unit test stubs"""

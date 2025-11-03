@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.reindex_target import ReindexTarget
+from formkiq_client.models.reindex_target import ReindexTarget
 
 class TestReindexTarget(unittest.TestCase):
     """ReindexTarget unit test stubs"""

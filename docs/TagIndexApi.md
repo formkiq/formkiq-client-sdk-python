@@ -1,4 +1,4 @@
-# openapi_client.TagIndexApi
+# formkiq_client.TagIndexApi
 
 All URIs are relative to *http://localhost*
 
@@ -16,15 +16,15 @@ Perform a search on a index; this is currently available for both folder and tag
 
 
 ```python
-import openapi_client
-from openapi_client.models.index_search_request import IndexSearchRequest
-from openapi_client.models.index_search_response import IndexSearchResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.index_search_request import IndexSearchRequest
+from formkiq_client.models.index_search_response import IndexSearchResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -34,10 +34,10 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TagIndexApi(api_client)
-    index_search_request = openapi_client.IndexSearchRequest() # IndexSearchRequest | 
+    api_instance = formkiq_client.TagIndexApi(api_client)
+    index_search_request = formkiq_client.IndexSearchRequest() # IndexSearchRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
     next = 'next_example' # str | Next page of results token (optional)

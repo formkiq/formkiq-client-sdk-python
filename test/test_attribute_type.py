@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.attribute_type import AttributeType
+from formkiq_client.models.attribute_type import AttributeType
 
 class TestAttributeType(unittest.TestCase):
     """AttributeType unit test stubs"""

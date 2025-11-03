@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.checksum_type import ChecksumType
+from formkiq_client.models.checksum_type import ChecksumType
 
 class TestChecksumType(unittest.TestCase):
     """ChecksumType unit test stubs"""

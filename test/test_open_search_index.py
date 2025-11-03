@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.open_search_index import OpenSearchIndex
+from formkiq_client.models.open_search_index import OpenSearchIndex
 
 class TestOpenSearchIndex(unittest.TestCase):
     """OpenSearchIndex unit test stubs"""
@@ -42,7 +42,7 @@ class TestOpenSearchIndex(unittest.TestCase):
                 store_size = '',
                 name = '',
                 aliases = [
-                    openapi_client.models.open_search_alias.OpenSearchAlias(
+                    formkiq_client.models.open_search_alias.OpenSearchAlias(
                         name = '', )
                     ]
             )

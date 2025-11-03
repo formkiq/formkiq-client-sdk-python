@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.google_export_output_type import GoogleExportOutputType
+from formkiq_client.models.google_export_output_type import GoogleExportOutputType
 
 class TestGoogleExportOutputType(unittest.TestCase):
     """GoogleExportOutputType unit test stubs"""

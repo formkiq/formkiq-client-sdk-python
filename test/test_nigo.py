@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.nigo import Nigo
+from formkiq_client.models.nigo import Nigo
 
 class TestNigo(unittest.TestCase):
     """Nigo unit test stubs"""

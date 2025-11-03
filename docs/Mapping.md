@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.mapping import Mapping
+from formkiq_client.models.mapping import Mapping
 
 # TODO update the JSON string below
 json = "{}"

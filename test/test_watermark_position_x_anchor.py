@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.watermark_position_x_anchor import WatermarkPositionXAnchor
+from formkiq_client.models.watermark_position_x_anchor import WatermarkPositionXAnchor
 
 class TestWatermarkPositionXAnchor(unittest.TestCase):
     """WatermarkPositionXAnchor unit test stubs"""

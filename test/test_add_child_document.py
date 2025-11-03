@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_child_document import AddChildDocument
+from formkiq_client.models.add_child_document import AddChildDocument
 
 class TestAddChildDocument(unittest.TestCase):
     """AddChildDocument unit test stubs"""
@@ -46,7 +46,7 @@ class TestAddChildDocument(unittest.TestCase):
                 is_base64 = True,
                 content = '',
                 tags = [
-                    openapi_client.models.add_document_tag.AddDocumentTag(
+                    formkiq_client.models.add_document_tag.AddDocumentTag(
                         key = '', 
                         value = '', 
                         values = [
@@ -54,7 +54,7 @@ class TestAddChildDocument(unittest.TestCase):
                             ], )
                     ],
                 metadata = [
-                    openapi_client.models.add_document_metadata.AddDocumentMetadata(
+                    formkiq_client.models.add_document_metadata.AddDocumentMetadata(
                         key = '', 
                         value = '', 
                         values = [

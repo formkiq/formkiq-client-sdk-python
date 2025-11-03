@@ -1,4 +1,4 @@
-# openapi_client.PublicApi
+# formkiq_client.PublicApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,24 +23,24 @@ See POST /documents/{documentId}/actions for adding actions to document schema
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_request import AddDocumentRequest
-from openapi_client.models.add_document_response import AddDocumentResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_request import AddDocumentRequest
+from formkiq_client.models.add_document_response import AddDocumentResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PublicApi(api_client)
-    add_document_request = openapi_client.AddDocumentRequest() # AddDocumentRequest | 
+    api_instance = formkiq_client.PublicApi(api_client)
+    add_document_request = formkiq_client.AddDocumentRequest() # AddDocumentRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -94,22 +94,22 @@ Receive an incoming public post to a specified webhook and creates a document ba
 
 
 ```python
-import openapi_client
-from openapi_client.models.document_id import DocumentId
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.document_id import DocumentId
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PublicApi(api_client)
+    api_instance = formkiq_client.PublicApi(api_client)
     webhooks = 'webhooks_example' # str | Web Hook Param
     body = None # object | 
     site_id = 'site_id_example' # str | Site Identifier (optional)

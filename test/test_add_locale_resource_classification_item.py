@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_locale_resource_classification_item import AddLocaleResourceClassificationItem
+from formkiq_client.models.add_locale_resource_classification_item import AddLocaleResourceClassificationItem
 
 class TestAddLocaleResourceClassificationItem(unittest.TestCase):
     """AddLocaleResourceClassificationItem unit test stubs"""

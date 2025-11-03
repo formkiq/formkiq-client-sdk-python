@@ -1,4 +1,4 @@
-# openapi_client.DocumentAttributesApi
+# formkiq_client.DocumentAttributesApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,15 +24,15 @@ Add multiple attributes to a document; this endpoint also accepts a different bo
 
 
 ```python
-import openapi_client
-from openapi_client.models.add_document_attributes_request import AddDocumentAttributesRequest
-from openapi_client.models.add_response import AddResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.add_document_attributes_request import AddDocumentAttributesRequest
+from formkiq_client.models.add_response import AddResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -42,11 +42,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentAttributesApi(api_client)
+    api_instance = formkiq_client.DocumentAttributesApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    add_document_attributes_request = openapi_client.AddDocumentAttributesRequest() # AddDocumentAttributesRequest | 
+    add_document_attributes_request = formkiq_client.AddDocumentAttributesRequest() # AddDocumentAttributesRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -101,14 +101,14 @@ Delete a document attribute by using its key
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -118,9 +118,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentAttributesApi(api_client)
+    api_instance = formkiq_client.DocumentAttributesApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     attribute_key = 'attribute_key_example' # str | Attribute Key
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -177,14 +177,14 @@ Delete a specific document attribute key/value combination; the request will be 
 
 
 ```python
-import openapi_client
-from openapi_client.models.delete_response import DeleteResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -194,9 +194,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentAttributesApi(api_client)
+    api_instance = formkiq_client.DocumentAttributesApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     attribute_key = 'attribute_key_example' # str | Attribute Key
     attribute_value = 'attribute_value_example' # str | Attribute Value
@@ -255,14 +255,14 @@ Get a document attribute by using its key
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_attribute_response import GetDocumentAttributeResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_attribute_response import GetDocumentAttributeResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -272,9 +272,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentAttributesApi(api_client)
+    api_instance = formkiq_client.DocumentAttributesApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     attribute_key = 'attribute_key_example' # str | Attribute Key
     site_id = 'site_id_example' # str | Site Identifier (optional)
@@ -331,14 +331,14 @@ Get a listing of a document's attributes
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_document_attributes_response import GetDocumentAttributesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_document_attributes_response import GetDocumentAttributesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -348,9 +348,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentAttributesApi(api_client)
+    api_instance = formkiq_client.DocumentAttributesApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
@@ -409,15 +409,15 @@ Set attributes value to a document
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_document_attribute_request import SetDocumentAttributeRequest
-from openapi_client.models.set_response import SetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_document_attribute_request import SetDocumentAttributeRequest
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -427,12 +427,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentAttributesApi(api_client)
+    api_instance = formkiq_client.DocumentAttributesApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     attribute_key = 'attribute_key_example' # str | Attribute Key
-    set_document_attribute_request = openapi_client.SetDocumentAttributeRequest() # SetDocumentAttributeRequest | 
+    set_document_attribute_request = formkiq_client.SetDocumentAttributeRequest() # SetDocumentAttributeRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:
@@ -491,15 +491,15 @@ Note:
 
 
 ```python
-import openapi_client
-from openapi_client.models.set_document_attributes_request import SetDocumentAttributesRequest
-from openapi_client.models.set_response import SetResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.set_document_attributes_request import SetDocumentAttributesRequest
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -509,11 +509,11 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DocumentAttributesApi(api_client)
+    api_instance = formkiq_client.DocumentAttributesApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    set_document_attributes_request = openapi_client.SetDocumentAttributesRequest() # SetDocumentAttributesRequest | 
+    set_document_attributes_request = formkiq_client.SetDocumentAttributesRequest() # SetDocumentAttributesRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
 
     try:

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_data_classification_response import GetDocumentDataClassificationResponse
+from formkiq_client.models.get_document_data_classification_response import GetDocumentDataClassificationResponse
 
 class TestGetDocumentDataClassificationResponse(unittest.TestCase):
     """GetDocumentDataClassificationResponse unit test stubs"""
@@ -38,13 +38,13 @@ class TestGetDocumentDataClassificationResponse(unittest.TestCase):
             return GetDocumentDataClassificationResponse(
                 next = '',
                 data_classifications = [
-                    openapi_client.models.data_classification.DataClassification(
+                    formkiq_client.models.data_classification.DataClassification(
                         llm_prompt_entity_name = '', 
                         inserted_date = '', 
                         content = '', 
                         user_id = '', 
                         attributes = [
-                            openapi_client.models.data_classification_attribute.DataClassificationAttribute(
+                            formkiq_client.models.data_classification_attribute.DataClassificationAttribute(
                                 key = '', 
                                 value = '', )
                             ], )

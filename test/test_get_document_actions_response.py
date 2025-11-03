@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_document_actions_response import GetDocumentActionsResponse
+from formkiq_client.models.get_document_actions_response import GetDocumentActionsResponse
 
 class TestGetDocumentActionsResponse(unittest.TestCase):
     """GetDocumentActionsResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetDocumentActionsResponse(unittest.TestCase):
             return GetDocumentActionsResponse(
                 next = '',
                 actions = [
-                    openapi_client.models.document_action.DocumentAction(
+                    formkiq_client.models.document_action.DocumentAction(
                         status = 'COMPLETE', 
                         type = 'ANTIVIRUS', 
                         retry_count = 1.337, 

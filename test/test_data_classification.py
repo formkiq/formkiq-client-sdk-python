@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.data_classification import DataClassification
+from formkiq_client.models.data_classification import DataClassification
 
 class TestDataClassification(unittest.TestCase):
     """DataClassification unit test stubs"""
@@ -41,7 +41,7 @@ class TestDataClassification(unittest.TestCase):
                 content = '',
                 user_id = '',
                 attributes = [
-                    openapi_client.models.data_classification_attribute.DataClassificationAttribute(
+                    formkiq_client.models.data_classification_attribute.DataClassificationAttribute(
                         key = '', 
                         value = '', )
                     ]

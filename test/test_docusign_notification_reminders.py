@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.docusign_notification_reminders import DocusignNotificationReminders
+from formkiq_client.models.docusign_notification_reminders import DocusignNotificationReminders
 
 class TestDocusignNotificationReminders(unittest.TestCase):
     """DocusignNotificationReminders unit test stubs"""

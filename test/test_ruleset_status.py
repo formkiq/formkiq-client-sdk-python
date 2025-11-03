@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.ruleset_status import RulesetStatus
+from formkiq_client.models.ruleset_status import RulesetStatus
 
 class TestRulesetStatus(unittest.TestCase):
     """RulesetStatus unit test stubs"""

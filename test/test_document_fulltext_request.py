@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_fulltext_request import DocumentFulltextRequest
+from formkiq_client.models.document_fulltext_request import DocumentFulltextRequest
 
 class TestDocumentFulltextRequest(unittest.TestCase):
     """DocumentFulltextRequest unit test stubs"""
@@ -36,11 +36,11 @@ class TestDocumentFulltextRequest(unittest.TestCase):
         model = DocumentFulltextRequest()
         if include_optional:
             return DocumentFulltextRequest(
-                query = openapi_client.models.document_fulltext_search.DocumentFulltextSearch(
+                query = formkiq_client.models.document_fulltext_search.DocumentFulltextSearch(
                     page = 56, 
                     text = '', 
                     tags = [
-                        openapi_client.models.document_fulltext_tag.DocumentFulltextTag(
+                        formkiq_client.models.document_fulltext_tag.DocumentFulltextTag(
                             eq = '', 
                             eq_or = [
                                 ''
@@ -48,14 +48,14 @@ class TestDocumentFulltextRequest(unittest.TestCase):
                             key = '', )
                         ], 
                     attributes = [
-                        openapi_client.models.document_fulltext_attribute.DocumentFulltextAttribute(
-                            eq = openapi_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
+                        formkiq_client.models.document_fulltext_attribute.DocumentFulltextAttribute(
+                            eq = formkiq_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
                                 string_value = '', 
                                 number_value = 1.337, 
                                 boolean_value = True, ), 
                             key = '', )
                         ], ),
-                response_fields = openapi_client.models.search_response_fields.SearchResponseFields(
+                response_fields = formkiq_client.models.search_response_fields.SearchResponseFields(
                     attributes = [
                         ''
                         ], 
@@ -65,11 +65,11 @@ class TestDocumentFulltextRequest(unittest.TestCase):
             )
         else:
             return DocumentFulltextRequest(
-                query = openapi_client.models.document_fulltext_search.DocumentFulltextSearch(
+                query = formkiq_client.models.document_fulltext_search.DocumentFulltextSearch(
                     page = 56, 
                     text = '', 
                     tags = [
-                        openapi_client.models.document_fulltext_tag.DocumentFulltextTag(
+                        formkiq_client.models.document_fulltext_tag.DocumentFulltextTag(
                             eq = '', 
                             eq_or = [
                                 ''
@@ -77,8 +77,8 @@ class TestDocumentFulltextRequest(unittest.TestCase):
                             key = '', )
                         ], 
                     attributes = [
-                        openapi_client.models.document_fulltext_attribute.DocumentFulltextAttribute(
-                            eq = openapi_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
+                        formkiq_client.models.document_fulltext_attribute.DocumentFulltextAttribute(
+                            eq = formkiq_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
                                 string_value = '', 
                                 number_value = 1.337, 
                                 boolean_value = True, ), 

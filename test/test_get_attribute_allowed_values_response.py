@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
+from formkiq_client.models.get_attribute_allowed_values_response import GetAttributeAllowedValuesResponse
 
 class TestGetAttributeAllowedValuesResponse(unittest.TestCase):
     """GetAttributeAllowedValuesResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_case_response import GetCaseResponse
+from formkiq_client.models.get_case_response import GetCaseResponse
 
 class TestGetCaseResponse(unittest.TestCase):
     """GetCaseResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestGetCaseResponse(unittest.TestCase):
         model = GetCaseResponse()
         if include_optional:
             return GetCaseResponse(
-                case = openapi_client.models.case.Case(
+                case = formkiq_client.models.case.Case(
                     case_id = '', 
                     case_number = '', 
                     document_number = '', 

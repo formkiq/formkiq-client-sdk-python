@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.search_range_data_type import SearchRangeDataType
+from formkiq_client.models.search_range_data_type import SearchRangeDataType
 
 class TestSearchRangeDataType(unittest.TestCase):
     """SearchRangeDataType unit test stubs"""

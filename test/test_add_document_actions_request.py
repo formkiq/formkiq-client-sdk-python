@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_actions_request import AddDocumentActionsRequest
+from formkiq_client.models.add_document_actions_request import AddDocumentActionsRequest
 
 class TestAddDocumentActionsRequest(unittest.TestCase):
     """AddDocumentActionsRequest unit test stubs"""
@@ -37,11 +37,11 @@ class TestAddDocumentActionsRequest(unittest.TestCase):
         if include_optional:
             return AddDocumentActionsRequest(
                 actions = [
-                    openapi_client.models.add_action.AddAction(
+                    formkiq_client.models.add_action.AddAction(
                         type = 'ANTIVIRUS', 
-                        parameters = openapi_client.models.add_action_parameters.AddActionParameters(
+                        parameters = formkiq_client.models.add_action_parameters.AddActionParameters(
                             ocr_textract_queries = [
-                                openapi_client.models.textract_query.TextractQuery(
+                                formkiq_client.models.textract_query.TextractQuery(
                                     text = '', 
                                     alias = '', 
                                     pages = [

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.add_google_document_export_request import AddGoogleDocumentExportRequest
+from formkiq_client.models.add_google_document_export_request import AddGoogleDocumentExportRequest
 
 # TODO update the JSON string below
 json = "{}"

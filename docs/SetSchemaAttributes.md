@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.set_schema_attributes import SetSchemaAttributes
+from formkiq_client.models.set_schema_attributes import SetSchemaAttributes
 
 # TODO update the JSON string below
 json = "{}"

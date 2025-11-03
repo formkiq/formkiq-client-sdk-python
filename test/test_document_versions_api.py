@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_versions_api import DocumentVersionsApi
+from formkiq_client.api.document_versions_api import DocumentVersionsApi
 
 
 class TestDocumentVersionsApi(unittest.TestCase):

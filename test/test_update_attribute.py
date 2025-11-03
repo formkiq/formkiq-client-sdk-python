@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_attribute import UpdateAttribute
+from formkiq_client.models.update_attribute import UpdateAttribute
 
 class TestUpdateAttribute(unittest.TestCase):
     """UpdateAttribute unit test stubs"""
@@ -37,13 +37,13 @@ class TestUpdateAttribute(unittest.TestCase):
         if include_optional:
             return UpdateAttribute(
                 type = 'STANDARD',
-                watermark = openapi_client.models.watermark.Watermark(
+                watermark = formkiq_client.models.watermark.Watermark(
                     font_size = 1.337, 
                     text = '', 
                     rotation = 1.337, 
                     image_document_id = '', 
                     scale = 'FIT_BEST', 
-                    position = openapi_client.models.watermark_position.WatermarkPosition(
+                    position = formkiq_client.models.watermark_position.WatermarkPosition(
                         x_anchor = 'LEFT', 
                         y_anchor = 'TOP', 
                         x_offset = 1.337, 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.add_folder_share_request import AddFolderShareRequest
+from formkiq_client.models.add_folder_share_request import AddFolderShareRequest
 
 # TODO update the JSON string below
 json = "{}"

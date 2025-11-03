@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.docusign_sign_here_tabs import DocusignSignHereTabs
+from formkiq_client.models.docusign_sign_here_tabs import DocusignSignHereTabs
 
 class TestDocusignSignHereTabs(unittest.TestCase):
     """DocusignSignHereTabs unit test stubs"""

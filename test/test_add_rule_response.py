@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_rule_response import AddRuleResponse
+from formkiq_client.models.add_rule_response import AddRuleResponse
 
 class TestAddRuleResponse(unittest.TestCase):
     """AddRuleResponse unit test stubs"""

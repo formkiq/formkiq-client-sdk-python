@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.add_document_response import AddDocumentResponse
+from formkiq_client.models.add_document_response import AddDocumentResponse
 
 # TODO update the JSON string below
 json = "{}"

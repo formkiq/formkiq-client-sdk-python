@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.public_api import PublicApi
+from formkiq_client.api.public_api import PublicApi
 
 
 class TestPublicApi(unittest.TestCase):

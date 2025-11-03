@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.task import Task
+from formkiq_client.models.task import Task
 
 class TestTask(unittest.TestCase):
     """Task unit test stubs"""

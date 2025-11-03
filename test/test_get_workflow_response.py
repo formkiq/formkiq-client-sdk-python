@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_workflow_response import GetWorkflowResponse
+from formkiq_client.models.get_workflow_response import GetWorkflowResponse
 
 class TestGetWorkflowResponse(unittest.TestCase):
     """GetWorkflowResponse unit test stubs"""
@@ -41,9 +41,9 @@ class TestGetWorkflowResponse(unittest.TestCase):
                 in_use = True,
                 status = 'ACTIVE',
                 steps = [
-                    openapi_client.models.workflow_step.WorkflowStep(
+                    formkiq_client.models.workflow_step.WorkflowStep(
                         step_id = '', 
-                        action = openapi_client.models.document_action.DocumentAction(
+                        action = formkiq_client.models.document_action.DocumentAction(
                             status = 'COMPLETE', 
                             type = 'ANTIVIRUS', 
                             retry_count = 1.337, 
@@ -62,13 +62,13 @@ class TestGetWorkflowResponse(unittest.TestCase):
                             metadata = {
                                 'key' : ''
                                 }, ), 
-                        queue = openapi_client.models.workflow_queue.WorkflowQueue(
+                        queue = formkiq_client.models.workflow_queue.WorkflowQueue(
                             queue_id = '', 
                             approval_groups = [
                                 ''
                                 ], ), 
                         decisions = [
-                            openapi_client.models.workflow_step_decision.WorkflowStepDecision(
+                            formkiq_client.models.workflow_step_decision.WorkflowStepDecision(
                                 next_step_id = '', )
                             ], )
                     ]

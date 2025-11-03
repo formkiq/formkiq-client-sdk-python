@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_search_range import DocumentSearchRange
+from formkiq_client.models.document_search_range import DocumentSearchRange
 
 class TestDocumentSearchRange(unittest.TestCase):
     """DocumentSearchRange unit test stubs"""

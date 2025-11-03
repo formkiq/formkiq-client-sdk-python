@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.user_activities_api import UserActivitiesApi
+from formkiq_client.api.user_activities_api import UserActivitiesApi
 
 
 class TestUserActivitiesApi(unittest.TestCase):

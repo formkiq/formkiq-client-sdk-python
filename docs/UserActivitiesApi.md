@@ -1,4 +1,4 @@
-# openapi_client.UserActivitiesApi
+# formkiq_client.UserActivitiesApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,14 +20,14 @@ Retrieve a user's activities for a document
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_user_activites_response import GetUserActivitesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_user_activites_response import GetUserActivitesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -37,9 +37,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.UserActivitiesApi(api_client)
+    api_instance = formkiq_client.UserActivitiesApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
@@ -98,14 +98,14 @@ Retrieve an resource activities
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_activites_response import GetActivitesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_activites_response import GetActivitesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -115,9 +115,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.UserActivitiesApi(api_client)
+    api_instance = formkiq_client.UserActivitiesApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     document_id = 'document_id_example' # str | Document Identifier (optional)
     entity_type_id = 'entity_type_id_example' # str | EntityType Identifier (optional)
@@ -190,14 +190,14 @@ Retrieve a user's activities
 
 
 ```python
-import openapi_client
-from openapi_client.models.get_user_activites_response import GetUserActivitesResponse
-from openapi_client.rest import ApiException
+import formkiq_client
+from formkiq_client.models.get_user_activites_response import GetUserActivitesResponse
+from formkiq_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = formkiq_client.Configuration(
     host = "http://localhost"
 )
 
@@ -207,9 +207,9 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.UserActivitiesApi(api_client)
+    api_instance = formkiq_client.UserActivitiesApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')

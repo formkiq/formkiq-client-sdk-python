@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.watermark_position import WatermarkPosition
+from formkiq_client.models.watermark_position import WatermarkPosition
 
 class TestWatermarkPosition(unittest.TestCase):
     """WatermarkPosition unit test stubs"""

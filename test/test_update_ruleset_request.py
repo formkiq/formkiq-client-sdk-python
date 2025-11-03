@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_ruleset_request import UpdateRulesetRequest
+from formkiq_client.models.update_ruleset_request import UpdateRulesetRequest
 
 class TestUpdateRulesetRequest(unittest.TestCase):
     """UpdateRulesetRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestUpdateRulesetRequest(unittest.TestCase):
         model = UpdateRulesetRequest()
         if include_optional:
             return UpdateRulesetRequest(
-                ruleset = openapi_client.models.update_ruleset.UpdateRuleset(
+                ruleset = formkiq_client.models.update_ruleset.UpdateRuleset(
                     description = '', 
                     priority = 1.337, 
                     version = 1.337, 
@@ -44,7 +44,7 @@ class TestUpdateRulesetRequest(unittest.TestCase):
             )
         else:
             return UpdateRulesetRequest(
-                ruleset = openapi_client.models.update_ruleset.UpdateRuleset(
+                ruleset = formkiq_client.models.update_ruleset.UpdateRuleset(
                     description = '', 
                     priority = 1.337, 
                     version = 1.337, 

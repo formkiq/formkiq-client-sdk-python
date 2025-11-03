@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.add_document_attribute_relationship import AddDocumentAttributeRelationship
+from formkiq_client.models.add_document_attribute_relationship import AddDocumentAttributeRelationship
 
 # TODO update the JSON string below
 json = "{}"

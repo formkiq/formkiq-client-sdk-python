@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_child_document_response import AddChildDocumentResponse
+from formkiq_client.models.add_child_document_response import AddChildDocumentResponse
 
 class TestAddChildDocumentResponse(unittest.TestCase):
     """AddChildDocumentResponse unit test stubs"""

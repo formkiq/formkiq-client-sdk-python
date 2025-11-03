@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_entity_request import AddEntityRequest
+from formkiq_client.models.add_entity_request import AddEntityRequest
 
 class TestAddEntityRequest(unittest.TestCase):
     """AddEntityRequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestAddEntityRequest(unittest.TestCase):
         model = AddEntityRequest()
         if include_optional:
             return AddEntityRequest(
-                entity = openapi_client.models.add_entity.AddEntity(
+                entity = formkiq_client.models.add_entity.AddEntity(
                     name = '', 
                     attributes = [
-                        openapi_client.models.add_entity_attribute.AddEntityAttribute(
+                        formkiq_client.models.add_entity_attribute.AddEntityAttribute(
                             key = '', 
                             string_value = '', 
                             string_values = [

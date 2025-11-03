@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.index_search_response import IndexSearchResponse
+from formkiq_client.models.index_search_response import IndexSearchResponse
 
 class TestIndexSearchResponse(unittest.TestCase):
     """IndexSearchResponse unit test stubs"""
@@ -39,7 +39,7 @@ class TestIndexSearchResponse(unittest.TestCase):
                 next = '',
                 previous = '',
                 values = [
-                    openapi_client.models.index_search.IndexSearch(
+                    formkiq_client.models.index_search.IndexSearch(
                         value = '', )
                     ]
             )

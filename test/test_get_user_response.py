@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_user_response import GetUserResponse
+from formkiq_client.models.get_user_response import GetUserResponse
 
 class TestGetUserResponse(unittest.TestCase):
     """GetUserResponse unit test stubs"""
@@ -36,14 +36,14 @@ class TestGetUserResponse(unittest.TestCase):
         model = GetUserResponse()
         if include_optional:
             return GetUserResponse(
-                user = openapi_client.models.user.User(
+                user = formkiq_client.models.user.User(
                     username = '', 
                     email = '', 
                     enabled = True, 
                     user_status = '', 
                     inserted_date = '', 
                     last_modified_date = '', 
-                    attributes = openapi_client.models.user_attributes.UserAttributes(
+                    attributes = formkiq_client.models.user_attributes.UserAttributes(
                         address = '', 
                         birthdate = '', 
                         family_name = '', 

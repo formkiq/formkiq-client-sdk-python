@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.user_share import UserShare
+from formkiq_client.models.user_share import UserShare
 
 class TestUserShare(unittest.TestCase):
     """UserShare unit test stubs"""

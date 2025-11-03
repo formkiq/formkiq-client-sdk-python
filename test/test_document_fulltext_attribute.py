@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_fulltext_attribute import DocumentFulltextAttribute
+from formkiq_client.models.document_fulltext_attribute import DocumentFulltextAttribute
 
 class TestDocumentFulltextAttribute(unittest.TestCase):
     """DocumentFulltextAttribute unit test stubs"""
@@ -36,12 +36,12 @@ class TestDocumentFulltextAttribute(unittest.TestCase):
         model = DocumentFulltextAttribute()
         if include_optional:
             return DocumentFulltextAttribute(
-                eq = openapi_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
+                eq = formkiq_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
                     string_value = '', 
                     number_value = 1.337, 
                     boolean_value = True, ),
                 eq_or = [
-                    openapi_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
+                    formkiq_client.models.document_fulltext_attribute_eq.DocumentFulltextAttributeEq(
                         string_value = '', 
                         number_value = 1.337, 
                         boolean_value = True, )

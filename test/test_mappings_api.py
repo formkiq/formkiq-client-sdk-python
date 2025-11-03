@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.mappings_api import MappingsApi
+from formkiq_client.api.mappings_api import MappingsApi
 
 
 class TestMappingsApi(unittest.TestCase):

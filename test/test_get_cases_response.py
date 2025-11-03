@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.get_cases_response import GetCasesResponse
+from formkiq_client.models.get_cases_response import GetCasesResponse
 
 class TestGetCasesResponse(unittest.TestCase):
     """GetCasesResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestGetCasesResponse(unittest.TestCase):
             return GetCasesResponse(
                 next = '',
                 cases = [
-                    openapi_client.models.case.Case(
+                    formkiq_client.models.case.Case(
                         case_id = '', 
                         case_number = '', 
                         document_number = '', 

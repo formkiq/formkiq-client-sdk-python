@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_nigo_request import AddNigoRequest
+from formkiq_client.models.add_nigo_request import AddNigoRequest
 
 class TestAddNigoRequest(unittest.TestCase):
     """AddNigoRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAddNigoRequest(unittest.TestCase):
         model = AddNigoRequest()
         if include_optional:
             return AddNigoRequest(
-                nigo = openapi_client.models.add_nigo.AddNigo(
+                nigo = formkiq_client.models.add_nigo.AddNigo(
                     name = '', 
                     description = '', 
                     status = 'NEW', 
@@ -53,7 +53,7 @@ class TestAddNigoRequest(unittest.TestCase):
             )
         else:
             return AddNigoRequest(
-                nigo = openapi_client.models.add_nigo.AddNigo(
+                nigo = formkiq_client.models.add_nigo.AddNigo(
                     name = '', 
                     description = '', 
                     status = 'NEW', 

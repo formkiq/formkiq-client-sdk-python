@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.locale_resource_type import LocaleResourceType
+from formkiq_client.models.locale_resource_type import LocaleResourceType
 
 class TestLocaleResourceType(unittest.TestCase):
     """LocaleResourceType unit test stubs"""

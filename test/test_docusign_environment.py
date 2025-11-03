@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.docusign_environment import DocusignEnvironment
+from formkiq_client.models.docusign_environment import DocusignEnvironment
 
 class TestDocusignEnvironment(unittest.TestCase):
     """DocusignEnvironment unit test stubs"""

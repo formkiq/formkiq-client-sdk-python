@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_case import UpdateCase
+from formkiq_client.models.update_case import UpdateCase
 
 class TestUpdateCase(unittest.TestCase):
     """UpdateCase unit test stubs"""

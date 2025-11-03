@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.document_version import DocumentVersion
+from formkiq_client.models.document_version import DocumentVersion
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.document_search_attribute import DocumentSearchAttribute
+from formkiq_client.models.document_search_attribute import DocumentSearchAttribute
 
 class TestDocumentSearchAttribute(unittest.TestCase):
     """DocumentSearchAttribute unit test stubs"""
@@ -41,7 +41,7 @@ class TestDocumentSearchAttribute(unittest.TestCase):
                     ''
                     ],
                 begins_with = '',
-                range = openapi_client.models.document_search_range.DocumentSearchRange(
+                range = formkiq_client.models.document_search_range.DocumentSearchRange(
                     start = '', 
                     end = '', 
                     type = 'STRING', ),

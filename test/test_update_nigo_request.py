@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_nigo_request import UpdateNigoRequest
+from formkiq_client.models.update_nigo_request import UpdateNigoRequest
 
 class TestUpdateNigoRequest(unittest.TestCase):
     """UpdateNigoRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestUpdateNigoRequest(unittest.TestCase):
         model = UpdateNigoRequest()
         if include_optional:
             return UpdateNigoRequest(
-                nigo = openapi_client.models.update_nigo.UpdateNigo(
+                nigo = formkiq_client.models.update_nigo.UpdateNigo(
                     name = '', 
                     description = '', 
                     planned_start_date = '', 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_document_generate_response import AddDocumentGenerateResponse
+from formkiq_client.models.add_document_generate_response import AddDocumentGenerateResponse
 
 class TestAddDocumentGenerateResponse(unittest.TestCase):
     """AddDocumentGenerateResponse unit test stubs"""

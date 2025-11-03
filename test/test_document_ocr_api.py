@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_ocr_api import DocumentOCRApi
+from formkiq_client.api.document_ocr_api import DocumentOCRApi
 
 
 class TestDocumentOCRApi(unittest.TestCase):

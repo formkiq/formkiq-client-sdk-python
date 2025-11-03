@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.set_group_permissions_request import SetGroupPermissionsRequest
+from formkiq_client.models.set_group_permissions_request import SetGroupPermissionsRequest
 
 # TODO update the JSON string below
 json = "{}"

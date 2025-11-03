@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.site_group_permissions import SiteGroupPermissions
+from formkiq_client.models.site_group_permissions import SiteGroupPermissions
 
 class TestSiteGroupPermissions(unittest.TestCase):
     """SiteGroupPermissions unit test stubs"""

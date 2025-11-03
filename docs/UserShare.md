@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.user_share import UserShare
+from formkiq_client.models.user_share import UserShare
 
 # TODO update the JSON string below
 json = "{}"

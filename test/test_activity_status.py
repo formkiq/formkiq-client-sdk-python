@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.activity_status import ActivityStatus
+from formkiq_client.models.activity_status import ActivityStatus
 
 class TestActivityStatus(unittest.TestCase):
     """ActivityStatus unit test stubs"""

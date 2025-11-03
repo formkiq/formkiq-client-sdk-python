@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_attributes_api import DocumentAttributesApi
+from formkiq_client.api.document_attributes_api import DocumentAttributesApi
 
 
 class TestDocumentAttributesApi(unittest.TestCase):

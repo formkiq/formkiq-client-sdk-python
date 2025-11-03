@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.document_shares_api import DocumentSharesApi
+from formkiq_client.api.document_shares_api import DocumentSharesApi
 
 
 class TestDocumentSharesApi(unittest.TestCase):

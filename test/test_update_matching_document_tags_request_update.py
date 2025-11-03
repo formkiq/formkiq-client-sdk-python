@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.update_matching_document_tags_request_update import UpdateMatchingDocumentTagsRequestUpdate
+from formkiq_client.models.update_matching_document_tags_request_update import UpdateMatchingDocumentTagsRequestUpdate
 
 class TestUpdateMatchingDocumentTagsRequestUpdate(unittest.TestCase):
     """UpdateMatchingDocumentTagsRequestUpdate unit test stubs"""
@@ -37,7 +37,7 @@ class TestUpdateMatchingDocumentTagsRequestUpdate(unittest.TestCase):
         if include_optional:
             return UpdateMatchingDocumentTagsRequestUpdate(
                 tags = [
-                    openapi_client.models.add_document_tag.AddDocumentTag(
+                    formkiq_client.models.add_document_tag.AddDocumentTag(
                         key = '', 
                         value = '', 
                         values = [

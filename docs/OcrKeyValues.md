@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.model.ocr_key_values import OcrKeyValues
+from formkiq_client.models.ocr_key_values import OcrKeyValues
 
 # TODO update the JSON string below
 json = "{}"

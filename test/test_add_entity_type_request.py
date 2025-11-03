@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_entity_type_request import AddEntityTypeRequest
+from formkiq_client.models.add_entity_type_request import AddEntityTypeRequest
 
 class TestAddEntityTypeRequest(unittest.TestCase):
     """AddEntityTypeRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestAddEntityTypeRequest(unittest.TestCase):
         model = AddEntityTypeRequest()
         if include_optional:
             return AddEntityTypeRequest(
-                entity_type = openapi_client.models.add_entity_type.AddEntityType(
+                entity_type = formkiq_client.models.add_entity_type.AddEntityType(
                     namespace = 'PRESET', 
                     name = '', )
             )

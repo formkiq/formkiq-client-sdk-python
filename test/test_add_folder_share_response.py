@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.add_folder_share_response import AddFolderShareResponse
+from formkiq_client.models.add_folder_share_response import AddFolderShareResponse
 
 class TestAddFolderShareResponse(unittest.TestCase):
     """AddFolderShareResponse unit test stubs"""

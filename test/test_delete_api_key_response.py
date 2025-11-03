@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.model.delete_api_key_response import DeleteApiKeyResponse
+from formkiq_client.models.delete_api_key_response import DeleteApiKeyResponse
 
 class TestDeleteApiKeyResponse(unittest.TestCase):
     """DeleteApiKeyResponse unit test stubs"""
