@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **site_id** | **str** |  | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **permissions** | **List[str]** | List of permissions | [optional] 
+**groups** | **List[str]** | List of groups to add as custom claims to API Key | [optional] 
 
 ## Example
 

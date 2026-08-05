@@ -312,7 +312,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_mapping**
-> SetResponse set_mapping(mapping_id, set_mapping_request, site_id=site_id)
+> SetResponse set_mapping(mapping_id, set_mapping_request, site_id=site_id, create_if_missing=create_if_missing)
 
 Set Mapping
 
@@ -346,10 +346,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     mapping_id = 'mapping_id_example' # str | Mapping Identifier
     set_mapping_request = formkiq_client.SetMappingRequest() # SetMappingRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    create_if_missing = False # bool | When true, skip checking whether the resource exists before setting it (optional) (default to False)
 
     try:
         # Set Mapping
-        api_response = api_instance.set_mapping(mapping_id, set_mapping_request, site_id=site_id)
+        api_response = api_instance.set_mapping(mapping_id, set_mapping_request, site_id=site_id, create_if_missing=create_if_missing)
         print("The response of MappingsApi->set_mapping:\n")
         pprint(api_response)
     except Exception as e:
@@ -366,6 +367,7 @@ Name | Type | Description  | Notes
  **mapping_id** | **str**| Mapping Identifier | 
  **set_mapping_request** | [**SetMappingRequest**](SetMappingRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **create_if_missing** | **bool**| When true, skip checking whether the resource exists before setting it | [optional] [default to False]
 
 ### Return type
 

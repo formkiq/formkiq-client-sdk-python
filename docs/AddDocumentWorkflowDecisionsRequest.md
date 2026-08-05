@@ -5,9 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**step_id** | **str** | Workflow Step Identifier | [optional] 
 **comments** | **str** | Workflow decision comments | [optional] 
-**decision** | **str** |  | 
+**decision** | [**WorkflowDecision**](WorkflowDecision.md) |  | [optional] 
 
 ## Example
 

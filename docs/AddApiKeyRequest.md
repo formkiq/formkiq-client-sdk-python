@@ -6,7 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Name of API Key | [optional] 
-**permissions** | **List[str]** | List of permissions | [optional] 
+**groups** | **List[str]** | Optional list of groups to add as custom claims to API Key | [optional] 
+**permissions** | [**List[ApiKeyPermission]**](ApiKeyPermission.md) |  | [optional] 
 
 ## Example
 

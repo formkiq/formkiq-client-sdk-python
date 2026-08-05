@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_document_user_activities**
-> GetUserActivitesResponse get_document_user_activities(document_id, site_id=site_id, next=next, limit=limit)
+> GetUserActivitesResponse get_document_user_activities(document_id, site_id=site_id, artifact_id=artifact_id, next=next, limit=limit)
 
 Get user activities for a document
 
@@ -42,12 +42,13 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.UserActivitiesApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
 
     try:
         # Get user activities for a document
-        api_response = api_instance.get_document_user_activities(document_id, site_id=site_id, next=next, limit=limit)
+        api_response = api_instance.get_document_user_activities(document_id, site_id=site_id, artifact_id=artifact_id, next=next, limit=limit)
         print("The response of UserActivitiesApi->get_document_user_activities:\n")
         pprint(api_response)
     except Exception as e:
@@ -63,6 +64,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **next** | **str**| Next page of results token | [optional] 
  **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
 
@@ -88,7 +90,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_resource_activities**
-> GetActivitesResponse get_resource_activities(site_id=site_id, document_id=document_id, entity_type_id=entity_type_id, namespace=namespace, entity_id=entity_id, start=start, end=end, sort=sort, next=next, limit=limit, user_id=user_id)
+> GetActivitesResponse get_resource_activities(site_id=site_id, document_id=document_id, artifact_id=artifact_id, entity_type_id=entity_type_id, namespace=namespace, entity_id=entity_id, ruleset_id=ruleset_id, rule_id=rule_id, workflow_id=workflow_id, queue_id=queue_id, webhook_id=webhook_id, locale=locale, attribute_key=attribute_key, var_schema=var_schema, classification_id=classification_id, mapping_id=mapping_id, api_key=api_key, control_policy=control_policy, start=start, end=end, sort=sort, next=next, limit=limit, user_id=user_id)
 
 Get resource activities
 
@@ -120,9 +122,22 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.UserActivitiesApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier (optional)
     document_id = 'document_id_example' # str | Document Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     entity_type_id = 'entity_type_id_example' # str | EntityType Identifier (optional)
     namespace = 'namespace_example' # str | Namespace Identifier (optional)
     entity_id = 'entity_id_example' # str | Entity Identifier (optional)
+    ruleset_id = 'ruleset_id_example' # str | RulesetId Identifier (optional)
+    rule_id = 'rule_id_example' # str | RuleId Identifier (optional)
+    workflow_id = 'workflow_id_example' # str | Workflow Identifier (optional)
+    queue_id = 'queue_id_example' # str | Queue Identifier (optional)
+    webhook_id = 'webhook_id_example' # str | Webhook Identifier (optional)
+    locale = 'locale_example' # str | Site Locale (ISO 639 / ISO 3166) (optional)
+    attribute_key = 'attribute_key_example' # str | Attribute Key (optional)
+    var_schema = 'var_schema_example' # str | Schema Type (optional)
+    classification_id = 'classification_id_example' # str | Classification Id (optional)
+    mapping_id = 'mapping_id_example' # str | Mapping Id (optional)
+    api_key = 'api_key_example' # str | Api Key (optional)
+    control_policy = 'control_policy_example' # str | Control Policy (optional)
     start = '2013-10-20T19:20:30+01:00' # datetime | Start of date-time range (UTC) (optional)
     end = '2013-10-20T19:20:30+01:00' # datetime | End of date-time range (UTC) (optional)
     sort = 'sort_example' # str | Sort order (default DESC) (optional)
@@ -132,7 +147,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Get resource activities
-        api_response = api_instance.get_resource_activities(site_id=site_id, document_id=document_id, entity_type_id=entity_type_id, namespace=namespace, entity_id=entity_id, start=start, end=end, sort=sort, next=next, limit=limit, user_id=user_id)
+        api_response = api_instance.get_resource_activities(site_id=site_id, document_id=document_id, artifact_id=artifact_id, entity_type_id=entity_type_id, namespace=namespace, entity_id=entity_id, ruleset_id=ruleset_id, rule_id=rule_id, workflow_id=workflow_id, queue_id=queue_id, webhook_id=webhook_id, locale=locale, attribute_key=attribute_key, var_schema=var_schema, classification_id=classification_id, mapping_id=mapping_id, api_key=api_key, control_policy=control_policy, start=start, end=end, sort=sort, next=next, limit=limit, user_id=user_id)
         print("The response of UserActivitiesApi->get_resource_activities:\n")
         pprint(api_response)
     except Exception as e:
@@ -148,9 +163,22 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **str**| Site Identifier | [optional] 
  **document_id** | **str**| Document Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **entity_type_id** | **str**| EntityType Identifier | [optional] 
  **namespace** | **str**| Namespace Identifier | [optional] 
  **entity_id** | **str**| Entity Identifier | [optional] 
+ **ruleset_id** | **str**| RulesetId Identifier | [optional] 
+ **rule_id** | **str**| RuleId Identifier | [optional] 
+ **workflow_id** | **str**| Workflow Identifier | [optional] 
+ **queue_id** | **str**| Queue Identifier | [optional] 
+ **webhook_id** | **str**| Webhook Identifier | [optional] 
+ **locale** | **str**| Site Locale (ISO 639 / ISO 3166) | [optional] 
+ **attribute_key** | **str**| Attribute Key | [optional] 
+ **var_schema** | **str**| Schema Type | [optional] 
+ **classification_id** | **str**| Classification Id | [optional] 
+ **mapping_id** | **str**| Mapping Id | [optional] 
+ **api_key** | **str**| Api Key | [optional] 
+ **control_policy** | **str**| Control Policy | [optional] 
  **start** | **datetime**| Start of date-time range (UTC) | [optional] 
  **end** | **datetime**| End of date-time range (UTC) | [optional] 
  **sort** | **str**| Sort order (default DESC) | [optional] 

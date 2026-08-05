@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 
 # **add_document_workflow**
-> AddDocumentWorkflowResponse add_document_workflow(document_id, add_document_workflow_request, site_id=site_id)
+> AddDocumentWorkflowResponse add_document_workflow(document_id, add_document_workflow_request, site_id=site_id, artifact_id=artifact_id)
 
 Add document workflow
 
@@ -57,10 +57,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     add_document_workflow_request = formkiq_client.AddDocumentWorkflowRequest() # AddDocumentWorkflowRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Add document workflow
-        api_response = api_instance.add_document_workflow(document_id, add_document_workflow_request, site_id=site_id)
+        api_response = api_instance.add_document_workflow(document_id, add_document_workflow_request, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentWorkflowsApi->add_document_workflow:\n")
         pprint(api_response)
     except Exception as e:
@@ -77,6 +78,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **add_document_workflow_request** | [**AddDocumentWorkflowRequest**](AddDocumentWorkflowRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -101,7 +103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_document_workflow_decisions**
-> AddDocumentWorkflowDecisionsResponse add_document_workflow_decisions(document_id, workflow_id, add_document_workflow_decisions_request, site_id=site_id)
+> AddDocumentWorkflowDecisionsResponse add_document_workflow_decisions(document_id, workflow_id, add_document_workflow_decisions_request, site_id=site_id, artifact_id=artifact_id)
 
 Approve/Reject document in approval queue
 
@@ -136,10 +138,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
     add_document_workflow_decisions_request = formkiq_client.AddDocumentWorkflowDecisionsRequest() # AddDocumentWorkflowDecisionsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Approve/Reject document in approval queue
-        api_response = api_instance.add_document_workflow_decisions(document_id, workflow_id, add_document_workflow_decisions_request, site_id=site_id)
+        api_response = api_instance.add_document_workflow_decisions(document_id, workflow_id, add_document_workflow_decisions_request, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentWorkflowsApi->add_document_workflow_decisions:\n")
         pprint(api_response)
     except Exception as e:
@@ -157,6 +160,7 @@ Name | Type | Description  | Notes
  **workflow_id** | **str**| Workflow Identifier | 
  **add_document_workflow_decisions_request** | [**AddDocumentWorkflowDecisionsRequest**](AddDocumentWorkflowDecisionsRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -407,7 +411,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_workflow**
-> DeleteWorkflowResponse delete_workflow(workflow_id, site_id=site_id)
+> DeleteResponse delete_workflow(workflow_id, site_id=site_id)
 
 Delete workflow
 
@@ -418,7 +422,7 @@ Delete a Workflow; available as an Add-On Module
 
 ```python
 import formkiq_client
-from formkiq_client.models.delete_workflow_response import DeleteWorkflowResponse
+from formkiq_client.models.delete_response import DeleteResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -461,7 +465,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteWorkflowResponse**](DeleteWorkflowResponse.md)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -481,7 +485,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_workflow**
-> GetDocumentWorkflowResponse get_document_workflow(document_id, workflow_id, site_id=site_id)
+> GetDocumentWorkflowResponse get_document_workflow(document_id, workflow_id, site_id=site_id, artifact_id=artifact_id)
 
 Get document workflow
 
@@ -514,10 +518,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Get document workflow
-        api_response = api_instance.get_document_workflow(document_id, workflow_id, site_id=site_id)
+        api_response = api_instance.get_document_workflow(document_id, workflow_id, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentWorkflowsApi->get_document_workflow:\n")
         pprint(api_response)
     except Exception as e:
@@ -534,6 +539,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **workflow_id** | **str**| Workflow Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -558,7 +564,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_workflows**
-> GetDocumentWorkflowsResponse get_document_workflows(document_id, site_id=site_id)
+> GetDocumentWorkflowsResponse get_document_workflows(document_id, site_id=site_id, artifact_id=artifact_id)
 
 Get document workflows
 
@@ -590,10 +596,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentWorkflowsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Get document workflows
-        api_response = api_instance.get_document_workflows(document_id, site_id=site_id)
+        api_response = api_instance.get_document_workflows(document_id, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentWorkflowsApi->get_document_workflows:\n")
         pprint(api_response)
     except Exception as e:
@@ -609,6 +616,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -1091,7 +1099,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_workflow**
-> SetWorkflowResponse set_workflow(workflow_id, set_workflow_request, site_id=site_id)
+> SetResponse set_workflow(workflow_id, set_workflow_request, site_id=site_id, create_if_missing=create_if_missing)
 
 Set workflow
 
@@ -1102,8 +1110,8 @@ Set a Workflow details; available as an Add-On Module
 
 ```python
 import formkiq_client
+from formkiq_client.models.set_response import SetResponse
 from formkiq_client.models.set_workflow_request import SetWorkflowRequest
-from formkiq_client.models.set_workflow_response import SetWorkflowResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -1125,10 +1133,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     workflow_id = 'workflow_id_example' # str | Workflow Identifier
     set_workflow_request = formkiq_client.SetWorkflowRequest() # SetWorkflowRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    create_if_missing = False # bool | When true, skip checking whether the resource exists before setting it (optional) (default to False)
 
     try:
         # Set workflow
-        api_response = api_instance.set_workflow(workflow_id, set_workflow_request, site_id=site_id)
+        api_response = api_instance.set_workflow(workflow_id, set_workflow_request, site_id=site_id, create_if_missing=create_if_missing)
         print("The response of DocumentWorkflowsApi->set_workflow:\n")
         pprint(api_response)
     except Exception as e:
@@ -1145,10 +1154,11 @@ Name | Type | Description  | Notes
  **workflow_id** | **str**| Workflow Identifier | 
  **set_workflow_request** | [**SetWorkflowRequest**](SetWorkflowRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **create_if_missing** | **bool**| When true, skip checking whether the resource exists before setting it | [optional] [default to False]
 
 ### Return type
 
-[**SetWorkflowResponse**](SetWorkflowResponse.md)
+[**SetResponse**](SetResponse.md)
 
 ### Authorization
 
@@ -1163,13 +1173,13 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | 20) OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 **400** | 400 BAD REQUEST |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_workflow**
-> UpdateWorkflowResponse update_workflow(workflow_id, update_workflow_request, site_id=site_id)
+> UpdateResponse update_workflow(workflow_id, update_workflow_request, site_id=site_id)
 
 Update workflow
 
@@ -1180,8 +1190,8 @@ Update a Workflow details; available as an Add-On Module
 
 ```python
 import formkiq_client
+from formkiq_client.models.update_response import UpdateResponse
 from formkiq_client.models.update_workflow_request import UpdateWorkflowRequest
-from formkiq_client.models.update_workflow_response import UpdateWorkflowResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -1226,7 +1236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UpdateWorkflowResponse**](UpdateWorkflowResponse.md)
+[**UpdateResponse**](UpdateResponse.md)
 
 ### Authorization
 
@@ -1241,7 +1251,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | 20) OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 **400** | 400 BAD REQUEST |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

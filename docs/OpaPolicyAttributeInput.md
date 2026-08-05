@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **match_username** | **bool** | Match Input Username | [optional] 
+**match_user_claim** | **str** | Matches user claim name to match against the Attribute Key value | [optional] 
 
 ## Example
 

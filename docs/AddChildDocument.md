@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **content** | **str** | Document content | 
 **tags** | [**List[AddDocumentTag]**](AddDocumentTag.md) | List of document tags | [optional] 
 **metadata** | [**List[AddDocumentMetadata]**](AddDocumentMetadata.md) | List of document Metadata | [optional] 
+**attributes** | [**List[AddDocumentAttribute]**](AddDocumentAttribute.md) | List of Attributes to add to document | [optional] 
 
 ## Example
 

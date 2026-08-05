@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**classification_id** | **str** | Classification Identifier | [optional] 
+**classification_id** | **str** | Classification Identifier | 
 **name** | **str** | Name of Classification | [optional] 
 **user_id** | **str** |  | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 

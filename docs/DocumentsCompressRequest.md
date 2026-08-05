@@ -5,7 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**document_ids** | **List[str]** | Documents to compress | 
+**document_ids** | **List[str]** | Documents to compress | [optional] 
+**documents** | [**List[DocumentsCompressDocument]**](DocumentsCompressDocument.md) | Documents to compress with optional artifact identifiers | [optional] 
 
 ## Example
 

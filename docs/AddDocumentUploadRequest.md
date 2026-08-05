@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **document_id** | **str** | optional Document Identifier, if skipped one will be assigned | [optional] 
+**artifacts** | **bool** | Whether the document supports artifact documents | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
 **content_type** | **str** | Document media type | [optional] 
 **width** | **str** | Document Content Width property | [optional] 

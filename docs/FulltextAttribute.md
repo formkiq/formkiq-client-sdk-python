@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**inserted_date** | **str** | Inserted Timestamp | [optional] 
 **string_values** | **List[str]** | Attribute with string values | [optional] 
 **number_values** | **List[float]** | Attribute with number values | [optional] 
 **boolean_value** | **bool** | Attribute with boolean value | [optional] 

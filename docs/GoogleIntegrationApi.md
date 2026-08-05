@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **add_google_document_export**
-> AddGoogleDocumentExportResponse add_google_document_export(document_id, add_google_document_export_request, site_id=site_id)
+> AddGoogleDocumentExportResponse add_google_document_export(document_id, add_google_document_export_request, site_id=site_id, artifact_id=artifact_id)
 
 Add Google Document Export
 
@@ -42,10 +42,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     add_google_document_export_request = formkiq_client.AddGoogleDocumentExportRequest() # AddGoogleDocumentExportRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Add Google Document Export
-        api_response = api_instance.add_google_document_export(document_id, add_google_document_export_request, site_id=site_id)
+        api_response = api_instance.add_google_document_export(document_id, add_google_document_export_request, site_id=site_id, artifact_id=artifact_id)
         print("The response of GoogleIntegrationApi->add_google_document_export:\n")
         pprint(api_response)
     except Exception as e:
@@ -62,6 +63,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **add_google_document_export_request** | [**AddGoogleDocumentExportRequest**](AddGoogleDocumentExportRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 

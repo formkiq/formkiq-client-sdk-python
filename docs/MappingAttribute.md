@@ -5,14 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attribute_key** | **str** | Attribute Key | [optional] 
-**source_type** | [**MappingAttributeSourceType**](MappingAttributeSourceType.md) |  | [optional] 
+**attribute_key** | **str** | Attribute Key | 
+**source_type** | [**MappingAttributeSourceType**](MappingAttributeSourceType.md) |  | 
 **default_value** | **str** | Default value | [optional] 
 **default_values** | **List[str]** | Default values | [optional] 
-**label_texts** | **List[str]** |  | [optional] 
-**label_matching_type** | [**MappingAttributeLabelMatchingType**](MappingAttributeLabelMatchingType.md) |  | [optional] 
-**metadata_field** | [**MappingAttributeMetadataField**](MappingAttributeMetadataField.md) |  | [optional] 
+**label_texts** | **List[str]** | Label Texts | 
+**label_matching_type** | [**MappingAttributeLabelMatchingType**](MappingAttributeLabelMatchingType.md) |  | 
 **validation_regex** | **str** | Attribute Value Regex Validation | [optional] 
+**metadata_field** | [**MappingAttributeMetadataField**](MappingAttributeMetadataField.md) |  | 
+**llm_prompt_entity_name** | **str** | LLM prompt entity name | 
 
 ## Example
 

@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **text** | **str** | Full text search | [optional] 
 **meta** | [**DocumentSearchMeta**](DocumentSearchMeta.md) |  | [optional] 
+**filename** | [**DocumentSearchFilename**](DocumentSearchFilename.md) |  | [optional] 
+**folder** | [**DocumentSearchFolder**](DocumentSearchFolder.md) |  | [optional] 
 **attribute** | [**DocumentSearchAttribute**](DocumentSearchAttribute.md) |  | [optional] 
 **attributes** | [**List[DocumentSearchAttribute]**](DocumentSearchAttribute.md) | List of Composite Key attributes to filter search results on | [optional] 
 **tag** | [**DocumentSearchTag**](DocumentSearchTag.md) |  | [optional] 

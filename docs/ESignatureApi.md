@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **add_docusign_envelopes**
-> AddDocusignEnvelopesResponse add_docusign_envelopes(document_id, add_docusign_envelopes_request, site_id=site_id)
+> AddDocusignEnvelopesResponse add_docusign_envelopes(document_id, add_docusign_envelopes_request, site_id=site_id, artifact_id=artifact_id)
 
 Create Docusign Envelope request
 
@@ -44,10 +44,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     add_docusign_envelopes_request = formkiq_client.AddDocusignEnvelopesRequest() # AddDocusignEnvelopesRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Create Docusign Envelope request
-        api_response = api_instance.add_docusign_envelopes(document_id, add_docusign_envelopes_request, site_id=site_id)
+        api_response = api_instance.add_docusign_envelopes(document_id, add_docusign_envelopes_request, site_id=site_id, artifact_id=artifact_id)
         print("The response of ESignatureApi->add_docusign_envelopes:\n")
         pprint(api_response)
     except Exception as e:
@@ -64,6 +65,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **add_docusign_envelopes_request** | [**AddDocusignEnvelopesRequest**](AddDocusignEnvelopesRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -88,7 +90,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_docusign_recipient_view**
-> AddDocusignRecipientViewResponse add_docusign_recipient_view(document_id, envelope_id, add_docusign_recipient_view_request, site_id=site_id)
+> AddDocusignRecipientViewResponse add_docusign_recipient_view(document_id, envelope_id, add_docusign_recipient_view_request, site_id=site_id, artifact_id=artifact_id)
 
 Create Docusign Recipient View request
 
@@ -123,10 +125,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     envelope_id = 'envelope_id_example' # str | Docusign Envelope Id
     add_docusign_recipient_view_request = formkiq_client.AddDocusignRecipientViewRequest() # AddDocusignRecipientViewRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Create Docusign Recipient View request
-        api_response = api_instance.add_docusign_recipient_view(document_id, envelope_id, add_docusign_recipient_view_request, site_id=site_id)
+        api_response = api_instance.add_docusign_recipient_view(document_id, envelope_id, add_docusign_recipient_view_request, site_id=site_id, artifact_id=artifact_id)
         print("The response of ESignatureApi->add_docusign_recipient_view:\n")
         pprint(api_response)
     except Exception as e:
@@ -144,6 +147,7 @@ Name | Type | Description  | Notes
  **envelope_id** | **str**| Docusign Envelope Id | 
  **add_docusign_recipient_view_request** | [**AddDocusignRecipientViewRequest**](AddDocusignRecipientViewRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 

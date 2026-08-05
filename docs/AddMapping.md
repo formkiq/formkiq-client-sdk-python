@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **name** | **str** | Name of Mapping | [optional] 
 **description** | **str** | Description of Mapping | [optional] 
 **attributes** | [**List[MappingAttribute]**](MappingAttribute.md) | List of attributes | [optional] 
+**classifications** | [**List[MappingClassification]**](MappingClassification.md) | List of classifications | [optional] 
 
 ## Example
 

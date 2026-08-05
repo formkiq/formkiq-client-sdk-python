@@ -11,7 +11,8 @@ Name | Type | Description | Notes
 **ocr_output_type** | [**OcrOutputType**](OcrOutputType.md) |  | [optional] 
 **ocr_number_of_pages** | **str** | Number of pages to OCR (from start) (-1 all) | [optional] 
 **add_pdf_detected_characters_as_text** | **str** | OCR: For the rewriting of the PDF document, converting any image text to searchable text | [optional] 
-**llm_prompt_entity_name** | **str** | DATA_CLASSIFICATION: Set the LLM Prompt Entity Name | [optional] 
+**llm_prompt_entity_name** | **str** | LLMPROMPT, DATA_CLASSIFICATION, METADATA_EXTRACTION: Set the LLM Prompt Entity Name | [optional] 
+**model_id** | **str** | LLMPROMPT: Override the LLM Prompt Entity model id | [optional] 
 **url** | **str** | Webhook: Callback URL | [optional] 
 **character_max** | **str** | Fulltext: Maximum number of characters (-1 unlimited, Typesense defaults to 2048 characters) | [optional] 
 **engine** | **str** | DocumentTagging: Engine to use for document tagging generation | [optional] 
@@ -24,9 +25,11 @@ Name | Type | Description | Notes
 **tags** | **str** | DocumentTagging: Comma-deliminted list of keywords to generate tags for | [optional] 
 **mapping_id** | **str** | Id of Mapping | [optional] 
 **event_bus_name** | **str** | The name or ARN of the event bus to receive the event | [optional] 
+**checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **width** | **str** | The width of the image to resize (or &#39;auto&#39;) | [optional] 
 **height** | **str** | The height of the image to resize (or &#39;auto&#39;) | [optional] 
-**path** | **str** | The path to use when creating resized document (optional) | [optional] 
+**path** | **str** | MOVE: Destination folder path, must end with &#39;/&#39;; RESIZE: Path to use when creating resized document (optional) | [optional] 
+**delete_type** | [**DeleteType**](DeleteType.md) |  | [optional] 
 **output_type** | **str** | The output type of the image | [optional] 
 
 ## Example

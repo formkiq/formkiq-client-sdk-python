@@ -6,6 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **document_id** | **str** | optional Document Identifier (Version 4 UUID), if skipped one will be assigned | [optional] 
+**artifacts** | **bool** | Whether the document supports artifact documents | [optional] 
+**artifact_category** | **str** | Artifact Category | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
 **checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **checksum** | **str** | The checksum value to validate the file against | [optional] 

@@ -6,9 +6,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **step_id** | **str** | Workflow Step Identifier | [optional] 
+**description** | **str** | Workflow Step description | [optional] 
 **action** | [**DocumentAction**](DocumentAction.md) |  | [optional] 
 **queue** | [**WorkflowQueue**](WorkflowQueue.md) |  | [optional] 
-**decisions** | [**List[WorkflowStepDecision]**](WorkflowStepDecision.md) | Workflow Decisions | [optional] 
+**mappings** | [**List[WorkflowStepMapping]**](WorkflowStepMapping.md) |  | [optional] 
+**decision** | [**WorkflowStepDecision**](WorkflowStepDecision.md) |  | [optional] 
+**decisions** | [**List[WorkflowStepDecisions]**](WorkflowStepDecisions.md) | Workflow Decisions | [optional] 
 
 ## Example
 

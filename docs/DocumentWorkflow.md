@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **name** | **str** | Workflow name | [optional] 
 **description** | **str** | Workflow description | [optional] 
 **current_step_id** | **str** | The current step workflow is on | [optional] 
+**action_count** | **int** | Number of actions added for the current workflow step | [optional] 
+**completed_action_count** | **int** | Number of completed actions for the current workflow step | [optional] 
 **status** | [**DocumentWorkflowStatus**](DocumentWorkflowStatus.md) |  | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 

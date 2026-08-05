@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**artifact_category** | **str** | Artifact Category | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
 **width** | **str** | Document Content Width property | [optional] 
 **height** | **str** | Document Content Height property | [optional] 
