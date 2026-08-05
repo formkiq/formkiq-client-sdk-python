@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**total_count** | **int** | Total number of documents that matched the search query. When the number of matches exceeds 10,000, this value will be reported as 10,000+ unless the search request explicitly enables exact total hit tracking.  | [optional] 
 **documents** | [**List[FulltextSearchItem]**](FulltextSearchItem.md) | List of search result documents | [optional] 
 
 ## Example

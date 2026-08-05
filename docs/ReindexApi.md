@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **add_reindex_document**
-> AddResponse add_reindex_document(document_id, add_reindex_document_request, site_id=site_id)
+> AddResponse add_reindex_document(document_id, add_reindex_document_request, site_id=site_id, artifact_id=artifact_id)
 
 Reindex metadata on a document
 
@@ -44,10 +44,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     add_reindex_document_request = formkiq_client.AddReindexDocumentRequest() # AddReindexDocumentRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Reindex metadata on a document
-        api_response = api_instance.add_reindex_document(document_id, add_reindex_document_request, site_id=site_id)
+        api_response = api_instance.add_reindex_document(document_id, add_reindex_document_request, site_id=site_id, artifact_id=artifact_id)
         print("The response of ReindexApi->add_reindex_document:\n")
         pprint(api_response)
     except Exception as e:
@@ -64,6 +65,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **add_reindex_document_request** | [**AddReindexDocumentRequest**](AddReindexDocumentRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 

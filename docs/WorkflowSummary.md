@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Name of Workflow | [optional] 
-**workflow_id** | **str** | Workflow identifier | [optional] 
+**workflow_id** | **str** | Workflow identifier | 
 **description** | **str** | Description of Workflow | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **user_id** | **str** | User who created workflow | [optional] 

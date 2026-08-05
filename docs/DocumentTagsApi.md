@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **add_document_tags**
-> AddResponse add_document_tags(document_id, add_document_tags_request, site_id=site_id)
+> AddResponse add_document_tags(document_id, add_document_tags_request, site_id=site_id, artifact_id=artifact_id)
 
 Add tag to document
 
@@ -50,10 +50,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     add_document_tags_request = {"key":"category"} # AddDocumentTagsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Add tag to document
-        api_response = api_instance.add_document_tags(document_id, add_document_tags_request, site_id=site_id)
+        api_response = api_instance.add_document_tags(document_id, add_document_tags_request, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentTagsApi->add_document_tags:\n")
         pprint(api_response)
     except Exception as e:
@@ -70,6 +71,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **add_document_tags_request** | [**AddDocumentTagsRequest**](AddDocumentTagsRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -93,7 +95,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_tag**
-> DeleteResponse delete_document_tag(document_id, tag_key, site_id=site_id)
+> DeleteResponse delete_document_tag(document_id, tag_key, site_id=site_id, artifact_id=artifact_id)
 
 Delete document tag
 
@@ -126,10 +128,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     tag_key = 'tag_key_example' # str | Tag Key
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Delete document tag
-        api_response = api_instance.delete_document_tag(document_id, tag_key, site_id=site_id)
+        api_response = api_instance.delete_document_tag(document_id, tag_key, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentTagsApi->delete_document_tag:\n")
         pprint(api_response)
     except Exception as e:
@@ -146,6 +149,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **tag_key** | **str**| Tag Key | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -169,7 +173,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_tag_and_value**
-> DeleteResponse delete_document_tag_and_value(document_id, tag_key, tag_value, site_id=site_id, share_key=share_key)
+> DeleteResponse delete_document_tag_and_value(document_id, tag_key, tag_value, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
 
 Delete document's tag value
 
@@ -203,11 +207,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     tag_key = 'tag_key_example' # str | Tag Key
     tag_value = 'tag_value_example' # str | Tag Key Value
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Delete document's tag value
-        api_response = api_instance.delete_document_tag_and_value(document_id, tag_key, tag_value, site_id=site_id, share_key=share_key)
+        api_response = api_instance.delete_document_tag_and_value(document_id, tag_key, tag_value, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
         print("The response of DocumentTagsApi->delete_document_tag_and_value:\n")
         pprint(api_response)
     except Exception as e:
@@ -225,6 +230,7 @@ Name | Type | Description  | Notes
  **tag_key** | **str**| Tag Key | 
  **tag_value** | **str**| Tag Key Value | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 
 ### Return type
@@ -249,7 +255,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_tag**
-> GetDocumentTagResponse get_document_tag(document_id, tag_key, site_id=site_id, share_key=share_key)
+> GetDocumentTagResponse get_document_tag(document_id, tag_key, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
 
 Get document tag by key
 
@@ -282,11 +288,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     tag_key = 'tag_key_example' # str | Tag Key
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Get document tag by key
-        api_response = api_instance.get_document_tag(document_id, tag_key, site_id=site_id, share_key=share_key)
+        api_response = api_instance.get_document_tag(document_id, tag_key, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
         print("The response of DocumentTagsApi->get_document_tag:\n")
         pprint(api_response)
     except Exception as e:
@@ -303,6 +310,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **tag_key** | **str**| Tag Key | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 
 ### Return type
@@ -327,7 +335,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_tags**
-> GetDocumentTagsResponse get_document_tags(document_id, site_id=site_id, limit=limit, share_key=share_key, next=next, previous=previous)
+> GetDocumentTagsResponse get_document_tags(document_id, site_id=site_id, artifact_id=artifact_id, limit=limit, share_key=share_key, next=next, previous=previous)
 
 Get document's tags
 
@@ -359,6 +367,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentTagsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
     share_key = 'share_key_example' # str | Share Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
@@ -366,7 +375,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Get document's tags
-        api_response = api_instance.get_document_tags(document_id, site_id=site_id, limit=limit, share_key=share_key, next=next, previous=previous)
+        api_response = api_instance.get_document_tags(document_id, site_id=site_id, artifact_id=artifact_id, limit=limit, share_key=share_key, next=next, previous=previous)
         print("The response of DocumentTagsApi->get_document_tags:\n")
         pprint(api_response)
     except Exception as e:
@@ -382,6 +391,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
  **share_key** | **str**| Share Identifier | [optional] 
  **next** | **str**| Next page of results token | [optional] 
@@ -409,7 +419,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_document_tag**
-> set_document_tag(document_id, tag_key, set_document_tag_key_request, site_id=site_id)
+> UpdateResponse set_document_tag(document_id, tag_key, set_document_tag_key_request, site_id=site_id, artifact_id=artifact_id)
 
 Update document tag value(s)
 
@@ -421,6 +431,7 @@ Update any and all values of a document tag, by using its key; you can supply on
 ```python
 import formkiq_client
 from formkiq_client.models.set_document_tag_key_request import SetDocumentTagKeyRequest
+from formkiq_client.models.update_response import UpdateResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -443,10 +454,13 @@ with formkiq_client.ApiClient(configuration) as api_client:
     tag_key = 'tag_key_example' # str | Tag Key
     set_document_tag_key_request = formkiq_client.SetDocumentTagKeyRequest() # SetDocumentTagKeyRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Update document tag value(s)
-        api_instance.set_document_tag(document_id, tag_key, set_document_tag_key_request, site_id=site_id)
+        api_response = api_instance.set_document_tag(document_id, tag_key, set_document_tag_key_request, site_id=site_id, artifact_id=artifact_id)
+        print("The response of DocumentTagsApi->set_document_tag:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DocumentTagsApi->set_document_tag: %s\n" % e)
 ```
@@ -462,10 +476,11 @@ Name | Type | Description  | Notes
  **tag_key** | **str**| Tag Key | 
  **set_document_tag_key_request** | [**SetDocumentTagKeyRequest**](SetDocumentTagKeyRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
-void (empty response body)
+[**UpdateResponse**](UpdateResponse.md)
 
 ### Authorization
 
@@ -474,7 +489,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -485,7 +500,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_document_tags**
-> set_document_tags(document_id, add_document_tags_request, site_id=site_id)
+> SetResponse set_document_tags(document_id, add_document_tags_request, site_id=site_id, artifact_id=artifact_id)
 
 Set document's tags
 
@@ -497,6 +512,7 @@ Set multiple tags to a document; this endpoint also accepts a different body par
 ```python
 import formkiq_client
 from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
+from formkiq_client.models.set_response import SetResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -518,10 +534,13 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     add_document_tags_request = {"tags":[{"key":"category"}]} # AddDocumentTagsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Set document's tags
-        api_instance.set_document_tags(document_id, add_document_tags_request, site_id=site_id)
+        api_response = api_instance.set_document_tags(document_id, add_document_tags_request, site_id=site_id, artifact_id=artifact_id)
+        print("The response of DocumentTagsApi->set_document_tags:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DocumentTagsApi->set_document_tags: %s\n" % e)
 ```
@@ -536,10 +555,11 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **add_document_tags_request** | [**AddDocumentTagsRequest**](AddDocumentTagsRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
-void (empty response body)
+[**SetResponse**](SetResponse.md)
 
 ### Authorization
 
@@ -548,7 +568,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 
@@ -559,7 +579,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_document_tags**
-> update_document_tags(document_id, add_document_tags_request, site_id=site_id)
+> UpdateResponse update_document_tags(document_id, add_document_tags_request, site_id=site_id, artifact_id=artifact_id)
 
 Update document tags
 
@@ -571,6 +591,7 @@ Updates multiple tags to a document; this endpoint also accepts a different body
 ```python
 import formkiq_client
 from formkiq_client.models.add_document_tags_request import AddDocumentTagsRequest
+from formkiq_client.models.update_response import UpdateResponse
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -592,10 +613,13 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     add_document_tags_request = {"tags":[{"key":"category"}]} # AddDocumentTagsRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Update document tags
-        api_instance.update_document_tags(document_id, add_document_tags_request, site_id=site_id)
+        api_response = api_instance.update_document_tags(document_id, add_document_tags_request, site_id=site_id, artifact_id=artifact_id)
+        print("The response of DocumentTagsApi->update_document_tags:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling DocumentTagsApi->update_document_tags: %s\n" % e)
 ```
@@ -610,10 +634,11 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **add_document_tags_request** | [**AddDocumentTagsRequest**](AddDocumentTagsRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
-void (empty response body)
+[**UpdateResponse**](UpdateResponse.md)
 
 ### Authorization
 
@@ -622,7 +647,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 

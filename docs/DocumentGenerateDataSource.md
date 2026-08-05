@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | The data source name | [optional] 
 **document_id** | **str** | Document Identifier of the data source document | 
+**artifact_id** | **str** | Document Artifact Identifier of the data source document | [optional] 
 **data_root** | **str** | The default JSON object path for the data object | [optional] [default to 'data']
 
 ## Example

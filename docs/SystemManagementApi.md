@@ -7,18 +7,21 @@ Method | HTTP request | Description
 [**add_api_key**](SystemManagementApi.md#add_api_key) | **POST** /sites/{siteId}/apiKeys | Add API Key
 [**add_locale**](SystemManagementApi.md#add_locale) | **POST** /sites/{siteId}/locales | Add Locale
 [**add_locale_resource_item**](SystemManagementApi.md#add_locale_resource_item) | **POST** /sites/{siteId}/locales/{locale}/resourceItems | Add Locale Resource Item
-[**add_open_search_restore_snapshot**](SystemManagementApi.md#add_open_search_restore_snapshot) | **POST** /sites/{siteId}/opensearch/snapshots/{snapshotName}/restore | Add an OpenSearch Restore Snapshot
-[**add_open_search_snapshot**](SystemManagementApi.md#add_open_search_snapshot) | **POST** /sites/{siteId}/opensearch/snapshots/{snapshotName} | Add an OpenSearch Snapshot
+[**add_open_search_restore_snapshot**](SystemManagementApi.md#add_open_search_restore_snapshot) | **POST** /sites/{siteId}/opensearch/snapshots/{snapshotName}/restore | Restore site OpenSearch snapshot
+[**add_open_search_snapshot**](SystemManagementApi.md#add_open_search_snapshot) | **POST** /sites/{siteId}/opensearch/snapshots/{snapshotName} | Create site OpenSearch snapshot
 [**add_site**](SystemManagementApi.md#add_site) | **POST** /sites | Add Site
+[**add_system_inference_model_agreement**](SystemManagementApi.md#add_system_inference_model_agreement) | **POST** /system/inferenceModels/agreement | Agree to a system inference model
+[**cleanup_open_search_snapshot_repository**](SystemManagementApi.md#cleanup_open_search_snapshot_repository) | **POST** /sites/global/opensearch/snapshotRepositories/{repositoryName}/cleanup | Cleanup OpenSearch snapshot repository
 [**delete_api_key**](SystemManagementApi.md#delete_api_key) | **DELETE** /sites/{siteId}/apiKeys/{apiKey} | Delete API Key
 [**delete_locale**](SystemManagementApi.md#delete_locale) | **DELETE** /sites/{siteId}/locales/{locale} | Delete Locale
 [**delete_locale_resource_item**](SystemManagementApi.md#delete_locale_resource_item) | **DELETE** /sites/{siteId}/locales/{locale}/resourceItems/{itemKey} | Delete Local Resource Item
 [**delete_open_search_index**](SystemManagementApi.md#delete_open_search_index) | **DELETE** /sites/{siteId}/opensearch/index | Deletes site(s) OpenSearch index
 [**delete_open_search_index_by_name**](SystemManagementApi.md#delete_open_search_index_by_name) | **DELETE** /sites/global/opensearch/indices/{indexName} | Deletes OpenSearch index by name
-[**delete_open_search_restore_snapshot**](SystemManagementApi.md#delete_open_search_restore_snapshot) | **DELETE** /sites/{siteId}/opensearch/snapshots/{snapshotName}/restore | Deletes site(s) OpenSearch Restore Snapshot
-[**delete_open_search_snapshot**](SystemManagementApi.md#delete_open_search_snapshot) | **DELETE** /sites/{siteId}/opensearch/snapshots/{snapshotName} | Deletes site(s) OpenSearch Snapshot
-[**delete_open_search_snapshot_repository**](SystemManagementApi.md#delete_open_search_snapshot_repository) | **DELETE** /sites/{siteId}/opensearch/snapshotRepository | Deletes site(s) OpenSearch Snapshot Repository
+[**delete_open_search_restore_snapshot**](SystemManagementApi.md#delete_open_search_restore_snapshot) | **DELETE** /sites/{siteId}/opensearch/snapshots/{snapshotName}/restore | Delete restored OpenSearch snapshot index
+[**delete_open_search_snapshot**](SystemManagementApi.md#delete_open_search_snapshot) | **DELETE** /sites/{siteId}/opensearch/snapshots/{snapshotName} | Delete site OpenSearch snapshot
+[**delete_open_search_snapshot_repository**](SystemManagementApi.md#delete_open_search_snapshot_repository) | **DELETE** /sites/{siteId}/opensearch/snapshotRepository | Delete site OpenSearch snapshot repository
 [**delete_site_group**](SystemManagementApi.md#delete_site_group) | **DELETE** /sites/{siteId}/groups/{groupName} | Deletes Site Group and permissions
+[**generate_delegation_token**](SystemManagementApi.md#generate_delegation_token) | **POST** /sites/{siteId}/delegationTokens | Generate a delegation token
 [**get_all_open_search_indices**](SystemManagementApi.md#get_all_open_search_indices) | **GET** /sites/global/opensearch/indices | Get all OpenSearch indices
 [**get_api_keys**](SystemManagementApi.md#get_api_keys) | **GET** /sites/{siteId}/apiKeys | Get API Keys
 [**get_configuration**](SystemManagementApi.md#get_configuration) | **GET** /sites/{siteId}/configuration | Get site configuration
@@ -27,13 +30,15 @@ Method | HTTP request | Description
 [**get_locales**](SystemManagementApi.md#get_locales) | **GET** /sites/{siteId}/locales | Get Locales
 [**get_open_search_index**](SystemManagementApi.md#get_open_search_index) | **GET** /sites/{siteId}/opensearch/index | Get site(s) OpenSearch index settings
 [**get_open_search_indices**](SystemManagementApi.md#get_open_search_indices) | **GET** /sites/{siteId}/opensearch/indices | Get site(s) OpenSearch indices
-[**get_open_search_snapshot**](SystemManagementApi.md#get_open_search_snapshot) | **GET** /sites/{siteId}/opensearch/snapshots/{snapshotName} | Get site(s) OpenSearch snapshot
-[**get_open_search_snapshot_repositories**](SystemManagementApi.md#get_open_search_snapshot_repositories) | **GET** /sites/global/opensearch/snapshotRepositories | Get site(s) OpenSearch snapshot repositories
-[**get_open_search_snapshot_repository**](SystemManagementApi.md#get_open_search_snapshot_repository) | **GET** /sites/{siteId}/opensearch/snapshotRepository | Get site(s) OpenSearch snapshot repository
-[**get_open_search_snapshots**](SystemManagementApi.md#get_open_search_snapshots) | **GET** /sites/{siteId}/opensearch/snapshots | Get site(s) OpenSearch snapshots
+[**get_open_search_snapshot**](SystemManagementApi.md#get_open_search_snapshot) | **GET** /sites/{siteId}/opensearch/snapshots/{snapshotName} | Get site OpenSearch snapshot
+[**get_open_search_snapshot_repositories**](SystemManagementApi.md#get_open_search_snapshot_repositories) | **GET** /sites/global/opensearch/snapshotRepositories | List OpenSearch snapshot repositories
+[**get_open_search_snapshot_repository**](SystemManagementApi.md#get_open_search_snapshot_repository) | **GET** /sites/{siteId}/opensearch/snapshotRepository | Get site OpenSearch snapshot repository
+[**get_open_search_snapshots**](SystemManagementApi.md#get_open_search_snapshots) | **GET** /sites/{siteId}/opensearch/snapshots | List site OpenSearch snapshots
 [**get_site_group**](SystemManagementApi.md#get_site_group) | **GET** /sites/{siteId}/groups/{groupName} | Get group and permissions belonging to site
 [**get_site_groups**](SystemManagementApi.md#get_site_groups) | **GET** /sites/{siteId}/groups | Get group(s) and permissions belonging to site
 [**get_sites**](SystemManagementApi.md#get_sites) | **GET** /sites | Get site(s) access
+[**get_system_configuration**](SystemManagementApi.md#get_system_configuration) | **GET** /system/configuration | Get system configuration
+[**get_system_inference_models**](SystemManagementApi.md#get_system_inference_models) | **GET** /system/inferenceModels | Get system inference models
 [**get_version**](SystemManagementApi.md#get_version) | **GET** /version | Get FormKiQ version
 [**set_locale_resource_item**](SystemManagementApi.md#set_locale_resource_item) | **PUT** /sites/{siteId}/locales/{locale}/resourceItems/{itemKey} | Set Locale Resource Item
 [**set_open_search_index**](SystemManagementApi.md#set_open_search_index) | **PUT** /sites/{siteId}/opensearch/index | Set site(s) OpenSearch index settings
@@ -41,6 +46,7 @@ Method | HTTP request | Description
 [**set_site_group_permissions**](SystemManagementApi.md#set_site_group_permissions) | **PUT** /sites/{siteId}/groups/{groupName}/permissions | Set Site&#39;s Group Permissions
 [**update_configuration**](SystemManagementApi.md#update_configuration) | **PATCH** /sites/{siteId}/configuration | Update site configuration
 [**update_site**](SystemManagementApi.md#update_site) | **PATCH** /sites/{siteId} | Update Site
+[**update_system_configuration**](SystemManagementApi.md#update_system_configuration) | **PATCH** /system/configuration | Update system configuration
 
 
 # **add_api_key**
@@ -273,9 +279,11 @@ No authorization required
 # **add_open_search_restore_snapshot**
 > AddResponse add_open_search_restore_snapshot(site_id, snapshot_name)
 
-Add an OpenSearch Restore Snapshot
+Restore site OpenSearch snapshot
 
-Add an OpenSearch Restore Snapshot
+Restores the specified snapshot into a separate OpenSearch index for the site.
+
+The restored index is created from the site's current index name with the snapshot name and "_restored" suffix. For provisioned OpenSearch domains, the snapshot is read from the site's S3 snapshot repository. For OpenSearch Serverless, the snapshot is read from the automated snapshot repository.
 
 ### Example
 
@@ -305,7 +313,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
     try:
-        # Add an OpenSearch Restore Snapshot
+        # Restore site OpenSearch snapshot
         api_response = api_instance.add_open_search_restore_snapshot(site_id, snapshot_name)
         print("The response of SystemManagementApi->add_open_search_restore_snapshot:\n")
         pprint(api_response)
@@ -347,9 +355,11 @@ No authorization required
 # **add_open_search_snapshot**
 > AddResponse add_open_search_snapshot(site_id, snapshot_name)
 
-Add an OpenSearch Snapshot
+Create site OpenSearch snapshot
 
-Add an OpenSearch Snapshot
+Creates a manual snapshot of the specified site's OpenSearch index.
+
+If the site's S3 snapshot repository does not already exist, it is registered before the snapshot is created. The supplied snapshot name is stored with the site prefix. This operation is not supported for OpenSearch Serverless.
 
 ### Example
 
@@ -379,7 +389,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
     try:
-        # Add an OpenSearch Snapshot
+        # Create site OpenSearch snapshot
         api_response = api_instance.add_open_search_snapshot(site_id, snapshot_name)
         print("The response of SystemManagementApi->add_open_search_snapshot:\n")
         pprint(api_response)
@@ -489,6 +499,158 @@ No authorization required
 |-------------|-------------|------------------|
 **201** | 201 CREATED |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 **400** | 400 OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_system_inference_model_agreement**
+> AddResponse add_system_inference_model_agreement(add_system_inference_model_agreement_request)
+
+Agree to a system inference model
+
+Agree to the Bedrock model usage agreement for a system inference model
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.add_response import AddResponse
+from formkiq_client.models.add_system_inference_model_agreement_request import AddSystemInferenceModelAgreementRequest
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    add_system_inference_model_agreement_request = formkiq_client.AddSystemInferenceModelAgreementRequest() # AddSystemInferenceModelAgreementRequest | 
+
+    try:
+        # Agree to a system inference model
+        api_response = api_instance.add_system_inference_model_agreement(add_system_inference_model_agreement_request)
+        print("The response of SystemManagementApi->add_system_inference_model_agreement:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->add_system_inference_model_agreement: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **add_system_inference_model_agreement_request** | [**AddSystemInferenceModelAgreementRequest**](AddSystemInferenceModelAgreementRequest.md)|  | 
+
+### Return type
+
+[**AddResponse**](AddResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | 400 Bad Request |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cleanup_open_search_snapshot_repository**
+> CleanupOpenSearchSnapshotRepositoryResponse cleanup_open_search_snapshot_repository(repository_name, cluster_manager_timeout=cluster_manager_timeout, timeout=timeout)
+
+Cleanup OpenSearch snapshot repository
+
+Cleans up stale data in the specified OpenSearch snapshot repository.
+
+This endpoint clears data no longer referenced by any existing snapshot. This operation is not supported for OpenSearch Serverless.
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.cleanup_open_search_snapshot_repository_response import CleanupOpenSearchSnapshotRepositoryResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    repository_name = 'repository_name_example' # str | Snapshot Repository Name
+    cluster_manager_timeout = 'cluster_manager_timeout_example' # str | The amount of time to wait for a response from the cluster manager node. (optional)
+    timeout = 'timeout_example' # str | The amount of time to wait for the operation to complete. (optional)
+
+    try:
+        # Cleanup OpenSearch snapshot repository
+        api_response = api_instance.cleanup_open_search_snapshot_repository(repository_name, cluster_manager_timeout=cluster_manager_timeout, timeout=timeout)
+        print("The response of SystemManagementApi->cleanup_open_search_snapshot_repository:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->cleanup_open_search_snapshot_repository: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **repository_name** | **str**| Snapshot Repository Name | 
+ **cluster_manager_timeout** | **str**| The amount of time to wait for a response from the cluster manager node. | [optional] 
+ **timeout** | **str**| The amount of time to wait for the operation to complete. | [optional] 
+
+### Return type
+
+[**CleanupOpenSearchSnapshotRepositoryResponse**](CleanupOpenSearchSnapshotRepositoryResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -863,9 +1025,11 @@ No authorization required
 # **delete_open_search_restore_snapshot**
 > DeleteResponse delete_open_search_restore_snapshot(site_id, snapshot_name)
 
-Deletes site(s) OpenSearch Restore Snapshot
+Delete restored OpenSearch snapshot index
 
-Deletes the OpenSearch Restore Snapshot
+Deletes the restored OpenSearch index created from the specified snapshot.
+
+This deletes only the restored index named with the snapshot name and "_restored" suffix. It does not delete the original site index or the snapshot. This operation is not supported for OpenSearch Serverless.
 
 ### Example
 
@@ -895,7 +1059,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
     try:
-        # Deletes site(s) OpenSearch Restore Snapshot
+        # Delete restored OpenSearch snapshot index
         api_response = api_instance.delete_open_search_restore_snapshot(site_id, snapshot_name)
         print("The response of SystemManagementApi->delete_open_search_restore_snapshot:\n")
         pprint(api_response)
@@ -937,9 +1101,11 @@ No authorization required
 # **delete_open_search_snapshot**
 > DeleteResponse delete_open_search_snapshot(site_id, snapshot_name)
 
-Deletes site(s) OpenSearch Snapshot
+Delete site OpenSearch snapshot
 
-Deletes the OpenSearch Snapshot
+Deletes a manual snapshot from the specified site's S3 snapshot repository.
+
+The supplied snapshot name is resolved to the site's stored snapshot name before deletion. This operation is not supported for OpenSearch Serverless.
 
 ### Example
 
@@ -969,7 +1135,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
     try:
-        # Deletes site(s) OpenSearch Snapshot
+        # Delete site OpenSearch snapshot
         api_response = api_instance.delete_open_search_snapshot(site_id, snapshot_name)
         print("The response of SystemManagementApi->delete_open_search_snapshot:\n")
         pprint(api_response)
@@ -1011,9 +1177,11 @@ No authorization required
 # **delete_open_search_snapshot_repository**
 > DeleteResponse delete_open_search_snapshot_repository(site_id)
 
-Deletes site(s) OpenSearch Snapshot Repository
+Delete site OpenSearch snapshot repository
 
-Deletes the OpenSearch Snapshot Repository
+Deletes the S3 snapshot repository configured for the specified site's OpenSearch index.
+
+This removes the OpenSearch repository registration, not the site's index. This operation is not supported for OpenSearch Serverless.
 
 ### Example
 
@@ -1042,7 +1210,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
-        # Deletes site(s) OpenSearch Snapshot Repository
+        # Delete site OpenSearch snapshot repository
         api_response = api_instance.delete_open_search_snapshot_repository(site_id)
         print("The response of SystemManagementApi->delete_open_search_snapshot_repository:\n")
         pprint(api_response)
@@ -1151,6 +1319,89 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **generate_delegation_token**
+> AddDelegationTokenResponse generate_delegation_token(site_id, add_delegation_token_request)
+
+Generate a delegation token
+
+Creates a KMS-signed delegation token for a site. This endpoint requires ADMIN permission
+for the requested siteId. The returned token is sent on later API requests in the
+x-formkiq-delegation-token header and reduces the caller's effective permissions to the
+requested subset for that site. It cannot grant ADMIN, add permissions the caller does not
+already have, or add access to other sites. When onBehalfOf is supplied, activity created
+while using the token is attributed to that username while the signed token still records
+the ADMIN principal that issued it. The reason is signed into the token for audit and
+support traceability.
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.add_delegation_token_request import AddDelegationTokenRequest
+from formkiq_client.models.add_delegation_token_response import AddDelegationTokenResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    add_delegation_token_request = formkiq_client.AddDelegationTokenRequest() # AddDelegationTokenRequest | 
+
+    try:
+        # Generate a delegation token
+        api_response = api_instance.generate_delegation_token(site_id, add_delegation_token_request)
+        print("The response of SystemManagementApi->generate_delegation_token:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->generate_delegation_token: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **add_delegation_token_request** | [**AddDelegationTokenRequest**](AddDelegationTokenRequest.md)|  | 
+
+### Return type
+
+[**AddDelegationTokenResponse**](AddDelegationTokenResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | 400 Bad Request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1749,9 +2000,11 @@ No authorization required
 # **get_open_search_snapshot**
 > GetOpenSearchSnapshotResponse get_open_search_snapshot(site_id, snapshot_name)
 
-Get site(s) OpenSearch snapshot
+Get site OpenSearch snapshot
 
-Returns the OpenSearch Snapshot
+Returns details for a snapshot of the specified site's OpenSearch index.
+
+For provisioned OpenSearch domains, the supplied snapshot name is resolved to the site's stored snapshot name before lookup. For OpenSearch Serverless, the response is read from the automated snapshot repository.
 
 ### Example
 
@@ -1781,7 +2034,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     snapshot_name = 'snapshot_name_example' # str | Snapshot Name
 
     try:
-        # Get site(s) OpenSearch snapshot
+        # Get site OpenSearch snapshot
         api_response = api_instance.get_open_search_snapshot(site_id, snapshot_name)
         print("The response of SystemManagementApi->get_open_search_snapshot:\n")
         pprint(api_response)
@@ -1823,9 +2076,11 @@ No authorization required
 # **get_open_search_snapshot_repositories**
 > GetOpenSearchSnapshotRepositoryResponse get_open_search_snapshot_repositories()
 
-Get site(s) OpenSearch snapshot repositories
+List OpenSearch snapshot repositories
 
-Returns the OpenSearch Snapshot Repositories
+Returns all configured OpenSearch S3 snapshot repositories for the deployment.
+
+This endpoint is available to administrators when the fulltext OpenSearch module is installed and snapshot support is enabled. Snapshot repositories are not supported for OpenSearch Serverless.
 
 ### Example
 
@@ -1853,7 +2108,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.SystemManagementApi(api_client)
 
     try:
-        # Get site(s) OpenSearch snapshot repositories
+        # List OpenSearch snapshot repositories
         api_response = api_instance.get_open_search_snapshot_repositories()
         print("The response of SystemManagementApi->get_open_search_snapshot_repositories:\n")
         pprint(api_response)
@@ -1891,9 +2146,11 @@ No authorization required
 # **get_open_search_snapshot_repository**
 > GetOpenSearchSnapshotRepositoryResponse get_open_search_snapshot_repository(site_id)
 
-Get site(s) OpenSearch snapshot repository
+Get site OpenSearch snapshot repository
 
-Returns the OpenSearch Snapshot Repository
+Returns the S3 snapshot repository configured for the specified site.
+
+The repository stores manual snapshots for the site's OpenSearch index. It is named from the site and application environment and is created automatically when a snapshot is requested. Snapshot repositories are not supported for OpenSearch Serverless.
 
 ### Example
 
@@ -1922,7 +2179,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
-        # Get site(s) OpenSearch snapshot repository
+        # Get site OpenSearch snapshot repository
         api_response = api_instance.get_open_search_snapshot_repository(site_id)
         print("The response of SystemManagementApi->get_open_search_snapshot_repository:\n")
         pprint(api_response)
@@ -1963,9 +2220,11 @@ No authorization required
 # **get_open_search_snapshots**
 > GetOpenSearchSnapshotResponse get_open_search_snapshots(site_id)
 
-Get site(s) OpenSearch snapshots
+List site OpenSearch snapshots
 
-Returns the OpenSearch Snapshots
+Returns snapshots for the specified site's OpenSearch index.
+
+For provisioned OpenSearch domains, the response is read from the site's S3 snapshot repository. For OpenSearch Serverless, the response is read from the automated snapshot repository.
 
 ### Example
 
@@ -1994,7 +2253,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     site_id = 'site_id_example' # str | Site Identifier
 
     try:
-        # Get site(s) OpenSearch snapshots
+        # List site OpenSearch snapshots
         api_response = api_instance.get_open_search_snapshots(site_id)
         print("The response of SystemManagementApi->get_open_search_snapshots:\n")
         pprint(api_response)
@@ -2233,6 +2492,142 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetSitesResponse**](GetSitesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_system_configuration**
+> GetSystemConfigurationResponse get_system_configuration()
+
+Get system configuration
+
+Returns the system configuration
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_system_configuration_response import GetSystemConfigurationResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+
+    try:
+        # Get system configuration
+        api_response = api_instance.get_system_configuration()
+        print("The response of SystemManagementApi->get_system_configuration:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->get_system_configuration: %s\n" % e)
+```
+
+
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetSystemConfigurationResponse**](GetSystemConfigurationResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_system_inference_models**
+> GetSystemInferenceModelsResponse get_system_inference_models()
+
+Get system inference models
+
+Returns the system inference models
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_system_inference_models_response import GetSystemInferenceModelsResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+
+    try:
+        # Get system inference models
+        api_response = api_instance.get_system_inference_models()
+        print("The response of SystemManagementApi->get_system_inference_models:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->get_system_inference_models: %s\n" % e)
+```
+
+
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetSystemInferenceModelsResponse**](GetSystemInferenceModelsResponse.md)
 
 ### Authorization
 
@@ -2773,6 +3168,80 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_system_configuration**
+> UpdateResponse update_system_configuration(update_system_configuration_request)
+
+Update system configuration
+
+Update the system configuration
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.update_response import UpdateResponse
+from formkiq_client.models.update_system_configuration_request import UpdateSystemConfigurationRequest
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    update_system_configuration_request = formkiq_client.UpdateSystemConfigurationRequest() # UpdateSystemConfigurationRequest | 
+
+    try:
+        # Update system configuration
+        api_response = api_instance.update_system_configuration(update_system_configuration_request)
+        print("The response of SystemManagementApi->update_system_configuration:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->update_system_configuration: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_system_configuration_request** | [**UpdateSystemConfigurationRequest**](UpdateSystemConfigurationRequest.md)|  | 
+
+### Return type
+
+[**UpdateResponse**](UpdateResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | 400 OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

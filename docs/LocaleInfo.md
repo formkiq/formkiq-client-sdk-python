@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**locale** | **str** | Name of Locale | [optional] 
+**locale** | **str** | Name of Locale | 
 
 ## Example
 

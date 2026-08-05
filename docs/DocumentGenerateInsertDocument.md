@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **position** | [**DocumentGenerateInsertDocumentPosition**](DocumentGenerateInsertDocumentPosition.md) |  | 
 **document_id** | **str** | Document Identifier of the data source document | 
+**artifact_id** | **str** | Document Artifact Identifier of the data source document | [optional] 
 
 ## Example
 

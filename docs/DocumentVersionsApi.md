@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **delete_document_version**
-> DeleteResponse delete_document_version(document_id, version_key, site_id=site_id, share_key=share_key)
+> DeleteResponse delete_document_version(document_id, version_key, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
 
 Delete document version
 
@@ -43,11 +43,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     version_key = 'version_key_example' # str | Version Key (version key required URL encoding)
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Delete document version
-        api_response = api_instance.delete_document_version(document_id, version_key, site_id=site_id, share_key=share_key)
+        api_response = api_instance.delete_document_version(document_id, version_key, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
         print("The response of DocumentVersionsApi->delete_document_version:\n")
         pprint(api_response)
     except Exception as e:
@@ -64,6 +65,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **version_key** | **str**| Version Key (version key required URL encoding) | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 
 ### Return type
@@ -88,7 +90,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_versions**
-> GetDocumentVersionsResponse get_document_versions(document_id, site_id=site_id, limit=limit, share_key=share_key, next=next)
+> GetDocumentVersionsResponse get_document_versions(document_id, site_id=site_id, artifact_id=artifact_id, limit=limit, share_key=share_key, next=next)
 
 Get document's versions
 
@@ -120,13 +122,14 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentVersionsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
     share_key = 'share_key_example' # str | Share Identifier (optional)
     next = 'next_example' # str | Next page of results token (optional)
 
     try:
         # Get document's versions
-        api_response = api_instance.get_document_versions(document_id, site_id=site_id, limit=limit, share_key=share_key, next=next)
+        api_response = api_instance.get_document_versions(document_id, site_id=site_id, artifact_id=artifact_id, limit=limit, share_key=share_key, next=next)
         print("The response of DocumentVersionsApi->get_document_versions:\n")
         pprint(api_response)
     except Exception as e:
@@ -142,6 +145,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
  **share_key** | **str**| Share Identifier | [optional] 
  **next** | **str**| Next page of results token | [optional] 
@@ -168,7 +172,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_document_version**
-> SetDocumentVersionResponse set_document_version(document_id, set_document_version_request, site_id=site_id)
+> SetDocumentVersionResponse set_document_version(document_id, set_document_version_request, site_id=site_id, artifact_id=artifact_id)
 
 Set version of document
 
@@ -202,10 +206,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     set_document_version_request = formkiq_client.SetDocumentVersionRequest() # SetDocumentVersionRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Set version of document
-        api_response = api_instance.set_document_version(document_id, set_document_version_request, site_id=site_id)
+        api_response = api_instance.set_document_version(document_id, set_document_version_request, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentVersionsApi->set_document_version:\n")
         pprint(api_response)
     except Exception as e:
@@ -222,6 +227,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **set_document_version_request** | [**SetDocumentVersionRequest**](SetDocumentVersionRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 

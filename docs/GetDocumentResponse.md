@@ -5,6 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**artifact_id** | **str** | Artifact Identifier | [optional] 
+**promoted_artifact_id** | **str** | Promoted Artifact Identifier | [optional] 
+**artifact_category** | **str** | Artifact Category | [optional] 
+**has_artifacts** | **bool** | Whether the document has artifact documents | [optional] 
 **site_id** | **str** | Site Identifier | [optional] 
 **path** | **str** | Path or Name of document | [optional] 
 **width** | **str** | Document Content Width property | [optional] 

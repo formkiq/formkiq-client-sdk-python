@@ -6,8 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | [**AttributeType**](AttributeType.md) |  | [optional] [default to AttributeType.STANDARD]
-**key** | **str** | Attribute Key | [optional] 
+**key** | **str** | Attribute Key | 
 **data_type** | [**AttributeDataType**](AttributeDataType.md) |  | [optional] [default to AttributeDataType.STRING]
+**validation_regex** | **str** | Attribute Value Regex Validation | [optional] 
 **watermark** | [**Watermark**](Watermark.md) |  | [optional] 
 
 ## Example

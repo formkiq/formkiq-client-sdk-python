@@ -13,11 +13,13 @@ Name | Type | Description | Notes
 **last_modified_date** | **str** | Last Modified Timestamp | [optional] 
 **checksum** | **str** | Document checksum, changes when document file changes | [optional] 
 **document_id** | **str** | Document Identifier | 
+**has_artifacts** | **bool** | Whether the document has artifact documents | [optional] 
 **content_type** | **str** | Document Content-Type | [optional] 
 **user_id** | **str** | User who added document | [optional] 
 **content_length** | **int** | Document size | [optional] 
 **version_id** | **str** | Document version | [optional] 
 **belongs_to_document_id** | **str** | Parent Document Identifier | [optional] 
+**attributes** | [**List[DocumentAttribute]**](DocumentAttribute.md) | List of document attributes | [optional] 
 
 ## Example
 

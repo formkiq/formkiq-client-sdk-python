@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**WorkflowStepDecisionType**](WorkflowStepDecisionType.md) |  | [optional] 
-**next_step_id** | **str** | Workflow Step to move to | [optional] 
+**conditions** | [**List[WorkflowStepCondition]**](WorkflowStepCondition.md) | Workflow Step Conditions | [optional] 
+**default_transition** | [**WorkflowStepTransition**](WorkflowStepTransition.md) |  | [optional] 
 
 ## Example
 

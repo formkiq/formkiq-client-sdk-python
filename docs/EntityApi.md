@@ -7,11 +7,14 @@ Method | HTTP request | Description
 [**add_entity**](EntityApi.md#add_entity) | **POST** /entities/{entityTypeId} | Add New Entity
 [**add_entity_type**](EntityApi.md#add_entity_type) | **POST** /entityTypes | Add New EntityType
 [**delete_entity**](EntityApi.md#delete_entity) | **DELETE** /entities/{entityTypeId}/{entityId} | Deletes Entity
+[**delete_entity_attribute**](EntityApi.md#delete_entity_attribute) | **DELETE** /entities/{entityTypeId}/{entityId}/attributes/{attributeKey} | Deletes Entity Attribute
 [**delete_entity_type**](EntityApi.md#delete_entity_type) | **DELETE** /entityTypes/{entityTypeId} | Deletes Entity Type
 [**get_entities**](EntityApi.md#get_entities) | **GET** /entities/{entityTypeId} | Get Entities
 [**get_entity**](EntityApi.md#get_entity) | **GET** /entities/{entityTypeId}/{entityId} | Get Entity
 [**get_entity_type**](EntityApi.md#get_entity_type) | **GET** /entityTypes/{entityTypeId} | Get EntityType
 [**get_entity_types**](EntityApi.md#get_entity_types) | **GET** /entityTypes | Get EntityTypes
+[**set_entity**](EntityApi.md#set_entity) | **PUT** /entities/{entityTypeId}/{entityId} | Set Entity
+[**set_entity_type**](EntityApi.md#set_entity_type) | **PUT** /entityTypes/{entityTypeId} | Set EntityType
 [**update_entity**](EntityApi.md#update_entity) | **PATCH** /entities/{entityTypeId}/{entityId} | Update Entity
 
 
@@ -224,6 +227,84 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entity_type_id** | **str**| EntityType Identifier | 
  **entity_id** | **str**| Entity Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**DeleteResponse**](DeleteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_entity_attribute**
+> DeleteResponse delete_entity_attribute(entity_type_id, entity_id, attribute_key, site_id=site_id)
+
+Deletes Entity Attribute
+
+Deletes Entity Attribute
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.EntityApi(api_client)
+    entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
+    entity_id = 'entity_id_example' # str | Entity Identifier
+    attribute_key = 'attribute_key_example' # str | Attribute Key
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Deletes Entity Attribute
+        api_response = api_instance.delete_entity_attribute(entity_type_id, entity_id, attribute_key, site_id=site_id)
+        print("The response of EntityApi->delete_entity_attribute:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling EntityApi->delete_entity_attribute: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **entity_type_id** | **str**| EntityType Identifier | 
+ **entity_id** | **str**| Entity Identifier | 
+ **attribute_key** | **str**| Attribute Key | 
  **site_id** | **str**| Site Identifier | [optional] 
 
 ### Return type
@@ -630,6 +711,170 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_entity**
+> SetResponse set_entity(entity_type_id, entity_id, set_entity_request, site_id=site_id, namespace=namespace, create_if_missing=create_if_missing)
+
+Set Entity
+
+Sets a Entity
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.set_entity_request import SetEntityRequest
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.EntityApi(api_client)
+    entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
+    entity_id = 'entity_id_example' # str | Entity Identifier
+    set_entity_request = formkiq_client.SetEntityRequest() # SetEntityRequest | 
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+    namespace = 'namespace_example' # str | Namespace Identifier (optional)
+    create_if_missing = False # bool | When true, skip checking whether the resource exists before setting it (optional) (default to False)
+
+    try:
+        # Set Entity
+        api_response = api_instance.set_entity(entity_type_id, entity_id, set_entity_request, site_id=site_id, namespace=namespace, create_if_missing=create_if_missing)
+        print("The response of EntityApi->set_entity:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling EntityApi->set_entity: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **entity_type_id** | **str**| EntityType Identifier | 
+ **entity_id** | **str**| Entity Identifier | 
+ **set_entity_request** | [**SetEntityRequest**](SetEntityRequest.md)|  | 
+ **site_id** | **str**| Site Identifier | [optional] 
+ **namespace** | **str**| Namespace Identifier | [optional] 
+ **create_if_missing** | **bool**| When true, skip checking whether the resource exists before setting it | [optional] [default to False]
+
+### Return type
+
+[**SetResponse**](SetResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | 400 OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_entity_type**
+> SetResponse set_entity_type(entity_type_id, set_entity_type_request, site_id=site_id, create_if_missing=create_if_missing)
+
+Set EntityType
+
+Sets a Entity Type
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.set_entity_type_request import SetEntityTypeRequest
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.EntityApi(api_client)
+    entity_type_id = 'entity_type_id_example' # str | EntityType Identifier
+    set_entity_type_request = formkiq_client.SetEntityTypeRequest() # SetEntityTypeRequest | 
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+    create_if_missing = False # bool | When true, skip checking whether the resource exists before setting it (optional) (default to False)
+
+    try:
+        # Set EntityType
+        api_response = api_instance.set_entity_type(entity_type_id, set_entity_type_request, site_id=site_id, create_if_missing=create_if_missing)
+        print("The response of EntityApi->set_entity_type:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling EntityApi->set_entity_type: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **entity_type_id** | **str**| EntityType Identifier | 
+ **set_entity_type_request** | [**SetEntityTypeRequest**](SetEntityTypeRequest.md)|  | 
+ **site_id** | **str**| Site Identifier | [optional] 
+ **create_if_missing** | **bool**| When true, skip checking whether the resource exists before setting it | [optional] [default to False]
+
+### Return type
+
+[**SetResponse**](SetResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | 400 OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

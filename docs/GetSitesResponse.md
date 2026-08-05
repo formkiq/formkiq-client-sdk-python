@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **username** | **str** | Username of request caller | [optional] 
 **roles** | **List[str]** |  | [optional] 
+**saml_groups** | **List[str]** | List of User Saml Groups | [optional] 
+**user_claims** | **Dict[str, object]** | Map of custom JWT claims | [optional] 
 **sites** | [**List[Site]**](Site.md) | List of sites | [optional] 
 
 ## Example

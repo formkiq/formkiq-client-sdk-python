@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**delete_document_checkout_legal_hold**](DocumentsApi.md#delete_document_checkout_legal_hold) | **DELETE** /documents/{documentId}/legalHold | Delete document legal hold checkout
 [**delete_published_document_content**](DocumentsApi.md#delete_published_document_content) | **DELETE** /publications/{documentId} | Delete published document&#39;s contents
 [**get_document**](DocumentsApi.md#get_document) | **GET** /documents/{documentId} | Get document
+[**get_document_artifacts**](DocumentsApi.md#get_document_artifacts) | **GET** /documents/{documentId}/artifacts | Get document artifacts
 [**get_document_content**](DocumentsApi.md#get_document_content) | **GET** /documents/{documentId}/content | Get document&#39;s contents
 [**get_document_id_upload**](DocumentsApi.md#get_document_id_upload) | **GET** /documents/{documentId}/upload | Get url to update large document
 [**get_document_syncs**](DocumentsApi.md#get_document_syncs) | **GET** /documents/{documentId}/syncs | Get document syncs
@@ -19,6 +20,7 @@ Method | HTTP request | Description
 [**get_document_url**](DocumentsApi.md#get_document_url) | **GET** /documents/{documentId}/url | Get document content url
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /documents | Get Documents listing
 [**get_published_document_content**](DocumentsApi.md#get_published_document_content) | **GET** /publications/{documentId} | Get published document&#39;s contents
+[**promote_document_artifact**](DocumentsApi.md#promote_document_artifact) | **PUT** /documents/{documentId}/artifacts/promoteArtifact | Promote document artifact
 [**purge_document**](DocumentsApi.md#purge_document) | **DELETE** /documents/{documentId}/purge | Purge document
 [**set_document_checkout**](DocumentsApi.md#set_document_checkout) | **PUT** /documents/{documentId}/checkout | Perform document checkout
 [**set_document_checkout_legal_hold**](DocumentsApi.md#set_document_checkout_legal_hold) | **PUT** /documents/{documentId}/legalHold | Perform document legal hold checkout
@@ -34,6 +36,12 @@ Add new document
 Creates a new document; body may include document content if less than 5 MB.
 
 Returns a unique **documentId** used in subsequent operations.
+
+**Content Type Detection**
+If the document **Content-Type** is not specified during upload, the service will determine it
+asynchronously after the upload completes.
+
+This may result in a **temporary delay** before the content type and related metadata are available.
 
 See POST /documents/{documentId}/tags for adding tags to document schema
 
@@ -192,7 +200,14 @@ No authorization required
 
 Add large document
 
-Returns a URL that can be used to upload document content and create a new document, while allowing metadata to also be sent; this endpoint (whether GET or POST) is required in order to add content that is larger than 5 MB. The POST endpoint allow the adding of document metadata at the same time as the document is created.
+Returns a URL that can be used to upload document content and create a new document.
+This endpoint is required for uploading content larger than 5 MB and allows document metadata
+to be provided at creation time.
+
+**Content Type Detection**
+If the document **Content-Type** is not specified during upload, the service will determine it
+asynchronously after the upload completes.
+This may result in a **temporary delay** before the content type and related metadata are available.
 
 ### Example
 
@@ -344,7 +359,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document**
-> DeleteResponse delete_document(document_id, site_id=site_id, soft_delete=soft_delete)
+> DeleteResponse delete_document(document_id, site_id=site_id, artifact_id=artifact_id, soft_delete=soft_delete)
 
 Delete document
 
@@ -356,7 +371,7 @@ The SoftDelete parameter allows for the temporary removal of a document's metada
 
 The document can be permanently deleted by calling the DELETE /documents/{documentId} with softDelete=false or restored using the PUT /documents/{documentId}/restore.
 
-Only the GET /documents?deleted=true will return all the soft deleted documents.
+Only the GET /documents?softDeleted=true will return all the soft deleted documents.
 
 ### Example
 
@@ -384,11 +399,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     soft_delete = True # bool | Whether to soft delete document (optional)
 
     try:
         # Delete document
-        api_response = api_instance.delete_document(document_id, site_id=site_id, soft_delete=soft_delete)
+        api_response = api_instance.delete_document(document_id, site_id=site_id, artifact_id=artifact_id, soft_delete=soft_delete)
         print("The response of DocumentsApi->delete_document:\n")
         pprint(api_response)
     except Exception as e:
@@ -404,6 +420,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **soft_delete** | **bool**| Whether to soft delete document | [optional] 
 
 ### Return type
@@ -428,7 +445,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_checkout_legal_hold**
-> DeleteResponse delete_document_checkout_legal_hold(document_id, site_id=site_id)
+> DeleteResponse delete_document_checkout_legal_hold(document_id, site_id=site_id, artifact_id=artifact_id)
 
 Delete document legal hold checkout
 
@@ -461,10 +478,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Delete document legal hold checkout
-        api_response = api_instance.delete_document_checkout_legal_hold(document_id, site_id=site_id)
+        api_response = api_instance.delete_document_checkout_legal_hold(document_id, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentsApi->delete_document_checkout_legal_hold:\n")
         pprint(api_response)
     except Exception as e:
@@ -480,6 +498,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -577,7 +596,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document**
-> GetDocumentResponse get_document(document_id, site_id=site_id, share_key=share_key)
+> GetDocumentResponse get_document(document_id, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
 
 Get document
 
@@ -609,11 +628,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Get document
-        api_response = api_instance.get_document(document_id, site_id=site_id, share_key=share_key)
+        api_response = api_instance.get_document(document_id, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
         print("The response of DocumentsApi->get_document:\n")
         pprint(api_response)
     except Exception as e:
@@ -629,6 +649,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 
 ### Return type
@@ -652,8 +673,86 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_document_artifacts**
+> GetDocumentsResponse get_document_artifacts(document_id, site_id=site_id, limit=limit, next=next)
+
+Get document artifacts
+
+Returns the list of artifact documents associated with the specified document
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_documents_response import GetDocumentsResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+    limit = '10' # str | Limit Results (optional) (default to '10')
+    next = 'next_example' # str | Next page of results token (optional)
+
+    try:
+        # Get document artifacts
+        api_response = api_instance.get_document_artifacts(document_id, site_id=site_id, limit=limit, next=next)
+        print("The response of DocumentsApi->get_document_artifacts:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentsApi->get_document_artifacts: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **site_id** | **str**| Site Identifier | [optional] 
+ **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
+ **next** | **str**| Next page of results token | [optional] 
+
+### Return type
+
+[**GetDocumentsResponse**](GetDocumentsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_document_content**
-> GetDocumentContentResponse get_document_content(document_id, site_id=site_id, version_key=version_key, share_key=share_key)
+> GetDocumentContentResponse get_document_content(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, share_key=share_key)
 
 Get document's contents
 
@@ -693,12 +792,13 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     version_key = 'version_key_example' # str | Version Key (version key required URL encoding) (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Get document's contents
-        api_response = api_instance.get_document_content(document_id, site_id=site_id, version_key=version_key, share_key=share_key)
+        api_response = api_instance.get_document_content(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, share_key=share_key)
         print("The response of DocumentsApi->get_document_content:\n")
         pprint(api_response)
     except Exception as e:
@@ -714,6 +814,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **version_key** | **str**| Version Key (version key required URL encoding) | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 
@@ -739,7 +840,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_id_upload**
-> GetDocumentUrlResponse get_document_id_upload(document_id, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
+> GetDocumentUrlResponse get_document_id_upload(document_id, site_id=site_id, artifact_id=artifact_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
 
 Get url to update large document
 
@@ -771,6 +872,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     checksum_type = 'checksum_type_example' # str | Checksum Type (optional)
     checksum = 'checksum_example' # str | Checksum value (optional)
     content_length = 56 # int | Indicates the size of the entity-body (optional)
@@ -779,7 +881,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
 
     try:
         # Get url to update large document
-        api_response = api_instance.get_document_id_upload(document_id, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
+        api_response = api_instance.get_document_id_upload(document_id, site_id=site_id, artifact_id=artifact_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
         print("The response of DocumentsApi->get_document_id_upload:\n")
         pprint(api_response)
     except Exception as e:
@@ -795,6 +897,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **checksum_type** | **str**| Checksum Type | [optional] 
  **checksum** | **str**| Checksum value | [optional] 
  **content_length** | **int**| Indicates the size of the entity-body | [optional] 
@@ -985,7 +1088,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_url**
-> GetDocumentUrlResponse get_document_url(document_id, site_id=site_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark)
+> GetDocumentUrlResponse get_document_url(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark, format=format)
 
 Get document content url
 
@@ -1017,15 +1120,17 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     version_key = 'version_key_example' # str | Version Key (version key required URL encoding) (optional)
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
     inline = False # bool | Set the Content-Disposition to inline (optional) (default to False)
     bypass_watermark = False # bool | Allow the by pass of watermark (only allowed by GOVERN / ADMIN permissions) (optional) (default to False)
+    format = 'format_example' # str | Return a shortlink URL when set to `short`; available as an Add-On Module (optional)
 
     try:
         # Get document content url
-        api_response = api_instance.get_document_url(document_id, site_id=site_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark)
+        api_response = api_instance.get_document_url(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark, format=format)
         print("The response of DocumentsApi->get_document_url:\n")
         pprint(api_response)
     except Exception as e:
@@ -1041,11 +1146,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **version_key** | **str**| Version Key (version key required URL encoding) | [optional] 
  **duration** | **int**| Indicates the number of hours request is valid for | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
  **inline** | **bool**| Set the Content-Disposition to inline | [optional] [default to False]
  **bypass_watermark** | **bool**| Allow the by pass of watermark (only allowed by GOVERN / ADMIN permissions) | [optional] [default to False]
+ **format** | **str**| Return a shortlink URL when set to &#x60;short&#x60;; available as an Add-On Module | [optional] 
 
 ### Return type
 
@@ -1069,7 +1176,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_documents**
-> GetDocumentsResponse get_documents(site_id=site_id, action_status=action_status, sync_status=sync_status, deleted=deleted, var_date=var_date, tz=tz, next=next, previous=previous, limit=limit)
+> GetDocumentsResponse get_documents(site_id=site_id, action_status=action_status, sync_status=sync_status, soft_deleted=soft_deleted, deleted=deleted, var_date=var_date, tz=tz, start=start, end=end, sort=sort, next=next, previous=previous, projection=projection, limit=limit)
 
 Get Documents listing
 
@@ -1102,16 +1209,21 @@ with formkiq_client.ApiClient(configuration) as api_client:
     site_id = 'site_id_example' # str | Site Identifier (optional)
     action_status = 'action_status_example' # str | Fetch documents with an action status (optional)
     sync_status = 'sync_status_example' # str | Fetch documents with an sync status (optional)
-    deleted = True # bool | Fetch soft deleted documents (optional)
+    soft_deleted = True # bool | Fetch soft deleted documents (optional)
+    deleted = True # bool | Deprecated: use softDeleted. Fetch soft deleted documents (optional)
     var_date = 'var_date_example' # str | Fetch documents inserted on a certain date (yyyy-MM-dd) (optional)
     tz = 'tz_example' # str | UTC offset to apply to date parameter (IE: -0600) (optional)
+    start = '2013-10-20T19:20:30+01:00' # datetime | Start of date-time range (UTC) (optional)
+    end = '2013-10-20T19:20:30+01:00' # datetime | End of date-time range (UTC) (optional)
+    sort = 'sort_example' # str | Sort order (default DESC) (optional)
     next = 'next_example' # str | Next page of results token (optional)
     previous = 'previous_example' # str | Previous page of results token (optional)
+    projection = 'projection_example' # str | Specify a restricted document projection. Use 'DOCUMENT_ID_ONLY' to return only the documentId attribute. (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')
 
     try:
         # Get Documents listing
-        api_response = api_instance.get_documents(site_id=site_id, action_status=action_status, sync_status=sync_status, deleted=deleted, var_date=var_date, tz=tz, next=next, previous=previous, limit=limit)
+        api_response = api_instance.get_documents(site_id=site_id, action_status=action_status, sync_status=sync_status, soft_deleted=soft_deleted, deleted=deleted, var_date=var_date, tz=tz, start=start, end=end, sort=sort, next=next, previous=previous, projection=projection, limit=limit)
         print("The response of DocumentsApi->get_documents:\n")
         pprint(api_response)
     except Exception as e:
@@ -1128,11 +1240,16 @@ Name | Type | Description  | Notes
  **site_id** | **str**| Site Identifier | [optional] 
  **action_status** | **str**| Fetch documents with an action status | [optional] 
  **sync_status** | **str**| Fetch documents with an sync status | [optional] 
- **deleted** | **bool**| Fetch soft deleted documents | [optional] 
+ **soft_deleted** | **bool**| Fetch soft deleted documents | [optional] 
+ **deleted** | **bool**| Deprecated: use softDeleted. Fetch soft deleted documents | [optional] 
  **var_date** | **str**| Fetch documents inserted on a certain date (yyyy-MM-dd) | [optional] 
  **tz** | **str**| UTC offset to apply to date parameter (IE: -0600) | [optional] 
+ **start** | **datetime**| Start of date-time range (UTC) | [optional] 
+ **end** | **datetime**| End of date-time range (UTC) | [optional] 
+ **sort** | **str**| Sort order (default DESC) | [optional] 
  **next** | **str**| Next page of results token | [optional] 
  **previous** | **str**| Previous page of results token | [optional] 
+ **projection** | **str**| Specify a restricted document projection. Use &#39;DOCUMENT_ID_ONLY&#39; to return only the documentId attribute. | [optional] 
  **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
 
 ### Return type
@@ -1227,8 +1344,85 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **promote_document_artifact**
+> SetResponse promote_document_artifact(document_id, promote_document_artifact_request, site_id=site_id)
+
+Promote document artifact
+
+Promotes a document artifact to the specified document
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.promote_document_artifact_request import PromoteDocumentArtifactRequest
+from formkiq_client.models.set_response import SetResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentsApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    promote_document_artifact_request = formkiq_client.PromoteDocumentArtifactRequest() # PromoteDocumentArtifactRequest | 
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Promote document artifact
+        api_response = api_instance.promote_document_artifact(document_id, promote_document_artifact_request, site_id=site_id)
+        print("The response of DocumentsApi->promote_document_artifact:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentsApi->promote_document_artifact: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **promote_document_artifact_request** | [**PromoteDocumentArtifactRequest**](PromoteDocumentArtifactRequest.md)|  | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**SetResponse**](SetResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **purge_document**
-> DeleteResponse purge_document(document_id, site_id=site_id)
+> DeleteResponse purge_document(document_id, site_id=site_id, artifact_id=artifact_id)
 
 Purge document
 
@@ -1260,10 +1454,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Purge document
-        api_response = api_instance.purge_document(document_id, site_id=site_id)
+        api_response = api_instance.purge_document(document_id, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentsApi->purge_document:\n")
         pprint(api_response)
     except Exception as e:
@@ -1279,6 +1474,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -1302,7 +1498,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_document_checkout**
-> SetResponse set_document_checkout(document_id, site_id=site_id)
+> SetResponse set_document_checkout(document_id, site_id=site_id, artifact_id=artifact_id)
 
 Perform document checkout
 
@@ -1335,10 +1531,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Perform document checkout
-        api_response = api_instance.set_document_checkout(document_id, site_id=site_id)
+        api_response = api_instance.set_document_checkout(document_id, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentsApi->set_document_checkout:\n")
         pprint(api_response)
     except Exception as e:
@@ -1354,6 +1551,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -1377,7 +1575,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_document_checkout_legal_hold**
-> SetResponse set_document_checkout_legal_hold(document_id, site_id=site_id)
+> SetResponse set_document_checkout_legal_hold(document_id, site_id=site_id, artifact_id=artifact_id)
 
 Perform document legal hold checkout
 
@@ -1410,10 +1608,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Perform document legal hold checkout
-        api_response = api_instance.set_document_checkout_legal_hold(document_id, site_id=site_id)
+        api_response = api_instance.set_document_checkout_legal_hold(document_id, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentsApi->set_document_checkout_legal_hold:\n")
         pprint(api_response)
     except Exception as e:
@@ -1429,6 +1628,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -1452,7 +1652,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_document_restore**
-> SetDocumentRestoreResponse set_document_restore(document_id, site_id=site_id)
+> SetDocumentRestoreResponse set_document_restore(document_id, site_id=site_id, artifact_id=artifact_id)
 
 Restore soft deleted document
 
@@ -1484,10 +1684,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.DocumentsApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
     try:
         # Restore soft deleted document
-        api_response = api_instance.set_document_restore(document_id, site_id=site_id)
+        api_response = api_instance.set_document_restore(document_id, site_id=site_id, artifact_id=artifact_id)
         print("The response of DocumentsApi->set_document_restore:\n")
         pprint(api_response)
     except Exception as e:
@@ -1503,6 +1704,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
 
 ### Return type
 
@@ -1526,7 +1728,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_document**
-> AddDocumentResponse update_document(document_id, update_document_request, site_id=site_id, share_key=share_key)
+> AddDocumentResponse update_document(document_id, update_document_request, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
 
 Update document
 
@@ -1565,11 +1767,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     update_document_request = {"path":"test.txt","contentType":"text/plain","isBase64":false,"content":"This is sample data file","tags":[{"key":"category","value":"sample"},{"key":"players","values":["111","222"]}],"metadata":[{"key":"info","value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}]} # UpdateDocumentRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
 
     try:
         # Update document
-        api_response = api_instance.update_document(document_id, update_document_request, site_id=site_id, share_key=share_key)
+        api_response = api_instance.update_document(document_id, update_document_request, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
         print("The response of DocumentsApi->update_document:\n")
         pprint(api_response)
     except Exception as e:
@@ -1586,6 +1789,7 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **update_document_request** | [**UpdateDocumentRequest**](UpdateDocumentRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
 
 ### Return type

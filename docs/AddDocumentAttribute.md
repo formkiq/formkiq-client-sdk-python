@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **entity_type_id** | **str** | EntityType Identifier or Entity Type Name | 
 **entity_id** | **str** | Entity Identifier | 
 **namespace** | [**EntityTypeNamespace**](EntityTypeNamespace.md) |  | [optional] 
+**entities** | [**List[AddDocumentAttributeEntityValue]**](AddDocumentAttributeEntityValue.md) | Attribute with entity values | 
 
 ## Example
 

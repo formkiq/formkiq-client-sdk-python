@@ -6,6 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attribute_key** | **str** |  | [optional] 
+**default_entity_type_id** | **str** |  | [optional] 
+**default_entity_id** | **str** |  | [optional] 
 **min_number_of_values** | **float** | The minimum number of attribute values | [optional] 
 **max_number_of_values** | **float** | The maximum number of attribute values | [optional] 
 **default_value** | **str** | Default value | [optional] 

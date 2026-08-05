@@ -5,10 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mapping_id** | **str** | Mapping Identifier | [optional] 
+**mapping_id** | **str** | Mapping Identifier | 
 **name** | **str** | Name of Mapping | [optional] 
 **description** | **str** | Description of Mapping | [optional] 
 **attributes** | [**List[MappingAttribute]**](MappingAttribute.md) | List of attributes | [optional] 
+**classifications** | [**List[MappingClassification]**](MappingClassification.md) | List of classifications | [optional] 
 
 ## Example
 

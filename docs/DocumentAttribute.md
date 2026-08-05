@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **user_id** | **str** | User who added attribute | [optional] 
 **value_type** | [**AttributeValueType**](AttributeValueType.md) |  | [optional] 
+**entity** | [**Entity**](Entity.md) |  | [optional] 
+**entities** | [**List[Entity]**](Entity.md) | Attribute with entity values | [optional] 
 
 ## Example
 
