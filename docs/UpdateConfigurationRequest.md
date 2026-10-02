@@ -5,11 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**branding** | [**BrandingConfig**](BrandingConfig.md) |  | [optional] 
 **chat_gpt_api_key** | **str** | ChatGPT Api Key | [optional] 
 **max_content_length_bytes** | **str** | Set Maximum Document Content Length in Bytes | [optional] 
 **max_documents** | **str** | Set Maximum number of Documents allowed | [optional] 
 **max_webhooks** | **str** | Set Maximum number of Webhooks allowed | [optional] 
-**notification_email** | **str** | Email address to use for notifications | [optional] 
+**notification_email** | **str** | Deprecated. Use notification.email instead. Email address to use for SES notifications. | [optional] 
+**notification** | [**NotificationConfig**](NotificationConfig.md) |  | [optional] 
 **document** | [**DocumentConfig**](DocumentConfig.md) |  | [optional] 
 **ocr** | [**OcrConfig**](OcrConfig.md) |  | [optional] 
 **google** | [**GoogleConfig**](GoogleConfig.md) |  | [optional] 

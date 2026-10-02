@@ -1124,7 +1124,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     version_key = 'version_key_example' # str | Version Key (version key required URL encoding) (optional)
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
-    inline = False # bool | Set the Content-Disposition to inline (optional) (default to False)
+    inline = False # bool | Request inline delivery. S3-backed SVG documents identified by content type or filename are always served as attachments. (optional) (default to False)
     bypass_watermark = False # bool | Allow the by pass of watermark (only allowed by GOVERN / ADMIN permissions) (optional) (default to False)
     format = 'format_example' # str | Return a shortlink URL when set to `short`; available as an Add-On Module (optional)
 
@@ -1150,7 +1150,7 @@ Name | Type | Description  | Notes
  **version_key** | **str**| Version Key (version key required URL encoding) | [optional] 
  **duration** | **int**| Indicates the number of hours request is valid for | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
- **inline** | **bool**| Set the Content-Disposition to inline | [optional] [default to False]
+ **inline** | **bool**| Request inline delivery. S3-backed SVG documents identified by content type or filename are always served as attachments. | [optional] [default to False]
  **bypass_watermark** | **bool**| Allow the by pass of watermark (only allowed by GOVERN / ADMIN permissions) | [optional] [default to False]
  **format** | **str**| Return a shortlink URL when set to &#x60;short&#x60;; available as an Add-On Module | [optional] 
 

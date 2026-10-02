@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **string_value** | **str** | Search for string value | [optional] 
 **number_value** | **float** | Search for number value | [optional] 
 **boolean_value** | **bool** | Search for boolean value | [optional] 
+**date_value** | **str** | Search for date value | [optional] 
 
 ## Example
 

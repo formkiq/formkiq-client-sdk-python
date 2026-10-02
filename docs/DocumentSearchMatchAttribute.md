@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **string_value** | **str** | Attribute with string value | [optional] 
 **number_value** | **float** | Attribute with number value | [optional] 
 **boolean_value** | **bool** | Attribute with boolean value | [optional] 
+**date_value** | **str** | Attribute with date value | [optional] 
 
 ## Example
 

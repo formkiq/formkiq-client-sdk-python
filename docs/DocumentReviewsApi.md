@@ -17,7 +17,8 @@ Method | HTTP request | Description
 
 Add document review
 
-Add a review to a document
+Add a review to a document. When notifications are supplied, queue each notification
+for delivery when the review is created.
 
 ### Example
 
@@ -96,7 +97,9 @@ No authorization required
 
 Add document review decision
 
-Add a decision to a document review
+Add a decision to a document review. When approvalGroups is set on the review,
+the caller must belong to at least one of those groups, in addition to satisfying the existing authorization requirements, before the decision is added.
+Decisions submitted to a review that is already COMPLETED return 409 Conflict without creating a decision, follow-up review, notification, or activity record.
 
 ### Example
 
@@ -169,6 +172,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | 201 CREATED |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**409** | The review is already complete. No decision was created. |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

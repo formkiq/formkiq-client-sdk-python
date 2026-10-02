@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **document_id** | **str** | Generated document identifier | [optional] 
+**artifact_id** | **str** | Artifact Identifier | [optional] 
 
 ## Example
 

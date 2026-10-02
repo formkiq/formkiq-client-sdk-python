@@ -5,10 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**environment** | [**DocusignEnvironment**](DocusignEnvironment.md) |  | [optional] 
 **user_id** | **str** | Docusign UserId | [optional] 
 **integration_key** | **str** | Docusign Integration Key or ClientId | [optional] 
 **rsa_private_key** | **str** | Docusign Rsa Private Key | [optional] 
-**hmac_signature** | **str** | Enabled security with Docusign Connect using HMAC keys. When enabled these keys are known only by Docusign and your app, and will be used to sign all Connect messages sent from your Docusign account to your application. | [optional] 
+**hmac_signature** | **str** | Optional HMAC secret used to validate Docusign Connect event notifications. When configured, callbacks must include a matching Docusign HMAC signature. When omitted or empty, callbacks are processed without HMAC validation, including when connectUrl is configured. | [optional] 
+**connect_url** | **str** | Public HTTPS URL that receives Docusign Connect event notifications. May be configured with or without hmacSignature. | [optional] 
 
 ## Example
 

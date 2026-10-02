@@ -10,6 +10,9 @@ Name | Type | Description | Notes
 **datasources** | [**List[DocumentGenerateDataSource]**](DocumentGenerateDataSource.md) | List of data sources | [optional] 
 **output_type** | [**DocumentGenerateOutputType**](DocumentGenerateOutputType.md) |  | [optional] 
 **save_as_document_id** | **str** | Save the generated document with a specific documentId | [optional] 
+**save_as_artifact** | **bool** | Create the output as a new artifact of saveAsDocumentId | [optional] [default to False]
+**save_as_artifact_id** | **str** | Save the output as a new version of an existing artifact | [optional] 
+**artifact_category** | **str** | Optional caller-defined category for artifact output | [optional] 
 **path** | **str** | The path of the generated document | [optional] 
 
 ## Example

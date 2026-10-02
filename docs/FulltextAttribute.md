@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **string_values** | **List[str]** | Attribute with string values | [optional] 
 **number_values** | **List[float]** | Attribute with number values | [optional] 
 **boolean_value** | **bool** | Attribute with boolean value | [optional] 
+**date_values** | **List[str]** | Attribute with date values | [optional] 
 **value_type** | [**AttributeValueType**](AttributeValueType.md) |  | [optional] 
 
 ## Example

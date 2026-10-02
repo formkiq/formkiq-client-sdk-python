@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **width** | **str** | Document Content Width property | [optional] 
 **height** | **str** | Document Content Height property | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
+**resource_type** | [**DocumentResourceType**](DocumentResourceType.md) |  | [optional] 
 **content_type** | **str** | Document Content-Type | [optional] 
 **checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **checksum** | **str** | The checksum value to validate the file against | [optional] 

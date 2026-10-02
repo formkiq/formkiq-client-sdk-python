@@ -10,6 +10,8 @@ Data Type of Attribute
 
 * `BOOLEAN` (value: `'BOOLEAN'`)
 
+* `DATE` (value: `'DATE'`)
+
 * `KEY_ONLY` (value: `'KEY_ONLY'`)
 
 * `PUBLICATION` (value: `'PUBLICATION'`)

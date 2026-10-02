@@ -6,7 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email_subject** | **str** | The subject line of the email message that is sent to all recipients | [optional] 
-**environment** | [**DocusignEnvironment**](DocusignEnvironment.md) |  | 
+**environment** | [**DocusignEnvironment**](DocusignEnvironment.md) |  | [optional] 
+**status** | [**DocusignEnvelopeStatus**](DocusignEnvelopeStatus.md) |  | [optional] [default to DocusignEnvelopeStatus.SENT]
 **signers** | [**List[DocusignSigner]**](DocusignSigner.md) | List of DocuSign Signers | [optional] 
 **inperson_signers** | [**List[DocusignInpersonSigner]**](DocusignInpersonSigner.md) | List of DocuSign Inperson Signers | [optional] 
 **notification** | [**DocusignNotification**](DocusignNotification.md) |  | [optional] 

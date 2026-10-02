@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **number_value** | **float** | Attribute with number value | [optional] 
 **number_values** | **List[float]** | Attribute with number values | [optional] 
 **boolean_value** | **bool** | Attribute with boolean value | [optional] 
+**date_value** | **str** | Attribute with date value | [optional] 
+**date_values** | **List[str]** | Attribute with date values | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **user_id** | **str** | User who added attribute | [optional] 
 **value_type** | [**AttributeValueType**](AttributeValueType.md) |  | [optional] 

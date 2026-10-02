@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **review_id** | **str** | Review Identifier | [optional] 
 **review_category** | **str** | Review category | [optional] 
 **review_status** | [**DocumentReviewStatus**](DocumentReviewStatus.md) |  | [optional] 
+**approval_groups** | **List[str]** | Optional approval groups used for additional credential verification when submitting a decision to POST /documents/{documentId}/reviews/{reviewId}/decisions. The caller must belong to at least one of the listed groups, in addition to satisfying the existing authorization requirements. | [optional] 
 **required_decisions** | **int** | Number of decisions required to complete the review | [optional] 
 **user_id** | **str** | User who added review | [optional] 
 **comments** | **str** | Review comments | [optional] 

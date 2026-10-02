@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **width** | **str** | Document Content Width property | [optional] 
 **height** | **str** | Document Content Height property | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
+**resource_type** | [**DocumentResourceType**](DocumentResourceType.md) |  | [optional] 
 **content_type** | **str** | Document media type | [optional] 
 **is_base64** | **bool** | Is the content Base64-encoded? | [optional] 
 **content** | **str** | Document content | 

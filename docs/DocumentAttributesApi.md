@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**add_document_attributes**](DocumentAttributesApi.md#add_document_attributes) | **POST** /documents/{documentId}/attributes | Add attribute to document
 [**delete_document_attribute**](DocumentAttributesApi.md#delete_document_attribute) | **DELETE** /documents/{documentId}/attributes/{attributeKey} | Delete document attribute
 [**delete_document_attribute_and_value**](DocumentAttributesApi.md#delete_document_attribute_and_value) | **DELETE** /documents/{documentId}/attributes/{attributeKey}/{attributeValue} | Delete document&#39;s attribute value
+[**generate_document_attribute_value**](DocumentAttributesApi.md#generate_document_attribute_value) | **POST** /documents/{documentId}/attributes/{attributeKey}/generate | Generate document attribute value
 [**get_document_attribute**](DocumentAttributesApi.md#get_document_attribute) | **GET** /documents/{documentId}/attributes/{attributeKey} | Get document attribute by key
 [**get_document_attributes**](DocumentAttributesApi.md#get_document_attributes) | **GET** /documents/{documentId}/attributes | Get document&#39;s attributes
 [**set_document_attribute_value**](DocumentAttributesApi.md#set_document_attribute_value) | **PUT** /documents/{documentId}/attributes/{attributeKey} | Set document&#39;s attributes value
@@ -247,6 +248,84 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **generate_document_attribute_value**
+> GenerateDocumentAttributeValueResponse generate_document_attribute_value(document_id, attribute_key, site_id=site_id)
+
+Generate document attribute value
+
+Allocates the next value from the numbering sequence configured for the attribute key and stores it on the document. If the document already has a value for the attribute key, the existing value is returned.
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.generate_document_attribute_value_response import GenerateDocumentAttributeValueResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentAttributesApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    attribute_key = 'attribute_key_example' # str | Attribute Key
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Generate document attribute value
+        api_response = api_instance.generate_document_attribute_value(document_id, attribute_key, site_id=site_id)
+        print("The response of DocumentAttributesApi->generate_document_attribute_value:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentAttributesApi->generate_document_attribute_value: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **attribute_key** | **str**| Attribute Key | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**GenerateDocumentAttributeValueResponse**](GenerateDocumentAttributeValueResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | Attribute key is not eligible for generated values |  -  |
+**404** | Document or numbering sequence not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

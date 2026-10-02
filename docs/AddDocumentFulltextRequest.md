@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **width** | **str** | Document Content Width property | [optional] 
 **height** | **str** | Document Content Height property | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
+**resource_type** | [**DocumentResourceType**](DocumentResourceType.md) |  | [optional] 
 **checksum** | **str** | Document checksum, changes when document file changes | [optional] 
 **checksum_type** | [**ChecksumType**](ChecksumType.md) |  | [optional] 
 **tags** | [**List[AddDocumentTag]**](AddDocumentTag.md) | List of document tags | [optional] 

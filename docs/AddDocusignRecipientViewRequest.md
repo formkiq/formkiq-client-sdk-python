@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**environment** | [**DocusignEnvironment**](DocusignEnvironment.md) |  | 
+**environment** | [**DocusignEnvironment**](DocusignEnvironment.md) |  | [optional] 
 **recipient_view** | [**DocusignRecipientView**](DocusignRecipientView.md) |  | 
 
 ## Example

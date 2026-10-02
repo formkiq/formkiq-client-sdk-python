@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**delete_folder**](DocumentFoldersApi.md#delete_folder) | **DELETE** /folders/{indexKey} | Delete document folder
 [**get_folder_documents**](DocumentFoldersApi.md#get_folder_documents) | **GET** /folders | Get document folders
 [**get_folder_permissions**](DocumentFoldersApi.md#get_folder_permissions) | **GET** /folders/{indexKey}/permissions | Get folder permissions
+[**move_folder**](DocumentFoldersApi.md#move_folder) | **POST** /folders/{indexKey}/moves | Move document folder
 [**set_folder_permissions**](DocumentFoldersApi.md#set_folder_permissions) | **PUT** /folders/permissions | Sets Folder Permissions
 
 
@@ -317,6 +318,83 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **move_folder**
+> MoveFolderResponse move_folder(index_key, move_folder_request, site_id=site_id)
+
+Move document folder
+
+Creates an asynchronous folder move request
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.move_folder_request import MoveFolderRequest
+from formkiq_client.models.move_folder_response import MoveFolderResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.DocumentFoldersApi(api_client)
+    index_key = 'index_key_example' # str | Index Key Identifier
+    move_folder_request = formkiq_client.MoveFolderRequest() # MoveFolderRequest | 
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+
+    try:
+        # Move document folder
+        api_response = api_instance.move_folder(index_key, move_folder_request, site_id=site_id)
+        print("The response of DocumentFoldersApi->move_folder:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DocumentFoldersApi->move_folder: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **index_key** | **str**| Index Key Identifier | 
+ **move_folder_request** | [**MoveFolderRequest**](MoveFolderRequest.md)|  | 
+ **site_id** | **str**| Site Identifier | [optional] 
+
+### Return type
+
+[**MoveFolderResponse**](MoveFolderResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | 201 CREATED |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

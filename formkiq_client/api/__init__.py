@@ -9,6 +9,7 @@ from formkiq_client.api.document_actions_api import DocumentActionsApi
 from formkiq_client.api.document_attributes_api import DocumentAttributesApi
 from formkiq_client.api.document_folders_api import DocumentFoldersApi
 from formkiq_client.api.document_generation_api import DocumentGenerationApi
+from formkiq_client.api.document_notifications_api import DocumentNotificationsApi
 from formkiq_client.api.document_ocr_api import DocumentOCRApi
 from formkiq_client.api.document_reviews_api import DocumentReviewsApi
 from formkiq_client.api.document_search_api import DocumentSearchApi

@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **number_value** | **float** | Attribute with number value | [optional] 
 **number_values** | **List[float]** | Attribute with number values | [optional] 
 **boolean_value** | **bool** | Attribute with boolean value | [optional] 
+**date_value** | **str** | Attribute with date value | [optional] 
+**date_values** | **List[str]** | Attribute with date values | [optional] 
 **classification_id** | **str** | Classification Identifier | 
 **document_id** | **str** | Relationship To Document Identifier | 
 **relationship** | [**DocumentRelationshipType**](DocumentRelationshipType.md) |  | 

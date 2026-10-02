@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**add_api_key**](SystemManagementApi.md#add_api_key) | **POST** /sites/{siteId}/apiKeys | Add API Key
 [**add_locale**](SystemManagementApi.md#add_locale) | **POST** /sites/{siteId}/locales | Add Locale
 [**add_locale_resource_item**](SystemManagementApi.md#add_locale_resource_item) | **POST** /sites/{siteId}/locales/{locale}/resourceItems | Add Locale Resource Item
+[**add_notification_test**](SystemManagementApi.md#add_notification_test) | **POST** /sites/{siteId}/configuration/notification/test | Send a test notification
 [**add_open_search_restore_snapshot**](SystemManagementApi.md#add_open_search_restore_snapshot) | **POST** /sites/{siteId}/opensearch/snapshots/{snapshotName}/restore | Restore site OpenSearch snapshot
 [**add_open_search_snapshot**](SystemManagementApi.md#add_open_search_snapshot) | **POST** /sites/{siteId}/opensearch/snapshots/{snapshotName} | Create site OpenSearch snapshot
 [**add_site**](SystemManagementApi.md#add_site) | **POST** /sites | Add Site
@@ -28,6 +29,8 @@ Method | HTTP request | Description
 [**get_locale_resource_item**](SystemManagementApi.md#get_locale_resource_item) | **GET** /sites/{siteId}/locales/{locale}/resourceItems/{itemKey} | Get Resource Item by Locale
 [**get_locale_resource_items**](SystemManagementApi.md#get_locale_resource_items) | **GET** /sites/{siteId}/locales/{locale}/resourceItems | Get Resource Items by Locale
 [**get_locales**](SystemManagementApi.md#get_locales) | **GET** /sites/{siteId}/locales | Get Locales
+[**get_numbering_sequence**](SystemManagementApi.md#get_numbering_sequence) | **GET** /sites/{siteId}/numberingSequences/{attributeKey} | Get numbering sequence
+[**get_numbering_sequences**](SystemManagementApi.md#get_numbering_sequences) | **GET** /sites/{siteId}/numberingSequences | Get numbering sequences
 [**get_open_search_index**](SystemManagementApi.md#get_open_search_index) | **GET** /sites/{siteId}/opensearch/index | Get site(s) OpenSearch index settings
 [**get_open_search_indices**](SystemManagementApi.md#get_open_search_indices) | **GET** /sites/{siteId}/opensearch/indices | Get site(s) OpenSearch indices
 [**get_open_search_snapshot**](SystemManagementApi.md#get_open_search_snapshot) | **GET** /sites/{siteId}/opensearch/snapshots/{snapshotName} | Get site OpenSearch snapshot
@@ -41,6 +44,7 @@ Method | HTTP request | Description
 [**get_system_inference_models**](SystemManagementApi.md#get_system_inference_models) | **GET** /system/inferenceModels | Get system inference models
 [**get_version**](SystemManagementApi.md#get_version) | **GET** /version | Get FormKiQ version
 [**set_locale_resource_item**](SystemManagementApi.md#set_locale_resource_item) | **PUT** /sites/{siteId}/locales/{locale}/resourceItems/{itemKey} | Set Locale Resource Item
+[**set_numbering_sequence**](SystemManagementApi.md#set_numbering_sequence) | **PUT** /sites/{siteId}/numberingSequences/{attributeKey} | Set numbering sequence
 [**set_open_search_index**](SystemManagementApi.md#set_open_search_index) | **PUT** /sites/{siteId}/opensearch/index | Set site(s) OpenSearch index settings
 [**set_open_search_indices**](SystemManagementApi.md#set_open_search_indices) | **PUT** /sites/{siteId}/opensearch/indices | Set site(s) OpenSearch index to use for a SiteId
 [**set_site_group_permissions**](SystemManagementApi.md#set_site_group_permissions) | **PUT** /sites/{siteId}/groups/{groupName}/permissions | Set Site&#39;s Group Permissions
@@ -273,6 +277,82 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 201 CREATED |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_notification_test**
+> AddNotificationTestResponse add_notification_test(site_id, add_notification_test_request)
+
+Send a test notification
+
+Queues a test email using the site's saved notification configuration
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.add_notification_test_request import AddNotificationTestRequest
+from formkiq_client.models.add_notification_test_response import AddNotificationTestResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    add_notification_test_request = formkiq_client.AddNotificationTestRequest() # AddNotificationTestRequest | 
+
+    try:
+        # Send a test notification
+        api_response = api_instance.add_notification_test(site_id, add_notification_test_request)
+        print("The response of SystemManagementApi->add_notification_test:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->add_notification_test: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **add_notification_test_request** | [**AddNotificationTestRequest**](AddNotificationTestRequest.md)|  | 
+
+### Return type
+
+[**AddNotificationTestResponse**](AddNotificationTestResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | Test notification queued |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | Invalid request or notification configuration |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1851,6 +1931,157 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_numbering_sequence**
+> GetNumberingSequenceResponse get_numbering_sequence(site_id, attribute_key)
+
+Get numbering sequence
+
+Returns the numbering sequence configured for an attribute key
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_numbering_sequence_response import GetNumberingSequenceResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    attribute_key = 'attribute_key_example' # str | Attribute Key
+
+    try:
+        # Get numbering sequence
+        api_response = api_instance.get_numbering_sequence(site_id, attribute_key)
+        print("The response of SystemManagementApi->get_numbering_sequence:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->get_numbering_sequence: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **attribute_key** | **str**| Attribute Key | 
+
+### Return type
+
+[**GetNumberingSequenceResponse**](GetNumberingSequenceResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**404** | Numbering sequence not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_numbering_sequences**
+> GetNumberingSequencesResponse get_numbering_sequences(site_id, limit=limit, next=next)
+
+Get numbering sequences
+
+Returns the numbering sequences configured for a site
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_numbering_sequences_response import GetNumberingSequencesResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    limit = '10' # str | Limit Results (optional) (default to '10')
+    next = 'next_example' # str | Next page of results token (optional)
+
+    try:
+        # Get numbering sequences
+        api_response = api_instance.get_numbering_sequences(site_id, limit=limit, next=next)
+        print("The response of SystemManagementApi->get_numbering_sequences:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->get_numbering_sequences: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **limit** | **str**| Limit Results | [optional] [default to &#39;10&#39;]
+ **next** | **str**| Next page of results token | [optional] 
+
+### Return type
+
+[**GetNumberingSequencesResponse**](GetNumberingSequencesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_open_search_index**
 > GetOpenSearchIndexResponse get_open_search_index(site_id)
 
@@ -2790,6 +3021,84 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_numbering_sequence**
+> GetNumberingSequenceResponse set_numbering_sequence(site_id, attribute_key, set_numbering_sequence_request)
+
+Set numbering sequence
+
+Creates or updates the numbering sequence for an attribute key
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_numbering_sequence_response import GetNumberingSequenceResponse
+from formkiq_client.models.set_numbering_sequence_request import SetNumberingSequenceRequest
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    attribute_key = 'attribute_key_example' # str | Attribute Key
+    set_numbering_sequence_request = {"pattern":"CONTRACT-{YEAR}-{SEQUENCE}","startAt":1,"padding":5,"reset":"YEARLY","timezone":"America/Winnipeg"} # SetNumberingSequenceRequest | 
+
+    try:
+        # Set numbering sequence
+        api_response = api_instance.set_numbering_sequence(site_id, attribute_key, set_numbering_sequence_request)
+        print("The response of SystemManagementApi->set_numbering_sequence:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->set_numbering_sequence: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **attribute_key** | **str**| Attribute Key | 
+ **set_numbering_sequence_request** | [**SetNumberingSequenceRequest**](SetNumberingSequenceRequest.md)|  | 
+
+### Return type
+
+[**GetNumberingSequenceResponse**](GetNumberingSequenceResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | Invalid numbering sequence configuration |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

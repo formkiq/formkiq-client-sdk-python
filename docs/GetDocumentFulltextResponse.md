@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **width** | **str** | Document Content Width property | [optional] 
 **height** | **str** | Document Content Height property | [optional] 
 **deep_link_path** | **str** | Path or Name of deep link | [optional] 
+**resource_type** | [**DocumentResourceType**](DocumentResourceType.md) |  | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
 **last_modified_date** | **str** | Last Modified Timestamp | [optional] 
 **document_id** | **str** | Document Identifier | [optional] 

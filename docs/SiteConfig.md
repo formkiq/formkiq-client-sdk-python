@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**branding** | [**BrandingConfig**](BrandingConfig.md) |  | [optional] 
 **max_content_length_bytes** | **str** | Set Maximum Document Content Length in Bytes | [optional] 
 **max_documents** | **str** | Set Maximum number of Documents allowed | [optional] 
 **max_webhooks** | **str** | Set Maximum number of Webhooks allowed | [optional] 
