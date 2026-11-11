@@ -504,7 +504,7 @@ configuration = formkiq_client.Configuration(
 with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.AdvancedDocumentSearchApi(api_client)
-    document_fulltext_request = formkiq_client.DocumentFulltextRequest() # DocumentFulltextRequest | 
+    document_fulltext_request = {"query":{"attributes":[{"key":"invoiceDetails","json":{"path":"$.customer.name","eq":"Acme"}},{"key":"invoiceDetails","json":{"path":"$.approved","eq":"true"}},{"key":"invoiceDetails","json":{"path":"$.total","gte":1000,"lt":2000}},{"key":"invoiceDetails","json":{"path":"$.lineItems.sku","eq":"HOSTING"}}]}} # DocumentFulltextRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     index_name = 'index_name_example' # str | IndexName to query (optional)
     limit = '10' # str | Limit Results (optional) (default to '10')

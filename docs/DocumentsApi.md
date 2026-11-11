@@ -29,7 +29,7 @@ Method | HTTP request | Description
 
 
 # **add_document**
-> AddDocumentResponse add_document(add_document_request, site_id=site_id, share_key=share_key)
+> AddDocumentResponse add_document(add_document_request, site_id=site_id, share_key=share_key, accelerate=accelerate)
 
 Add new document
 
@@ -75,10 +75,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     add_document_request = {"path":"test.txt","contentType":"text/plain","isBase64":false,"content":"This is sample data file","tags":[{"key":"category","value":"sample"},{"key":"players","values":["111","222"]}],"metadata":[{"key":"info","value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}]} # AddDocumentRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
+    accelerate = False # bool | Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration=true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. (optional) (default to False)
 
     try:
         # Add new document
-        api_response = api_instance.add_document(add_document_request, site_id=site_id, share_key=share_key)
+        api_response = api_instance.add_document(add_document_request, site_id=site_id, share_key=share_key, accelerate=accelerate)
         print("The response of DocumentsApi->add_document:\n")
         pprint(api_response)
     except Exception as e:
@@ -95,6 +96,7 @@ Name | Type | Description  | Notes
  **add_document_request** | [**AddDocumentRequest**](AddDocumentRequest.md)|  | 
  **site_id** | **str**| Site Identifier | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
+ **accelerate** | **bool**| Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration&#x3D;true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. | [optional] [default to False]
 
 ### Return type
 
@@ -196,7 +198,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_document_upload**
-> GetDocumentUrlResponse add_document_upload(add_document_upload_request, site_id=site_id, content_length=content_length, duration=duration, share_key=share_key)
+> GetDocumentUrlResponse add_document_upload(add_document_upload_request, site_id=site_id, content_length=content_length, duration=duration, share_key=share_key, accelerate=accelerate)
 
 Add large document
 
@@ -239,10 +241,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     content_length = 56 # int | Indicates the size of the entity-body (optional)
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
+    accelerate = False # bool | Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration=true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. (optional) (default to False)
 
     try:
         # Add large document
-        api_response = api_instance.add_document_upload(add_document_upload_request, site_id=site_id, content_length=content_length, duration=duration, share_key=share_key)
+        api_response = api_instance.add_document_upload(add_document_upload_request, site_id=site_id, content_length=content_length, duration=duration, share_key=share_key, accelerate=accelerate)
         print("The response of DocumentsApi->add_document_upload:\n")
         pprint(api_response)
     except Exception as e:
@@ -261,6 +264,7 @@ Name | Type | Description  | Notes
  **content_length** | **int**| Indicates the size of the entity-body | [optional] 
  **duration** | **int**| Indicates the number of hours request is valid for | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
+ **accelerate** | **bool**| Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration&#x3D;true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. | [optional] [default to False]
 
 ### Return type
 
@@ -359,19 +363,27 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document**
-> DeleteResponse delete_document(document_id, site_id=site_id, artifact_id=artifact_id, soft_delete=soft_delete)
+> DeleteResponse delete_document(document_id, site_id=site_id, artifact_id=artifact_id, soft_delete=soft_delete, delete_type=delete_type)
 
 Delete document
 
-Delete a document's details, i.e., metadata, contents, etc
+Select the deletion behavior using deleteType (case-insensitive; surrounding whitespace is ignored):
 
-SoftDelete:
+- SOFT_DELETE temporarily hides the document's metadata, attributes, and associated records
+  from normal API requests. Restore the document using PUT /documents/{documentId}/restore,
+  or list soft-deleted documents using GET /documents?softDeleted=true.
+- HARD_DELETE deletes the document's metadata and current contents.
+- CONTENT_ONLY removes the current S3 object while retaining document metadata,
+  attributes, tags, processing results, and workflow history. Existing S3 versions are retained.
+  Returns 404 when the current content does not exist, including repeated content deletion.
 
-The SoftDelete parameter allows for the temporary removal of a document's metadata, attributes, etc from being retrieved from all API requests.
+When no deletion option is supplied, the document's metadata and current contents are deleted.
 
-The document can be permanently deleted by calling the DELETE /documents/{documentId} with softDelete=false or restored using the PUT /documents/{documentId}/restore.
+The deprecated softDelete parameter remains supported for backward compatibility.
+Without deleteType, softDelete=true selects SOFT_DELETE.
+If softDelete is false or omitted, HARD_DELETE is used.
 
-Only the GET /documents?softDeleted=true will return all the soft deleted documents.
+When deleteType is supplied, it takes precedence and softDelete is ignored.
 
 ### Example
 
@@ -379,6 +391,7 @@ Only the GET /documents?softDeleted=true will return all the soft deleted docume
 ```python
 import formkiq_client
 from formkiq_client.models.delete_response import DeleteResponse
+from formkiq_client.models.document_delete_type import DocumentDeleteType
 from formkiq_client.rest import ApiException
 from pprint import pprint
 
@@ -400,11 +413,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     document_id = 'document_id_example' # str | Document Identifier
     site_id = 'site_id_example' # str | Site Identifier (optional)
     artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
-    soft_delete = True # bool | Whether to soft delete document (optional)
+    soft_delete = True # bool | Legacy deletion flag. Set true to soft delete the document, equivalent to deleteType=SOFT_DELETE. Existing requests remain supported. Ignored when deleteType is supplied. (optional)
+    delete_type = formkiq_client.DocumentDeleteType() # DocumentDeleteType | Case-insensitive deletion mode; surrounding whitespace is ignored. Defaults to HARD_DELETE when no deletion option is supplied. Takes precedence over the deprecated softDelete parameter when both are supplied. (optional)
 
     try:
         # Delete document
-        api_response = api_instance.delete_document(document_id, site_id=site_id, artifact_id=artifact_id, soft_delete=soft_delete)
+        api_response = api_instance.delete_document(document_id, site_id=site_id, artifact_id=artifact_id, soft_delete=soft_delete, delete_type=delete_type)
         print("The response of DocumentsApi->delete_document:\n")
         pprint(api_response)
     except Exception as e:
@@ -421,7 +435,8 @@ Name | Type | Description  | Notes
  **document_id** | **str**| Document Identifier | 
  **site_id** | **str**| Site Identifier | [optional] 
  **artifact_id** | **str**| Artifact Document Identifier | [optional] 
- **soft_delete** | **bool**| Whether to soft delete document | [optional] 
+ **soft_delete** | **bool**| Legacy deletion flag. Set true to soft delete the document, equivalent to deleteType&#x3D;SOFT_DELETE. Existing requests remain supported. Ignored when deleteType is supplied. | [optional] 
+ **delete_type** | [**DocumentDeleteType**](.md)| Case-insensitive deletion mode; surrounding whitespace is ignored. Defaults to HARD_DELETE when no deletion option is supplied. Takes precedence over the deprecated softDelete parameter when both are supplied. | [optional] 
 
 ### Return type
 
@@ -441,6 +456,8 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | Invalid deletion mode. |  -  |
+**404** | Document or content not found. Content-only deletion returns this status when the current S3 object is absent, including repeated deletion, with the message \&quot;Document content for {documentId} not found.\&quot; |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -752,7 +769,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_content**
-> GetDocumentContentResponse get_document_content(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, share_key=share_key)
+> GetDocumentContentResponse get_document_content(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, share_key=share_key, accelerate=accelerate)
 
 Get document's contents
 
@@ -795,10 +812,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     version_key = 'version_key_example' # str | Version Key (version key required URL encoding) (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
+    accelerate = False # bool | Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration=true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. (optional) (default to False)
 
     try:
         # Get document's contents
-        api_response = api_instance.get_document_content(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, share_key=share_key)
+        api_response = api_instance.get_document_content(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, share_key=share_key, accelerate=accelerate)
         print("The response of DocumentsApi->get_document_content:\n")
         pprint(api_response)
     except Exception as e:
@@ -817,6 +835,7 @@ Name | Type | Description  | Notes
  **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **version_key** | **str**| Version Key (version key required URL encoding) | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
+ **accelerate** | **bool**| Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration&#x3D;true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. | [optional] [default to False]
 
 ### Return type
 
@@ -840,7 +859,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_id_upload**
-> GetDocumentUrlResponse get_document_id_upload(document_id, site_id=site_id, artifact_id=artifact_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
+> GetDocumentUrlResponse get_document_id_upload(document_id, site_id=site_id, artifact_id=artifact_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key, accelerate=accelerate)
 
 Get url to update large document
 
@@ -878,10 +897,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     content_length = 56 # int | Indicates the size of the entity-body (optional)
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
+    accelerate = False # bool | Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration=true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. (optional) (default to False)
 
     try:
         # Get url to update large document
-        api_response = api_instance.get_document_id_upload(document_id, site_id=site_id, artifact_id=artifact_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
+        api_response = api_instance.get_document_id_upload(document_id, site_id=site_id, artifact_id=artifact_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key, accelerate=accelerate)
         print("The response of DocumentsApi->get_document_id_upload:\n")
         pprint(api_response)
     except Exception as e:
@@ -903,6 +923,7 @@ Name | Type | Description  | Notes
  **content_length** | **int**| Indicates the size of the entity-body | [optional] 
  **duration** | **int**| Indicates the number of hours request is valid for | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
+ **accelerate** | **bool**| Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration&#x3D;true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. | [optional] [default to False]
 
 ### Return type
 
@@ -1004,7 +1025,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_upload**
-> GetDocumentUrlResponse get_document_upload(path=path, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
+> GetDocumentUrlResponse get_document_upload(path=path, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key, accelerate=accelerate)
 
 Get url to add large document
 
@@ -1041,10 +1062,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     content_length = 56 # int | Indicates the size of the entity-body (optional)
     duration = 56 # int | Indicates the number of hours request is valid for (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
+    accelerate = False # bool | Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration=true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. (optional) (default to False)
 
     try:
         # Get url to add large document
-        api_response = api_instance.get_document_upload(path=path, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key)
+        api_response = api_instance.get_document_upload(path=path, site_id=site_id, checksum_type=checksum_type, checksum=checksum, content_length=content_length, duration=duration, share_key=share_key, accelerate=accelerate)
         print("The response of DocumentsApi->get_document_upload:\n")
         pprint(api_response)
     except Exception as e:
@@ -1065,6 +1087,7 @@ Name | Type | Description  | Notes
  **content_length** | **int**| Indicates the size of the entity-body | [optional] 
  **duration** | **int**| Indicates the number of hours request is valid for | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
+ **accelerate** | **bool**| Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration&#x3D;true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. | [optional] [default to False]
 
 ### Return type
 
@@ -1088,11 +1111,20 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_url**
-> GetDocumentUrlResponse get_document_url(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark, format=format)
+> GetDocumentUrlResponse get_document_url(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark, format=format, max_uses=max_uses, accelerate=accelerate)
 
 Get document content url
 
-Returns a URL for the document's contents; this URL will expire (the default is 48 hours)
+Returns a URL for the document's contents. Direct S3 presigned URLs expire after 48 hours by default.
+
+With the Shortlinks Add-On Module, use `format=short&maxUses=1` for a single-redemption short link,
+or set `maxUses` to a larger positive integer to allow that many redemptions. Omitting `maxUses`
+permits unlimited redemptions during the short link's validity period.
+
+For usage-limited short links, `duration` controls the short link's validity in hours.
+Each successful redemption generates a fresh S3 presigned URL valid for 20 seconds.
+The S3 request must start before expiry; a download already in progress can continue afterward.
+The S3 URL itself can be reused during those 20 seconds.
 
 ### Example
 
@@ -1127,10 +1159,12 @@ with formkiq_client.ApiClient(configuration) as api_client:
     inline = False # bool | Request inline delivery. S3-backed SVG documents identified by content type or filename are always served as attachments. (optional) (default to False)
     bypass_watermark = False # bool | Allow the by pass of watermark (only allowed by GOVERN / ADMIN permissions) (optional) (default to False)
     format = 'format_example' # str | Return a shortlink URL when set to `short`; available as an Add-On Module (optional)
+    max_uses = 1 # int | Maximum number of successful short-link redemptions. Requires `format=short` and the Shortlinks Add-On Module. Set to `1` for a single redemption; omit for unlimited redemptions during the short link's validity period. (optional)
+    accelerate = False # bool | Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration=true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. (optional) (default to False)
 
     try:
         # Get document content url
-        api_response = api_instance.get_document_url(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark, format=format)
+        api_response = api_instance.get_document_url(document_id, site_id=site_id, artifact_id=artifact_id, version_key=version_key, duration=duration, share_key=share_key, inline=inline, bypass_watermark=bypass_watermark, format=format, max_uses=max_uses, accelerate=accelerate)
         print("The response of DocumentsApi->get_document_url:\n")
         pprint(api_response)
     except Exception as e:
@@ -1153,6 +1187,8 @@ Name | Type | Description  | Notes
  **inline** | **bool**| Request inline delivery. S3-backed SVG documents identified by content type or filename are always served as attachments. | [optional] [default to False]
  **bypass_watermark** | **bool**| Allow the by pass of watermark (only allowed by GOVERN / ADMIN permissions) | [optional] [default to False]
  **format** | **str**| Return a shortlink URL when set to &#x60;short&#x60;; available as an Add-On Module | [optional] 
+ **max_uses** | **int**| Maximum number of successful short-link redemptions. Requires &#x60;format&#x3D;short&#x60; and the Shortlinks Add-On Module. Set to &#x60;1&#x60; for a single redemption; omit for unlimited redemptions during the short link&#39;s validity period. | [optional] 
+ **accelerate** | **bool**| Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration&#x3D;true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. | [optional] [default to False]
 
 ### Return type
 
@@ -1728,7 +1764,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_document**
-> AddDocumentResponse update_document(document_id, update_document_request, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
+> AddDocumentResponse update_document(document_id, update_document_request, site_id=site_id, artifact_id=artifact_id, share_key=share_key, accelerate=accelerate)
 
 Update document
 
@@ -1769,10 +1805,11 @@ with formkiq_client.ApiClient(configuration) as api_client:
     site_id = 'site_id_example' # str | Site Identifier (optional)
     artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
     share_key = 'share_key_example' # str | Share Identifier (optional)
+    accelerate = False # bool | Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration=true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. (optional) (default to False)
 
     try:
         # Update document
-        api_response = api_instance.update_document(document_id, update_document_request, site_id=site_id, artifact_id=artifact_id, share_key=share_key)
+        api_response = api_instance.update_document(document_id, update_document_request, site_id=site_id, artifact_id=artifact_id, share_key=share_key, accelerate=accelerate)
         print("The response of DocumentsApi->update_document:\n")
         pprint(api_response)
     except Exception as e:
@@ -1791,6 +1828,7 @@ Name | Type | Description  | Notes
  **site_id** | **str**| Site Identifier | [optional] 
  **artifact_id** | **str**| Artifact Document Identifier | [optional] 
  **share_key** | **str**| Share Identifier | [optional] 
+ **accelerate** | **bool**| Use S3 Transfer Acceleration for presigned transfer URLs targeting the FormKiQ documents bucket, including internal uploads of inline content. Requires EnableS3TransferAcceleration&#x3D;true on the deployment; additional transfer charges apply. Defaults to false. Has no effect on inline content returned by the API. Unavailable acceleration, external download URLs, and watermarked downloads return HTTP 400. | [optional] [default to False]
 
 ### Return type
 

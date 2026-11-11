@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **status** | [**SiteStatus**](SiteStatus.md) |  | [optional] 
 **permission** | [**SitePermission**](SitePermission.md) |  | [optional] 
 **roles** | **List[str]** | List of roles used to get permissions | [optional] 
-**permissions** | [**List[SiteGroupPermissions]**](SiteGroupPermissions.md) |  | [optional] 
+**permissions** | [**List[ApiPermissionGrant]**](ApiPermissionGrant.md) |  | [optional] 
 **upload_email** | **str** | SiteId document upload email address | [optional] 
 **config** | [**SiteConfig**](SiteConfig.md) |  | [optional] 
 **usage** | [**SiteUsage**](SiteUsage.md) |  | [optional] 

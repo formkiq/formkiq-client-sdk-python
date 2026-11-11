@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_opa_access_policy**](AccessControlApi.md#get_opa_access_policy) | **GET** /sites/{siteId}/opa/accessPolicy | Get OPA Access Policy
 [**get_opa_access_policy_items**](AccessControlApi.md#get_opa_access_policy_items) | **GET** /sites/{siteId}/opa/accessPolicy/policyItems | Get OPA Access Policy Items
 [**set_opa_access_policy_items**](AccessControlApi.md#set_opa_access_policy_items) | **PUT** /sites/{siteId}/opa/accessPolicy/policyItems | Set opa access policy items, can only be requested with ADMIN privileges
+[**test_opa_access_policy**](AccessControlApi.md#test_opa_access_policy) | **POST** /sites/{siteId}/opa/accessPolicy/test | Test an OPA access policy, can only be requested with ADMIN privileges
 
 
 # **delete_opa_access_policy_items**
@@ -368,6 +369,88 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
 **400** | 400 OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **test_opa_access_policy**
+> TestOpaAccessPolicyResponse test_opa_access_policy(site_id, test_opa_access_policy_request)
+
+Test an OPA access policy, can only be requested with ADMIN privileges
+
+Evaluates the site's saved OPA access policy, or draft policy items supplied in the
+request, against simulated request and user input. The operation does not persist
+policies or modify documents.
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.test_opa_access_policy_request import TestOpaAccessPolicyRequest
+from formkiq_client.models.test_opa_access_policy_response import TestOpaAccessPolicyResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.AccessControlApi(api_client)
+    site_id = 'site_id_example' # str | Site Identifier
+    test_opa_access_policy_request = formkiq_client.TestOpaAccessPolicyRequest() # TestOpaAccessPolicyRequest | 
+
+    try:
+        # Test an OPA access policy, can only be requested with ADMIN privileges
+        api_response = api_instance.test_opa_access_policy(site_id, test_opa_access_policy_request)
+        print("The response of AccessControlApi->test_opa_access_policy:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AccessControlApi->test_opa_access_policy: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **str**| Site Identifier | 
+ **test_opa_access_policy_request** | [**TestOpaAccessPolicyRequest**](TestOpaAccessPolicyRequest.md)|  | 
+
+### Return type
+
+[**TestOpaAccessPolicyResponse**](TestOpaAccessPolicyResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OPA access policy test completed |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**400** | Invalid OPA access policy test request |  -  |
+**401** | User is not authenticated or does not have ADMIN privileges for the site |  -  |
+**404** | No saved OPA access policy exists for the site |  -  |
+**500** | OPA evaluation failed |  -  |
+**504** | OPA evaluation timed out |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

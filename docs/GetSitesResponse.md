@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **username** | **str** | Username of request caller | [optional] 
 **roles** | **List[str]** |  | [optional] 
 **saml_groups** | **List[str]** | List of User Saml Groups | [optional] 
-**user_claims** | **Dict[str, object]** | Map of custom JWT claims | [optional] 
+**user_claims** | **Dict[str, object]** | Custom claims for the authenticated caller, from a JWT or API key. Values retain their JSON types, including strings, numbers, Booleans, arrays, and objects. Null-valued object fields are omitted. | [optional] 
 **sites** | [**List[Site]**](Site.md) | List of sites | [optional] 
 
 ## Example

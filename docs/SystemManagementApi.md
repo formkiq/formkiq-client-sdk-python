@@ -37,6 +37,7 @@ Method | HTTP request | Description
 [**get_open_search_snapshot_repositories**](SystemManagementApi.md#get_open_search_snapshot_repositories) | **GET** /sites/global/opensearch/snapshotRepositories | List OpenSearch snapshot repositories
 [**get_open_search_snapshot_repository**](SystemManagementApi.md#get_open_search_snapshot_repository) | **GET** /sites/{siteId}/opensearch/snapshotRepository | Get site OpenSearch snapshot repository
 [**get_open_search_snapshots**](SystemManagementApi.md#get_open_search_snapshots) | **GET** /sites/{siteId}/opensearch/snapshots | List site OpenSearch snapshots
+[**get_permission_catalog**](SystemManagementApi.md#get_permission_catalog) | **GET** /permissions/catalog | Get API permission catalog
 [**get_site_group**](SystemManagementApi.md#get_site_group) | **GET** /sites/{siteId}/groups/{groupName} | Get group and permissions belonging to site
 [**get_site_groups**](SystemManagementApi.md#get_site_groups) | **GET** /sites/{siteId}/groups | Get group(s) and permissions belonging to site
 [**get_sites**](SystemManagementApi.md#get_sites) | **GET** /sites | Get site(s) access
@@ -58,7 +59,14 @@ Method | HTTP request | Description
 
 Add API Key
 
-Adds a new API Key
+Creates an API key for the specified site. Supply an optional roleType to select
+a predefined role, or CUSTOM with a nonempty permissions array. When roleType is
+omitted and a nonempty permissions array is supplied, that array is treated as an
+explicit CUSTOM grant without adding inherited role permissions. If roleType and
+permissions are both omitted, or permissions is empty with no roleType, the legacy
+READ, WRITE and DELETE grants apply. For predefined role types, omit permissions
+or supply an empty array; nonempty permissions are rejected. ADMIN roles and ADMIN
+permission grants are not allowed, even for administrators.
 
 ### Example
 
@@ -2522,6 +2530,87 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_permission_catalog**
+> GetPermissionCatalogResponse get_permission_catalog()
+
+Get API permission catalog
+
+Returns the supported API permission role types, grouped by permission group,
+with the scoped permission names and descriptions in each group. Use this catalog when creating
+API keys or mapping user roles to permissions.
+
+Predefined role types contain their effective permissions, including permissions
+inherited from other operation categories. CUSTOM contains all available scoped
+permissions as selectable options; it does not automatically grant them.
+Deprecated umbrella permissions are excluded from the permission lists, and empty
+groups are omitted.
+
+The catalog is available to authenticated callers without a site-specific API
+permission. It describes supported grants rather than the caller's current
+permissions or authority to assign those grants. No siteId is required.
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.get_permission_catalog_response import GetPermissionCatalogResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.SystemManagementApi(api_client)
+
+    try:
+        # Get API permission catalog
+        api_response = api_instance.get_permission_catalog()
+        print("The response of SystemManagementApi->get_permission_catalog:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemManagementApi->get_permission_catalog: %s\n" % e)
+```
+
+
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetPermissionCatalogResponse**](GetPermissionCatalogResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | API permission catalog |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+**401** | Authentication required |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_site_group**
 > GetSiteGroupResponse get_site_group(site_id, group_name)
 
@@ -3257,7 +3346,13 @@ No authorization required
 
 Set Site's Group Permissions
 
-Set Site's Group Permissions
+Replaces the group's permission grants for the specified site. Supply an optional
+roleType to select a predefined role, or CUSTOM with a nonempty permissions array.
+When roleType is omitted, permissions is required and is treated as an explicit
+CUSTOM grant without adding inherited role permissions. For predefined role types,
+omit permissions or supply an empty array. Nonempty permissions with a predefined
+roleType are rejected. ADMIN roles and ADMIN permission grants are not allowed,
+even for administrators.
 
 ### Example
 
@@ -3286,7 +3381,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     api_instance = formkiq_client.SystemManagementApi(api_client)
     site_id = 'site_id_example' # str | Site Identifier
     group_name = 'group_name_example' # str | Group Name
-    set_group_permissions_request = formkiq_client.SetGroupPermissionsRequest() # SetGroupPermissionsRequest | 
+    set_group_permissions_request = {"roleType":"USER_MANAGEMENT"} # SetGroupPermissionsRequest | 
 
     try:
         # Set Site's Group Permissions

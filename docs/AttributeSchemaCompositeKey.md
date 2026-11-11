@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attribute_keys** | **List[str]** |  | [optional] 
+**attribute_keys** | **List[str]** | Attribute keys that form the composite key. Attributes with dataType JSON cannot be part of a composite key. | [optional] 
 
 ## Example
 

@@ -5,22 +5,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **str** | Attribute key | 
-**string_value** | **str** | Attribute with string value | [optional] 
-**string_values** | **List[str]** | Attribute with string values | [optional] 
-**number_value** | **float** | Attribute with number value | [optional] 
-**number_values** | **List[float]** | Attribute with number values | [optional] 
-**boolean_value** | **bool** | Attribute with boolean value | [optional] 
-**date_value** | **str** | Attribute with date value | [optional] 
-**date_values** | **List[str]** | Attribute with date values | [optional] 
-**classification_id** | **str** | Classification Identifier | 
-**document_id** | **str** | Relationship To Document Identifier | 
-**relationship** | [**DocumentRelationshipType**](DocumentRelationshipType.md) |  | 
-**inverse_relationship** | [**DocumentRelationshipType**](DocumentRelationshipType.md) |  | [optional] 
-**entity_type_id** | **str** | EntityType Identifier or Entity Type Name | 
-**entity_id** | **str** | Entity Identifier | 
-**namespace** | [**EntityTypeNamespace**](EntityTypeNamespace.md) |  | [optional] 
-**entities** | [**List[AddDocumentAttributeEntityValue]**](AddDocumentAttributeEntityValue.md) | Attribute with entity values | 
 
 ## Example
 
