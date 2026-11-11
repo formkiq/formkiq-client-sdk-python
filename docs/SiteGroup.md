@@ -1,11 +1,13 @@
 # SiteGroup
 
+A group's permission configuration for a site. roleType is optional for legacy records. A missing roleType means permissions contains explicit CUSTOM grants. A predefined roleType determines the effective role grants.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**permissions** | [**List[SiteGroupPermissions]**](SiteGroupPermissions.md) |  | [optional] 
+**role_type** | [**ApiPermissionRoleType**](ApiPermissionRoleType.md) |  | [optional] 
+**permissions** | [**List[ApiPermissionGrant]**](ApiPermissionGrant.md) | Explicit CUSTOM or legacy permission grants. | [optional] 
 
 ## Example
 

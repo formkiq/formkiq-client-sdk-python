@@ -11,7 +11,8 @@ Name | Type | Description | Notes
 **review_category** | **str** | Review category | [optional] 
 **review_status** | [**DocumentReviewStatus**](DocumentReviewStatus.md) |  | [optional] 
 **approval_groups** | **List[str]** | Optional approval groups used for additional credential verification when submitting a decision to POST /documents/{documentId}/reviews/{reviewId}/decisions. The caller must belong to at least one of the listed groups, in addition to satisfying the existing authorization requirements. | [optional] 
-**required_decisions** | **int** | Number of decisions required to complete the review | [optional] 
+**required_decisions** | **int** | Number of decision records matching countedDecisionTypes required to complete the review. Completion does not imply a positive approval outcome. | [optional] 
+**counted_decision_types** | [**List[ReviewDecisionType]**](ReviewDecisionType.md) | Effective types of decision records that count toward requiredDecisions. Always returned by review GET and list operations, including [APPROVAL] for records stored without an explicit policy. This does not restrict which supported decision types may be submitted. | 
 **user_id** | **str** | User who added review | [optional] 
 **comments** | **str** | Review comments | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 

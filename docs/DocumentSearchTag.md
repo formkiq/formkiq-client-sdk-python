@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **begins_with** | **str** | Searches for strings that begin with | [optional] 
 **eq** | **str** | Searches for strings that eq | [optional] 
-**eq_or** | **List[str]** | Searches for ANY strings that eq | [optional] 
+**eq_or** | **List[str]** | Searches for strings equal to any provided value. Pagination is not supported when &#x60;eqOr&#x60; is used, so no &#x60;nextToken&#x60; is returned. The request limit is applied separately to each value.  | [optional] 
 **range** | [**DocumentSearchRange**](DocumentSearchRange.md) |  | [optional] 
 **key** | **str** | Tag key to search | 
 

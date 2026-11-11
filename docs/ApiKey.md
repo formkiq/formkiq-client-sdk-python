@@ -1,5 +1,6 @@
 # ApiKey
 
+An API key and its permission configuration. roleType is optional for legacy records. A missing roleType means permissions contains explicit CUSTOM grants. A predefined roleType determines the effective role grants, which can be discovered in the catalog.
 
 ## Properties
 
@@ -10,8 +11,10 @@ Name | Type | Description | Notes
 **user_id** | **str** |  | [optional] 
 **site_id** | **str** |  | [optional] 
 **inserted_date** | **str** | Inserted Timestamp | [optional] 
-**permissions** | **List[str]** | List of permissions | [optional] 
+**role_type** | [**ApiPermissionRoleType**](ApiPermissionRoleType.md) |  | [optional] 
+**permissions** | [**List[ApiPermissionGrant]**](ApiPermissionGrant.md) | Explicit CUSTOM or legacy permission grants. | [optional] 
 **groups** | **List[str]** | List of groups to add as custom claims to API Key | [optional] 
+**custom_claims** | **Dict[str, object]** | Custom claims associated with the API key and exposed in the requesting caller&#39;s userClaims. Values may be strings, numbers, Booleans, arrays, or objects. Null-valued object fields are omitted. These claims do not override the key&#39;s username, site, groups, role, or permissions. Keys created without custom claims have an empty claims map. | [optional] 
 
 ## Example
 

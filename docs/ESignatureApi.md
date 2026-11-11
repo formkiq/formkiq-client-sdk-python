@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**add_docusign_sender_view**](ESignatureApi.md#add_docusign_sender_view) | **POST** /esignature/docusign/{documentId}/envelopes/{envelopeId}/views/sender | Create Docusign Sender View request
 [**add_esignature_docusign_events**](ESignatureApi.md#add_esignature_docusign_events) | **POST** /esignature/docusign/events | Add E-signature event
 [**get_docusign_envelope**](ESignatureApi.md#get_docusign_envelope) | **GET** /esignature/docusign/{documentId}/envelopes/{envelopeId} | Get Docusign envelope and recipient status
+[**get_docusign_envelope_audit_events**](ESignatureApi.md#get_docusign_envelope_audit_events) | **GET** /esignature/docusign/{documentId}/envelopes/{envelopeId}/auditEvents | Get DocuSign envelope audit events
 [**void_docusign_envelope**](ESignatureApi.md#void_docusign_envelope) | **POST** /esignature/docusign/{documentId}/envelopes/{envelopeId}/void | Void a DocuSign envelope
 
 
@@ -109,7 +110,7 @@ No authorization required
 
 Create Docusign Envelope request
 
-DocuSign create Docusign Envelope request; available as an Add-On Module
+Create a DocuSign envelope for the selected document or artifact; available as an Add-On Module. Recipient tabs support signatures, initials, automatic signing dates, recipient-entered dates, and single-line or multiline text. See DocusignSigningTabs for the supported collections and validation rules.
 
 ### Example
 
@@ -137,7 +138,7 @@ with formkiq_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = formkiq_client.ESignatureApi(api_client)
     document_id = 'document_id_example' # str | Document Identifier
-    add_docusign_envelopes_request = formkiq_client.AddDocusignEnvelopesRequest() # AddDocusignEnvelopesRequest | 
+    add_docusign_envelopes_request = {"emailSubject":"Please review and sign","environment":"DEVELOPMENT","status":"sent","signers":[{"name":"Jane Smith","email":"signer1@example.com","recipientId":"1","routingOrder":"1","tabs":{"signHereTabs":[{"anchorString":"signature1"}],"dateSignedTabs":[{"anchorString":"date1","tabLabel":"signedOn","anchorIgnoreIfNotPresent":"false"}],"textTabs":[{"anchorString":"text1","tabLabel":"comments","anchorIgnoreIfNotPresent":"false","width":"300","height":"80","maxLength":"1000","required":"true"}]}}]} # AddDocusignEnvelopesRequest | 
     site_id = 'site_id_example' # str | Site Identifier (optional)
     artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
 
@@ -180,7 +181,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | 200 OK |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
-**400** | 400 OK |  -  |
+**400** | Invalid envelope request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -495,6 +496,94 @@ No authorization required
 **403** | Access to the selected document or artifact is denied |  -  |
 **404** | Document, artifact, or associated DocuSign envelope not found |  -  |
 **429** | Envelope polling or DocuSign rate limit exceeded |  * Retry-After - Seconds to wait before another lookup <br>  |
+**502** | DocuSign authentication failure, upstream error, or invalid response |  -  |
+**504** | DocuSign request timed out |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_docusign_envelope_audit_events**
+> GetDocusignEnvelopeAuditEventsResponse get_docusign_envelope_audit_events(document_id, envelope_id, site_id=site_id, artifact_id=artifact_id, environment=environment)
+
+Get DocuSign envelope audit events
+
+Retrieves the audit history recorded by DocuSign for an associated envelope; available as an Add-On Module. Requires read access to the selected document or artifact and validates its stored envelope association before contacting DocuSign. Calls GET /restapi/v2.1/accounts/{accountId}/envelopes/{envelopeId}/audit_events, resolving the account, base URI, and OAuth token through the site's existing integration. Returns DocuSign's JSON unchanged, including auditEvents, paymentEvents, and any additional fields, without a FormKiQ wrapper. Includes reminder and resend events when recorded by DocuSign; this history does not guarantee that every reminder is recorded or confirm inbox delivery. Reminder and resend webhook subscriptions are separate from this operation.
+
+### Example
+
+
+```python
+import formkiq_client
+from formkiq_client.models.docusign_environment import DocusignEnvironment
+from formkiq_client.models.get_docusign_envelope_audit_events_response import GetDocusignEnvelopeAuditEventsResponse
+from formkiq_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = formkiq_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Enter a context with an instance of the API client
+with formkiq_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = formkiq_client.ESignatureApi(api_client)
+    document_id = 'document_id_example' # str | Document Identifier
+    envelope_id = 'envelope_id_example' # str | Docusign Envelope Id
+    site_id = 'site_id_example' # str | Site Identifier (optional)
+    artifact_id = 'artifact_id_example' # str | Artifact Document Identifier (optional)
+    environment = formkiq_client.DocusignEnvironment() # DocusignEnvironment | DocuSign environment. Defaults to the site's docusignEnvironment; required when the site has no default. Must match the environment in which the envelope was created. (optional)
+
+    try:
+        # Get DocuSign envelope audit events
+        api_response = api_instance.get_docusign_envelope_audit_events(document_id, envelope_id, site_id=site_id, artifact_id=artifact_id, environment=environment)
+        print("The response of ESignatureApi->get_docusign_envelope_audit_events:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ESignatureApi->get_docusign_envelope_audit_events: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_id** | **str**| Document Identifier | 
+ **envelope_id** | **str**| Docusign Envelope Id | 
+ **site_id** | **str**| Site Identifier | [optional] 
+ **artifact_id** | **str**| Artifact Document Identifier | [optional] 
+ **environment** | [**DocusignEnvironment**](.md)| DocuSign environment. Defaults to the site&#39;s docusignEnvironment; required when the site has no default. Must match the environment in which the envelope was created. | [optional] 
+
+### Return type
+
+[**GetDocusignEnvelopeAuditEventsResponse**](GetDocusignEnvelopeAuditEventsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | DocuSign envelope audit history returned unchanged |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  * Cache-Control - Prevents caching of the envelope audit history <br>  |
+**400** | Invalid parameters or missing DocuSign configuration |  -  |
+**401** | Authentication required |  -  |
+**403** | Read access to the selected document or artifact is denied |  -  |
+**404** | Document, artifact, or associated DocuSign envelope not found |  -  |
+**429** | DocuSign rate limit exceeded |  * Retry-After - Seconds to wait before another lookup <br>  |
 **502** | DocuSign authentication failure, upstream error, or invalid response |  -  |
 **504** | DocuSign request timed out |  -  |
 
